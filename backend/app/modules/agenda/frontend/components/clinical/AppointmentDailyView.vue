@@ -616,7 +616,7 @@ const appointmentsByProfIndex = computed(() => {
                   v-for="(seg, segIdx) in blockedSegments.filter(s => s.professionalId === prof.id)"
                   :key="`blocked-${prof.id}-${segIdx}`"
                   class="absolute inset-x-0 pointer-events-none z-10 schedules-blocked"
-                  :title="seg.reason || (seg.state === 'clinic_closed' ? 'Clínica cerrada' : 'No disponible')"
+                  :title="seg.reason || (seg.state === 'clinic_closed' ? t('appointments.freeSlots.clinicClosed') : t('appointments.freeSlots.professionalOff'))"
                   :style="{
                     top: `${seg.startSlot * getSlotHeight()}px`,
                     height: `${(seg.endSlot - seg.startSlot) * getSlotHeight()}px`

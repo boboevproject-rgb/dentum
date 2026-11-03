@@ -170,5 +170,12 @@ class TestRolesConstant:
 
     def test_all_expected_roles_defined(self):
         """All expected roles should be defined."""
-        expected_roles = {"admin", "dentist", "hygienist", "assistant", "receptionist"}
+        expected_roles = {
+            "admin",
+            "dentist",
+            "hygienist",
+            "assistant",
+            "receptionist",
+            "technician",
+        }
         assert expected_roles == set(ROLES)

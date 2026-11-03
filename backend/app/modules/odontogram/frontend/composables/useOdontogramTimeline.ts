@@ -7,6 +7,7 @@
  * - Switching between live and historical view
  */
 
+import { PERMISSIONS } from '~~/app/config/permissions'
 import type {
   ApiResponse,
   OdontogramData,
@@ -15,6 +16,7 @@ import type {
 } from '~~/app/types'
 
 export function useOdontogramTimeline() {
+  const { can } = usePermissions()
   const api = useApi()
   const toast = useToast()
   const { t } = useI18n()
@@ -51,6 +53,10 @@ export function useOdontogramTimeline() {
 
   /** Fetch timeline dates for a patient */
   async function fetchTimeline(patientId: string): Promise<void> {
+    if (!can(PERMISSIONS.odontogram.read)) {
+      timelineDates.value = []
+      return
+    }
     loading.value = true
     try {
       const response = await api.get<ApiResponse<{

@@ -68,9 +68,11 @@ from app.modules.treatment_plan.models import (
 )
 from app.seeds.demo_data import (
     CLINIC_ID,
+    PATIENT_IDS,
     USER_DENTIST_ID,
     USER_HYGIENIST_ID,
     USER_RECEPTIONIST_ID,
+    USER_TECHNICIAN_ID,
     generate_appointments_data,
     generate_budgets_data,
     generate_invoice_series_data,
@@ -895,6 +897,19 @@ async def main(lang: str = "en", country: str = "generic") -> None:
                     f"Needs review: {stats['needs_review']} | "
                     f"Attempts logged: {stats['attempts']}"
                 )
+
+            if await _module_is_installed(db, "lab_orders"):
+                print("\n[opt] Creating lab orders demo (module installed)...")
+                from app.modules.lab_orders.seed import seed_lab_orders_demo
+
+                stats = await seed_lab_orders_demo(
+                    db,
+                    clinic_id=CLINIC_ID,
+                    patient_ids=PATIENT_IDS,
+                    dentist_id=USER_DENTIST_ID,
+                    technician_id=USER_TECHNICIAN_ID,
+                )
+                print(f"  Orders: {stats['orders']} | Timeline events: {stats['events']}")
 
             await db.commit()
             print("\n" + "=" * 60)

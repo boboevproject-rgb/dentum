@@ -57,13 +57,15 @@ const path = computed(() => {
   return { line, area: areaPath }
 })
 
+const { t } = useI18n()
+
 const label = computed(() => {
   if (props.ariaLabel) return props.ariaLabel
-  if (!props.points.length) return 'sparkline empty'
+  if (!props.points.length) return t('app.sparklineEmpty')
   const last = props.points[props.points.length - 1]
   const first = props.points[0]
   const delta = last! - first!
-  return `Trend ${props.points.length} points, ${delta >= 0 ? 'up' : 'down'} ${Math.abs(delta).toFixed(0)}`
+  return t(delta >= 0 ? 'app.sparklineUp' : 'app.sparklineDown', { n: props.points.length, delta: Math.abs(delta).toFixed(0) })
 })
 
 const isEmpty = computed(() => props.points.length < 2)

@@ -193,13 +193,13 @@ function formatPercent(value: number | null | undefined): string {
 function formatMinutes(value: number | null | undefined): string {
   if (value === null || value === undefined) return '—'
   const rounded = Math.round(value * 10) / 10
-  return `${rounded} min`
+  return t('common.durationMinutes', { value: rounded })
 }
 
 function formatSignedMinutes(value: number | null | undefined): string {
   if (value === null || value === undefined) return '—'
   const sign = value > 0 ? '+' : ''
-  return `${sign}${Math.round(value * 10) / 10} min`
+  return `${sign}${t('common.durationMinutes', { value: Math.round(value * 10) / 10 })}`
 }
 
 // ─── Derived: hero ───────────────────────────────────────────────────
@@ -841,7 +841,7 @@ function goBack() {
               class="flex items-center gap-3"
             >
               <span class="w-20 text-ui text-muted tnum">
-                {{ bucket.label }} min
+                {{ t('common.durationMinutes', { value: bucket.label }) }}
               </span>
               <div class="flex-1 bg-surface-sunken rounded-full h-2 overflow-hidden">
                 <div

@@ -30,7 +30,9 @@ class OdontogramModule(BaseModule):
             "admin": ["*"],
             "dentist": ["*"],
             "hygienist": ["read", "write"],
-            "assistant": ["read"],
+            # The chart is drawn from the treatments list, so chart read
+            # access needs treatments.read too (assistant saw a 403 before).
+            "assistant": ["read", "treatments.read"],
             "receptionist": [],
         },
         "frontend": {

@@ -37,13 +37,14 @@ from .models import (
 )
 from .permissions import get_role_permissions, has_permission, permission_matches
 
-#: 5 standard roles seeded as system roles (clinic_id IS NULL).
+#: 6 standard roles seeded as system roles (clinic_id IS NULL).
 SYSTEM_ROLE_NAMES: tuple[str, ...] = (
     "admin",
     "dentist",
     "hygienist",
     "assistant",
     "receptionist",
+    "technician",
 )
 
 

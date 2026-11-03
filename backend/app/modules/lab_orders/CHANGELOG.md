@@ -2,6 +2,17 @@
 
 ## Unreleased
 
+- feat: dental technician workbench (0.2.0). New core role `technician`;
+  new permissions `lab_orders.work` (move an order along the lab workflow,
+  take it over) and `lab_orders.comment` (write in the order thread).
+  New status `try_in`. New table `lab_order_events` (status changes,
+  assignments and comments — one shared thread for clinic and lab) and
+  `lab_orders.technician_id` (migration `labo_0003`). Endpoints:
+  `GET /stats`, `POST /{id}/transition`, `POST /{id}/assign`,
+  `GET /{id}/events`, `POST /{id}/comments`; list filters `statuses`,
+  `technician_id`. Frontend: `/lab-workbench` board, shared order drawer,
+  dashboard counters and patient-summary feed slots. Demo seed for orders.
+
 - fix(#723): the paginated list query now ends its `order_by` on the primary key. Rows that tied on the sort column (same date, name or timestamp) were cut from different orderings on each page, so some appeared twice and others on no page.
 
 - fix(#718): `received_date` is stamped with the clinic's calendar date, not

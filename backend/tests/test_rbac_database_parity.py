@@ -28,7 +28,7 @@ from app.core.auth.rbac import (
 )
 from app.core.auth.seed_rbac import seed_rbac
 
-ROLES = ("admin", "dentist", "hygienist", "assistant", "receptionist")
+ROLES = ("admin", "dentist", "hygienist", "assistant", "receptionist", "technician")
 
 
 async def _seeded(db):

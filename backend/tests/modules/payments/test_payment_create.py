@@ -294,3 +294,18 @@ async def test_idempotency_key_concurrent_race_adopts_winner(
         f"/api/v1/payments?clinic_id={setup['clinic_id']}", headers=auth_headers
     )
     assert listing.json()["total"] == 1
+
+
+@pytest.mark.asyncio
+async def test_refunds_report_is_not_shadowed_by_payment_refunds(
+    db_session: AsyncSession, auth_headers: dict, client: AsyncClient
+):
+    """``/reports/refunds`` must not be parsed as ``/{payment_id}/refunds``."""
+    await _setup_clinic(db_session, auth_headers, client)
+    r = await client.get(
+        "/api/v1/payments/reports/refunds",
+        params={"date_from": "2026-01-01", "date_to": "2026-12-31"},
+        headers=auth_headers,
+    )
+    assert r.status_code == 200, r.text
+    assert r.json()["data"]["total_refunded"] in ("0", "0.00")

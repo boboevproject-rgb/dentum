@@ -23,6 +23,7 @@ ROLES: Final[list[str]] = [
     "hygienist",
     "assistant",
     "receptionist",
+    "technician",
 ]
 
 # Roles that imply ``ClinicMembership.is_professional`` at creation.
@@ -56,6 +57,9 @@ ROLE_PERMISSIONS: Final[dict[str, list[str]]] = {
     "hygienist": [],
     "assistant": [],
     "receptionist": [],
+    # Dental technician: works lab orders only; every grant comes from
+    # the lab_orders manifest.
+    "technician": [],
 }
 
 

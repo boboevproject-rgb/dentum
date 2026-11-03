@@ -16,7 +16,7 @@ export interface ClinicMembership {
   id: string
   user_id: string
   clinic_id: string
-  role: 'admin' | 'dentist' | 'hygienist' | 'assistant' | 'receptionist'
+  role: 'admin' | 'dentist' | 'hygienist' | 'assistant' | 'receptionist' | 'technician'
 }
 
 export interface Cabinet {
@@ -110,7 +110,7 @@ export interface MeResponse {
   permissions: string[]
 }
 
-export type UserRole = 'admin' | 'dentist' | 'hygienist' | 'assistant' | 'receptionist'
+export type UserRole = 'admin' | 'dentist' | 'hygienist' | 'assistant' | 'receptionist' | 'technician'
 
 // Professional type — members with `is_professional` on their
 // membership. Usually dentists/hygienists, but any role qualifies
@@ -2286,6 +2286,8 @@ export interface ClinicalNoteLinked {
   id: string | null
   label: string | null
   tooth_number: number | null
+  names?: Record<string, string> | null
+  clinical_type?: string | null
 }
 
 export interface RecentNoteEntry {

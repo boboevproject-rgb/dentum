@@ -68,14 +68,10 @@ const formData = reactive({
 })
 
 // Duration options (in minutes)
-const durationOptions = [
-  { value: 15, label: '15 min' },
-  { value: 30, label: '30 min' },
-  { value: 45, label: '45 min' },
-  { value: 60, label: '60 min' },
-  { value: 90, label: '90 min' },
-  { value: 120, label: '120 min' }
-]
+const durationOptions = [15, 30, 45, 60, 90, 120].map(value => ({
+  value,
+  label: t('common.durationMinutes', { value })
+}))
 const validDurations = durationOptions.map(d => d.value)
 
 // Edit mode check

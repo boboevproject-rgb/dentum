@@ -463,7 +463,7 @@ const categoryOptions = computed(() => [
                     </UBadge>
                   </td>
                   <td class="hidden md:table-cell py-2.5 px-4 text-center text-muted dark:text-subtle">
-                    {{ item.default_duration_minutes ? `${item.default_duration_minutes} min` : '-' }}
+                    {{ item.default_duration_minutes ? t('common.durationMinutes', { value: item.default_duration_minutes }) : '-' }}
                   </td>
                   <td class="py-2.5 px-4 text-end">
                     <div
@@ -635,7 +635,7 @@ const categoryOptions = computed(() => [
                 </UBadge>
               </td>
               <td class="hidden lg:table-cell py-3 px-4 text-center text-muted dark:text-subtle">
-                {{ item.default_duration_minutes ? `${item.default_duration_minutes} min` : '-' }}
+                {{ item.default_duration_minutes ? t('common.durationMinutes', { value: item.default_duration_minutes }) : '-' }}
               </td>
               <td class="py-3 px-4 text-end">
                 <div

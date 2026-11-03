@@ -2,6 +2,7 @@
 import type { TimelineEntry } from '~~/app/types'
 import { resolveSlot } from '~~/app/composables/useModuleSlots'
 import { PERMISSIONS } from '~~/app/config/permissions'
+import { localizeTimelineDescription, localizeTimelineTitle } from '../../utils/timelineText'
 
 interface Props {
   patientId: string
@@ -9,7 +10,7 @@ interface Props {
 
 const props = defineProps<Props>()
 
-const { t, locale } = useI18n()
+const { t, te, locale } = useI18n()
 const { can } = usePermissions()
 
 const patientIdRef = computed(() => props.patientId)
@@ -53,7 +54,7 @@ const showTreatmentSlot = computed(
 
 // ---- Date formatting ---------------------------------------------------
 
-const localeCode = computed(() => (locale.value === 'es' ? 'es-ES' : 'en-US'))
+const localeCode = computed(() => locale.value)
 
 function formatTime(date: Date): string {
   return date.toLocaleTimeString(localeCode.value, { hour: '2-digit', minute: '2-digit' })
@@ -380,13 +381,13 @@ onMounted(() => {
                         isLowImpact(entry.event_type) ? 'text-sm' : ''
                       ]"
                     >
-                      {{ entry.title }}
+                      {{ localizeTimelineTitle(entry.title, t, te) }}
                     </h4>
                     <p
                       v-if="entry.description"
                       class="text-caption text-muted mt-1 whitespace-pre-line"
                     >
-                      {{ entry.description }}
+                      {{ localizeTimelineDescription(entry.description, t) }}
                     </p>
 
                     <!-- Meta chips from event_data -->

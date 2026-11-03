@@ -1,3 +1,4 @@
+import { PERMISSIONS } from '~~/app/config/permissions'
 import type {
   AllergyEntry,
   ApiResponse,
@@ -33,6 +34,7 @@ export function useMedicalHistory(patientId: Ref<string | undefined>) {
   const api = useApi()
   const { t } = useI18n()
   const toast = useToast()
+  const { can } = usePermissions()
 
   const medicalHistory = ref<MedicalHistory>({ ...DEFAULT_MEDICAL_HISTORY })
   const isLoading = ref(false)
@@ -41,6 +43,8 @@ export function useMedicalHistory(patientId: Ref<string | undefined>) {
 
   async function fetchMedicalHistory() {
     if (!patientId.value) return
+    // Reception sees emergency contacts only, not the medical history.
+    if (!can(PERMISSIONS.medicalHistory.read)) return
 
     isLoading.value = true
     error.value = null

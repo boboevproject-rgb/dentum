@@ -81,7 +81,7 @@ class Role(Base, TimestampMixin):
     """A role a clinic member can hold.
 
     ``clinic_id IS NULL`` marks a **system** role (the standard five:
-    admin / dentist / hygienist / assistant / receptionist), shared by all
+    admin / dentist / hygienist / assistant / receptionist / technician), shared by all
     clinics. A non-null ``clinic_id`` is a clinic-created custom role, which
     can be granted permissions directly (issue #46).
     """

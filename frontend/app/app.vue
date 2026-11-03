@@ -31,7 +31,10 @@ useSeoMeta({
 </script>
 
 <template>
-  <UApp :locale="nuxtUILocale">
+  <UApp
+    :locale="nuxtUILocale"
+    :toaster="{ label: t('app.toastLabel') }"
+  >
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>

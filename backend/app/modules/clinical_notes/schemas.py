@@ -151,6 +151,10 @@ class LinkedEntityBrief(BaseModel):
     id: UUID | None = None
     label: str | None = None
     tooth_number: int | None = None
+    # Treatment owners: the catalog ``names`` per locale and the clinical
+    # type, so the client can show the label in the viewer's language.
+    names: dict[str, str] | None = None
+    clinical_type: str | None = None
 
 
 class RecentNoteEntry(BaseModel):

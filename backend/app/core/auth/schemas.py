@@ -157,7 +157,9 @@ class UserCreate(BaseModel):
     password: str | None = Field(default=None, min_length=12)
     first_name: str = Field(min_length=1, max_length=100)
     last_name: str = Field(min_length=1, max_length=100)
-    role: str = Field(description="Role: admin, dentist, hygienist, assistant, receptionist")
+    role: str = Field(
+        description="Role: admin, dentist, hygienist, assistant, receptionist, technician"
+    )
     clinic_id: UUID | None = Field(
         default=None, description="Clinic ID. If not provided, uses admin's current clinic"
     )
@@ -204,7 +206,8 @@ class UserUpdate(BaseModel):
     last_name: str | None = Field(default=None, min_length=1, max_length=100)
     email: EmailStr | None = None
     role: str | None = Field(
-        default=None, description="Role: admin, dentist, hygienist, assistant, receptionist"
+        default=None,
+        description="Role: admin, dentist, hygienist, assistant, receptionist, technician",
     )
     is_active: bool | None = None
     is_professional: bool | None = Field(

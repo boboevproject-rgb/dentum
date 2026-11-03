@@ -15,7 +15,18 @@ const emit = defineEmits<{
   upgrade: [name: string]
   viewDetails: [name: string]
 }>()
-const { t } = useI18n()
+const { t, te } = useI18n()
+
+// Manifest name/summary are English; show the localized catalog entry when
+// one exists (the module code stays visible next to a translated title).
+const title = computed(() => {
+  const key = `moduleCatalog.titles.${props.module.name}`
+  return te(key) ? t(key) : props.module.name
+})
+const summary = computed(() => {
+  const key = `moduleCatalog.summaries.${props.module.name}`
+  return te(key) && t(key) ? t(key) : props.module.summary
+})
 
 const stateRole = computed(() => MODULE_STATE_ROLE[props.module.state] ?? 'neutral')
 const stateLabel = computed(() => t(`settings.modules.state.${camelState(props.module.state)}`))
@@ -52,8 +63,12 @@ const categoryColor = computed<UiColor>(() =>
       <div class="flex-1 min-w-0">
         <div class="flex items-center gap-2 flex-wrap">
           <h3 class="font-semibold text-default">
-            {{ module.name }}
+            {{ title }}
           </h3>
+          <code
+            v-if="title !== module.name"
+            class="text-caption text-subtle"
+          >{{ module.name }}</code>
           <UBadge
             :color="categoryColor"
             variant="subtle"
@@ -69,10 +84,10 @@ const categoryColor = computed<UiColor>(() =>
         </div>
 
         <p
-          v-if="module.summary"
+          v-if="summary"
           class="mt-1 text-sm text-muted line-clamp-2"
         >
-          {{ module.summary }}
+          {{ summary }}
         </p>
 
         <div class="mt-3 flex items-center gap-3 flex-wrap">

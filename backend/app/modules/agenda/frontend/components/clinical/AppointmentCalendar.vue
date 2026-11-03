@@ -762,7 +762,7 @@ const allAppointmentsWithDayIndex = computed(() => {
                   v-for="(seg, segIdx) in blockedSegments.filter(s => s.dateKey === formatLocalDate(day))"
                   :key="`blocked-${day.toISOString()}-${segIdx}`"
                   class="absolute inset-x-0 pointer-events-none z-10 schedules-blocked"
-                  :title="seg.reason || 'Clínica cerrada'"
+                  :title="seg.reason || t('appointments.freeSlots.clinicClosed')"
                   :style="{
                     top: `${seg.startSlot * getSlotHeight()}px`,
                     height: `${(seg.endSlot - seg.startSlot) * getSlotHeight()}px`

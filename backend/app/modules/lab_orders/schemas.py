@@ -9,7 +9,11 @@ from pydantic import BaseModel, ConfigDict, Field
 WorkType = Literal[
     "crown", "bridge", "denture", "implant", "veneer", "orthodontic", "repair", "other"
 ]
-OrderStatus = Literal["sent", "in_progress", "ready", "received", "cancelled"]
+OrderStatus = Literal["sent", "in_progress", "try_in", "ready", "received", "cancelled"]
+# Statuses a technician may move an order *to* from the workbench. Receipt
+# and cancellation stay with the clinic (lab_orders.write).
+TechnicianStatus = Literal["in_progress", "try_in", "ready"]
+EventKind = Literal["status", "comment", "assigned"]
 ImpressionType = Literal["alginate", "pvs_silicone", "digital_scan", "other"]
 ShadeSelection = Literal[
     "A1",
@@ -77,5 +81,32 @@ class LabOrderResponse(BaseModel):
     received_date: date | None
     notes: str | None
     created_by: UUID | None
+    technician_id: UUID | None = None
+    technician_name: str | None = None
     created_at: datetime
     updated_at: datetime
+
+
+class LabOrderTransition(BaseModel):
+    """Technician workbench move; an optional comment travels with it."""
+
+    status: TechnicianStatus
+    comment: str | None = Field(default=None, max_length=2000)
+
+
+class LabOrderCommentCreate(BaseModel):
+    body: str = Field(min_length=1, max_length=2000)
+
+
+class LabOrderEventResponse(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
+
+    id: UUID
+    order_id: UUID
+    author_id: UUID | None
+    author_name: str | None
+    kind: EventKind
+    from_status: OrderStatus | None
+    to_status: OrderStatus | None
+    body: str | None
+    created_at: datetime

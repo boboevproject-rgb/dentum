@@ -195,7 +195,9 @@ export const PERMISSIONS = {
   },
   labOrders: {
     read: 'lab_orders.read',
-    write: 'lab_orders.write'
+    write: 'lab_orders.write',
+    work: 'lab_orders.work',
+    comment: 'lab_orders.comment'
   },
   patientRelationships: {
     read: 'patient_relationships.read',

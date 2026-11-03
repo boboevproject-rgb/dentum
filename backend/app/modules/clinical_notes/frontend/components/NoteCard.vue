@@ -35,7 +35,7 @@ const emit = defineEmits<{
   'open-linked': [linked: ClinicalNoteLinked]
 }>()
 
-const { t, locale } = useI18n()
+const { t, te, locale } = useI18n()
 const { metaFor } = useNoteTypeMeta()
 
 const meta = computed(() => metaFor(props.noteType))
@@ -174,13 +174,17 @@ const linkedLabel = computed(() => {
     return t('clinicalNotes.linked.tooth', { n: linked.tooth_number })
   }
   if (linked.kind === 'treatment') {
-    if (linked.tooth_number && linked.label) {
+    const typeKey = linked.clinical_type ? `odontogram.treatments.types.${linked.clinical_type}` : ''
+    const label = linked.names?.[locale.value]
+      || (typeKey && te(typeKey) ? t(typeKey) : null)
+      || linked.label
+    if (linked.tooth_number && label) {
       return t('clinicalNotes.linked.treatmentOnTooth', {
-        label: linked.label,
+        label,
         n: linked.tooth_number
       })
     }
-    return linked.label || t('clinicalNotes.linked.treatment')
+    return label || t('clinicalNotes.linked.treatment')
   }
   if (linked.kind === 'plan') {
     return linked.label

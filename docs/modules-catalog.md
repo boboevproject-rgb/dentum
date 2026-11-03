@@ -28,7 +28,7 @@ Maintained by `backend/scripts/generate_catalogs.py`. CI fails if a manifest cha
 | `integrations` | 0.1.0 | official | patients | manual | yes | 4 | 0 | 8 | no |
 | `inventory` | 0.2.0 | community | — | manual | yes | 2 | 1 | 0 | yes |
 | `inventory_reorder` | 0.1.0 | official | contacts, inventory, suppliers, supplier_items, purchase_orders | manual | yes | 2 | 0 | 0 | no |
-| `lab_orders` | 0.1.0 | community | patients, contacts | manual | yes | 2 | 1 | 0 | yes |
+| `lab_orders` | 0.2.0 | community | patients, contacts | manual | yes | 4 | 1 | 0 | yes |
 | `leads` | 0.1.0 | community | patients, recalls | manual | yes | 4 | 0 | 0 | yes |
 | `media` | 0.2.0 | official | patients | auto | no | 4 | 7 | 2 | yes |
 | `medical_reference` | 0.4.0 | community | patients_clinical, patients | manual | yes | 2 | 0 | 0 | yes |
@@ -493,7 +493,7 @@ Reorder suggestions from 90-day usage and supplier lead times; generates draft p
 - **Events consumed:** —
 - **Module CLAUDE.md:** [`backend/app/modules/inventory_reorder/CLAUDE.md`](../backend/app/modules/inventory_reorder/CLAUDE.md)
 
-### `lab_orders` — v0.1.0
+### `lab_orders` — v0.2.0
 
 Track lab work orders per patient — from sent to received.
 
@@ -504,7 +504,9 @@ Track lab work orders per patient — from sent to received.
 - **Depends:** `patients`, `contacts`
 - **Frontend layer:** `frontend`
 - **Permissions:**
+  - `lab_orders.comment`
   - `lab_orders.read`
+  - `lab_orders.work`
   - `lab_orders.write`
 - **Events emitted:**
   - `lab_order.status_changed`

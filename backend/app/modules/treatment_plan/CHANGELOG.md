@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- fix(i18n): pipeline row showed the raw budget status code and a hardcoded `€`; now `budget.status.*` and the clinic currency (also in the confirm-plan modal).
+
 - fix(#779): the plan number's year is the clinic's year, not the server's UTC year (New Year's Eve gave the wrong year).
 - fix(#768): every `SELECT … FOR UPDATE` in this module now re-reads the locked row (`populate_existing`). A locking select on a row already in the session returned the cached instance with its pre-lock values. A guard test now enforces this across the tree.
 

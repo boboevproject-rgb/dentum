@@ -19,9 +19,93 @@
     "save": "Enviar trabalho",
     "cancel": "Cancelar",
     "noLabsHint": "Crie primeiro um contacto de laboratório em Contactos.",
-    "workTypes": {"crown":"Coroa","bridge":"Ponte","denture":"Prótese","implant":"Implante","veneer":"Faceta","orthodontic":"Ortodontia","repair":"Reparação","other":"Outro"},
-    "impressionTypes": {"alginate":"Alginato","pvs_silicone":"PVS / silicone","digital_scan":"Digital","other":"Outro"},
-    "statuses": {"sent":"Enviado","in_progress":"Em curso","ready":"Pronto","received":"Recebido","cancelled":"Cancelado"}
+    "workTypes": {
+      "crown": "Coroa",
+      "bridge": "Ponte",
+      "denture": "Prótese",
+      "implant": "Implante",
+      "veneer": "Faceta",
+      "orthodontic": "Ortodontia",
+      "repair": "Reparação",
+      "other": "Outro"
+    },
+    "impressionTypes": {
+      "alginate": "Alginato",
+      "pvs_silicone": "PVS / silicone",
+      "digital_scan": "Digital",
+      "other": "Outro"
+    },
+    "statuses": {
+      "sent": "Enviado",
+      "in_progress": "Em curso",
+      "ready": "Pronto",
+      "received": "Recebido",
+      "cancelled": "Cancelado",
+      "try_in": "Try-in"
+    },
+    "technician": "Technician",
+    "unassigned": "Not assigned",
+    "overdue": "Overdue",
+    "open": "Open",
+    "empty": "No lab orders yet.",
+    "allStatuses": "All statuses",
+    "actions": {
+      "take": "Take into work",
+      "rework": "Back to work",
+      "try_in": "Send for try-in",
+      "ready": "Mark ready",
+      "assignMe": "Assign to me"
+    },
+    "toast": {
+      "moved": "Order status updated",
+      "assigned": "Order assigned to you"
+    },
+    "errors": {
+      "load": "Could not load the order",
+      "action": "Action failed, please try again"
+    },
+    "detail": {
+      "title": "Lab order",
+      "nextStep": "Next step in the lab",
+      "commentHint": "Text typed below is attached to the status change as a comment.",
+      "history": "History and messages",
+      "noHistory": "No activity yet.",
+      "system": "System",
+      "statusChanged": "Status: {from} → {to}",
+      "created": "Order sent to the lab",
+      "assigned": "Took the order",
+      "messagePlaceholder": "Message to the clinic / technician…",
+      "send": "Send"
+    },
+    "workbench": {
+      "title": "Technician workbench",
+      "subtitle": "Orders from the clinic by lab stage. Open a card to update the status or reply.",
+      "search": "Patient, tooth, work type…",
+      "all": "All",
+      "mine": "Mine",
+      "refresh": "Refresh",
+      "empty": "Nothing here",
+      "overdueAlert": "{n} overdue order | {n} overdue orders",
+      "columns": {
+        "sent": "New",
+        "in_progress": "In work",
+        "try_in": "Try-in",
+        "ready": "Ready to collect"
+      }
+    },
+    "dashboard": {
+      "title": "Dental lab",
+      "open": "Open"
+    },
+    "patientFeed": {
+      "title": "Lab work",
+      "due": "Due {date}"
+    },
+    "receivedDate": "Received date"
   },
-  "nav": {"labOrdersForm":"Novo trabalho de laboratório","labOrdersStatus":"Trabalhos de laboratório"}
+  "nav": {
+    "labOrdersForm": "Novo trabalho de laboratório",
+    "labOrdersStatus": "Trabalhos de laboratório",
+    "labWorkbench": "Technician workbench"
+  }
 }

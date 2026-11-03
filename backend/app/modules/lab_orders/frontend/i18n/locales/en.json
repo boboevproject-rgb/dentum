@@ -19,9 +19,93 @@
     "save": "Send order",
     "cancel": "Cancel",
     "noLabsHint": "Create a lab contact first in Contacts.",
-    "workTypes": {"crown":"Crown","bridge":"Bridge","denture":"Denture","implant":"Implant","veneer":"Veneer","orthodontic":"Orthodontic","repair":"Repair","other":"Other"},
-    "impressionTypes": {"alginate":"Alginate","pvs_silicone":"PVS / silicone","digital_scan":"Digital scan","other":"Other"},
-    "statuses": {"sent":"Sent","in_progress":"In progress","ready":"Ready","received":"Received","cancelled":"Cancelled"}
+    "workTypes": {
+      "crown": "Crown",
+      "bridge": "Bridge",
+      "denture": "Denture",
+      "implant": "Implant",
+      "veneer": "Veneer",
+      "orthodontic": "Orthodontic",
+      "repair": "Repair",
+      "other": "Other"
+    },
+    "impressionTypes": {
+      "alginate": "Alginate",
+      "pvs_silicone": "PVS / silicone",
+      "digital_scan": "Digital scan",
+      "other": "Other"
+    },
+    "statuses": {
+      "sent": "Sent",
+      "in_progress": "In progress",
+      "ready": "Ready",
+      "received": "Received",
+      "cancelled": "Cancelled",
+      "try_in": "Try-in"
+    },
+    "technician": "Technician",
+    "unassigned": "Not assigned",
+    "overdue": "Overdue",
+    "open": "Open",
+    "empty": "No lab orders yet.",
+    "allStatuses": "All statuses",
+    "actions": {
+      "take": "Take into work",
+      "rework": "Back to work",
+      "try_in": "Send for try-in",
+      "ready": "Mark ready",
+      "assignMe": "Assign to me"
+    },
+    "toast": {
+      "moved": "Order status updated",
+      "assigned": "Order assigned to you"
+    },
+    "errors": {
+      "load": "Could not load the order",
+      "action": "Action failed, please try again"
+    },
+    "detail": {
+      "title": "Lab order",
+      "nextStep": "Next step in the lab",
+      "commentHint": "Text typed below is attached to the status change as a comment.",
+      "history": "History and messages",
+      "noHistory": "No activity yet.",
+      "system": "System",
+      "statusChanged": "Status: {from} → {to}",
+      "created": "Order sent to the lab",
+      "assigned": "Took the order",
+      "messagePlaceholder": "Message to the clinic / technician…",
+      "send": "Send"
+    },
+    "workbench": {
+      "title": "Technician workbench",
+      "subtitle": "Orders from the clinic by lab stage. Open a card to update the status or reply.",
+      "search": "Patient, tooth, work type…",
+      "all": "All",
+      "mine": "Mine",
+      "refresh": "Refresh",
+      "empty": "Nothing here",
+      "overdueAlert": "{n} overdue order | {n} overdue orders",
+      "columns": {
+        "sent": "New",
+        "in_progress": "In work",
+        "try_in": "Try-in",
+        "ready": "Ready to collect"
+      }
+    },
+    "dashboard": {
+      "title": "Dental lab",
+      "open": "Open"
+    },
+    "patientFeed": {
+      "title": "Lab work",
+      "due": "Due {date}"
+    },
+    "receivedDate": "Received date"
   },
-  "nav": {"labOrdersForm":"New lab order","labOrdersStatus":"Lab orders"}
+  "nav": {
+    "labOrdersForm": "New lab order",
+    "labOrdersStatus": "Lab orders",
+    "labWorkbench": "Technician workbench"
+  }
 }

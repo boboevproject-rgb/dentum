@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- fix(rbac): `assistant` gets `treatments.read` with `read` — the chart is drawn from the treatments list, so assistants hit a 403 on every patient. The chart composables no longer call the API for roles without the permission (reception).
+
 - fix: the "Continue plan" dropdown on the diagnosis banner rendered empty.
   `DiagnosisCTA` bound the Nuxt UI v3 `options` / `option-attribute` /
   `value-attribute` props, which v4 ignores, so with two or more drafts the

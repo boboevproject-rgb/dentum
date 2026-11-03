@@ -105,6 +105,7 @@ USER_DENTIST_ID = UUID("b1eebc99-9c0b-4ef8-bb6d-6bb9bd380a23")
 USER_HYGIENIST_ID = UUID("b2eebc99-9c0b-4ef8-bb6d-6bb9bd380a24")
 USER_ASSISTANT_ID = UUID("b3eebc99-9c0b-4ef8-bb6d-6bb9bd380a25")
 USER_RECEPTIONIST_ID = UUID("b4eebc99-9c0b-4ef8-bb6d-6bb9bd380a26")
+USER_TECHNICIAN_ID = UUID("b5eebc99-9c0b-4ef8-bb6d-6bb9bd380a27")
 
 # Memberships
 MEMBERSHIP_ADMIN_ID = UUID("c0eebc99-9c0b-4ef8-bb6d-6bb9bd380a33")
@@ -112,6 +113,7 @@ MEMBERSHIP_DENTIST_ID = UUID("c1eebc99-9c0b-4ef8-bb6d-6bb9bd380a34")
 MEMBERSHIP_HYGIENIST_ID = UUID("c2eebc99-9c0b-4ef8-bb6d-6bb9bd380a35")
 MEMBERSHIP_ASSISTANT_ID = UUID("c3eebc99-9c0b-4ef8-bb6d-6bb9bd380a36")
 MEMBERSHIP_RECEPTIONIST_ID = UUID("c4eebc99-9c0b-4ef8-bb6d-6bb9bd380a37")
+MEMBERSHIP_TECHNICIAN_ID = UUID("c5eebc99-9c0b-4ef8-bb6d-6bb9bd380a38")
 
 # Patients (15 patients) - Using hex digits only (0-9, a-f)
 PATIENT_IDS = [
@@ -332,6 +334,14 @@ USERS_I18N = {
         "te": {"first_name": "రమ్య", "last_name": "శర్మ"},
         "hi": {"first_name": "पूजा", "last_name": "सिंह"},
     },
+    "technician": {
+        "es": {"first_name": "Javier", "last_name": "Ortega Ruiz"},
+        "en": {"first_name": "David", "last_name": "Miller"},
+        "fr": {"first_name": "Nicolas", "last_name": "Lefèvre"},
+        "ta": {"first_name": "சுரேஷ்", "last_name": "பாலன்"},
+        "te": {"first_name": "శ్రీనివాస్", "last_name": "రెడ్డి"},
+        "hi": {"first_name": "राहुल", "last_name": "मेहता"},
+    },
 }
 
 
@@ -379,6 +389,14 @@ def get_users_data() -> list[dict]:
             "last_name": USERS_I18N["receptionist"][LANG]["last_name"],
             "role": "receptionist",
             "membership_id": MEMBERSHIP_RECEPTIONIST_ID,
+        },
+        {
+            "id": USER_TECHNICIAN_ID,
+            "email": "technician@demo.clinic",
+            "first_name": USERS_I18N["technician"][LANG]["first_name"],
+            "last_name": USERS_I18N["technician"][LANG]["last_name"],
+            "role": "technician",
+            "membership_id": MEMBERSHIP_TECHNICIAN_ID,
         },
     ]
 

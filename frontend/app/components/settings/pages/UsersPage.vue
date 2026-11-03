@@ -19,7 +19,8 @@ const ROLE_ORDER: Record<UserRole, number> = {
   dentist: 1,
   hygienist: 2,
   assistant: 3,
-  receptionist: 4
+  receptionist: 4,
+  technician: 5
 }
 
 const sortedUsers = computed(() => {
@@ -116,7 +117,8 @@ function getRoleBadgeColor(role: UserRole): BadgeColor {
     dentist: 'info',
     hygienist: 'success',
     assistant: 'warning',
-    receptionist: 'neutral'
+    receptionist: 'neutral',
+    technician: 'primary'
   }
   return colors[role] || 'neutral'
 }

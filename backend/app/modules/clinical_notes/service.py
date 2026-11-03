@@ -621,6 +621,8 @@ def _build_linked(
             "id": note.owner_id,
             "label": label,
             "tooth_number": teeth[0] if teeth else None,
+            "names": catalog.names if catalog else None,
+            "clinical_type": treatment.clinical_type if treatment else None,
         }
     if note.owner_type == NOTE_OWNER_PLAN:
         plan = plan_by_id.get(note.owner_id)

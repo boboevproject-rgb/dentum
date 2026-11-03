@@ -214,7 +214,7 @@ export interface IssuedTrendPoint {
 
 export function useReports() {
   const api = useApi()
-  const { t } = useI18n()
+  const { t, te } = useI18n()
 
   // Shared "a report fetch failed" flag (issue #101). The fetchers keep
   // their catch-and-default contract (null / []), so callers alone cannot
@@ -719,15 +719,9 @@ export function useReports() {
   }
 
   function getBudgetStatusLabel(status: string): string {
-    const labels: Record<string, string> = {
-      draft: t('budget.status.draft'),
-      accepted: t('budget.status.accepted'),
-      rejected: t('budget.status.rejected'),
-      completed: t('budget.status.completed'),
-      expired: t('budget.status.expired'),
-      cancelled: t('budget.status.cancelled')
-    }
-    return labels[status] || status
+    // Every budget status (sent, partially_accepted, …) has a label.
+    const key = `budget.status.${status}`
+    return te(key) ? t(key) : status
   }
 
   function getBudgetStatusColor(status: string): string {

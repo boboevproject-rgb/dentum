@@ -82,9 +82,9 @@ function statusLabel(s: Appointment['status']): string {
 }
 
 function blockedLabel(e: BlockedEntry): string {
-  if (e.reason === 'clinic_closed') return t('appointments.freeSlots.clinicClosed', 'Clínica cerrada')
+  if (e.reason === 'clinic_closed') return t('appointments.freeSlots.clinicClosed')
   if (e.reason === 'on_break') return t('appointments.freeSlots.onBreak', 'Pausa')
-  return t('appointments.freeSlots.professionalOff', 'No disponible')
+  return t('appointments.freeSlots.professionalOff')
 }
 
 function freeAriaLabel(e: FreeSlotEntry): string {

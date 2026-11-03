@@ -9,7 +9,7 @@ last_verified_commit: c9c20493
 
 ### `lab_order.status_changed`
 
-Published when PATCH changes an order's status (the same update
+Published when PATCH or the technician `/transition` endpoint changes an order's status (the same update
 auto-stamps `received_date` on `received`). Constant:
 `EventType.LAB_ORDER_STATUS_CHANGED`. Payload:
 

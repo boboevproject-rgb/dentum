@@ -47,6 +47,7 @@ _EXEMPT_BASE: dict[str, Any] = {
     "names": {
         "es": "Exento",
         "en": "Exempt",
+        "ru": "Без НДС",
         "fr": "Exonéré",
         "ta": "விலக்கு",
         "te": "మినహాయింపు",
@@ -63,6 +64,7 @@ VAT_TYPES: list[dict[str, Any]] = [
         "names": {
             "es": "Reducido (10%)",
             "en": "Reduced (10%)",
+            "ru": "Пониженная (10%)",
             "fr": "Réduit (10%)",
             "ta": "குறைக்கப்பட்டது (10%)",
             "te": "తగ్గించిన రేటు (10%)",
@@ -76,6 +78,7 @@ VAT_TYPES: list[dict[str, Any]] = [
         "names": {
             "es": "General (21%)",
             "en": "Standard (21%)",
+            "ru": "Стандартная (21%)",
             "fr": "Général (21%)",
             "ta": "பொதுவானது (21%)",
             "te": "సాధారణ రేటు (21%)",
@@ -106,6 +109,7 @@ CATEGORIES: list[dict[str, Any]] = [
         "names": {
             "es": "Diagnóstico",
             "en": "Diagnostic",
+            "ru": "Диагностика",
             "fr": "Diagnostic",
             "ta": "நோயறிதல்",
             "te": "రోగనిర్ధారణ",
@@ -114,6 +118,7 @@ CATEGORIES: list[dict[str, Any]] = [
         "descriptions": {
             "es": "Servicios de diagnóstico y evaluación",
             "en": "Diagnostic and evaluation services",
+            "ru": "Диагностика и обследование",
             "fr": "Services de diagnostique et d'évaluation",
             "ta": "நோயறிதல் மற்றும் மதிப்பீட்டு சேவைகள்",
             "te": "రోగనిర్ధారణ మరియు పరిశీలన సేవలు",
@@ -127,6 +132,7 @@ CATEGORIES: list[dict[str, Any]] = [
         "names": {
             "es": "Preventivo",
             "en": "Preventive",
+            "ru": "Профилактика",
             "fr": "Préventif",
             "ta": "தடுப்பு",
             "te": "నివారణ",
@@ -135,6 +141,7 @@ CATEGORIES: list[dict[str, Any]] = [
         "descriptions": {
             "es": "Prevención e higiene dental",
             "en": "Preventive and hygiene",
+            "ru": "Профилактика и гигиена",
             "fr": "Prévention et hygiène dentaire",
             "ta": "நோய் தடுப்பு மற்றும் பல் சுகாதாரம்",
             "te": "నివారణ మరియు దంత శుభ్రత",
@@ -148,6 +155,7 @@ CATEGORIES: list[dict[str, Any]] = [
         "names": {
             "es": "Restauradora",
             "en": "Restorative",
+            "ru": "Терапия",
             "fr": "Restauration",
             "ta": "பல் மறுசீரமைப்பு",
             "te": "దంత పునరుద్ధరణ",
@@ -156,6 +164,7 @@ CATEGORIES: list[dict[str, Any]] = [
         "descriptions": {
             "es": "Restauración dental",
             "en": "Dental restoration",
+            "ru": "Реставрация зубов",
             "fr": "Restauration dentaire",
             "ta": "பல் மறுசீரமைப்பு",
             "te": "దంత పునరుద్ధరణ",
@@ -169,6 +178,7 @@ CATEGORIES: list[dict[str, Any]] = [
         "names": {
             "es": "Endodoncia",
             "en": "Endodontics",
+            "ru": "Эндодонтия",
             "fr": "Endodontie",
             "ta": "பல்லுட்புறச் சிகிச்சை",
             "te": "ఎండోడాంటిక్స్ (రూట్ కెనాల్)",
@@ -177,6 +187,7 @@ CATEGORIES: list[dict[str, Any]] = [
         "descriptions": {
             "es": "Tratamientos de conducto radicular",
             "en": "Root canal treatments",
+            "ru": "Лечение корневых каналов",
             "fr": "Traitements des canaux radiculaires",
             "ta": "பல் வேர் சிகிச்சைகள்",
             "te": "రూట్ కెనాల్ చికిత్సలు",
@@ -190,6 +201,7 @@ CATEGORIES: list[dict[str, Any]] = [
         "names": {
             "es": "Periodoncia",
             "en": "Periodontics",
+            "ru": "Пародонтология",
             "fr": "Parodontie",
             "ta": "பல்லைச் சுற்றிய திசு மருத்துவம்",
             "te": "చిగుళ్ళ చికిత్స (periodontics)",
@@ -198,6 +210,7 @@ CATEGORIES: list[dict[str, Any]] = [
         "descriptions": {
             "es": "Encías y tejidos de soporte",
             "en": "Gums and supporting tissues",
+            "ru": "Дёсны и опорные ткани",
             "fr": "Gencives et tissus de soutien",
             "ta": "ஈறுகள் மற்றும் பற்களைத் தாங்கும் திசுக்கள்",
             "te": "చిగుళ్ళు మరియు దంతాలకు ఆధారమైన కణజాలాలు",
@@ -211,6 +224,7 @@ CATEGORIES: list[dict[str, Any]] = [
         "names": {
             "es": "Cirugía",
             "en": "Surgery",
+            "ru": "Хирургия",
             "fr": "Chirurgie",
             "ta": "பல் அறுவைச் சிகிச்சை",
             "te": "దంత శస్త్రచికిత్స",
@@ -219,6 +233,7 @@ CATEGORIES: list[dict[str, Any]] = [
         "descriptions": {
             "es": "Procedimientos quirúrgicos dentales",
             "en": "Dental surgical procedures",
+            "ru": "Хирургические стоматологические процедуры",
             "fr": "Procédures chirurgicales dentaires",
             "ta": "பல் அறுவைச் சிகிச்சை நடைமுறைகள்",
             "te": "దంత శస్త్రచికిత్స ప్రక్రియలు",
@@ -232,6 +247,7 @@ CATEGORIES: list[dict[str, Any]] = [
         "names": {
             "es": "Ortodoncia",
             "en": "Orthodontics",
+            "ru": "Ортодонтия",
             "fr": "Orthodontie",
             "ta": "பற்சீரமைப்பு",
             "te": "ఆర్థోడాంటిక్స్",
@@ -240,6 +256,7 @@ CATEGORIES: list[dict[str, Any]] = [
         "descriptions": {
             "es": "Ortodoncia y alineación",
             "en": "Orthodontics and alignment",
+            "ru": "Ортодонтия и выравнивание",
             "fr": "Orthodontie et alignement",
             "ta": "பற்சீரமைப்பு மற்றும் பற்கள் சீரமைத்தல்",
             "te": "ఆర్థోడాంటిక్స్ మరియు దంతాల అమరిక",
@@ -253,6 +270,7 @@ CATEGORIES: list[dict[str, Any]] = [
         "names": {
             "es": "Estética",
             "en": "Cosmetic",
+            "ru": "Эстетика",
             "fr": "Esthétique",
             "ta": "அழகியல்",
             "te": "సౌందర్య",
@@ -261,6 +279,7 @@ CATEGORIES: list[dict[str, Any]] = [
         "descriptions": {
             "es": "Estética dental",
             "en": "Cosmetic dentistry",
+            "ru": "Эстетическая стоматология",
             "fr": "Esthétique dentaire",
             "ta": "அழகியல் பல் மருத்துவம்",
             "te": "సౌందర్య దంత వైద్యం",
@@ -274,6 +293,7 @@ CATEGORIES: list[dict[str, Any]] = [
         "names": {
             "es": "Prótesis",
             "en": "Prosthetics",
+            "ru": "Протезирование",
             "fr": "Prothèses",
             "ta": "செயற்கைப் பற்கள்",
             "te": "కృత్రిమ దంతాలు (prosthetics)",
@@ -282,6 +302,7 @@ CATEGORIES: list[dict[str, Any]] = [
         "descriptions": {
             "es": "Prótesis y férulas",
             "en": "Prosthetics and splints",
+            "ru": "Протезирование и шины",
             "fr": "Prothèses et gouttières",
             "ta": "செயற்கைப் பற்கள் மற்றும் பல் நிலைப்படுத்தும் கருவிகள்",
             "te": "కృత్రిమ దంతాలు మరియు స్ప్లింట్లు",
@@ -295,6 +316,7 @@ CATEGORIES: list[dict[str, Any]] = [
         "names": {
             "es": "Odontopediatría",
             "en": "Pediatric",
+            "ru": "Детская стоматология",
             "fr": "Odontologie pédiatrique",
             "ta": "குழந்தைகள் பல் மருத்துவம்",
             "te": "పిల్లల దంత వైద్యం",
@@ -303,6 +325,7 @@ CATEGORIES: list[dict[str, Any]] = [
         "descriptions": {
             "es": "Tratamientos para niños",
             "en": "Treatments for children",
+            "ru": "Лечение детей",
             "fr": "Traitements pour enfants",
             "ta": "குழந்தைகளுக்கான மருத்துவ சிகிச்சைகள்",
             "te": "పిల్లల కోసం చికిత్సలు",
@@ -353,6 +376,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Primera Visita",
                 "en": "First Visit",
+                "ru": "Первичный приём",
                 "fr": "Première visite",
                 "ta": "முதல் வருகை",
                 "te": "మొదటి సందర్శన",
@@ -361,6 +385,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "descriptions": {
                 "es": "Consulta inicial con exploración y diagnóstico",
                 "en": "Initial consultation with examination and diagnosis",
+                "ru": "Первичная консультация с осмотром и диагностикой",
                 "fr": "Consultation initiale avec examen et diagnostique",
                 "ta": "பரிசோதனை மற்றும் நோயறிதலுடன் கூடிய ஆரம்ப ஆலோசனை",
                 "te": "పరీక్ష మరియు రోగనిర్ధారణతో మొదటి సంప్రదింపు",
@@ -379,6 +404,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Revisión",
                 "en": "Follow-up",
+                "ru": "Контрольный приём",
                 "fr": "Contrôle",
                 "ta": "தொடர் பரிசோதனை",
                 "te": "ఫాలో-అప్",
@@ -395,6 +421,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Radiografía Periapical",
                 "en": "Periapical X-Ray",
+                "ru": "Прицельный снимок",
                 "fr": "Radiographie périapicale",
                 "ta": "பல் வேர் முனைப்பகுதி எக்ஸ்ரே",
                 "te": "పెరియాపికల్ ఎక్స్-రే (IOPA)",
@@ -411,6 +438,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Radiografía Panorámica",
                 "en": "Panoramic X-Ray",
+                "ru": "Панорамный снимок (ОПТГ)",
                 "fr": "Radiographie panoramique",
                 "ta": "முழு வாய் பனோரமிக் எக்ஸ்ரே",
                 "te": "పనోరమిక్ ఎక్స్-రే (OPG)",
@@ -427,6 +455,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "CBCT (TAC 3D)",
                 "en": "CBCT (3D Scan)",
+                "ru": "КЛКТ (3D-снимок)",
                 "fr": "CBCT (Tomodensitométrie 3D)",
                 "ta": "CBCT (முப்பரிமாண ஸ்கேன்)",
                 "te": "CBCT (3D స్కాన్)",
@@ -443,6 +472,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Estudio Ortodóncico",
                 "en": "Orthodontic Study",
+                "ru": "Ортодонтическое обследование",
                 "fr": "Étude orthodontique",
                 "ta": "பற்சீரமைப்பு ஆய்வு",
                 "te": "ఆర్థోడాంటిక్ అధ్యయనం",
@@ -459,6 +489,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Fotografías intraorales",
                 "en": "Intraoral Photos",
+                "ru": "Внутриротовые фото",
                 "fr": "Photographies intraorales",
                 "ta": "வாயின் உட்புறப் புகைப்படங்கள்",
                 "te": "నోటి లోపలి ఫోటోలు",
@@ -475,6 +506,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Visita de urgencia",
                 "en": "Emergency visit",
+                "ru": "Экстренный приём",
                 "fr": "Visite d'urgence",
                 "ta": "அவசர பல் மருத்துவ வருகை",
                 "te": "అత్యవసర సందర్శన",
@@ -491,6 +523,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Segunda opinión",
                 "en": "Second opinion",
+                "ru": "Второе мнение",
                 "fr": "Deuxième avis",
                 "ta": "இரண்டாவது மருத்துவக் கருத்து",
                 "te": "రెండవ అభిప్రాయం",
@@ -507,6 +540,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Telerradiografía lateral",
                 "en": "Lateral cephalogram",
+                "ru": "Боковая телерентгенограмма",
                 "fr": "Téléradiographie latérale",
                 "ta": "பக்கவாட்டு செபலோமெட்ரிக் எக்ஸ்ரே",
                 "te": "లాటరల్ సెఫలోగ్రామ్",
@@ -526,6 +560,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Limpieza dental",
                 "en": "Dental Cleaning",
+                "ru": "Профессиональная чистка",
                 "fr": "Détartrage",
                 "ta": "பல் சுத்தம்",
                 "te": "దంతాల శుభ్రత",
@@ -534,6 +569,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "descriptions": {
                 "es": "Tartrectomía y pulido",
                 "en": "Scaling and polishing",
+                "ru": "Снятие зубных отложений и полировка",
                 "fr": "Détartrage et polissage",
                 "ta": "பல் கல் அகற்றுதல் மற்றும் மெருகூட்டுதல்",
                 "te": "స్కేలింగ్ మరియు పాలిషింగ్",
@@ -550,6 +586,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Fluorización",
                 "en": "Fluoride Application",
+                "ru": "Фторирование",
                 "fr": "Fluoration",
                 "ta": "ஃப்ளூரைடு சிகிச்சை",
                 "te": "ఫ్లోరైడ్ పూత",
@@ -566,6 +603,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Revisión",
                 "en": "Checkup",
+                "ru": "Осмотр",
                 "fr": "Contrôle",
                 "ta": "பரிசோதனை",
                 "te": "దంత పరీక్ష",
@@ -574,6 +612,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "descriptions": {
                 "es": "Revisión general",
                 "en": "General checkup",
+                "ru": "Общий осмотр",
                 "fr": "Contrôle général",
                 "ta": "பொது பல் பரிசோதனை",
                 "te": "సాధారణ దంత పరీక్ష",
@@ -590,6 +629,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Sellador de fosas y fisuras",
                 "en": "Pit and Fissure Sealant",
+                "ru": "Герметизация фиссур",
                 "fr": "Scellement de sillons et fissures",
                 "ta": "பல் குழிகள் மற்றும் பிளவுகளுக்கான சீலன்ட்",
                 "te": "పిట్ అండ్ ఫిషర్ సీలెంట్",
@@ -610,6 +650,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Instrucciones de higiene",
                 "en": "Oral Hygiene Instruction",
+                "ru": "Обучение гигиене полости рта",
                 "fr": "Instructions d'hygiène buccale",
                 "ta": "வாய்வழி சுகாதார வழிகாட்டுதல்",
                 "te": "నోటి పరిశుభ్రత సూచనలు",
@@ -626,6 +667,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Tartrectomía con curetaje",
                 "en": "Scaling with curettage",
+                "ru": "Снятие отложений с кюретажем",
                 "fr": "Détartrage avec curetage",
                 "ta": "கியூரட்டேஜ் உடன் பல் கல் அகற்றுதல்",
                 "te": "క్యూరెటేజ్‌తో స్కేలింగ్",
@@ -642,6 +684,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Profilaxis infantil",
                 "en": "Pediatric prophylaxis",
+                "ru": "Детская профгигиена",
                 "fr": "Prophylaxie pédiatrique",
                 "ta": "குழந்தைகளுக்கான தடுப்பு பல் சுத்தம்",
                 "te": "పిల్లల దంత శుభ్రత (prophylaxis)",
@@ -664,6 +707,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Obturación composite",
                 "en": "Composite filling",
+                "ru": "Композитная пломба",
                 "fr": "Obturation composite",
                 "ta": "காம்பசிட் பல் நிரப்புதல்",
                 "te": "కాంపోజిట్ ఫిల్లింగ్",
@@ -691,6 +735,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Obturación amalgama",
                 "en": "Amalgam filling",
+                "ru": "Амальгамная пломба",
                 "fr": "Obturation amalgame",
                 "ta": "அமல்கம் பல் நிரப்புதல்",
                 "te": "అమాల్గమ్ ఫిల్లింగ్",
@@ -718,6 +763,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Obturación temporal",
                 "en": "Temporary filling",
+                "ru": "Временная пломба",
                 "fr": "Obturation temporaire",
                 "ta": "தற்காலிக பல் நிரப்புதல்",
                 "te": "తాత్కాలిక ఫిల్లింగ్",
@@ -739,6 +785,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Inlay composite",
                 "en": "Composite inlay",
+                "ru": "Композитная вкладка (inlay)",
                 "fr": "Inlay composite",
                 "ta": "காம்பசிட் இன்லே",
                 "te": "కాంపోజిట్ ఇన్‌లే",
@@ -758,6 +805,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Inlay cerámico",
                 "en": "Ceramic inlay",
+                "ru": "Керамическая вкладка (inlay)",
                 "fr": "Inlay céramique",
                 "ta": "செராமிக் இன்லே",
                 "te": "సిరామిక్ ఇన్‌లే",
@@ -777,6 +825,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Overlay composite",
                 "en": "Composite overlay",
+                "ru": "Композитная накладка (overlay)",
                 "fr": "Overlay composite",
                 "ta": "காம்பசிட் ஓவர்லே",
                 "te": "కాంపోజిట్ ఓవర్‌లే",
@@ -796,6 +845,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Overlay cerámico",
                 "en": "Ceramic overlay",
+                "ru": "Керамическая накладка (overlay)",
                 "fr": "Overlay céramique",
                 "ta": "செராமிக் ஓவர்லே",
                 "te": "సిరామిక్ ఓవర్‌లే",
@@ -816,6 +866,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Carilla composite",
                 "en": "Composite veneer",
+                "ru": "Композитный винир",
                 "fr": "Facette composite",
                 "ta": "காம்பசிட் பல் வெனீர்",
                 "te": "కాంపోజిట్ వెనీర్",
@@ -835,6 +886,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Carilla porcelana",
                 "en": "Porcelain veneer",
+                "ru": "Керамический винир",
                 "fr": "Facette céramique",
                 "ta": "பீங்கான் பல் வெனீர்",
                 "te": "పోర్సిలెయిన్ వెనీర్",
@@ -854,6 +906,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Carilla zirconio",
                 "en": "Zirconia veneer",
+                "ru": "Циркониевый винир",
                 "fr": "Facette zircone",
                 "ta": "சிர்கோனியா பல் வெனீர்",
                 "te": "జిర్కోనియా వెనీర్",
@@ -874,6 +927,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Corona metal-cerámica",
                 "en": "Metal-ceramic crown",
+                "ru": "Металлокерамическая коронка",
                 "fr": "Couronne métal-céramique",
                 "ta": "உலோகம்-செராமிக் பல் கிரீடம்",
                 "te": "మెటల్-సిరామిక్ క్రౌన్",
@@ -892,6 +946,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
                     "labels": {
                         "es": "Toma de medidas",
                         "en": "Impressions",
+                        "ru": "Слепки",
                         "fr": "Prise d'empreinte",
                         "ta": "பல் அளவெடுப்பு",
                         "te": "ఇంప్రెషన్లు (కొలతలు)",
@@ -903,6 +958,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
                     "labels": {
                         "es": "Colocación",
                         "en": "Placement",
+                        "ru": "Установка",
                         "fr": "Pose",
                         "ta": "பொருத்துதல்",
                         "te": "అమర్చడం",
@@ -917,6 +973,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Corona zirconio",
                 "en": "Zirconia crown",
+                "ru": "Циркониевая коронка",
                 "fr": "Couronne zircone",
                 "ta": "சிர்கோனியா பல் கிரீடம்",
                 "te": "జిర్కోనియా క్రౌన్",
@@ -935,6 +992,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
                     "labels": {
                         "es": "Toma de medidas",
                         "en": "Impressions",
+                        "ru": "Слепки",
                         "fr": "Prise d'empreinte",
                         "ta": "பல் அளவெடுப்பு",
                         "te": "ఇంప్రెషన్లు (కొలతలు)",
@@ -946,6 +1004,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
                     "labels": {
                         "es": "Colocación",
                         "en": "Placement",
+                        "ru": "Установка",
                         "fr": "Pose",
                         "ta": "பொருத்துதல்",
                         "te": "అమర్చడం",
@@ -960,6 +1019,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Corona disilicato de litio",
                 "en": "Lithium disilicate crown",
+                "ru": "Коронка из дисиликата лития",
                 "fr": "Couronne disilicate de lithium",
                 "ta": "லித்தியம் டிசிலிகேட் பல் கிரீடம்",
                 "te": "లిథియం డైసిలికేట్ క్రౌన్",
@@ -978,6 +1038,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
                     "labels": {
                         "es": "Toma de medidas",
                         "en": "Impressions",
+                        "ru": "Слепки",
                         "fr": "Prise d'empreinte",
                         "ta": "பல் அளவெடுப்பு",
                         "te": "ఇంప్రెషన్లు (కొలతలు)",
@@ -989,6 +1050,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
                     "labels": {
                         "es": "Colocación",
                         "en": "Placement",
+                        "ru": "Установка",
                         "fr": "Pose",
                         "ta": "பொருத்துதல்",
                         "te": "అమర్చడం",
@@ -1003,6 +1065,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Corona metal",
                 "en": "Metal crown",
+                "ru": "Металлическая коронка",
                 "fr": "Couronne métallique",
                 "ta": "உலோக பல் கிரீடம்",
                 "te": "మెటల్ క్రౌన్",
@@ -1022,6 +1085,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Corona provisional",
                 "en": "Provisional crown",
+                "ru": "Временная коронка",
                 "fr": "Couronne provisoire",
                 "ta": "தற்காலிக பல் கிரீடம்",
                 "te": "తాత్కాలిక క్రౌన్",
@@ -1044,6 +1108,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Corona sobre implante metal-cerámica",
                 "en": "Metal-ceramic crown on implant",
+                "ru": "Металлокерамическая коронка на имплантат",
                 "fr": "Couronne sur implant métal-céramique",
                 "ta": "உள்வைப்பின் மீது உலோகம்-செராமிக் பல் கிரீடம்",
                 "te": "ఇంప్లాంట్‌పై మెటల్-సిరామిక్ క్రౌన్",
@@ -1062,6 +1127,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
                     "labels": {
                         "es": "Toma de medidas",
                         "en": "Impressions",
+                        "ru": "Слепки",
                         "fr": "Prise d'empreinte",
                         "ta": "பல் அளவெடுப்பு",
                         "te": "ఇంప్రెషన్లు (కొలతలు)",
@@ -1073,6 +1139,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
                     "labels": {
                         "es": "Colocación",
                         "en": "Placement",
+                        "ru": "Установка",
                         "fr": "Pose",
                         "ta": "பொருத்துதல்",
                         "te": "అమర్చడం",
@@ -1087,6 +1154,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Corona sobre implante zirconio",
                 "en": "Zirconia crown on implant",
+                "ru": "Циркониевая коронка на имплантат",
                 "fr": "Couronne sur implant zircone",
                 "ta": "உள்வைப்பின் மீது சிர்கோனியா பல் கிரீடம்",
                 "te": "ఇంప్లాంట్‌పై జిర్కోనియా క్రౌన్",
@@ -1105,6 +1173,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
                     "labels": {
                         "es": "Toma de medidas",
                         "en": "Impressions",
+                        "ru": "Слепки",
                         "fr": "Prise d'empreinte",
                         "ta": "பல் அளவெடுப்பு",
                         "te": "ఇంప్రెషన్లు (కొలతలు)",
@@ -1116,6 +1185,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
                     "labels": {
                         "es": "Colocación",
                         "en": "Placement",
+                        "ru": "Установка",
                         "fr": "Pose",
                         "ta": "பொருத்துதல்",
                         "te": "అమర్చడం",
@@ -1130,6 +1200,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Corona provisional sobre implante",
                 "en": "Provisional crown on implant",
+                "ru": "Временная коронка на имплантат",
                 "fr": "Couronne provisoire sur implant",
                 "ta": "உள்வைப்பின் மீது தற்காலிக பல் கிரீடம்",
                 "te": "ఇంప్లాంట్‌పై తాత్కాలిక క్రౌన్",
@@ -1150,6 +1221,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Puente metal-cerámica",
                 "en": "Metal-ceramic bridge",
+                "ru": "Металлокерамический мост",
                 "fr": "Pont métal-céramique",
                 "ta": "உலோகம்-செராமிக் பல் பாலம்",
                 "te": "మెటల్-సిరామిక్ బ్రిడ్జ్",
@@ -1170,6 +1242,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Puente zirconio",
                 "en": "Zirconia bridge",
+                "ru": "Мост из диоксида циркония",
                 "fr": "Pont zircone",
                 "ta": "சிர்கோனியா பல் பாலம்",
                 "te": "జిర్కోనియా బ్రిడ్జ్",
@@ -1190,6 +1263,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Puente Maryland",
                 "en": "Maryland bridge",
+                "ru": "Адгезивный (мэрилендский) мост",
                 "fr": "Pont du Maryland",
                 "ta": "மேரிலாண்ட் பல் பாலம்",
                 "te": "మేరీల్యాండ్ బ్రిడ్జ్",
@@ -1211,6 +1285,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Férula de descarga",
                 "en": "Occlusal splint",
+                "ru": "Окклюзионная шина",
                 "fr": "Gouttière d'occlusion",
                 "ta": "கடிப்பு அழுத்தத் தடுப்பு ஸ்ப்ளிண்ட்",
                 "te": "ఆక్లూజల్ స్ప్లింట్ (నైట్ గార్డ్)",
@@ -1230,6 +1305,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Férula periodontal de contención",
                 "en": "Periodontal retention splint",
+                "ru": "Пародонтальная шина",
                 "fr": "Gouttière de contention parodontale",
                 "ta": "பல் சுற்றுத்திசு நிலைப்படுத்தும் ஸ்ப்ளிண்ட்",
                 "te": "చిగుళ్ళ రిటెన్షన్ స్ప్లింట్",
@@ -1249,6 +1325,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Reconstrucción amplia con composite",
                 "en": "Large composite reconstruction",
+                "ru": "Обширная реставрация композитом",
                 "fr": "Reconstruction extensive en composite",
                 "ta": "காம்பசிட் மூலம் விரிவான பல் மறுசீரமைப்பு",
                 "te": "విస్తృత కాంపోజిట్ పునర్నిర్మాణం",
@@ -1268,6 +1345,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Reparación de obturación",
                 "en": "Filling repair",
+                "ru": "Починка пломбы",
                 "fr": "Réparation d'obturation",
                 "ta": "பல் நிரப்புதல் பழுது சரிசெய்தல்",
                 "te": "ఫిల్లింగ్ మరమ్మత్తు",
@@ -1287,6 +1365,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Recementado de corona",
                 "en": "Crown recementation",
+                "ru": "Повторная фиксация коронки",
                 "fr": "Recimentation de couronne",
                 "ta": "பல் கிரீடத்தை மீண்டும் பொருத்துதல்",
                 "te": "క్రౌన్‌ను మళ్ళీ సిమెంట్ చేయడం",
@@ -1306,6 +1385,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Corona sobre diente endodonciado",
                 "en": "Crown over endodontically treated tooth",
+                "ru": "Коронка на депульпированный зуб",
                 "fr": "Couronne sur dent dévitalisée",
                 "ta": "வேர் சிகிச்சை செய்யப்பட்ட பல்லின் மீது பல் கிரீடம்",
                 "te": "రూట్ కెనాల్ చేసిన దంతంపై క్రౌన్",
@@ -1325,6 +1405,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Pilar de cicatrización",
                 "en": "Healing abutment",
+                "ru": "Формирователь десны",
                 "fr": "Pilier de cicatrisation",
                 "ta": "குணமடைதல் அபட்மென்ட்",
                 "te": "హీలింగ్ అబట్‌మెంట్",
@@ -1344,6 +1425,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Pilar definitivo",
                 "en": "Definitive abutment",
+                "ru": "Постоянный абатмент",
                 "fr": "Pilier définitif",
                 "ta": "நிரந்தர அபட்மென்ட்",
                 "te": "శాశ్వత అబట్‌మెంట్",
@@ -1366,6 +1448,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Endodoncia unirradicular",
                 "en": "Single-root endodontics",
+                "ru": "Эндодонтия однокорневого зуба",
                 "fr": "Endodontie uniradiculaire",
                 "ta": "ஒரு வேர் பல்லுக்கான வேர் சிகிச்சை",
                 "te": "ఒకే వేరు రూట్ కెనాల్",
@@ -1385,6 +1468,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Endodoncia birradicular",
                 "en": "Two-root endodontics",
+                "ru": "Эндодонтия двухкорневого зуба",
                 "fr": "Endodontie biradiculaire",
                 "ta": "இரு வேர் பல்லுக்கான வேர் சிகிச்சை",
                 "te": "రెండు వేర్ల రూట్ కెనాల్",
@@ -1404,6 +1488,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Endodoncia molar",
                 "en": "Molar endodontics",
+                "ru": "Эндодонтия моляра",
                 "fr": "Endodontie molaire",
                 "ta": "கடைவாய்ப்பல்லுக்கான வேர் சிகிச்சை",
                 "te": "దవడ పన్ను (molar) రూట్ కెనాల్",
@@ -1422,6 +1507,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
                     "labels": {
                         "es": "Apertura y conductometría",
                         "en": "Access and length",
+                        "ru": "Доступ и определение длины",
                         "fr": "Ouverture et détermination",
                         "ta": "பல் அணுகல் மற்றும் வேர் கால்வாய் நீள அளவீடு",
                         "te": "యాక్సెస్ మరియు పొడవు కొలత",
@@ -1433,6 +1519,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
                     "labels": {
                         "es": "Limpieza y conformación",
                         "en": "Cleaning and shaping",
+                        "ru": "Очистка и формирование каналов",
                         "fr": "Nettoyage et mise en forme",
                         "ta": "சுத்தம் செய்தல் மற்றும் வடிவமைத்தல்",
                         "te": "శుభ్రపరచడం మరియు ఆకృతి",
@@ -1444,6 +1531,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
                     "labels": {
                         "es": "Obturación",
                         "en": "Obturation",
+                        "ru": "Пломбирование каналов",
                         "fr": "Obturation",
                         "ta": "வேர் கால்வாய் நிரப்புதல்",
                         "te": "ఆబ్ట్యురేషన్ (కెనాల్ నింపడం)",
@@ -1458,6 +1546,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Re-tratamiento endodóncico",
                 "en": "Endodontic retreatment",
+                "ru": "Повторное эндодонтическое лечение",
                 "fr": "Retraitement endodontique",
                 "ta": "மீண்டும் வேர் சிகிச்சை",
                 "te": "రూట్ కెనాల్ పునఃచికిత్స",
@@ -1477,6 +1566,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Perno de fibra",
                 "en": "Fiber post",
+                "ru": "Стекловолоконный штифт",
                 "fr": "Pivot en fibre",
                 "ta": "நார் போஸ்ட்",
                 "te": "ఫైబర్ పోస్ట్",
@@ -1496,6 +1586,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Perno colado",
                 "en": "Cast post",
+                "ru": "Литая культевая вкладка",
                 "fr": "Pivot coulé",
                 "ta": "வார்ப்புப் போஸ்ட்",
                 "te": "కాస్ట్ పోస్ట్",
@@ -1515,6 +1606,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Apertura cameral urgente",
                 "en": "Emergency pulp chamber opening",
+                "ru": "Экстренное вскрытие полости зуба",
                 "fr": "Ouverture d'urgence de la chambre pulpaire",
                 "ta": "அவசர பற்கூழ் அறை திறப்பு",
                 "te": "అత్యవసర పల్ప్ ఛాంబర్ ఓపెనింగ్",
@@ -1534,6 +1626,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Recambio de medicación intraconducto",
                 "en": "Intracanal medication refresh",
+                "ru": "Смена внутриканального лекарства",
                 "fr": "Renouvellement de médicament intraradiculaire",
                 "ta": "வேர் கால்வாயின் உள்ளமை மருந்து மாற்றம்",
                 "te": "కెనాల్ లోపలి మందు మార్పు",
@@ -1553,6 +1646,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Apicoformación",
                 "en": "Apexification",
+                "ru": "Апексификация",
                 "fr": "Apexification",
                 "ta": "வேர் முனை உருவாக்கச் சிகிச்சை",
                 "te": "అపెక్సిఫికేషన్ (apexification)",
@@ -1572,6 +1666,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Endodoncia en pieza temporal",
                 "en": "Endodontics on primary tooth",
+                "ru": "Эндодонтия временного зуба",
                 "fr": "Endodontie sur dent temporaire",
                 "ta": "பால் பல்லுக்கான வேர் சிகிச்சை",
                 "te": "పాల దంతానికి రూట్ కెనాల్",
@@ -1594,6 +1689,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Tartrectomía simple",
                 "en": "Simple scaling",
+                "ru": "Простое снятие зубных отложений",
                 "fr": "Détartrage simple",
                 "ta": "எளிய பல் கல் அகற்றுதல்",
                 "te": "సాధారణ స్కేలింగ్",
@@ -1610,6 +1706,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Raspado y alisado radicular (por cuadrante)",
                 "en": "Root scaling and planing (per quadrant)",
+                "ru": "Закрытый кюретаж (на квадрант)",
                 "fr": "Détartrage et surfaçage radiculaire (par quadrant)",
                 "ta": "ஒவ்வொரு குவாட்ரண்டிற்குமான வேர் சுத்தம் மற்றும் சமப்படுத்துதல்",
                 "te": "రూట్ స్కేలింగ్ మరియు ప్లానింగ్ (ప్రతి క్వాడ్రంట్‌కు)",
@@ -1626,6 +1723,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Cirugía periodontal",
                 "en": "Periodontal surgery",
+                "ru": "Пародонтальная хирургия",
                 "fr": "Chirurgie parodontale",
                 "ta": "பல் சுற்றுத்திசு அறுவைச் சிகிச்சை",
                 "te": "చిగుళ్ళ శస్త్రచికిత్స",
@@ -1642,6 +1740,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Injerto gingival",
                 "en": "Gingival graft",
+                "ru": "Десневой трансплантат",
                 "fr": "Greffe gingivale",
                 "ta": "ஈறு திசு ஒட்டுதல்",
                 "te": "చిగుళ్ళ గ్రాఫ్ట్",
@@ -1658,6 +1757,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Regeneración ósea guiada",
                 "en": "Guided bone regeneration",
+                "ru": "Направленная костная регенерация",
                 "fr": "Régénération osseuse guidée",
                 "ta": "வழிகாட்டப்பட்ட எலும்பு மறுஉருவாக்கம்",
                 "te": "గైడెడ్ బోన్ రీజెనరేషన్",
@@ -1674,6 +1774,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Mantenimiento periodontal",
                 "en": "Periodontal maintenance",
+                "ru": "Поддерживающая пародонтальная терапия",
                 "fr": "Entretien parodontal",
                 "ta": "பல் சுற்றுத்திசு பராமரிப்பு",
                 "te": "చిగుళ్ళ నిర్వహణ",
@@ -1690,6 +1791,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Curetaje por sextante",
                 "en": "Curettage per sextant",
+                "ru": "Кюретаж (на секстант)",
                 "fr": "Curetage par sextant",
                 "ta": "ஒவ்வொரு செக்ஸ்டண்டிற்குமான கியூரட்டேஜ்",
                 "te": "ప్రతి సెక్స్టంట్‌కు క్యూరెటేజ్",
@@ -1706,6 +1808,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Estudio periodontal (sondaje)",
                 "en": "Periodontal probing study",
+                "ru": "Пародонтальное зондирование",
                 "fr": "Étude parodontale (sondage)",
                 "ta": "பல் சுற்றுத்திசு ஆய்வு (ஆய்வுக் கருவி பரிசோதனை)",
                 "te": "చిగుళ్ళ ప్రోబింగ్ అధ్యయనం",
@@ -1722,6 +1825,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Férula de contención post-RAR",
                 "en": "Post-SRP retention splint",
+                "ru": "Шинирование после SRP",
                 "fr": "Gouttière de contention post-DDR",
                 "ta": "வேர் சுத்தம் மற்றும் சமப்படுத்தலுக்குப் பிந்தைய நிலைப்படுத்தும் ஸ்ப்ளிண்ட்",
                 "te": "SRP తర్వాత రిటెన్షన్ స్ప్లింట్",
@@ -1741,6 +1845,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Gingivectomía",
                 "en": "Gingivectomy",
+                "ru": "Гингивэктомия",
                 "fr": "Gingivectomie",
                 "ta": "ஈறு அகற்றுச் சிகிச்சை",
                 "te": "జింజివెక్టమీ (gingivectomy)",
@@ -1757,6 +1862,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Cirugía periodontal resectiva",
                 "en": "Resective periodontal surgery",
+                "ru": "Резективная пародонтальная хирургия",
                 "fr": "Chirurgie parodontale résécative",
                 "ta": "பல் சுற்றுத்திசு அகற்றுச் சிகிச்சை",
                 "te": "రిసెక్టివ్ చిగుళ్ళ శస్త్రచికిత్స",
@@ -1773,6 +1879,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Cirugía periodontal regenerativa",
                 "en": "Regenerative periodontal surgery",
+                "ru": "Регенеративная пародонтальная хирургия",
                 "fr": "Chirurgie parodontale régénérative",
                 "ta": "பல் சுற்றுத்திசு மறுஉருவாக்க அறுவைச் சிகிச்சை",
                 "te": "రీజెనరేటివ్ చిగుళ్ళ శస్త్రచికిత్స",
@@ -1792,6 +1899,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Extracción simple",
                 "en": "Simple extraction",
+                "ru": "Простое удаление",
                 "fr": "Extraction simple",
                 "ta": "எளிய பல் அகற்றுதல்",
                 "te": "సాధారణంగా పన్ను తీయడం",
@@ -1811,6 +1919,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Extracción compleja",
                 "en": "Complex extraction",
+                "ru": "Сложное удаление",
                 "fr": "Extraction compliquée",
                 "ta": "சிக்கலான பல் அகற்றுதல்",
                 "te": "సంక్లిష్టంగా పన్ను తీయడం",
@@ -1830,6 +1939,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Extracción tercer molar",
                 "en": "Wisdom tooth extraction",
+                "ru": "Удаление зуба мудрости",
                 "fr": "Extraction de la dent de sagesse",
                 "ta": "ஞானப்பல் அகற்றுதல்",
                 "te": "జ్ఞాన దంతం తీయడం",
@@ -1849,6 +1959,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Extracción quirúrgica con ostectomía",
                 "en": "Surgical extraction with osteotomy",
+                "ru": "Хирургическое удаление с остеотомией",
                 "fr": "Extraction chirurgicale avec ostéotomie",
                 "ta": "எலும்பு அகற்றலுடன் கூடிய அறுவை பல் அகற்றுதல்",
                 "te": "ఆస్టియోటమీతో శస్త్రచికిత్స ద్వారా పన్ను తీయడం",
@@ -1868,6 +1979,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Implante de titanio",
                 "en": "Titanium implant",
+                "ru": "Титановый имплантат",
                 "fr": "Implant en titane",
                 "ta": "டைட்டானியம் பல் உள்வைப்பு",
                 "te": "టైటానియం ఇంప్లాంట్",
@@ -1886,6 +1998,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
                     "labels": {
                         "es": "Cirugía de implante",
                         "en": "Implant surgery",
+                        "ru": "Имплантация",
                         "fr": "Chirurgie implantaire",
                         "ta": "பல் உள்வைப்பு அறுவைச் சிகிச்சை",
                         "te": "ఇంప్లాంట్ శస్త్రచికిత్స",
@@ -1897,6 +2010,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
                     "labels": {
                         "es": "Pilar de cicatrización",
                         "en": "Healing abutment",
+                        "ru": "Формирователь десны",
                         "fr": "Pilier de cicatrisation",
                         "ta": "குணமடைதல் அபட்மென்ட்",
                         "te": "హీలింగ్ అబట్‌మెంట్",
@@ -1908,6 +2022,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
                     "labels": {
                         "es": "Colocación de corona",
                         "en": "Crown placement",
+                        "ru": "Фиксация коронки",
                         "fr": "Pose de couronne",
                         "ta": "பல் கிரீடம் பொருத்துதல்",
                         "te": "క్రౌన్ అమర్చడం",
@@ -1922,6 +2037,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Implante de zirconio",
                 "en": "Zirconia implant",
+                "ru": "Циркониевый имплантат",
                 "fr": "Implant en zircone",
                 "ta": "சிர்கோனியா பல் உள்வைப்பு",
                 "te": "జిర్కోనియా ఇంప్లాంట్",
@@ -1941,6 +2057,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Elevación de seno",
                 "en": "Sinus lift",
+                "ru": "Синус-лифтинг",
                 "fr": "Élévation sinusienne",
                 "ta": "சைனஸ் உயர்த்துதல் சிகிச்சை",
                 "te": "సైనస్ లిఫ్ట్",
@@ -1957,6 +2074,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Injerto óseo",
                 "en": "Bone graft",
+                "ru": "Костная пластика",
                 "fr": "Greffe osseuse",
                 "ta": "எலும்பு ஒட்டுதல்",
                 "te": "ఎముక గ్రాఫ్ట్",
@@ -1973,6 +2091,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Apicectomía",
                 "en": "Apicoectomy",
+                "ru": "Резекция верхушки корня",
                 "fr": "Apicectomie",
                 "ta": "வேர் முனை அறுவைச் சிகிச்சை",
                 "te": "ఎపికోఎక్టమీ (apicoectomy)",
@@ -1992,6 +2111,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Frenectomía",
                 "en": "Frenectomy",
+                "ru": "Пластика уздечки",
                 "fr": "Frénectomie",
                 "ta": "தசை இணைப்புத் திசு அகற்றுச் சிகிச்சை",
                 "te": "ఫ్రీనెక్టమీ (frenectomy)",
@@ -2008,6 +2128,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Biopsia",
                 "en": "Biopsy",
+                "ru": "Биопсия",
                 "fr": "Biopsie",
                 "ta": "திசுப் பரிசோதனை",
                 "te": "బయాప్సీ (biopsy)",
@@ -2024,6 +2145,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Injerto de tejido conectivo",
                 "en": "Connective tissue graft",
+                "ru": "Пересадка соединительнотканного трансплантата",
                 "fr": "Greffe de tissu conjonctif",
                 "ta": "இணைப்புத் திசு ஒட்டுதல்",
                 "te": "కనెక్టివ్ టిష్యూ గ్రాఫ్ట్",
@@ -2040,6 +2162,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Alargamiento coronario",
                 "en": "Crown lengthening",
+                "ru": "Удлинение клинической коронки",
                 "fr": "Allongement coronaire",
                 "ta": "பல் கிரீட நீட்டிப்பு சிகிச்சை",
                 "te": "క్రౌన్ లెంగ్తెనింగ్",
@@ -2056,6 +2179,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Exéresis de quiste",
                 "en": "Cyst removal",
+                "ru": "Удаление кисты",
                 "fr": "Exérèse de kyste",
                 "ta": "நீர்க்கட்டி அகற்றுதல்",
                 "te": "తిత్తి (cyst) తొలగింపు",
@@ -2075,6 +2199,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Extracción de pieza incluida",
                 "en": "Impacted tooth extraction",
+                "ru": "Удаление ретинированного зуба",
                 "fr": "Extraction de dent incluse",
                 "ta": "புதைந்த பல் அகற்றுதல்",
                 "te": "ఇరుక్కున్న (impacted) పన్ను తీయడం",
@@ -2094,6 +2219,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Regularización ósea",
                 "en": "Bone reshaping",
+                "ru": "Коррекция костного контура",
                 "fr": "Régularisation osseuse",
                 "ta": "எலும்பு வடிவச் சீரமைப்பு",
                 "te": "ఎముక ఆకృతి సవరణ",
@@ -2110,6 +2236,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Plasma rico en plaquetas",
                 "en": "Platelet-rich plasma",
+                "ru": "Обогащённая тромбоцитами плазма (PRP)",
                 "fr": "Plasma riche en plaquettes",
                 "ta": "பிளேட்லெட் நிறைந்த பிளாஸ்மா",
                 "te": "ప్లేట్‌లెట్-రిచ్ ప్లాస్మా (PRP)",
@@ -2126,6 +2253,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Tratamiento de periimplantitis",
                 "en": "Peri-implantitis treatment",
+                "ru": "Лечение периимплантита",
                 "fr": "Traitement de péri-implantite",
                 "ta": "பல் உள்வைப்பைச் சுற்றிய தொற்று சிகிச்சை",
                 "te": "పెరి-ఇంప్లాంటైటిస్ చికిత్స",
@@ -2142,6 +2270,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Aumento óseo vertical",
                 "en": "Vertical bone augmentation",
+                "ru": "Вертикальная аугментация кости",
                 "fr": "Augmentation osseuse verticale",
                 "ta": "செங்குத்து எலும்பு பெருக்கச் சிகிச்சை",
                 "te": "నిలువు ఎముక పెంపు (vertical bone augmentation)",
@@ -2158,6 +2287,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Aumento óseo horizontal",
                 "en": "Horizontal bone augmentation",
+                "ru": "Горизонтальная аугментация кости",
                 "fr": "Augmentation osseuse horizontale",
                 "ta": "கிடைமட்ட எலும்பு பெருக்கச் சிகிச்சை",
                 "te": "అడ్డ ఎముక పెంపు (horizontal bone augmentation)",
@@ -2174,6 +2304,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Elevación de seno cerrada (atraumática)",
                 "en": "Closed sinus lift (atraumatic)",
+                "ru": "Закрытый синус-лифтинг (атравматичный)",
                 "fr": "Élévation sinusienne fermée (atraumatique)",
                 "ta": "மூடிய சைனஸ் உயர்த்துதல் (காயமில்லா முறை)",
                 "te": "క్లోజ్డ్ సైనస్ లిఫ్ట్ (అట్రామాటిక్)",
@@ -2193,6 +2324,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Ortodoncia brackets metálicos",
                 "en": "Metal braces",
+                "ru": "Металлические брекеты",
                 "fr": "Bagues métalliques",
                 "ta": "உலோக பற்சீரமைப்பு பிரேஸ்கள்",
                 "te": "మెటల్ బ్రేసెస్",
@@ -2209,6 +2341,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Ortodoncia brackets estéticos",
                 "en": "Ceramic braces",
+                "ru": "Керамические брекеты",
                 "fr": "Bagues esthétiques",
                 "ta": "செராமிக் பற்சீரமைப்பு பிரேஸ்கள்",
                 "te": "సిరామిక్ బ్రేసెస్",
@@ -2225,6 +2358,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Ortodoncia lingual",
                 "en": "Lingual braces",
+                "ru": "Лингвальные брекеты",
                 "fr": "Bagues linguales",
                 "ta": "நாக்குப்புற பற்சீரமைப்பு பிரேஸ்கள்",
                 "te": "లింగ్వల్ బ్రేసెస్",
@@ -2241,6 +2375,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Invisalign Lite",
                 "en": "Invisalign Lite",
+                "ru": "Invisalign Lite",
                 "fr": "Invisalign Lite",
                 "ta": "Invisalign Lite",
                 "te": "Invisalign Lite",
@@ -2257,6 +2392,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Invisalign Full",
                 "en": "Invisalign Full",
+                "ru": "Invisalign Full",
                 "fr": "Invisalign Full",
                 "ta": "Invisalign Full",
                 "te": "Invisalign Full",
@@ -2273,6 +2409,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Bracket individual (reposición)",
                 "en": "Bracket (replacement)",
+                "ru": "Брекет (замена)",
                 "fr": "Bracket individuel (remplacement)",
                 "ta": "தனிப்பட்ட பிராக்கெட் மாற்றீடு",
                 "te": "బ్రాకెట్ (మార్పు)",
@@ -2292,6 +2429,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Revisión de ortodoncia",
                 "en": "Orthodontic review",
+                "ru": "Ортодонтический контроль",
                 "fr": "Contrôle d'orthodontie",
                 "ta": "பற்சீரமைப்பு தொடர் பரிசோதனை",
                 "te": "ఆర్థోడాంటిక్ సమీక్ష",
@@ -2308,6 +2446,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Retenedor fijo",
                 "en": "Fixed retainer",
+                "ru": "Несъёмный ретейнер",
                 "fr": "Contention fixe",
                 "ta": "நிலையான பற்சீரமைப்பு ரிடெய்னர்",
                 "te": "స్థిర రిటైనర్",
@@ -2327,6 +2466,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Retenedor removible",
                 "en": "Removable retainer",
+                "ru": "Съёмный ретейнер",
                 "fr": "Contention amovible",
                 "ta": "அகற்றக்கூடிய பற்சீரமைப்பு ரிடெய்னர்",
                 "te": "తీసి పెట్టగల రిటైనర్",
@@ -2343,6 +2483,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Ataches de Invisalign",
                 "en": "Invisalign attachments",
+                "ru": "Аттачменты Invisalign",
                 "fr": "Attachements Invisalign",
                 "ta": "Invisalign இணைப்புகள்",
                 "te": "Invisalign అటాచ్‌మెంట్లు",
@@ -2362,6 +2503,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Cementado de bracket",
                 "en": "Bracket bonding",
+                "ru": "Фиксация брекетов",
                 "fr": "Collage de bracket",
                 "ta": "பிராக்கெட் ஒட்டுதல்",
                 "te": "బ్రాకెట్ బాండింగ్",
@@ -2381,6 +2523,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Descementado de brackets",
                 "en": "Bracket removal",
+                "ru": "Снятие брекетов",
                 "fr": "Dépose des bagues",
                 "ta": "பிராக்கெட் அகற்றுதல்",
                 "te": "బ్రాకెట్ తొలగింపు",
@@ -2397,6 +2540,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Separadores ortodóncicos",
                 "en": "Orthodontic separators",
+                "ru": "Ортодонтические сепараторы",
                 "fr": "Séparateurs orthodontiques",
                 "ta": "பற்சீரமைப்பு இடைவெளி பிரிப்பிகள்",
                 "te": "ఆర్థోడాంటిక్ సెపరేటర్లు",
@@ -2413,6 +2557,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Expansor palatino",
                 "en": "Palatal expander",
+                "ru": "Расширитель нёба",
                 "fr": "Dilatateur palatin",
                 "ta": "அண்ணப் பகுதி விரிவாக்கி",
                 "te": "పాలటల్ ఎక్స్‌పాండర్",
@@ -2429,6 +2574,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Microtornillo / anclaje esquelético temporal (TAD)",
                 "en": "Temporary anchorage device (TAD)",
+                "ru": "Ортодонтический минивинт (TAD)",
                 "fr": "Dispositif d'ancrage temporaire (TAD)",
                 "ta": "தற்காலிக எலும்பு நங்கூரக் கருவி (TAD)",
                 "te": "తాత్కాలిక యాంకరేజ్ పరికరం (TAD)",
@@ -2448,6 +2594,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Blanqueamiento ambulatorio",
                 "en": "At-home whitening",
+                "ru": "Домашнее отбеливание",
                 "fr": "Blanchiment à domicile",
                 "ta": "வீட்டிலேயே பற்களை வெண்மைப்படுத்துதல்",
                 "te": "ఇంటి వద్ద దంతాల తెల్లదనం",
@@ -2464,6 +2611,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Blanqueamiento en clínica",
                 "en": "In-office whitening",
+                "ru": "Кабинетное отбеливание",
                 "fr": "Blanchiment en cabinet",
                 "ta": "மருத்துவமனையில் பற்களை வெண்மைப்படுத்துதல்",
                 "te": "క్లినిక్‌లో దంతాల తెల్లదనం",
@@ -2480,6 +2628,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Blanqueamiento combinado",
                 "en": "Combined whitening",
+                "ru": "Комбинированное отбеливание",
                 "fr": "Blanchiment combiné",
                 "ta": "ஒருங்கிணைந்த பற்கள் வெண்மைப்படுத்துதல்",
                 "te": "మిశ్రమ దంతాల తెల్లదనం",
@@ -2496,6 +2645,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Microabrasión",
                 "en": "Microabrasion",
+                "ru": "Микроабразия",
                 "fr": "Microabrasion",
                 "ta": "நுண் உராய்வு சிகிச்சை",
                 "te": "మైక్రోఅబ్రేషన్",
@@ -2512,6 +2662,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Remineralización estética",
                 "en": "Aesthetic remineralization",
+                "ru": "Эстетическая реминерализация",
                 "fr": "Reminéralisation esthétique",
                 "ta": "அழகியல் பல் கனிமமயமாக்கல்",
                 "te": "సౌందర్య రీమినరలైజేషన్",
@@ -2528,6 +2679,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Reconstrucción estética con composite",
                 "en": "Aesthetic composite reconstruction",
+                "ru": "Эстетическая реставрация композитом",
                 "fr": "Reconstruction esthétique en composite",
                 "ta": "காம்பசிட் மூலம் அழகியல் பல் மறுசீரமைப்பு",
                 "te": "సౌందర్య కాంపోజిట్ పునర్నిర్మాణం",
@@ -2544,6 +2696,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Eliminación de pigmentación",
                 "en": "Pigmentation removal",
+                "ru": "Удаление пигментации",
                 "fr": "Élimination des pigmentations",
                 "ta": "பல் நிறமாற்றப் படிவங்களை அகற்றுதல்",
                 "te": "దంతాలపై మరకల తొలగింపు",
@@ -2563,6 +2716,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Prótesis completa superior",
                 "en": "Full upper denture",
+                "ru": "Полный съёмный протез верхней челюсти",
                 "fr": "Prothèse complète supérieure",
                 "ta": "மேல் தாடைக்கான முழு செயற்கைப் பற்கள்",
                 "te": "పై దవడ పూర్తి కట్టుడు పళ్ళు",
@@ -2579,6 +2733,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Prótesis completa inferior",
                 "en": "Full lower denture",
+                "ru": "Полный съёмный протез нижней челюсти",
                 "fr": "Prothèse complète inférieure",
                 "ta": "கீழ் தாடைக்கான முழு செயற்கைப் பற்கள்",
                 "te": "కింది దవడ పూర్తి కట్టుడు పళ్ళు",
@@ -2595,6 +2750,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Prótesis parcial esquelética",
                 "en": "Partial metal denture",
+                "ru": "Частичный бюгельный протез",
                 "fr": "Prothèse partielle squelettique",
                 "ta": "பகுதி உலோக செயற்கைப் பற்கள்",
                 "te": "పాక్షిక మెటల్ కట్టుడు పళ్ళు",
@@ -2611,6 +2767,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Prótesis parcial acrílica",
                 "en": "Partial acrylic denture",
+                "ru": "Частичный акриловый протез",
                 "fr": "Prothèse partielle acrylique",
                 "ta": "பகுதி அக்ரிலிக் செயற்கைப் பற்கள்",
                 "te": "పాక్షిక అక్రిలిక్ కట్టుడు పళ్ళు",
@@ -2627,6 +2784,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Sobredentadura sobre implantes",
                 "en": "Implant-supported overdenture",
+                "ru": "Покрывной протез на имплантатах",
                 "fr": "Surprothèse sur implants",
                 "ta": "பல் உள்வைப்பு ஆதரவு செயற்கைப் பற்கள்",
                 "te": "ఇంప్లాంట్ ఆధారిత ఓవర్‌డెంచర్",
@@ -2643,6 +2801,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Rebasado de prótesis",
                 "en": "Denture reline",
+                "ru": "Перебазировка протеза",
                 "fr": "Rebasage de prothèse",
                 "ta": "செயற்கைப் பல் அடிப்பகுதி மறுசீரமைப்பு",
                 "te": "కట్టుడు పళ్ళ రీలైన్",
@@ -2659,6 +2818,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Reparación de prótesis",
                 "en": "Denture repair",
+                "ru": "Починка протеза",
                 "fr": "Réparation de prothèse",
                 "ta": "செயற்கைப் பல் பழுது சரிசெய்தல்",
                 "te": "కట్టుడు పళ్ళ మరమ్మత్తు",
@@ -2675,6 +2835,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Prótesis provisional removible",
                 "en": "Provisional removable denture",
+                "ru": "Временный съёмный протез",
                 "fr": "Prothèse provisoire amovible",
                 "ta": "தற்காலிக அகற்றக்கூடிய செயற்கைப் பற்கள்",
                 "te": "తాత్కాలిక తీసి పెట్టగల కట్టుడు పళ్ళు",
@@ -2691,6 +2852,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Ajuste oclusal",
                 "en": "Occlusal adjustment",
+                "ru": "Избирательное пришлифовывание",
                 "fr": "Ajustement occlusal",
                 "ta": "கடிப்பு சீரமைப்பு",
                 "te": "ఆక్లూజల్ సర్దుబాటు (కాటు సరిచేయడం)",
@@ -2710,6 +2872,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Fluorización pediátrica",
                 "en": "Pediatric fluoride",
+                "ru": "Детское фторирование",
                 "fr": "Fluoration pédiatrique",
                 "ta": "குழந்தைகளுக்கான ஃப்ளூரைடு சிகிச்சை",
                 "te": "పిల్లలకు ఫ్లోరైడ్",
@@ -2726,6 +2889,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Sellador pediátrico",
                 "en": "Pediatric sealant",
+                "ru": "Детская герметизация фиссур",
                 "fr": "Scellement de sillons pédiatrique",
                 "ta": "குழந்தைகளுக்கான பல் குழி மற்றும் பிளவு சீலன்ட்",
                 "te": "పిల్లలకు సీలెంట్",
@@ -2746,6 +2910,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Pulpotomía",
                 "en": "Pulpotomy",
+                "ru": "Пульпотомия",
                 "fr": "Pulpotomie",
                 "ta": "குழந்தைகளுக்கான பற்கூழ் பகுதி அகற்றுச் சிகிச்சை",
                 "te": "పల్పోటమీ (pulpotomy)",
@@ -2765,6 +2930,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Corona preformada pediátrica",
                 "en": "Stainless steel crown",
+                "ru": "Стальная коронка",
                 "fr": "Couronne préformée pédiatrique",
                 "ta": "குழந்தைகளுக்கான ஸ்டெயின்லெஸ் ஸ்டீல் பல் கிரீடம்",
                 "te": "స్టెయిన్‌లెస్ స్టీల్ క్రౌన్",
@@ -2784,6 +2950,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Mantenedor de espacio simple",
                 "en": "Simple space maintainer",
+                "ru": "Простой ортодонтический держатель места",
                 "fr": "Mainteneur d'espace simple",
                 "ta": "எளிய பல் இடைவெளி பராமரிப்பி",
                 "te": "సాధారణ స్పేస్ మెయింటెయినర్",
@@ -2800,6 +2967,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Mantenedor de espacio compuesto",
                 "en": "Compound space maintainer",
+                "ru": "Сложный ортодонтический держатель места",
                 "fr": "Mainteneur d'espace composé",
                 "ta": "கூட்டு பல் இடைவெளி பராமரிப்பி",
                 "te": "సంయుక్త స్పేస్ మెయింటెయినర్",
@@ -2816,6 +2984,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Extracción de pieza temporal",
                 "en": "Primary tooth extraction",
+                "ru": "Удаление временного зуба",
                 "fr": "Extraction de dent temporaire",
                 "ta": "பால் பல் அகற்றுதல்",
                 "te": "పాల పన్ను తీయడం",
@@ -2835,6 +3004,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Obturación en dentición temporal",
                 "en": "Primary tooth filling",
+                "ru": "Пломба временного зуба",
                 "fr": "Obturation sur dent temporaire",
                 "ta": "பால் பல் நிரப்புதல்",
                 "te": "పాల పన్నుకు ఫిల్లింగ్",
@@ -2862,6 +3032,7 @@ TREATMENTS: dict[str, list[dict[str, Any]]] = {
             "names": {
                 "es": "Pulpectomía pediátrica",
                 "en": "Pediatric pulpectomy",
+                "ru": "Детская пульпэктомия",
                 "fr": "Pulpectomie pédiatrique",
                 "ta": "குழந்தைகளுக்கான பற்கூழ் முழு அகற்றுச் சிகிச்சை",
                 "te": "పిల్లల పల్పెక్టమీ (pulpectomy)",

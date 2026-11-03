@@ -6,6 +6,7 @@
  * be passed explicitly.
  */
 
+import { PERMISSIONS } from '~~/app/config/permissions'
 import type {
   ApiResponse,
   Arch,
@@ -39,6 +40,7 @@ function normalizeTreatment<T extends { status: string }>(treatment: T): T {
 const TREATMENTS_PAGE_SIZE = 100
 
 export function useTreatments() {
+  const { can } = usePermissions()
   const api = useApi()
   const toast = useToast()
   const { t } = useI18n()
@@ -84,6 +86,10 @@ export function useTreatments() {
     patientId: string,
     filters?: { status?: TreatmentStatus, tooth_number?: number, clinical_type?: string }
   ): Promise<void> {
+    if (!can(PERMISSIONS.odontogram.treatmentsRead)) {
+      treatments.value = []
+      return
+    }
     loading.value = true
     try {
       const params = new URLSearchParams()

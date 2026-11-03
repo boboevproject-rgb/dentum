@@ -36,7 +36,7 @@ function humanize(key: string, value: unknown): string {
     if (/^\d{4}-\d\d-\d\dT/.test(value)) return dateTime(value)
     return value
   }
-  if (typeof value === 'number' && key === 'duration_minutes') return `${value} min`
+  if (typeof value === 'number' && key === 'duration_minutes') return t('common.durationMinutes', { value })
   if (typeof value === 'boolean') return value ? '✓' : '✗'
   return String(value)
 }

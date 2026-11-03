@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- fix: `useMedicalHistory` no longer requests the medical history for roles without `medical.read` (reception got a 403 on every patient).
+
 - fix(#793): allergy `severity` accepted any string, and a value such as
   `severe` or `High` was stored and raised no alert, since only `high` and
   `critical` do. Create, update and the medical history bulk replace now answer

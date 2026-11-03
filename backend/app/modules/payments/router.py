@@ -174,9 +174,10 @@ async def reallocate(
 
 
 # --- Refunds ----------------------------------------------------------
+# ``:uuid`` keeps these from shadowing ``/reports/refunds`` (declared later).
 
 
-@router.get("/{payment_id}/refunds", response_model=ApiResponse[list[RefundResponse]])
+@router.get("/{payment_id:uuid}/refunds", response_model=ApiResponse[list[RefundResponse]])
 async def list_refunds(
     payment_id: UUID,
     ctx: Annotated[ClinicContext, Depends(get_clinic_context)],
@@ -189,7 +190,9 @@ async def list_refunds(
     return ApiResponse(data=[RefundResponse.model_validate(r) for r in payment.refunds])
 
 
-@router.post("/{payment_id}/refunds", response_model=ApiResponse[RefundResponse], status_code=201)
+@router.post(
+    "/{payment_id:uuid}/refunds", response_model=ApiResponse[RefundResponse], status_code=201
+)
 async def create_refund(
     payment_id: UUID,
     payload: RefundCreate,

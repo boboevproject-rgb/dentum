@@ -14,7 +14,7 @@ from app.config import settings
 pytestmark = pytest.mark.alembic_roundtrip
 BACKEND_ROOT = Path(__file__).resolve().parents[3]
 ALEMBIC_INI = BACKEND_ROOT / "alembic.ini"
-LAB_ORDER_TABLES = {"lab_orders"}
+LAB_ORDER_TABLES = {"lab_orders", "lab_order_events"}
 
 
 def _alembic(*args: str) -> None:

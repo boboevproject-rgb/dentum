@@ -28,7 +28,8 @@ export function useUsers() {
     { value: 'dentist', label: 'dentist' },
     { value: 'hygienist', label: 'hygienist' },
     { value: 'assistant', label: 'assistant' },
-    { value: 'receptionist', label: 'receptionist' }
+    { value: 'receptionist', label: 'receptionist' },
+    { value: 'technician', label: 'technician' }
   ]
 
   async function fetchUsers(): Promise<void> {

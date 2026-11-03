@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- fix(i18n): the linked-treatment chip on a note showed the server-picked catalog name (Spanish first) or the raw clinical type. The linked brief now also carries `names` and `clinical_type` and the card picks the viewer's language.
+
 - fix(#699): `linkAttachment` / `unlinkAttachment` posted to
   `/api/v1/clinical_notes/attachments`, which does not exist — this
   module exposes only the note-aware read, while media owns the rows and

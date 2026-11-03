@@ -8,6 +8,7 @@
  * - Tooth history
  */
 
+import { PERMISSIONS } from '~~/app/config/permissions'
 import type {
   ApiResponse,
   BulkToothUpdate,
@@ -21,6 +22,7 @@ import type {
 import { ALL_DECIDUOUS_NUMBERS, CONDITION_COLORS } from '~~/app/constants/odontogram'
 
 export function useOdontogramData() {
+  const { can } = usePermissions()
   const api = useApi()
   const toast = useToast()
   const { t } = useI18n()
@@ -72,6 +74,8 @@ export function useOdontogramData() {
 
   /** Fetch odontogram for a patient */
   async function fetchOdontogram(patientId: string): Promise<void> {
+    // Roles without chart access (e.g. reception) see no chart at all.
+    if (!can(PERMISSIONS.odontogram.read)) return
     loading.value = true
     error.value = null
 

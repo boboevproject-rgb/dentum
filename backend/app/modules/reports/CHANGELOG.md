@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- fix(i18n): the budgets-by-status report showed raw codes (`sent`, `partially_accepted`, …); every status now resolves through `budget.status.*`.
+
+- fix(i18n): scheduling report minutes used a hardcoded `min`.
+
 - fix(#689): the numbering-gaps report groups sequentials by the invoice's `fiscal_year` (the year its number was drawn in) instead of the year the draft was created, so one year's counter can no longer fill another year's gap.
 
 - fix: date-only fields (`YYYY-MM-DD`) are parsed as local midnight
