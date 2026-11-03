@@ -11,6 +11,20 @@ export function plPluralRule(choice: number, choicesLength: number): number {
   return few ? 1 : 2
 }
 
+// Russian pluralization: one (1, 21, 31… but not 11), few (2–4, 22–24…
+// but not 12–14), many (everything else). ru.json plural messages carry
+// three segments; a two-segment message degrades to one/other.
+export function ruPluralRule(choice: number, choicesLength: number): number {
+  const n = Math.abs(choice)
+  const mod10 = n % 10
+  const mod100 = n % 100
+  const one = mod10 === 1 && mod100 !== 11
+  if (choicesLength === 2) return one ? 0 : 1
+  if (one) return 0
+  if (mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14)) return 1
+  return 2
+}
+
 // Arabic pluralization (vue-i18n `choice`): CLDR gives Arabic six
 // categories. The rule maps a count to the index vue-i18n uses to pick
 // the pipe segment: 0 → zero, 1 → one, 2 → two, 3-10 → few,

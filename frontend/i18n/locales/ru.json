@@ -1,0 +1,3195 @@
+{
+  "app": {
+    "name": "DentalPin",
+    "tagline": "Управление стоматологической клиникой"
+  },
+  "demo": {
+    "bannerMessage": "Публичная демо-версия — не вводите реальные данные пациентов. База данных периодически сбрасывается.",
+    "bannerDismiss": "Скрыть",
+    "credentialsTitle": "Демо-доступ",
+    "credentialsNote": "Только для ознакомления — показано, потому что это публичная демо-версия.",
+    "copyEmail": "Копировать email",
+    "copyPassword": "Копировать пароль",
+    "copied": "Скопировано в буфер обмена"
+  },
+  "nav": {
+    "dashboard": "Главная",
+    "journal": "Журнал действий",
+    "staffTasks": "Задачи сотрудников",
+    "patients": "Пациенты",
+    "appointments": "Расписание",
+    "recalls": "Повторные визиты",
+    "inventory": "Склад",
+    "treatmentConsumables": "Расходники процедур",
+    "expenses": "Расходы",
+    "labOrdersForm": "Новый заказ в лабораторию",
+    "labOrdersStatus": "Заказы в лабораторию",
+    "treatmentPlans": "Планы лечения",
+    "budgets": "Сметы",
+    "invoices": "Счета",
+    "reports": "Отчёты",
+    "settings": "Настройки",
+    "defaultClinicName": "Клиника",
+    "catalog": "Прайс-лист",
+    "contacts": "Контакты",
+    "menu": "Меню",
+    "openMenu": "Открыть меню",
+    "close": "Закрыть",
+    "sections": {
+      "clinical": "Клиника",
+      "lab": "Лаборатория",
+      "financials": "Финансы",
+      "inventory": "Склад",
+      "practice": "Управление"
+    },
+    "toggleSidebar": "Свернуть/развернуть панель",
+    "documents": "Документы"
+  },
+  "auth": {
+    "login": "Войти",
+    "logout": "Выйти",
+    "email": "Email",
+    "password": "Пароль",
+    "loginButton": "Войти",
+    "loginSuccess": "Вход выполнен",
+    "invalidCredentials": "Неверный email или пароль",
+    "emailRequired": "Введите email",
+    "passwordRequired": "Введите пароль",
+    "emailInvalid": "Некорректный email",
+    "accountInactive": "Ваша учётная запись неактивна. Обратитесь к администратору",
+    "tooManyAttempts": "Слишком много попыток. Повторите через несколько минут",
+    "sessionExpired": "Сеанс истёк",
+    "networkError": "Не удалось подключиться к серверу",
+    "serverError": "Сервер недоступен. Повторите попытку через несколько минут",
+    "unknownError": "Непредвиденная ошибка. Повторите попытку"
+  },
+  "setup": {
+    "title": "Первая настройка",
+    "subtitle": "Создайте учётную запись и клинику. Вы начнёте работать через пару минут.",
+    "stepAccount": "Учётная запись администратора",
+    "stepClinic": "Данные клиники",
+    "firstName": "Имя",
+    "lastName": "Фамилия",
+    "email": "Email",
+    "password": "Пароль",
+    "passwordConfirm": "Повторите пароль",
+    "passwordHint": "Не менее 8 символов, буквы и цифры",
+    "clinicName": "Название клиники",
+    "taxId": "ИНН",
+    "next": "Далее",
+    "back": "Назад",
+    "submit": "Создать клинику",
+    "success": "Всё готово! Добро пожаловать в DentalPin",
+    "firstNameRequired": "Введите имя",
+    "lastNameRequired": "Введите фамилию",
+    "emailRequired": "Введите email",
+    "emailInvalid": "Некорректный email",
+    "passwordRequired": "Введите пароль",
+    "passwordTooShort": "Пароль должен содержать не менее 12 символов",
+    "passwordWeak": "Пароль должен содержать буквы и цифры",
+    "passwordMismatch": "Пароли не совпадают",
+    "clinicNameRequired": "Введите название клиники",
+    "taxIdRequired": "Введите ИНН",
+    "alreadyInitialized": "Система уже настроена. Войдите в систему.",
+    "error": "Не удалось завершить настройку. Повторите попытку",
+    "stepOf": "Шаг {current} из {total}",
+    "country": "Страна",
+    "countryHelp": "Определяет налоги, валюту и часовой пояс",
+    "countryRequired": "Выберите страну",
+    "taxIdGeneric": "ИНН",
+    "taxIdLooksInvalid": "Похоже, это некорректный NIF/CIF. Перепроверьте его перед выставлением счетов.",
+    "taxIdFormat": "Неверный формат (пример: {example})",
+    "timezoneRequired": "Выберите часовой пояс",
+    "currencyRequired": "Выберите валюту",
+    "derivedSettings": "Часовой пояс и валюта",
+    "willSeed": "Мы создадим прайс-лист процедур, ставки НДС, серию счетов, один кабинет и расписание с понедельника по пятницу. Всё можно изменить позже.",
+    "willSuggestVerifactu": "Позже мы предложим включить VeriFactu.",
+    "invalidData": "Проверьте данные: одно из полей заполнено неверно.",
+    "attendPatientsMyself": "Я сам(а) веду приём",
+    "attendPatientsMyselfHelp": "Вы будете доступны для записи как специалист. Это можно изменить позже в настройках команды.",
+    "addressTitle": "Адрес клиники",
+    "addressOptional": "необязательно"
+  },
+  "onboarding": {
+    "title": "Начало работы",
+    "progress": "Выполнено шагов: {done} из {total}",
+    "configure": "Настроить",
+    "skip": "Пропустить",
+    "unskip": "Отменить",
+    "dismiss": "Скрыть",
+    "guidedMode": "Режим подсказок",
+    "optional": "Необязательно ({count})",
+    "stepOf": "Шаг {current} из {total}",
+    "next": "Далее",
+    "finish": "Готово",
+    "exit": "Выйти",
+    "completedTitle": "Ваша клиника готова!",
+    "completedDescription": "Настройка завершена. Можно работать в обычном режиме.",
+    "guidedDoneTitle": "Обзор завершён",
+    "guidedDoneDescription": "Незавершённых шагов не осталось.",
+    "items": {
+      "team": {
+        "label": "Ваша команда",
+        "description": "Добавьте специалистов, которые ведут приём, или отметьте себя как специалиста, если работаете один."
+      },
+      "verifactu": {
+        "label": "Включить VeriFactu",
+        "description": "Обязательно в Испании для выставления счетов, действительных для налоговой службы (AEAT)."
+      }
+    }
+  },
+  "actions": {
+    "edit": "Изменить",
+    "change": "Сменить",
+    "cancel": "Отмена",
+    "save": "Сохранить",
+    "create": "Создать",
+    "delete": "Удалить",
+    "close": "Закрыть",
+    "remove": "Убрать"
+  },
+  "attachments": {
+    "linkError": "Ошибка при привязке вложения"
+  },
+  "patients": {
+    "title": "Пациенты",
+    "create": "Новый пациент",
+    "edit": "Изменить пациента",
+    "search": "Поиск пациента...",
+    "searchPlaceholder": "Имя или телефон",
+    "noResults": "Пациенты не найдены",
+    "empty": "Нет зарегистрированных пациентов",
+    "emptyAction": "Создать первого пациента",
+    "name": "Имя",
+    "firstName": "Имя",
+    "lastName": "Фамилия",
+    "phone": "Телефон",
+    "email": "Email",
+    "dateOfBirth": "Дата рождения",
+    "notes": "Заметки",
+    "created": "Пациент создан",
+    "updated": "Пациент обновлён",
+    "archived": "Пациент в архиве",
+    "notFound": "Пациент не найден",
+    "archiveConfirm": "Отправить пациента {name} в архив?",
+    "archiveDescription": "Пациент будет скрыт из поиска. Существующие записи на приём удалены не будут.",
+    "cancel": "Отмена",
+    "archive": "В архив",
+    "dangerZone": {
+      "title": "Опасная зона",
+      "archiveHelp": "Отправьте пациента в архив, чтобы скрыть его из поиска. Записи на приём и история сохранятся."
+    },
+    "billingSection": "Платёжные данные",
+    "billingSectionHint": "Эти данные автоматически подставляются при создании счетов для этого пациента.",
+    "editingBillingForInvoice": "Редактирование платёжных данных. Изменения отразятся в счёте.",
+    "returnToInvoice": "Вернуться к счёту",
+    "billingName": "Плательщик",
+    "billingNamePlaceholder": "Имя или организация для счетов",
+    "billingTaxId": "ИНН",
+    "billingEmail": "Email для счетов",
+    "billingAddress": "Адрес плательщика",
+    "billingComplete": "Заполнено",
+    "billingIncomplete": "Не заполнено",
+    "demographics": "Личные данные",
+    "nationalId": "Документ, удостоверяющий личность",
+    "nationalIdType": "Тип документа",
+    "passport": "Паспорт",
+    "profession": "Профессия",
+    "workplace": "Место работы",
+    "years": "лет",
+    "status": {
+      "active": "Активен",
+      "archived": "В архиве"
+    },
+    "filters": {
+      "status": "Статус",
+      "city": "Город",
+      "withDebt": "С долгом",
+      "doNotContact": "Не беспокоить",
+      "doNotContactOnly": "Только «не беспокоить»",
+      "doNotContactOnlyContactable": "Только доступные для связи"
+    },
+    "columns": {
+      "city": "Город",
+      "contact": "Контакты",
+      "debt": "Долг"
+    },
+    "sort": {
+      "lastVisit": "Последний визит",
+      "lastName": "Фамилия",
+      "firstName": "Имя",
+      "createdAt": "Дата регистрации",
+      "updatedAt": "Недавно изменённые"
+    },
+    "doNotContact": {
+      "label": "Не беспокоить",
+      "hint": "Пациент будет исключён из списка обзвона и автоматических рассылок",
+      "badge": "Не беспокоить"
+    },
+    "gender": {
+      "label": "Пол",
+      "select": "Выберите пол",
+      "male": "Мужской",
+      "female": "Женский",
+      "other": "Другой",
+      "preferNotSay": "Не указывать"
+    },
+    "emergencyContact": {
+      "title": "Контакт на случай экстренной связи",
+      "hasContact": "Есть контакт для экстренной связи",
+      "noContact": "Контакт для экстренной связи не указан",
+      "name": "ФИО",
+      "namePlaceholder": "Имя контакта",
+      "relationship": "Степень родства",
+      "relationshipPlaceholder": "Выберите степень родства",
+      "phone": "Телефон",
+      "phonePlaceholder": "Телефон контакта",
+      "email": "Email",
+      "emailPlaceholder": "Email контакта",
+      "isLegalGuardian": "Является законным представителем",
+      "remove": "Удалить контакт",
+      "relationships": {
+        "spouse": "Супруг(а)",
+        "parent": "Родитель",
+        "child": "Ребёнок",
+        "sibling": "Брат/сестра",
+        "friend": "Друг",
+        "other": "Другое"
+      }
+    },
+    "medicalHistory": {
+      "title": "Анамнез",
+      "save": "Сохранить анамнез",
+      "fetchError": "Ошибка загрузки анамнеза",
+      "saveSuccess": "Анамнез сохранён",
+      "saveError": "Ошибка сохранения анамнеза",
+      "allergies": "Аллергии",
+      "allergiesCount": "{n} аллергия | {n} аллергии | {n} аллергий",
+      "onAnticoagulants": "Принимает антикоагулянты",
+      "allergyName": "Название аллергии",
+      "type": "Тип",
+      "allergyTypes": {
+        "drug": "Лекарственная",
+        "food": "Пищевая",
+        "material": "На материалы",
+        "environmental": "Бытовая"
+      },
+      "severity": {
+        "low": "Лёгкая",
+        "medium": "Средняя",
+        "high": "Тяжёлая",
+        "critical": "Критическая"
+      },
+      "medications": "Препараты",
+      "medicationName": "Название препарата",
+      "dosage": "Дозировка",
+      "frequency": "Частота приёма",
+      "systemicDiseases": "Системные заболевания",
+      "diseaseName": "Название заболевания",
+      "diseaseTypes": {
+        "cardiovascular": "Сердечно-сосудистые",
+        "respiratory": "Дыхательной системы",
+        "endocrine": "Эндокринные",
+        "neurological": "Неврологические",
+        "autoimmune": "Аутоиммунные",
+        "other": "Другие"
+      },
+      "critical": "Критическое",
+      "controlled": "Под контролем",
+      "notControlled": "Не контролируется",
+      "specialConditions": "Особые состояния",
+      "pregnant": "Беременность",
+      "pregnancyWeek": "Неделя беременности",
+      "lactating": "Грудное вскармливание",
+      "anticoagulants": "Антикоагулянты",
+      "anticoagulantMedication": "Антикоагулянтный препарат",
+      "inrValue": "Значение МНО",
+      "anesthesiaReaction": "Реакция на анестезию",
+      "anesthesiaReactionDetails": "Описание реакции",
+      "bruxism": "Бруксизм",
+      "lifestyle": "Образ жизни",
+      "smoker": "Курит",
+      "smokingFrequency": "Сигарет в день",
+      "alcoholConsumption": "Употребление алкоголя",
+      "alcohol": {
+        "none": "Нет",
+        "occasional": "Изредка",
+        "moderate": "Умеренно",
+        "heavy": "Часто"
+      },
+      "surgicalHistory": "Перенесённые операции",
+      "procedure": "Операция"
+    },
+    "timeline": {
+      "empty": "Действий пока нет",
+      "emptyFiltered": "В этой категории нет событий",
+      "clearFilter": "Показать все действия",
+      "endOfTimeline": "Конец ленты",
+      "totalEntries": "{count} запись | {count} записи | {count} записей",
+      "groups": {
+        "today": "Сегодня",
+        "yesterday": "Вчера",
+        "thisWeek": "На этой неделе",
+        "thisMonth": "В этом месяце",
+        "earlier": "Ранее"
+      },
+      "author": "автор: {name}",
+      "meta": {
+        "cabinet": "Кабинет {name}",
+        "teeth": "Зубы: {list}",
+        "total": "Итого: {amount}",
+        "number": "№ {value}",
+        "via": "Через {channel}",
+        "template": "Шаблон: {key}",
+        "docType": "Тип: {type}"
+      },
+      "categories": {
+        "all": "Все",
+        "visit": "Визиты",
+        "treatment": "Лечение",
+        "financial": "Финансы",
+        "communication": "Коммуникации",
+        "medical": "Анамнез",
+        "document": "Документы",
+        "note": "Клинические записи"
+      }
+    },
+    "alerts": {
+      "title": "{count} предупреждение | {count} предупреждения | {count} предупреждений",
+      "label": "Клинические предупреждения"
+    },
+    "editDemographics": "Изменить личные данные",
+    "editEmergencyContact": "Изменить контакт для экстренной связи",
+    "editBilling": "Изменить платёжные данные",
+    "editMedicalHistory": "Изменить анамнез",
+    "medicalSnapshot": {
+      "title": "Медицинская информация",
+      "allergiesLabel": "Аллергии",
+      "allergiesEmpty": "Аллергий нет",
+      "allergiesNotReviewed": "Анамнез не заполнен",
+      "completeHistory": "Заполнить анамнез",
+      "reviewedOn": "Проверено {date}",
+      "conditions": {
+        "pregnantWeek": "Беременность · {week} нед.",
+        "anticoagulantInr": "Антикоагулянты · МНО {inr}",
+        "smokerFreq": "Курит · {freq}/день"
+      }
+    },
+    "personalInfo": {
+      "title": "Личные данные",
+      "ageLabel": "{age} лет",
+      "birthWithAge": "{date} ({age} лет)"
+    },
+    "contactInfo": {
+      "title": "Контакты",
+      "copyPhone": "Копировать телефон",
+      "copyEmail": "Копировать email",
+      "address": "Адрес",
+      "addEmergency": "Добавить контакт для экстренной связи",
+      "addGuardian": "Добавить законного представителя",
+      "guardianRequired": "Нужен законный представитель"
+    },
+    "administrative": {
+      "title": "Административное"
+    },
+    "header": {
+      "ariaLabel": "Заголовок карточки пациента"
+    },
+    "quickActions": {
+      "ariaLabel": "Быстрые действия с пациентом"
+    },
+    "onboarding": {
+      "label": "Создайте первого пациента",
+      "description": "Самый быстрый способ увидеть карточку, расписание и сметы в работе."
+    },
+    "editLegalGuardian": "Изменить законного представителя",
+    "legalGuardian": {
+      "title": "Законный представитель",
+      "hasGuardian": "Есть законный представитель",
+      "noGuardian": "Законный представитель не указан",
+      "name": "ФИО",
+      "namePlaceholder": "Имя представителя",
+      "dni": "Номер документа",
+      "dniPlaceholder": "Документ, удостоверяющий личность",
+      "relationship": "Степень родства",
+      "relationshipPlaceholder": "Выберите степень родства",
+      "relationships": {
+        "parent": "Родитель",
+        "legal_tutor": "Назначенный опекун",
+        "grandparent": "Бабушка/дедушка",
+        "other": "Другое"
+      },
+      "phone": "Телефон",
+      "phonePlaceholder": "Телефон представителя",
+      "email": "Email",
+      "emailPlaceholder": "Email представителя",
+      "address": "Адрес",
+      "addressPlaceholder": "Адрес представителя",
+      "notes": "Заметки",
+      "notesPlaceholder": "Дополнительные комментарии...",
+      "remove": "Удалить представителя"
+    }
+  },
+  "patientDetail": {
+    "tabs": {
+      "summary": "Сводка",
+      "info": "Данные",
+      "clinical": "Клиника",
+      "odontogram": "Зубная формула",
+      "administration": "Администрирование",
+      "history": "История",
+      "timeline": "Журнал",
+      "appointments": "Приёмы",
+      "budgets": "Сметы",
+      "billing": "Счета",
+      "payments": "Оплаты",
+      "documents": "Документы",
+      "gallery": "Галерея"
+    },
+    "historyPlaceholder": "Клинические записи будут доступны в следующей версии",
+    "noAppointments": "У пациента нет записей на приём",
+    "scheduleAppointment": "Записать на приём",
+    "noBudgets": "У пациента нет смет",
+    "createBudget": "Создать смету",
+    "viewAllBudgets": "Все сметы",
+    "activePlan": "Активный план",
+    "noActivePlan": "Нет активного плана",
+    "viewPlan": "Открыть план",
+    "createPlan": "Создать план",
+    "nextAppointment": "Следующий приём",
+    "noUpcomingAppointments": "Предстоящих приёмов нет",
+    "openAppointment": "Открыть приём",
+    "lastVisit": "Последний визит",
+    "neverVisited": "Ещё не был",
+    "reschedule": "Перенести",
+    "balance": "Баланс",
+    "collect": "Принять оплату",
+    "viewLedger": "Открыть историю расчётов",
+    "noPayments": "Движений нет",
+    "diagnoses": "Диагнозы",
+    "pending": "не вылечено",
+    "noDiagnoses": "Нет нерешённых находок",
+    "openOdontogram": "Открыть зубную формулу",
+    "medicalHistory": "Анамнез",
+    "completeMedicalHistory": "Анамнез не заполнен. Заполните его, чтобы внести аллергии, заболевания и препараты.",
+    "editMedicalHistory": "Изменить анамнез",
+    "quickActions": "Быстрые действия",
+    "edit": "Изменить",
+    "editPatient": "Изменить пациента",
+    "noSummaryCards": "В сводке нет подключённых модулей.",
+    "actions": {
+      "label": "Действия",
+      "newAppointment": "Приём",
+      "collect": "Оплата",
+      "newNote": "Запись",
+      "newBudget": "Смета",
+      "uploadDocument": "Документ"
+    }
+  },
+  "patientBilling": {
+    "totalBudgeted": "Всего по сметам",
+    "workInProgress": "Работы в процессе",
+    "workCompleted": "Выполненные работы",
+    "totalInvoiced": "Выставлено счетов",
+    "totalPaid": "Оплачено",
+    "balancePending": "Задолженность",
+    "invoices": "Счета",
+    "createInvoice": "Создать счёт",
+    "noInvoices": "У пациента нет счетов",
+    "pending": "Ожидает оплаты",
+    "totalDiscount": "скидок"
+  },
+  "odontogram": {
+    "title": "Зубная формула",
+    "tooth": "Зуб",
+    "globals": {
+      "category": "Вся полость рта",
+      "applied": "{name} добавлено в план",
+      "archPickerTitle": "Какая челюсть для «{name}»?",
+      "upperArch": "Верхняя челюсть",
+      "lowerArch": "Нижняя челюсть",
+      "searchPlaceholder": "Поиск процедуры…"
+    },
+    "selectCondition": "Выберите состояние",
+    "readOnly": "Только просмотр",
+    "legend": "Легенда",
+    "statusLegend": "Статус лечения",
+    "toothPosition": "Положение зуба",
+    "displaced": "Смещён",
+    "rotated": "Повёрнут",
+    "dentition": {
+      "permanent": "Постоянные",
+      "deciduous": "Молочные",
+      "toggle": "Сменить прикус"
+    },
+    "quadrants": {
+      "upper": "Верхняя челюсть",
+      "lower": "Нижняя челюсть",
+      "upperRight": "Верхняя правая",
+      "upperLeft": "Верхняя левая",
+      "lowerRight": "Нижняя правая",
+      "lowerLeft": "Нижняя левая"
+    },
+    "surfaces": {
+      "M": "Медиальная",
+      "D": "Дистальная",
+      "O": "Окклюзионная",
+      "V": "Вестибулярная",
+      "L": "Язычная"
+    },
+    "conditions": {
+      "healthy": "Здоров",
+      "caries": "Кариес",
+      "filling": "Пломба",
+      "crown": "Коронка",
+      "missing": "Отсутствует",
+      "root_canal": "Лечение каналов",
+      "implant": "Имплантат",
+      "bridge_pontic": "Промежуточная часть моста",
+      "bridge_abutment": "Опорный зуб моста",
+      "extraction_indicated": "Показано удаление",
+      "sealant": "Герметизация фиссур",
+      "fracture": "Перелом"
+    },
+    "history": {
+      "title": "История изменений",
+      "noChanges": "Изменений нет",
+      "changedBy": "Изменил",
+      "changeTypes": {
+        "created": "Создано",
+        "general_condition": "Общее состояние",
+        "surface_update": "Изменение поверхности",
+        "note": "Заметка"
+      }
+    },
+    "messages": {
+      "updated": "Зубная формула обновлена",
+      "error": "Ошибка обновления зубной формулы",
+      "loadError": "Не удалось загрузить зубную формулу"
+    },
+    "actions": {
+      "save": "Сохранить",
+      "reset": "Сбросить",
+      "print": "Печать"
+    },
+    "status": {
+      "existing": "Имеется",
+      "planned": "Запланировано"
+    },
+    "treatments": {
+      "title": "Лечение",
+      "addTreatment": "Добавить процедуру",
+      "selectStatus": "Выберите статус",
+      "noTreatments": "Процедур нет",
+      "markPerformed": "Отметить выполненной",
+      "categories": {
+        "common": "Частые",
+        "restorative": "Реставрация",
+        "other": "Прочее",
+        "diagnostico": "Диагностика",
+        "restauradora": "Реставрация",
+        "cirugia": "Хирургия",
+        "endodoncia": "Эндодонтия",
+        "ortodoncia": "Ортодонтия"
+      },
+      "types": {
+        "pulpitis": "Пульпит",
+        "caries": "Кариес",
+        "incipient_caries": "Начальный кариес",
+        "pigmentation": "Пигментация",
+        "fracture": "Перелом",
+        "missing": "Отсутствует",
+        "periapical_small": "Периапикальный очаг <2 мм",
+        "periapical_medium": "Периапикальный очаг 2–4 мм",
+        "periapical_large": "Периапикальный очаг >4 мм",
+        "rotated": "Повёрнут",
+        "displaced": "Смещён",
+        "unerupted": "Не прорезался",
+        "filling": "Пломба",
+        "filling_composite": "Композитная пломба",
+        "filling_amalgam": "Амальгамная пломба",
+        "filling_temporary": "Временная пломба",
+        "sealant": "Герметизация фиссур",
+        "veneer": "Винир",
+        "inlay": "Вкладка",
+        "overlay": "Накладка",
+        "crown": "Коронка",
+        "crown_on_implant": "Коронка на имплантате",
+        "provisional_crown_on_implant": "Временная коронка на имплантате",
+        "pontic": "Промежуточная часть",
+        "bridge_pontic": "Промежуточная часть моста",
+        "bridge_abutment": "Опорный зуб моста",
+        "extraction": "Удаление",
+        "implant": "Имплантат",
+        "apicoectomy": "Апикоэктомия",
+        "root_canal": "Лечение каналов",
+        "root_canal_full": "Каналы запломбированы полностью",
+        "root_canal_two_thirds": "Каналы запломбированы на 2/3",
+        "root_canal_half": "Каналы запломбированы на 1/2",
+        "root_canal_overfill": "Выведение материала за верхушку",
+        "post": "Штифт",
+        "bracket": "Брекет",
+        "tube": "Трубка",
+        "band": "Кольцо",
+        "attachment": "Аттачмент",
+        "retainer": "Ретейнер",
+        "rotate": "Повёрнут",
+        "displace": "Смещён",
+        "splint": "Шина",
+        "migrated": "Общая процедура",
+        "other": "Другая процедура"
+      },
+      "treatmentAdded": "Процедура добавлена",
+      "treatmentPerformed": "Процедура отмечена выполненной",
+      "treatmentDeleted": "Процедура удалена",
+      "status": {
+        "existing": "Имеется",
+        "planned": "Запланировано"
+      },
+      "deleteConfirm": "Удалить «{name}» (зуб {tooth})? Это действие нельзя отменить."
+    },
+    "position": {
+      "displaced": "Смещён",
+      "rotated": "Повёрнут",
+      "normal": "Норма"
+    },
+    "views": {
+      "occlusal": "Окклюзионный вид",
+      "lateral": "Боковой вид",
+      "dual": "Двойной вид"
+    },
+    "selectSurfaces": "Выберите поверхности",
+    "selectedSurfaces": "Выбранные поверхности",
+    "surfacesSelected": "поверхн. выбрано",
+    "instructions": {
+      "selectTreatment": "Выберите процедуру",
+      "clickTooth": "Нажмите на зуб, чтобы применить"
+    },
+    "addToPlan": "Добавить в план",
+    "noPlan": "Без плана",
+    "createNewPlan": "Создать новый план...",
+    "applyTo": "Применить к",
+    "oneTooth": "1 зуб",
+    "multipleTeeth": "Несколько зубов",
+    "surfacePricingHint": "Цена по поверхностям: {range}",
+    "toothNames": {
+      "centralIncisor": "Центральный резец",
+      "lateralIncisor": "Боковой резец",
+      "canine": "Клык",
+      "firstPremolar": "Первый премоляр",
+      "secondPremolar": "Второй премоляр",
+      "firstMolar": "Первый моляр",
+      "secondMolar": "Второй моляр",
+      "thirdMolar": "Третий моляр"
+    },
+    "positions": {
+      "upper": "верхний",
+      "lower": "нижний",
+      "left": "левый",
+      "right": "правый"
+    },
+    "tooltip": {
+      "clickToEdit": "Нажмите, чтобы изменить"
+    },
+    "planning": "Планирование",
+    "diagnosisMode": "Диагностика",
+    "treatmentList": {
+      "title": "Список процедур",
+      "noTreatments": "Процедур нет"
+    },
+    "changeHistory": {
+      "title": "История изменений",
+      "noChanges": "Изменений нет",
+      "treatmentAdded": "Процедура"
+    },
+    "timeline": {
+      "title": "Хронология",
+      "viewingDate": "Просмотр: {date}",
+      "viewingHistory": "Вы просматриваете прежнее состояние зубной формулы",
+      "returnToNow": "Вернуться к текущему состоянию",
+      "noHistory": "Предыдущей истории нет"
+    },
+    "multiTooth": {
+      "bridge": {
+        "label": "Мостовидный протез"
+      },
+      "splint": {
+        "label": "Шина"
+      },
+      "veneers": {
+        "label": "Несколько виниров"
+      },
+      "crowns": {
+        "label": "Несколько коронок"
+      },
+      "pillar": "опора",
+      "pontic": "промежуточная часть",
+      "roleHint": "Нажмите на зуб, чтобы переключить: опора / промежуточная часть.",
+      "needPillar": "Для мостовидного протеза нужен хотя бы один опорный зуб.",
+      "confirmHint": "Вы создаёте группу процедур из зубов: {n}.",
+      "willBePlanned": "Группа будет отмечена как запланированная.",
+      "willBeExisting": "Группа будет записана как имеющаяся.",
+      "hints": {
+        "range": "Нажмите на первый зуб, затем на последний",
+        "free": "Нажимайте на зубы, чтобы добавить или убрать"
+      },
+      "errors": {
+        "tooFew": "Нужно не менее зубов: {n}",
+        "tooMany": "Допускается не более зубов: {n}",
+        "sameArchRequired": "Зубы должны быть на одной челюсти"
+      },
+      "sectionLabel": "Процедуры на несколько зубов"
+    }
+  },
+  "clinical": {
+    "modes": {
+      "history": "История",
+      "diagnosis": "Диагностика",
+      "plans": "Планы лечения",
+      "appointments": "Приёмы"
+    },
+    "history": {
+      "stateAt": "Состояние на",
+      "changesOnDate": "Изменения за эту дату",
+      "noChanges": "Изменений нет"
+    },
+    "diagnosis": {
+      "registeredConditions": "Установленные диагнозы",
+      "registerConditions": "Внести диагнозы",
+      "noConditions": "Диагнозов нет",
+      "startDiagnosis": "Выберите зуб и добавьте имеющиеся состояния",
+      "generalConditions": "Общие состояния",
+      "readyToCreatePlan": "Диагностика завершена?",
+      "createPlan": "Создать план лечения",
+      "continuePlan": "Продолжить план «{name}»",
+      "selectPlan": "Выберите план",
+      "continue": "Продолжить",
+      "odontogramTab": "Зубная формула",
+      "openNotes": "Открыть записи"
+    },
+    "plans": {
+      "title": "Планы лечения",
+      "create": "Новый план",
+      "backToList": "К списку планов",
+      "treatments": "Процедуры плана",
+      "addTreatment": "Добавить процедуру",
+      "total": "Итого",
+      "activate": "Активировать план",
+      "generateBudget": "Составить смету",
+      "empty": "Планов лечения нет",
+      "emptyDescription": "Создайте план, чтобы упорядочить лечение пациента",
+      "createFirst": "Создать первый план",
+      "active": "Активные планы",
+      "drafts": "Черновики",
+      "completed": "Завершённые",
+      "closed": "Закрытые",
+      "other": "Прочие",
+      "noItems": "В плане нет процедур",
+      "markComplete": "Отметить завершённым",
+      "removeItem": "Убрать из плана",
+      "sessions": {
+        "progress": "{done}/{total} сеансов",
+        "markDone": "Отметить сеанс выполненным",
+        "cancel": "Отменить сеанс",
+        "markedDone": "Сеанс отмечен выполненным",
+        "cancelled": "Сеанс отменён",
+        "untitled": "Сеанс {n}"
+      },
+      "unknownTreatment": "Процедура",
+      "odontogram": "Зубная формула",
+      "pending": "ожидает",
+      "dragToReorder": "Перетащите, чтобы изменить порядок",
+      "reorderHint": "Для перемещения используйте Alt + стрелки",
+      "emptyDraft": {
+        "title": "Спланируйте лечение",
+        "step1": "Выберите процедуру на панели ниже",
+        "step2": "Нажмите на зуб в зубной формуле",
+        "step3": "Подтвердите план, чтобы сформировать смету и записи на приём"
+      },
+      "steps": {
+        "plan": "План",
+        "confirm": "Подтверждение",
+        "inProgress": "В работе"
+      },
+      "confirmCta": {
+        "titleWithItems": "Подтвердить план",
+        "subtitleWithItems": "После подтверждения станут доступны составление сметы и запись на приём.",
+        "empty": "Добавьте хотя бы одну процедуру, чтобы подтвердить план"
+      },
+      "ghostHint": "Доступно после подтверждения плана",
+      "addedToPlan": "Добавлено в план",
+      "addingToPlan": "Добавление в этот план",
+      "cancelPlan": "Отменить план",
+      "locked": {
+        "title": "План заблокирован",
+        "subtitle": "Смета {number} выставлена. Чтобы изменить процедуры, откройте смету заново (если она не принята) или пересогласуйте её.",
+        "viewBudget": "Открыть смету"
+      },
+      "removeItemConfirm": "Убрать «{name}» из этого плана? Это действие нельзя отменить."
+    },
+    "tooth": "Зуб"
+  },
+  "appointments": {
+    "title": "Расписание",
+    "checkin": {
+      "qr": "QR для отметки прихода",
+      "hint": "Пациент сканирует этот код, чтобы отметить приход. Код действует 15 минут после создания.",
+      "copyLink": "Копировать ссылку для отметки",
+      "openTitle": "Отметка прихода в клинику",
+      "success": "Вы отмечены. Пожалуйста, присаживайтесь.",
+      "invalid": "Код недействителен или истёк. Попросите новый в регистратуре.",
+      "confirm": "Я здесь",
+      "confirmHint": "Нажмите кнопку, чтобы подтвердить приход.",
+      "tooEarly": "Для отметки ещё рано. Ваш приём в {time}.",
+      "tooLate": "Отметка прихода на этот приём закрыта. Обратитесь в регистратуру."
+    },
+    "create": "Новая запись",
+    "edit": "Изменить запись",
+    "today": "Сегодня",
+    "tomorrow": "Завтра",
+    "yesterday": "Вчера",
+    "week": "Неделя",
+    "prevWeek": "Предыдущая неделя",
+    "nextWeek": "Следующая неделя",
+    "selectPatient": "Выберите пациента",
+    "selectProfessional": "Выберите специалиста",
+    "openPatientFile": "Открыть карточку пациента",
+    "patient": "Пациент",
+    "professional": "Специалист",
+    "cabinet": "Кабинет",
+    "date": "Дата",
+    "time": "Время",
+    "startTime": "Время начала",
+    "duration": "Длительность",
+    "treatmentType": "Тип процедуры",
+    "treatments": "Процедуры",
+    "addTreatment": "Добавить процедуру",
+    "selectTreatment": "Выберите процедуру",
+    "estimatedDuration": "Ожидаемая длительность",
+    "notes": "Заметки",
+    "hasNotes": "Есть заметки",
+    "status": {
+      "label": "Статус",
+      "scheduled": "Запланирован",
+      "confirmed": "Подтверждён",
+      "checked_in": "В зале ожидания",
+      "in_treatment": "В кресле",
+      "completed": "Завершён",
+      "cancelled": "Отменён",
+      "no_show": "Неявка"
+    },
+    "transitions": {
+      "confirmed": "Отметить подтверждённым",
+      "checked_in": "Отметить приход",
+      "in_treatment": "Пригласить в кресло",
+      "completed": "Завершить приём",
+      "cancelled": "Отменить приём",
+      "no_show": "Отметить неявку"
+    },
+    "timer": {
+      "startsIn": "начало через {minutes} мин",
+      "startsInOverdue": "опоздание {minutes} мин",
+      "waiting": "ждёт {minutes} мин",
+      "inTreatment": "{elapsed}/{planned} мин",
+      "completedAt": "завершён в {time}",
+      "cancelledAt": "отменён",
+      "noShowAt": "неявка"
+    },
+    "confirmTransitionTitle": "Подтвердите смену статуса",
+    "confirmCancelMessage": "Отменить этот приём? Изменение будет записано в журнал.",
+    "confirmNoShowMessage": "Отметить неявку пациента? Изменение будет записано в журнал.",
+    "noteLabel": "Заметка (необязательно)",
+    "transitionFailed": "Не удалось изменить статус приёма",
+    "when": "Когда",
+    "whereWho": "Кабинет и специалист",
+    "followup": {
+      "title": "Действия после приёма"
+    },
+    "created": "Запись создана",
+    "saved": "Запись сохранена",
+    "updated": "Запись обновлена",
+    "conflict": "Это время уже занято",
+    "cancel": "Отменить приём",
+    "markCompleted": "Отметить завершённым",
+    "markNoShow": "Неявка",
+    "dailyView": "День",
+    "weeklyView": "Неделя",
+    "kanbanView": "Канбан",
+    "kanban": {
+      "upcoming": "Ожидаются",
+      "waiting": "Зал ожидания",
+      "inChair": "В кресле",
+      "done": "Завершены",
+      "missed": "Неявка / Отмена",
+      "free": "Свободно",
+      "inactive": "Неактивно",
+      "empty": "Приёмов нет",
+      "nextIn": "Следующий в {time}",
+      "subtitleCount": "Приёмов: {count}",
+      "subtitleEmpty": "Приёмов нет",
+      "subtitleWaiting": "Ожидают: {count} · в среднем {avg} мин",
+      "subtitleInChair": "Занято: {busy} · свободно: {free}"
+    },
+    "cabinetAssignment": {
+      "assignLater": "Назначить позже",
+      "unassigned": "Не назначен",
+      "assign": "Назначить кабинет",
+      "reassign": "Сменить кабинет",
+      "unassign": "Снять кабинет",
+      "requiredForTreatment": "Назначьте кабинет перед началом лечения"
+    },
+    "professionals": {
+      "strip": "Специалисты",
+      "state": {
+        "free": "Свободен",
+        "in_treatment": "На приёме",
+        "on_break": "Перерыв",
+        "off": "Не работает"
+      }
+    },
+    "noProfessionals": "Специалисты не настроены",
+    "overlapWarning": "Обнаружены пересечения",
+    "overlapProfessional": "У специалиста в это время записей: {count}",
+    "overlapCabinet": "В кабинете в это время записей: {count}",
+    "selectDuration": "Выберите длительность...",
+    "sendEmail": "Отправить письмо",
+    "sendConfirmationEmail": "Отправить подтверждение",
+    "resendConfirmation": "Отправить подтверждение повторно",
+    "sendReminderEmail": "Отправить напоминание",
+    "emailSent": "Письмо отправлено",
+    "automatic": "автоматически",
+    "selectPatientFirst": "Выберите пациента, чтобы увидеть невыполненные процедуры",
+    "noPendingTreatments": "Невыполненных процедур нет",
+    "createPlanFirst": "Создайте план лечения для этого пациента",
+    "addTreatmentFromPlan": "Добавить процедуру из плана",
+    "selectPendingTreatment": "Выберите невыполненную процедуру",
+    "emptyDay": "На этот день приёмов нет",
+    "noPatient": "Без пациента",
+    "freeSlots": {
+      "byProfessional": "Специалист",
+      "byCabinet": "Кабинет",
+      "freeSuffix": "свободно",
+      "freeShort": "своб.",
+      "noFreeTime": "Нет свободного времени",
+      "tapToBook": "Нажмите, чтобы записать",
+      "tapToBookAria": "Свободное окно {duration} в {time}",
+      "nextFreeAt": "Следующее в {time}",
+      "gapsAtLeast": "Окон ≥ {min} мин: {count}",
+      "minDuration": "Минимум",
+      "noFreeSlots": "Сегодня нет свободных окон",
+      "clinicClosed": "Клиника закрыта",
+      "professionalOff": "Не работает",
+      "onBreak": "Перерыв"
+    },
+    "actionsMenu": "Действия с приёмом",
+    "sendMessage": "Отправить сообщение",
+    "resendConfirmationVia": "Отправить подтверждение повторно ({channel})",
+    "sendReminderVia": "Отправить напоминание ({channel})",
+    "sendCancellationVia": "Отправить уведомление об отмене ({channel})",
+    "loadError": "Не удалось загрузить приёмы",
+    "planAwaitingBudget": "Смета ожидает принятия"
+  },
+  "dashboard": {
+    "greetings": {
+      "morning": "Доброе утро",
+      "afternoon": "Добрый день",
+      "evening": "Добрый вечер"
+    },
+    "welcome": "Добро пожаловать в DentalPin",
+    "welcomeMessage": "Начните с создания первого пациента.",
+    "quickActions": {
+      "newAppointment": "Новая запись",
+      "newPatient": "Новый пациент",
+      "search": "Найти пациента",
+      "searchPlaceholder": "Поиск по имени, телефону или email"
+    },
+    "timeline": {
+      "title": "Сегодня",
+      "empty": "На сегодня приёмов нет",
+      "now": "Сейчас",
+      "openSchedule": "Открыть расписание"
+    },
+    "todayKpi": {
+      "title": "Приёмы сегодня",
+      "completed": "завершено",
+      "inProgress": "идут",
+      "upcoming": "ожидаются",
+      "cancelled": "отменено",
+      "noShow": "неявок",
+      "empty": "Сегодня приёмов нет"
+    },
+    "inClinic": {
+      "title": "Сейчас в клинике",
+      "inTreatment": "В кресле: {n}",
+      "waiting": "Ожидают: {n}",
+      "empty": "В клинике никого нет"
+    },
+    "unconfirmed": {
+      "title": "Не подтверждены на завтра",
+      "empty": "Все завтрашние приёмы подтверждены",
+      "confirm": "Подтвердить",
+      "confirmError": "Не удалось подтвердить"
+    },
+    "overdue": {
+      "title": "Просроченные платежи",
+      "daysOverdue": "{n} день просрочки | {n} дня просрочки | {n} дней просрочки",
+      "viewAll": "Показать все",
+      "empty": "Просроченных счетов нет"
+    },
+    "recent": {
+      "title": "Недавние пациенты",
+      "empty": "Пациентов пока нет"
+    },
+    "weekGlance": {
+      "title": "Неделя в цифрах",
+      "subtitle": "Последние 7 дней к предыдущим 7",
+      "appointments": "Приёмы",
+      "completed": "Завершено",
+      "invoiced": "Выставлено счетов",
+      "empty": "Нет данных за неделю"
+    }
+  },
+  "settings": {
+    "title": "Настройки",
+    "subtitle": "Управляйте клиникой, командой и модулями.",
+    "allCategories": "Все категории",
+    "navLabel": "Категории настроек",
+    "attentionRequired": "Требуется внимание",
+    "categories": {
+      "general": {
+        "label": "Общие",
+        "description": "Профиль клиники, оформление и часовой пояс."
+      },
+      "workspace": {
+        "label": "Рабочее пространство",
+        "description": "Кабинеты, часы работы и доступность."
+      },
+      "people": {
+        "label": "Люди",
+        "description": "Пользователи, роли и приглашения."
+      },
+      "clinical": {
+        "label": "Клиника и лечение",
+        "description": "Каталог, параметры лечения по умолчанию и шаблоны."
+      },
+      "billing": {
+        "label": "Счета и налоги",
+        "description": "Серии счетов, НДС и налоговая отчётность."
+      },
+      "communications": {
+        "label": "Коммуникации",
+        "description": "Уведомления, SMTP и шаблоны."
+      },
+      "integrations": {
+        "label": "Интеграции",
+        "description": "Внешние сервисы и провайдеры."
+      },
+      "modules": {
+        "label": "Модули",
+        "description": "Установка, обновление и удаление модулей."
+      },
+      "account": {
+        "label": "Аккаунт",
+        "description": "Ваш профиль, пароль и язык."
+      }
+    },
+    "supergroups": {
+      "clinicalSetup": {
+        "label": "Клиническая настройка"
+      },
+      "clinicalManagement": {
+        "label": "Клиническое управление"
+      },
+      "financialConfiguration": {
+        "label": "Финансовые настройки"
+      },
+      "systemAddons": {
+        "label": "Система и дополнения"
+      },
+      "myPreferences": {
+        "label": "Мои предпочтения"
+      }
+    },
+    "search": {
+      "placeholder": "Поиск по настройкам…",
+      "empty": "По вашему запросу ничего не найдено.",
+      "navigate": "перейти",
+      "open": "открыть"
+    },
+    "locked": {
+      "title": "У вас нет доступа к этому разделу",
+      "description": "Попросите администратора клиники выдать вам необходимые права доступа."
+    },
+    "emptyCategory": {
+      "title": "Нет доступных параметров",
+      "description": "Когда подходящие модули будут включены, их настройки появятся здесь."
+    },
+    "loadError": {
+      "description": "Не удалось загрузить редактор. Повторите попытку через несколько секунд."
+    },
+    "comingSoon": {
+      "title": "Скоро",
+      "subtitle": "Мы работаем над этим разделом. Пока им можно управлять через API."
+    },
+    "onboarding": {
+      "title": "Завершите настройку клиники",
+      "subtitle": "Осталось шагов для начальной настройки: {count}.",
+      "dismiss": "Скрыть",
+      "items": {
+        "clinicInfo": {
+          "label": "Заполните профиль клиники",
+          "description": "Название, налоговый номер и адрес попадут в сметы и счета."
+        },
+        "cabinets": {
+          "label": "Создайте хотя бы один кабинет",
+          "description": "Без кабинетов нельзя планировать приёмы."
+        }
+      }
+    },
+    "cabinetsDescription": "Помещения, где принимают пациентов.",
+    "usersDescription": "Аккаунты с доступом к этой клинике и их роли.",
+    "profileDescription": "Ваши личные данные в этой клинике.",
+    "clinic": "Клиника",
+    "profile": "Профиль",
+    "clinicName": "Название клиники",
+    "clinicInfo": "Сведения о клинике",
+    "clinicInfoDescription": "Эти данные будут указаны в сметах и документах",
+    "taxId": "Налоговый номер",
+    "legalName": "Юридическое название",
+    "legalNameHelp": "Юридическое название организации для счетов. Оставьте пустым, чтобы использовать название клиники.",
+    "street": "Адрес",
+    "city": "Город",
+    "postalCode": "Почтовый индекс",
+    "country": "Страна",
+    "countryPlaceholder": "Выберите страну",
+    "countrySearchPlaceholder": "Поиск страны…",
+    "phone": "Телефон",
+    "timezone": "Часовой пояс",
+    "timezoneHelp": "Всё расписание и приёмы отображаются в этом часовом поясе.",
+    "currency": "Валюта",
+    "currencyHelp": "Валюта клиники для смет, счетов и каталога.",
+    "editClinicInfo": "Изменить данные",
+    "clinicUpdated": "Данные клиники обновлены",
+    "clinicUpdateError": "Не удалось обновить данные",
+    "cabinets": "Кабинеты",
+    "language": "Язык",
+    "languageDescription": "Выберите удобный для вас язык",
+    "users": "Пользователи клиники",
+    "newUser": "Новый пользователь",
+    "createUser": "Создать пользователя",
+    "editUser": "Изменить пользователя",
+    "deleteUser": "Удалить пользователя",
+    "deleteUserConfirm": "Вы уверены, что хотите удалить",
+    "deleteUserNote": "Пользователь потеряет доступ к этой клинике, но его аккаунт не будет удалён.",
+    "noUsers": "Нет зарегистрированных пользователей",
+    "youTag": "(вы)",
+    "userActive": "Пользователь активен",
+    "isProfessional": "Ведёт приём как специалист",
+    "isProfessionalHelp": "Отображается в расписании, имеет рабочие часы, ему можно назначать процедуры. Администратор тоже может вести приём.",
+    "userInactiveNote": "(Не может войти)",
+    "saveChanges": "Сохранить изменения",
+    "noCabinets": "Кабинеты не настроены",
+    "addCabinet": "Добавить",
+    "newCabinet": "Новый кабинет",
+    "editCabinet": "Изменить кабинет",
+    "deleteCabinet": "Удалить кабинет",
+    "deleteCabinetConfirm": "Вы уверены, что хотите удалить кабинет",
+    "deleteCabinetNote": "Существующие приёмы в этом кабинете не изменятся.",
+    "createCabinet": "Создать кабинет",
+    "roles": {
+      "admin": "Администратор",
+      "dentist": "Стоматолог",
+      "hygienist": "Гигиенист",
+      "assistant": "Ассистент",
+      "receptionist": "Администратор регистратуры"
+    },
+    "errors": {
+      "loadUsers": "Не удалось загрузить пользователей",
+      "createUser": "Не удалось создать пользователя",
+      "updateUser": "Не удалось обновить пользователя",
+      "deleteUser": "Не удалось удалить пользователя",
+      "emailExists": "Такой email уже существует",
+      "userNotFound": "Пользователь не найден",
+      "operationNotAllowed": "Операция не разрешена",
+      "invalidData": "Неверные данные",
+      "inviteLink": "Не удалось создать ссылку для доступа"
+    },
+    "messages": {
+      "userCreated": "Пользователь создан",
+      "userUpdated": "Пользователь обновлён",
+      "userDeleted": "Пользователь удалён из клиники"
+    },
+    "modules": {
+      "title": "Модули",
+      "subtitle": "Установка, удаление и обновление модулей клиники.",
+      "description": "Управляйте тем, какие модули активны в вашей клинике.",
+      "searchPlaceholder": "Поиск модулей…",
+      "filterState": "Состояние",
+      "deps": "Зависимости",
+      "noDeps": "Нет зависимостей",
+      "state": {
+        "installed": "Установлен",
+        "uninstalled": "Не установлен",
+        "toInstall": "Ожидает установки",
+        "toUpgrade": "Ожидает обновления",
+        "toRemove": "Ожидает удаления",
+        "disabled": "Отключён",
+        "error": "Ошибка"
+      },
+      "category": {
+        "official": "Официальный",
+        "community": "От сообщества"
+      },
+      "actions": {
+        "install": "Установить",
+        "uninstall": "Удалить",
+        "upgrade": "Обновить",
+        "apply": "Применить изменения",
+        "viewDetails": "Подробнее",
+        "force": "Удалить принудительно"
+      },
+      "confirmInstall": {
+        "title": "Установить {name}?",
+        "message": "Установка модуля будет запланирована, он станет активным после применения изменений.",
+        "scheduled": "Также будут установлены эти зависимости:"
+      },
+      "confirmUninstall": {
+        "title": "Удалить {name}?",
+        "warning": "Таблицы модуля будут удалены. Предварительно создаётся резервная копия pg_dump, чтобы данные можно было восстановить.",
+        "forceHint": "Игнорирует зависимые модули. Используйте, только если понимаете, что делаете."
+      },
+      "confirmUpgrade": {
+        "title": "Обновить {name}?",
+        "message": "При применении изменений модуль будет обновлён до версии манифеста на диске."
+      },
+      "confirmApply": {
+        "title": "Применить изменения",
+        "message": "Сервер будет перезапущен. Во время выполнения отложенных операций сеанс может ненадолго прерваться."
+      },
+      "pending": {
+        "banner": "Ожидающие изменения:",
+        "apply": "Применить изменения"
+      },
+      "doctor": {
+        "banner": "В системе модулей обнаружены проблемы.",
+        "orphans": "модулей-сирот",
+        "missingDeps": "отсутствующих зависимостей",
+        "manifestErrors": "ошибок манифеста",
+        "errored": "модулей с ошибкой"
+      },
+      "detail": {
+        "state": "Состояние",
+        "category": "Категория",
+        "installedAt": "Установлен",
+        "lastChange": "Последнее изменение",
+        "baseRevision": "Базовая ревизия",
+        "appliedRevision": "Применённая ревизия",
+        "manifest": "Полный манифест",
+        "errorMessage": "Сообщение об ошибке",
+        "operationLog": "Журнал операций",
+        "noOperations": "Операций не зафиксировано."
+      },
+      "restart": {
+        "inProgress": "Перезапуск сервера…",
+        "done": "Изменения применены",
+        "failed": "Не удалось применить изменения",
+        "timeout": "Истекло время ожидания сервера"
+      },
+      "toasts": {
+        "scheduled": "Операция запланирована. Примените изменения, чтобы завершить.",
+        "applied": "Изменения успешно применены."
+      }
+    },
+    "invite": {
+      "linkTitle": "Ссылка для доступа",
+      "linkHelp": "Отправьте эту ссылку пользователю {name}, чтобы он сам выбрал пароль. Действует до {date}, одноразовая.",
+      "copy": "Копировать ссылку",
+      "copied": "Ссылка скопирована",
+      "whatsapp": "Отправить в WhatsApp",
+      "shareText": "Здравствуйте, {name}! Вот ваш доступ в DentalPin. Откройте ссылку и выберите пароль: {url}",
+      "secretNote": "Относитесь к ней как к паролю: любой, у кого есть ссылка, может войти в этот аккаунт.",
+      "passwordOptionalHelp": "Оставьте пустым, чтобы создать ссылку для доступа, которую можно отправить в WhatsApp или по email.",
+      "passwordOptionalPlaceholder": "Необязательно",
+      "createAndLink": "Создать и получить ссылку",
+      "rowAction": "Ссылка для доступа",
+      "setPasswordTitle": "Выберите пароль",
+      "setPasswordSubtitle": "Вас пригласили в DentalPin. Задайте пароль, чтобы войти.",
+      "setPasswordSubmit": "Сохранить и войти",
+      "invalidToken": "Эта ссылка недействительна или уже использована. Попросите администратора клиники выдать новую."
+    }
+  },
+  "selector": {
+    "recentPatients": "Недавние пациенты",
+    "commonTreatments": "Частые процедуры",
+    "noRecentPatients": "Нет недавних пациентов",
+    "noCommonTreatments": "Нет частых процедур",
+    "noMatches": "Ничего не найдено",
+    "typeToSearch": "Введите для поиска..."
+  },
+  "density": {
+    "switchToCompact": "Компактный вид",
+    "switchToComfortable": "Свободный вид"
+  },
+  "patientSelector": {
+    "createOption": "Создать пациента «{query}»",
+    "createOptionEmpty": "Создать нового пациента",
+    "newBadge": "Новый",
+    "duplicateWarning": "{name} уже есть с этим телефоном",
+    "useExisting": "Выбрать этого пациента",
+    "createForm": {
+      "title": "Новый пациент",
+      "back": "Назад к поиску",
+      "firstName": "Имя",
+      "lastName": "Фамилия",
+      "phone": "Телефон",
+      "phoneHint": "Можно добавить позже в карточке пациента.",
+      "submit": "Создать и выбрать",
+      "cancel": "Отмена",
+      "errorGeneric": "Не удалось создать пациента. Повторите."
+    }
+  },
+  "errors": {
+    "loadFailed": "Не удалось загрузить",
+    "createFailed": "Не удалось создать",
+    "updateFailed": "Не удалось обновить",
+    "deleteFailed": "Не удалось удалить"
+  },
+  "common": {
+    "andMore": "+ ещё {count}",
+    "save": "Сохранить",
+    "add": "Добавить",
+    "cancel": "Отмена",
+    "clear": "Очистить",
+    "close": "Закрыть",
+    "delete": "Удалить",
+    "comingSoon": "Скоро",
+    "edit": "Изменить",
+    "change": "изменение | изменения | изменений",
+    "back": "Назад",
+    "loading": "Загрузка...",
+    "error": "Ошибка",
+    "success": "Успешно",
+    "completed": "Завершено",
+    "retry": "Повторить",
+    "refresh": "Обновить",
+    "hide": "Скрыть",
+    "expand": "Развернуть",
+    "collapse": "Свернуть",
+    "forbidden": "Доступ запрещён",
+    "confirm": "Подтвердить",
+    "yes": "Да",
+    "no": "Нет",
+    "actions": "Действия",
+    "viewDetails": "Подробнее",
+    "previous": "Назад",
+    "next": "Далее",
+    "previousYear": "Предыдущий год",
+    "nextYear": "Следующий год",
+    "undo": "Отменить",
+    "undone": "Отменено",
+    "added": "Добавлено",
+    "removed": "Удалено",
+    "page": "Страница {current} из {total}",
+    "noData": "Нет данных",
+    "noValue": "нет значения",
+    "noResults": "Нет результатов",
+    "search": "Поиск...",
+    "selectAll": "Все",
+    "deselectAll": "Ни одного",
+    "all": "Все",
+    "required": "Обязательное поле",
+    "optional": "Необязательно",
+    "invalidEmail": "Неверный email",
+    "networkError": "Ошибка соединения",
+    "serverError": "Ошибка сервера",
+    "notFound": "Не найдено",
+    "offline": "Нет сети — данные могут быть устаревшими",
+    "inactive": "Неактивен",
+    "name": "Название",
+    "color": "Цвет",
+    "firstName": "Имя",
+    "lastName": "Фамилия",
+    "email": "Email",
+    "password": "Пароль",
+    "passwordPlaceholder": "Минимум 8 символов",
+    "role": "Роль",
+    "readOnly": "Только чтение",
+    "createdBy": "Создал",
+    "date": "Дата",
+    "upload": "Загрузить",
+    "uploading": "Загрузка…",
+    "maxFileSize": "до 10 МБ",
+    "durationMinutes": "{value} мин",
+    "days": {
+      "sunday": "Воскресенье",
+      "monday": "Понедельник",
+      "tuesday": "Вторник",
+      "wednesday": "Среда",
+      "thursday": "Четверг",
+      "friday": "Пятница",
+      "saturday": "Суббота"
+    },
+    "now": "Сейчас",
+    "today": "Сегодня",
+    "tomorrow": "Завтра",
+    "yesterday": "Вчера",
+    "copied": "Скопировано в буфер обмена",
+    "copy": "Копировать",
+    "copyFailed": "Не удалось скопировать",
+    "download": "Скачать",
+    "remove": "Убрать",
+    "default": "По умолчанию"
+  },
+  "cabinet": {
+    "toast": {
+      "created": "Кабинет создан",
+      "updated": "Кабинет обновлён",
+      "deleted": "Кабинет удалён",
+      "duplicateName": "Кабинет с таким названием уже существует",
+      "notFound": "Кабинет не найден",
+      "createFailed": "Не удалось создать кабинет",
+      "updateFailed": "Не удалось обновить кабинет",
+      "deleteFailed": "Не удалось удалить кабинет"
+    }
+  },
+  "professionals": {
+    "toast": {
+      "loadFailed": "Не удалось загрузить специалистов"
+    }
+  },
+  "lists": {
+    "empty": {
+      "title": "Нет результатов",
+      "description": "Измените фильтры или сбросьте их, чтобы увидеть все записи."
+    },
+    "resultCount": "{shown} из {total}",
+    "filter": {
+      "title": "Фильтры",
+      "more": "Фильтры",
+      "moreCount": "Фильтры ({count})",
+      "clear": "Сбросить",
+      "apply": "Применить",
+      "date": "Даты",
+      "dateFrom": "С",
+      "dateTo": "По",
+      "searchPlaceholder": "Поиск...",
+      "noResults": "Ничего не найдено",
+      "all": "Все"
+    },
+    "sort": {
+      "label": "Сортировка",
+      "asc": "По возрастанию",
+      "desc": "По убыванию"
+    },
+    "datePreset": {
+      "today": "Сегодня",
+      "last7": "Последние 7 дней",
+      "last30": "Последние 30 дней",
+      "thisMonth": "Этот месяц",
+      "thisQuarter": "Квартал",
+      "thisYear": "Год",
+      "custom": "Свой период"
+    },
+    "truncatedWarning": "Результаты усечены (>1000). Уточните фильтры."
+  },
+  "shared": {
+    "totals": "Итого",
+    "info": "Сведения",
+    "moreActions": "Ещё действия",
+    "criticalBanner": {
+      "dismiss": "Скрыть предупреждение"
+    },
+    "collect": {
+      "amountLabel": "Сумма к оплате",
+      "methodLabel": "Способ оплаты",
+      "dateLabel": "Дата оплаты",
+      "today": "Сегодня",
+      "quickFull": "Полностью",
+      "optionalDetails": "Добавить номер или заметки (необязательно)",
+      "referenceLabel": "Номер операции",
+      "referencePlaceholder": "напр., номер транзакции на POS-терминале",
+      "notesLabel": "Внутренние заметки",
+      "submit": "Принять оплату",
+      "cancel": "Отмена"
+    }
+  },
+  "validation": {
+    "required": "Обязательное поле",
+    "email": "Введите корректный email",
+    "minLength": "Минимум символов: {min}",
+    "maxLength": "Максимум символов: {max}",
+    "phone": "Введите корректный номер телефона"
+  },
+  "time": {
+    "minutes": "{n} мин",
+    "hours": "{n} час | {n} часа | {n} часов"
+  },
+  "calendar": {
+    "today": "Сегодня",
+    "prevWeek": "Предыдущая неделя",
+    "nextWeek": "Следующая неделя",
+    "monday": "Понедельник",
+    "tuesday": "Вторник",
+    "wednesday": "Среда",
+    "thursday": "Четверг",
+    "friday": "Пятница",
+    "saturday": "Суббота",
+    "sunday": "Воскресенье"
+  },
+  "catalog": {
+    "title": "Прайс-лист процедур",
+    "description": "Управление процедурами, ценами и налогами",
+    "items": "Процедуры",
+    "categories": "Категории",
+    "noItems": "В прайс-листе нет процедур",
+    "searchPlaceholder": "Поиск по коду или названию...",
+    "code": "Код",
+    "name": "Название",
+    "category": "Категория",
+    "price": "Цена",
+    "defaultPrice": "Базовая цена",
+    "costPrice": "Себестоимость",
+    "currency": "Валюта",
+    "vatType": "Тип НДС",
+    "vatRate": "НДС, %",
+    "duration": "Длительность",
+    "system": "Системная",
+    "newItem": "Новая процедура",
+    "editItem": "Изменить процедуру",
+    "deleteItem": "Удалить процедуру",
+    "deleteItemConfirm": "Вы уверены, что хотите удалить процедуру «{name}»?",
+    "deleteItemNote": "Это действие нельзя отменить.",
+    "pricing": "Цены",
+    "scheduling": "Планирование",
+    "characteristics": "Характеристики",
+    "scope": "Область применения",
+    "requiresAppointment": "Требует приёма",
+    "isDiagnostic": "Диагностическая",
+    "requiresSurfaces": "Требует поверхностей",
+    "materialNotes": "Материалы",
+    "materialNotesPlaceholder": "Необходимые материалы и расходники...",
+    "active": "Активна",
+    "vatTypes": {
+      "exempt": "Без НДС",
+      "reduced": "Пониженная ставка",
+      "standard": "Стандартная ставка"
+    },
+    "scopeTypes": {
+      "tooth": "Зуб",
+      "multi_tooth": "Несколько зубов",
+      "global_mouth": "Вся полость рта",
+      "global_arch": "По челюстям"
+    },
+    "pricingStrategy": {
+      "label": "Способ расчёта цены",
+      "help": "Как считается цена процедуры при её назначении",
+      "flat": "Фиксированная (одна цена)",
+      "per_tooth": "За зуб (× число зубов)",
+      "per_surface": "За поверхность (по ступеням)",
+      "per_role": "По роли (мост: опора/промежуточная часть)"
+    },
+    "surfacePrices": {
+      "title": "Цены по числу поверхностей",
+      "help": "Укажите цену для 1–5 поверхностей. Если на зубе выбраны поверхности, применяется подходящая ступень. Для незаполненных ступеней берётся ближайшая меньшая заполненная.",
+      "tier": "{n} пов."
+    },
+    "sessions": {
+      "title": "Этапы (поэтапная оплата)",
+      "help": "Задайте именованные этапы, в рамках которых проводится и оплачивается эта процедура (напр., коронка: «Слепки» + «Установка»). Сумма должна равняться базовой цене.",
+      "label": "Название",
+      "labelPlaceholder": "напр., Слепки",
+      "price": "Сумма",
+      "add": "Добавить этап",
+      "sumStatus": "Сумма {sum} € · Всего {total} €"
+    },
+    "categoryCreated": "Категория создана",
+    "categoryUpdated": "Категория обновлена",
+    "categoryDeleted": "Категория удалена",
+    "categoryKeyExists": "Категория с таким ключом уже существует",
+    "categoryCreateFailed": "Не удалось создать категорию",
+    "categoryUpdateFailed": "Не удалось обновить категорию",
+    "categoryDeleteFailed": "Не удалось удалить категорию",
+    "cannotModifySystemCategory": "Системную категорию нельзя изменить",
+    "cannotDeleteSystemCategory": "Системную категорию нельзя удалить",
+    "itemCreated": "Процедура создана",
+    "itemUpdated": "Процедура обновлена",
+    "itemDeleted": "Процедура удалена",
+    "itemCodeExists": "Процедура с таким кодом уже существует",
+    "categoryNotFound": "Категория не найдена",
+    "itemCreateFailed": "Не удалось создать процедуру",
+    "itemUpdateFailed": "Не удалось обновить процедуру",
+    "itemDeleteFailed": "Не удалось удалить процедуру",
+    "cannotModifySystemItem": "Системную процедуру нельзя изменить",
+    "systemItemHint": "Системная процедура: код, категория, способ расчёта цены и область применения заблокированы; цену, себестоимость, НДС, названия, длительность, этапы и статус изменять можно.",
+    "cannotDeleteSystemItem": "Системную процедуру нельзя удалить",
+    "odontogramMapping": "Отображение в зубной формуле",
+    "odontogramMappingDescription": "Свяжите эту процедуру с типом отображения в зубной формуле, чтобы она появилась в карте пациента.",
+    "odontogramType": "Тип процедуры",
+    "clinicalCategory": "Клиническая категория",
+    "noOdontogramMapping": "Без связи",
+    "odontogramMappingHint": "Характеристики процедуры будут автоматически подстроены под выбранный тип.",
+    "selectCategory": "Выберите категорию...",
+    "selectVatType": "Выберите тип НДС...",
+    "selectScope": "Выберите область применения...",
+    "selectOdontogramType": "Выберите тип...",
+    "selectClinicalCategory": "Выберите категорию...",
+    "expandAll": "Развернуть все",
+    "collapseAll": "Свернуть все",
+    "unnamed": "Без названия",
+    "activeHint": "Доступна для смет и планов",
+    "tabs": {
+      "general": "Общее",
+      "pricing": "Цены",
+      "scheduling": "Планирование",
+      "clinical": "Клиника"
+    },
+    "onboarding": {
+      "label": "Прайс-лист процедур",
+      "description": "Без процедур нельзя составлять сметы и планы. Загрузите стандартный каталог или создайте свой.",
+      "createOwn": "Создам свой"
+    },
+    "manageCategories": "Управление категориями",
+    "newCategory": "Новая категория",
+    "categoryName": "Название",
+    "categoryNamePlaceholder": "напр., Ортодонтия",
+    "categoryOrder": "Порядок",
+    "noCategories": "Нет категорий. Создайте категорию или загрузите стандартный каталог.",
+    "inactiveCategories": "Неактивные категории",
+    "reactivate": "Включить снова",
+    "deleteCategoryConfirm": "Категория будет деактивирована, её процедуры сохранятся. Продолжить?",
+    "systemCategoryNote": "Системные категории нельзя изменять или удалять.",
+    "loadDefaults": "Загрузить стандартный каталог",
+    "loadDefaultsHint": "Типы НДС, категории и эталонные процедуры для страны клиники. Добавляются только отсутствующие записи.",
+    "defaultsLoaded": "Каталог загружен: категорий — {categories}, процедур — {items}, типов НДС — {vat_types}",
+    "defaultsFailed": "Не удалось загрузить стандартный каталог",
+    "loadError": "Не удалось загрузить прайс-лист процедур"
+  },
+  "placeholders": {
+    "selectRole": "Выберите роль..."
+  },
+  "vatTypes": {
+    "title": "Типы НДС",
+    "description": "Управление типами НДС, доступными для процедур",
+    "name": "Название",
+    "rate": "Ставка",
+    "default": "По умолчанию",
+    "system": "Системный",
+    "active": "Активен",
+    "new": "Новый тип НДС",
+    "edit": "Изменить тип НДС",
+    "delete": "Удалить тип НДС",
+    "setAsDefault": "Сделать основным",
+    "showInactive": "Показать неактивные",
+    "noItems": "Типы НДС не настроены",
+    "namePlaceholder": "Напр.: Пониженная (10%)",
+    "systemNote": "У системных типов НДС можно менять только признак «по умолчанию».",
+    "deleteConfirm": "Вы уверены, что хотите удалить тип НДС",
+    "deleteNote": "Процедуры с этим типом НДС не изменятся.",
+    "created": "Тип НДС создан",
+    "updated": "Тип НДС обновлён",
+    "deleted": "Тип НДС удалён",
+    "loadError": "Не удалось загрузить типы НДС",
+    "createError": "Не удалось создать тип НДС",
+    "updateError": "Не удалось обновить тип НДС",
+    "deleteError": "Не удалось удалить тип НДС"
+  },
+  "treatmentPlans": {
+    "title": "Планы лечения",
+    "description": "Управление планами лечения пациентов",
+    "new": "Новый план",
+    "create": "Создать план лечения",
+    "edit": "Изменить план",
+    "view": "Открыть план",
+    "delete": "Удалить план",
+    "noItems": "В этом плане нет процедур",
+    "noPlans": "У этого пациента нет планов лечения",
+    "noPlansHint": "Отметьте процедуры в зубной формуле и создайте план, чтобы их упорядочить",
+    "createFirst": "Создать первый план",
+    "empty": "Планы лечения не созданы",
+    "emptyAction": "Создать первый план",
+    "searchPlaceholder": "Поиск по номеру, пациенту или названию...",
+    "planNumber": "Номер",
+    "patient": "Пациент",
+    "untitled": "Без названия",
+    "untitledPlan": "План без названия",
+    "itemCount": "{count} процедура | {count} процедуры | {count} процедур",
+    "treatments": "процедур",
+    "progress": "Ход выполнения",
+    "pendingTreatments": "Ожидающие процедуры",
+    "completedTreatments": "Выполненные процедуры",
+    "linkedBudget": "Связанная смета",
+    "unknownTreatment": "Неизвестная процедура",
+    "globalTreatment": "Общая процедура",
+    "activePlan": "Активный план",
+    "otherPlans": "Другие планы",
+    "viewAllPlans": "История планов",
+    "activate": "Активировать",
+    "generateBudget": "Создать смету",
+    "scheduleAppointment": "Записать на приём",
+    "status": {
+      "draft": "Черновик",
+      "pending": "Ожидает",
+      "active": "Активен",
+      "completed": "Завершён",
+      "closed": "Закрыт",
+      "archived": "В архиве"
+    },
+    "fields": {
+      "title": "Название",
+      "titlePlaceholder": "Напр.: Полная санация полости рта",
+      "assignedProfessional": "Ответственный специалист",
+      "selectProfessional": "Выберите специалиста",
+      "diagnosisNotes": "Заметки к диагнозу",
+      "diagnosisNotesPlaceholder": "Диагноз и клинические наблюдения...",
+      "internalNotes": "Внутренние заметки",
+      "internalNotesPlaceholder": "Заметки только для сотрудников..."
+    },
+    "modal": {
+      "subtitle": "Упорядочите лечение пациента",
+      "titleHint": "Необязательно — помогает отличить план",
+      "additionalNotes": "Дополнительные заметки",
+      "quickTip": "После создания плана можно добавлять процедуры из зубной формулы или прайс-листа.",
+      "createButton": "Создать план"
+    },
+    "actions": {
+      "activate": "Активировать план",
+      "confirm": "Подтвердить план",
+      "complete": "Отметить выполненным",
+      "generateBudget": "Создать смету",
+      "linkBudget": "Привязать смету",
+      "syncBudget": "Обновить смету",
+      "cancelPlan": "Отменить план",
+      "reopen": "Открыть снова",
+      "close": "Закрыть план",
+      "reactivate": "Возобновить план",
+      "logContact": "Записать контакт"
+    },
+    "items": {
+      "title": "Процедуры",
+      "add": "Добавить процедуру",
+      "addSelected": "Добавить {count} процедуру | Добавить {count} процедуры | Добавить {count} процедур",
+      "remove": "Убрать процедуру",
+      "empty": "В этом плане нет процедур",
+      "assignedProfessional": "Ответственный стоматолог",
+      "assignedProfessionalAriaLabel": "Сменить ответственного стоматолога для этой процедуры",
+      "useUsersPlanDoctor": "Стоматолог плана",
+      "noProfessional": "Стоматолог не назначен",
+      "inactiveProfessional": "Неактивный специалист",
+      "cascadeReassign": {
+        "title": "Переназначить ожидающие процедуры?",
+        "body": "Вы сменили стоматолога плана. Ожидающих процедур, назначенных на {previousName}: {count}. Переназначить их на нового стоматолога?",
+        "confirm": "Да, переназначить",
+        "cancel": "Нет, оставить как есть"
+      }
+    },
+    "filters": {
+      "allStatuses": "Все статусы"
+    },
+    "confirmations": {
+      "delete": "Удалить этот план лечения?",
+      "completeItem": "Отметить процедуру выполненной?",
+      "completeItemDescription": "Это действие нельзя отменить.",
+      "activateTitle": "Подтвердить план лечения?",
+      "activateDescription": "После подтверждения становится доступно создание сметы и запись на приём. Позже можно продолжать добавлять и выполнять процедуры.",
+      "unlockTitle": "Изменить план?",
+      "unlockIntro": "По этому плану уже выставлена смета {number}. Чтобы изменить план, текущую смету нужно отменить.",
+      "unlockConsequence1": "Смета {number} будет отменена и перестанет действовать для пациента.",
+      "unlockConsequence2": "Вы сможете добавлять, изменять и убирать процедуры плана.",
+      "unlockConsequence3": "После внесения изменений потребуется создать новую смету.",
+      "unlockConsequence4": "Отменённая смета сохраняется в истории.",
+      "cancelTitle": "Отменить план лечения?",
+      "cancelDescription": "План перейдёт в статус «Отменён», а все невыполненные запланированные процедуры будут убраны из зубной формулы. История плана сохранится."
+    },
+    "messages": {
+      "created": "План лечения создан",
+      "updated": "План лечения обновлён",
+      "deleted": "План лечения удалён",
+      "itemsAdded": "Процедуры добавлены в план"
+    },
+    "itemCompleted": "Процедура выполнена",
+    "budgetGenerated": "Смета создана",
+    "created": "План лечения создан",
+    "updated": "План лечения обновлён",
+    "statusUpdated": "Статус плана обновлён",
+    "deleted": "План лечения удалён",
+    "budgetLinked": "Смета привязана к плану",
+    "budgetSynced": "Смета обновлена",
+    "errors": {
+      "load": "Не удалось загрузить планы лечения",
+      "create": "Не удалось создать план лечения",
+      "update": "Не удалось обновить план лечения",
+      "delete": "Не удалось удалить план лечения"
+    },
+    "notes": {
+      "title": "Клинические записи",
+      "empty": "Клинических записей пока нет",
+      "addNote": "Добавить запись",
+      "edit": "Изменить запись",
+      "delete": "Удалить запись",
+      "attachments": "Вложения",
+      "author": "Автор",
+      "createdAt": "Создана",
+      "templatePicker": "Шаблоны",
+      "bodyPlaceholder": "Напишите клиническую запись…",
+      "saved": "Запись сохранена",
+      "deleted": "Запись удалена"
+    },
+    "completionNudge": {
+      "title": "Завершить процедуру",
+      "description": "Прежде чем отметить процедуру выполненной, добавьте клиническую запись о том, что было сделано на этом приёме.",
+      "completeWithNote": "Завершить с записью",
+      "skip": "Без записи",
+      "skipConfirm": "Завершить без клинической записи?"
+    },
+    "visitNote": {
+      "title": "Клиническая запись о визите",
+      "save": "Сохранить запись",
+      "empty": "Записи о визите пока нет",
+      "saved": "Запись сохранена"
+    },
+    "clinicalNotesTab": "Клинические записи",
+    "filterBy": {
+      "plan": "План",
+      "item": "Процедура",
+      "visit": "Визит",
+      "all": "Все"
+    },
+    "byPlan": {
+      "empty": "У этого пациента нет клинических записей ни в одном плане лечения",
+      "planNotesLabel": "Записи плана",
+      "noNotesForTreatment": "Нет записей по этой процедуре",
+      "noNotesForPlan": "В этом плане нет записей"
+    },
+    "noteTemplates": {
+      "endo": {
+        "singleVisit": "Эндодонтия — одно посещение",
+        "multiVisit": "Эндодонтия — несколько посещений"
+      },
+      "perio": {
+        "scaling": "Снятие зубных отложений / выравнивание корней"
+      },
+      "implant": {
+        "placement": "Установка имплантата"
+      },
+      "general": {
+        "followUp": "Общий контрольный осмотр"
+      }
+    },
+    "closureReason": {
+      "rejected_by_patient": "Отказ пациента",
+      "expired": "Истёк срок",
+      "cancelled_by_clinic": "Отменено клиникой",
+      "patient_abandoned": "Пациент прекратил лечение",
+      "other": "Другая причина"
+    },
+    "confirmed": "План подтверждён",
+    "reopened": "План открыт снова",
+    "closed": "План закрыт",
+    "reactivated": "План возобновлён",
+    "contactLogged": "Контакт записан",
+    "modals": {
+      "confirm": {
+        "title": "Подтвердить план",
+        "description": "План перейдёт в статус «Ожидает», и автоматически будет создан черновик сметы. После подтверждения процедуры доступны только для чтения.",
+        "submit": "Подтвердить план"
+      },
+      "reopen": {
+        "title": "Открыть план для редактирования",
+        "description": "Текущая смета будет отменена. План вернётся в черновик, и процедуры можно будет изменять.",
+        "submit": "Открыть снова"
+      },
+      "close": {
+        "title": "Закрыть план",
+        "description": "Выберите причину закрытия. Ожидающие процедуры будут отправлены в архив.",
+        "reasonLabel": "Причина",
+        "noteLabel": "Заметка (необязательно)",
+        "submit": "Закрыть план"
+      },
+      "reactivate": {
+        "title": "Возобновить закрытый план",
+        "description": "Будет возобновлён план, закрытый {date} по причине «{reason}». Продолжить?",
+        "submit": "Возобновить"
+      },
+      "contactLog": {
+        "title": "Записать контакт",
+        "description": "Фиксирует контакт с пациентом, не меняя статус плана.",
+        "channelLabel": "Канал",
+        "noteLabel": "Заметка (необязательно)",
+        "submit": "Записать"
+      }
+    },
+    "newBudgetHint": {
+      "text": "У этого пациента есть план {plan} без сметы. Создайте смету из плана, чтобы они оставались связаны.",
+      "cta": "Открыть план"
+    },
+    "viewDraftBudget": "Смета {number} (черновик)",
+    "followup": {
+      "subtitle": "Эти запланированные процедуры не были отмечены выполненными на приёме:",
+      "markPerformed": "Отметить выполненной",
+      "marked": "Отмечено выполненными: {count}."
+    }
+  },
+  "pipeline": {
+    "title": "Воронка планов",
+    "description": "Управление воронкой лечения.",
+    "tabs": {
+      "por_presupuestar": "Нужна смета",
+      "esperando_paciente": "Ждём пациента",
+      "sin_cita": "Нет записи",
+      "sin_proxima_cita": "Нет следующей записи",
+      "cerrados": "Закрытые",
+      "listado": "Список"
+    },
+    "row": {
+      "patient": "Пациент",
+      "plan": "План",
+      "budget": "Смета",
+      "items": "Процедуры",
+      "daysIn": "{n} дн. в статусе",
+      "nextAppt": "След. приём",
+      "noNextAppt": "Нет записи",
+      "noBudget": "Нет сметы"
+    },
+    "actions": {
+      "open": "Открыть",
+      "send": "Отправить",
+      "remind": "Отправить снова",
+      "schedule": "Записать",
+      "scheduleNext": "Записать на следующий",
+      "reactivate": "Возобновить",
+      "call": "Позвонить",
+      "whatsapp": "WhatsApp",
+      "markContacted": "Отметить контакт",
+      "acceptInClinic": "Принять в клинике"
+    },
+    "search": "Поиск по имени или номеру…",
+    "empty": "На этой вкладке нет записей.",
+    "loading": "Загрузка…"
+  },
+  "budget": {
+    "title": "Сметы",
+    "description": "Управление сметами лечения пациентов",
+    "new": "Новая смета",
+    "edit": "Редактировать смету",
+    "view": "Просмотр сметы",
+    "delete": "Удалить смету",
+    "duplicate": "Создать новую версию",
+    "noItems": "Нет смет",
+    "empty": "Сметы не созданы",
+    "emptyAction": "Создать первую смету",
+    "linkedToPlan": "Связана с планом",
+    "searchPlaceholder": "Поиск по номеру или пациенту...",
+    "budgetNumber": "Номер",
+    "version": "Версия",
+    "treatmentPlan": "План лечения",
+    "patient": "Пациент",
+    "selectPatient": "Выберите пациента",
+    "selectPatientHint": "Найдите и выберите пациента для этой сметы",
+    "professional": "Специалист",
+    "validFrom": "Действует с",
+    "validUntil": "Действует до",
+    "validUntilHint": "Оставьте пустым, если смета бессрочная",
+    "noExpiry": "Без срока действия",
+    "createAndAddItems": "Создать и добавить процедуры",
+    "subtotal": "Промежуточный итог",
+    "totalDiscount": "Общая скидка",
+    "totalTax": "Итого НДС",
+    "total": "Итого",
+    "globalDiscount": "Общая скидка",
+    "discountType": "Тип скидки",
+    "discountValue": "Размер скидки",
+    "percentage": "Процент",
+    "absolute": "Сумма",
+    "internalNotes": "Внутренние заметки",
+    "internalNotesPlaceholder": "Заметки видны только персоналу...",
+    "patientNotes": "Заметки для пациента",
+    "patientNotesPlaceholder": "Заметки, видимые в смете...",
+    "status": {
+      "title": "Статус",
+      "draft": "Черновик",
+      "sent": "Отправлена",
+      "partially_accepted": "Принята частично",
+      "accepted": "Принята",
+      "in_progress": "В работе",
+      "completed": "Выполнена",
+      "invoiced": "Выставлен счёт",
+      "rejected": "Отклонена",
+      "expired": "Истекла",
+      "cancelled": "Отменена"
+    },
+    "itemStatus": {
+      "pending": "Ожидает",
+      "accepted": "Принята",
+      "rejected": "Отклонена",
+      "in_progress": "В работе",
+      "completed": "Выполнена"
+    },
+    "actions": {
+      "send": "Отправить пациенту",
+      "accept": "Принять смету",
+      "acceptPartial": "Принять выбранные",
+      "reject": "Отклонить",
+      "cancel": "Отменить смету",
+      "duplicate": "Создать новую версию",
+      "downloadPdf": "Скачать PDF",
+      "previewPdf": "Предпросмотр PDF",
+      "startTreatment": "Начать лечение",
+      "completeTreatment": "Завершить лечение",
+      "renegotiate": "Пересогласовать",
+      "acceptInClinic": "Принять в клинике",
+      "resend": "Отправить повторно",
+      "sendReminder": "Отправить напоминание",
+      "setPublicCode": "Задать код доступа",
+      "unlockPublic": "Разблокировать доступ"
+    },
+    "items": {
+      "title": "Процедуры",
+      "add": "Добавить процедуру",
+      "remove": "Удалить процедуру",
+      "edit": "Редактировать процедуру",
+      "empty": "В этой смете нет процедур",
+      "singular": "процедура",
+      "plural": "процедур",
+      "addFromCatalog": "Добавить из каталога",
+      "addFromOdontogram": "Добавить из зубной формулы",
+      "treatment": "Процедура",
+      "searchCatalog": "Поиск в каталоге процедур...",
+      "unitPrice": "Цена за единицу",
+      "quantity": "Количество",
+      "discount": "Скидка",
+      "lineTotal": "Сумма по строке",
+      "tooth": "Зуб",
+      "toothNumber": "Номер зуба",
+      "toothNumberPlaceholder": "Напр.: 11, 21, 36...",
+      "surfaces": "Поверхности",
+      "notes": "Заметки",
+      "notesPlaceholder": "Заметки об этой процедуре...",
+      "managedByPlan": "Строки этой сметы управляются из плана лечения {plan}."
+    },
+    "signature": {
+      "title": "Электронная подпись",
+      "viewAction": "Посмотреть подпись",
+      "signedBy": "Подписал",
+      "signedAt": "Дата подписания",
+      "methodLabel": "Способ",
+      "relationshipLabel": "Отношение к пациенту",
+      "documentHash": "Хеш документа (SHA-256)",
+      "hashHint": "Хеш {short} — привязывает подпись к этому PDF. Любое изменение сделает её недействительной.",
+      "downloadSignedPdf": "Скачать подписанный PDF",
+      "downloadError": "Не удалось скачать подписанный PDF.",
+      "notSigned": "Подпись по этой смете ещё не получена.",
+      "method": {
+        "drawn": "Рукописная подпись",
+        "clickAccept": "Подтверждение нажатием",
+        "external": "Внешний сервис"
+      },
+      "email": "Email",
+      "relationship": "Отношение к пациенту",
+      "patient": "Пациент",
+      "guardian": "Законный представитель",
+      "representative": "Представитель",
+      "accept": "Я принимаю условия сметы",
+      "signHere": "Подпишите здесь",
+      "clear": "Очистить подпись",
+      "loadError": "Не удалось загрузить статус подписи"
+    },
+    "history": {
+      "title": "История изменений",
+      "noChanges": "Изменений нет",
+      "actions": {
+        "created": "Смета создана",
+        "updated": "Смета обновлена",
+        "status_changed": "Статус изменён",
+        "item_added": "Процедура добавлена",
+        "item_removed": "Процедура удалена",
+        "signed": "Смета подписана",
+        "sent": "Смета отправлена",
+        "duplicated": "Создана новая версия",
+        "deleted": "Смета удалена",
+        "item_treatment_started": "Лечение начато",
+        "item_treatment_completed": "Лечение завершено"
+      }
+    },
+    "versions": {
+      "title": "Версии",
+      "current": "Текущая",
+      "viewVersion": "Открыть версию"
+    },
+    "confirmations": {
+      "send": "Отправить смету пациенту?",
+      "sendDescription": "Смета будет отмечена как отправленная.",
+      "reject": "Отклонить смету?",
+      "rejectDescription": "Это действие нельзя отменить.",
+      "cancel": "Отменить смету?",
+      "cancelDescription": "Это действие нельзя отменить.",
+      "resend": "Создать новую версию этой сметы? Связанный план лечения перейдёт на новую версию.",
+      "delete": "Удалить смету?",
+      "deleteDescription": "Это действие нельзя отменить."
+    },
+    "send": {
+      "description": "Смету можно отправить по email или в WhatsApp либо отметить как отправленную вручную (распечатана или передана лично).",
+      "sendByEmail": "Отправить по email",
+      "willSendTo": "Будет отправлено на",
+      "noPatientEmail": "У пациента не указан email",
+      "customMessage": "Своё сообщение (необязательно)",
+      "customMessagePlaceholder": "Добавьте сообщение для пациента...",
+      "manualNote": "Смета будет отмечена как отправленная без отправки сообщения.",
+      "sendEmail": "Отправить email",
+      "markAsSent": "Отметить как отправленную",
+      "sendByWhatsapp": "Отправить в WhatsApp",
+      "sendWhatsapp": "Отправить в WhatsApp",
+      "willSendToPhone": "Будет отправлено в WhatsApp на номер"
+    },
+    "messages": {
+      "created": "Смета создана",
+      "updated": "Смета обновлена",
+      "deleted": "Смета удалена",
+      "sent": "Смета отправлена",
+      "sentByEmail": "Смета отправлена по email",
+      "sentManually": "Смета отмечена как отправленная",
+      "accepted": "Смета принята",
+      "rejected": "Смета отклонена",
+      "cancelled": "Смета отменена",
+      "duplicated": "Создана новая версия",
+      "resent": "Новая версия создана на основе предыдущей сметы",
+      "itemAdded": "Процедура добавлена",
+      "itemUpdated": "Процедура обновлена",
+      "itemRemoved": "Процедура удалена",
+      "treatmentStarted": "Лечение начато",
+      "treatmentCompleted": "Лечение завершено",
+      "sentByWhatsapp": "Смета отправлена в WhatsApp"
+    },
+    "errors": {
+      "load": "Ошибка загрузки смет",
+      "create": "Ошибка создания сметы",
+      "update": "Ошибка обновления сметы",
+      "delete": "Ошибка удаления сметы",
+      "send": "Ошибка отправки сметы",
+      "accept": "Ошибка принятия сметы",
+      "reject": "Ошибка отклонения сметы",
+      "notFound": "Смета не найдена",
+      "onlyDraft": "Редактировать можно только черновики смет"
+    },
+    "filters": {
+      "allStatuses": "Все статусы",
+      "status": "Статус",
+      "paymentStatus": "Статус",
+      "professional": "Специалист",
+      "validity": "Срок действия",
+      "validityValid": "Действует",
+      "validityExpiringSoon": "Истекает в течение 7 дней",
+      "validityExpired": "Истекла",
+      "dateFrom": "С",
+      "dateTo": "По",
+      "showExpired": "Показывать истёкшие",
+      "advanced": "Расширенные фильтры",
+      "clear": "Сбросить фильтры"
+    },
+    "sortFields": {
+      "createdAt": "Создана",
+      "validUntil": "Действует до",
+      "total": "Итого",
+      "status": "Статус",
+      "budgetNumber": "Номер"
+    },
+    "validity": {
+      "expired": "Истекла",
+      "expiresIn": "Истекает через {days} дн."
+    },
+    "pdf": {
+      "generating": "Формирование PDF...",
+      "downloadError": "Ошибка скачивания PDF"
+    },
+    "modals": {
+      "renegotiate": {
+        "title": "Пересогласовать смету",
+        "description": "Текущая смета будет отменена, а план вернётся в черновик, чтобы вы могли скорректировать процедуры.",
+        "submit": "Пересогласовать"
+      },
+      "acceptInClinic": {
+        "title": "Принять смету в клинике",
+        "description": "Зафиксируйте согласие пациента. Можно собрать подпись на планшете (необязательно).",
+        "signerLabel": "ФИО подписавшего",
+        "captureSignature": "Получить подпись",
+        "submit": "Отметить как принятую"
+      },
+      "setPublicCode": {
+        "title": "Задать код доступа",
+        "description": "У этого пациента не указаны ни телефон, ни дата рождения. Задайте код из 4–6 цифр и сообщите его пациенту устно. НЕ указывайте код в письме.",
+        "codeLabel": "Код (4–6 цифр)",
+        "submit": "Сохранить код"
+      }
+    },
+    "publicLink": {
+      "action": "Поделиться ссылкой",
+      "title": "Ссылка для пациента",
+      "help": "Скопируйте ссылку и отправьте пациенту в WhatsApp или по email. Перед просмотром сметы у него запросят один проверочный реквизит.",
+      "copy": "Копировать ссылку",
+      "copied": "Скопировано!",
+      "whatsapp": "Открыть в WhatsApp",
+      "whatsappNoPhone": "У пациента не указан телефон",
+      "whatsappGreeting": "Здравствуйте, {name}! Ваша смета:",
+      "whatsappGreetingFallback": "Здравствуйте! Ваша смета:",
+      "preview": "Предпросмотр",
+      "statusSent": "Отправлена",
+      "statusAccepted": "Принята",
+      "statusRejected": "Отклонена",
+      "statusExpired": "Истекла"
+    },
+    "public": {
+      "title": "Ваша смета",
+      "intro": "{clinic} отправила вам эту смету. Ознакомьтесь с процедурами и выберите вариант.",
+      "subtitle": "Ваш персональный план лечения",
+      "budgetNumber": "Смета",
+      "issuedOn": "Выдана {date}",
+      "items": "Включённые процедуры",
+      "tooth": "Зуб {number}",
+      "subtotal": "Промежуточный итог",
+      "discount": "Скидка",
+      "tax": "НДС",
+      "total": "Итого",
+      "validUntil": "Действует до {date}",
+      "trustSecure": "Защищённое соединение",
+      "trustEncrypted": "Данные зашифрованы",
+      "trustSignature": "Юридически значимая подпись",
+      "needHelp": "Нужна помощь? Позвоните в клинику",
+      "noteFromClinic": "Сообщение от клиники",
+      "callClinic": "Позвонить в клинику",
+      "emailClinic": "Написать на email",
+      "cta_accept": "Принять и подписать",
+      "cta_reject": "Не подходит",
+      "expired": "Срок действия сметы истёк. Пожалуйста, свяжитесь с клиникой.",
+      "locked": "Доступ заблокирован после слишком большого числа попыток. Пожалуйста, позвоните в клинику.",
+      "already_accepted": "Вы уже приняли эту смету. Клиника свяжется с вами, чтобы назначить первый приём.",
+      "already_rejected": "Вы отклонили эту смету. Если передумаете, позвоните в клинику.",
+      "download": {
+        "signedPdf": "Скачать подписанный PDF",
+        "notSigned": "К этой смете ещё не приложена подпись.",
+        "error": "Не удалось скачать PDF. Попробуйте ещё раз.",
+        "reauthIntro": "В целях безопасности подтвердите личность ещё раз, чтобы скачать подписанный PDF."
+      },
+      "verify": {
+        "title": "Подтвердите личность",
+        "intro": "Для защиты ваших данных подтвердите один реквизит перед просмотром сметы.",
+        "phone_last4_label": "Последние 4 цифры вашего телефона",
+        "dob_label": "Ваша дата рождения",
+        "manual_code_label": "Код, выданный вам клиникой",
+        "submit": "Продолжить",
+        "invalid": "Неверные данные. Попробуйте ещё раз.",
+        "locked": "Доступ заблокирован после слишком большого числа попыток. Пожалуйста, позвоните в клинику.",
+        "rate_limited": "Слишком много попыток. Подождите 15 минут."
+      },
+      "accept": {
+        "title": "Принять и подписать",
+        "signerLabel": "Ваши ФИО",
+        "signatureLabel": "Подпишите здесь (необязательно)",
+        "signatureClear": "Очистить",
+        "consent": "Я принимаю эту смету и разрешаю описанное лечение.",
+        "submit": "Подтвердить согласие",
+        "success": "Готово! Клиника свяжется с вами, чтобы назначить первый приём."
+      },
+      "reject": {
+        "title": "Не подходит",
+        "intro": "Почему эта смета вам не подходит?",
+        "reasonLabel": "Причина",
+        "noteLabel": "Комментарий (необязательно)",
+        "submit": "Подтвердить отказ",
+        "success": "Мы уведомили клинику.",
+        "reasons": {
+          "price": "Цена",
+          "time": "Нет времени",
+          "second_opinion": "Второе мнение",
+          "other": "Другая причина"
+        }
+      }
+    },
+    "settings": {
+      "title": "Настройки смет",
+      "description": "Настройте срок действия, напоминания и проверку по публичной ссылке.",
+      "cards": {
+        "expiry": {
+          "title": "Срок действия и автозакрытие",
+          "description": "Сколько действует смета до истечения и когда автоматически закрывать ожидающие планы."
+        },
+        "reminders": {
+          "title": "Автоматические напоминания",
+          "description": "Включение email-напоминаний через 7 и 14 дней пациентам, не ответившим на смету."
+        },
+        "publicLink": {
+          "title": "Публичная ссылка и проверка",
+          "description": "Настройте защиту ссылки на смету, которую получает пациент."
+        }
+      },
+      "expiry": {
+        "validityDays": "Срок действия сметы (дней)",
+        "validityHelp": "Если за это число дней ответа нет, смета получает статус «Истекла» (от 7 до 180).",
+        "autoCloseDays": "Дней до автозакрытия плана",
+        "autoCloseHelp": "Планы с истёкшей сметой, по которым нет действий в течение этого срока, переходят в «Закрыт» (от 7 до 180).",
+        "save": "Сохранить"
+      },
+      "reminders": {
+        "enabled": "Отправлять автонапоминания через 7 и 14 дней",
+        "enabledHelp": "Если включено, система пишет пациенту по email о неоплаченных сметах. Если выключено, администратор напоминает вручную.",
+        "save": "Сохранить"
+      },
+      "publicLink": {
+        "authDisabled": "Отключить проверку по публичной ссылке",
+        "authDisabledHelp": "Если включено, пациент видит смету просто по ссылке — без запроса телефона или даты рождения. Учитывайте риск, если ссылку передадут другим.",
+        "save": "Сохранить"
+      },
+      "saved": "Настройки сохранены"
+    }
+  },
+  "notifications": {
+    "communications": {
+      "language": {
+        "cardTitle": "Язык сообщений",
+        "cardDescription": "Язык сметы для пациента, писем и сообщений в WhatsApp.",
+        "title": "Язык сообщений пациентам",
+        "label": "Язык",
+        "help": "Применяется к смете, которую видит пациент, и к автоматическим шаблонам email и WhatsApp. Интерфейс персонала сохраняет язык, выбранный каждым пользователем.",
+        "save": "Сохранить",
+        "saved": "Язык сохранён"
+      }
+    },
+    "title": "Уведомления",
+    "description": "Настройка email-уведомлений клиники",
+    "pageDescription": "Настройте, какие уведомления отправляются автоматически, а какие требуют ручной отправки.",
+    "autoVsManual": "Автоматические и ручные уведомления",
+    "autoVsManualDescription": "Укажите, какие уведомления отправляются автоматически при наступлении события, а какие сотрудник отправляет вручную.",
+    "notificationType": "Тип уведомления",
+    "enabled": "Включено",
+    "autoSend": "Автоотправка",
+    "options": "Параметры",
+    "hoursBefore": "ч до",
+    "testConnection": "Проверить подключение",
+    "testEmailTitle": "Отправить тестовое письмо",
+    "testEmailDescription": "Мы отправим тестовое письмо, чтобы проверить, что настройки работают.",
+    "sendTestEmail": "Отправить тест",
+    "test_email_sent": "Тестовое письмо отправлено",
+    "settings_saved": "Настройки сохранены",
+    "emailProvider": "Почтовый сервис",
+    "providerConfigured": "Почтовый сервис настроен",
+    "providerNote": "Настройка почтового сервера выполняется в переменных окружения сервера.",
+    "infoTitle": "Информация",
+    "infoAutoSend": "Автоотправка: уведомление уходит при наступлении события (например, при создании записи).",
+    "infoManualSend": "Ручная отправка: появится кнопка, чтобы отправить уведомление, когда нужно.",
+    "infoDisabled": "Отключено: уведомление не отправляется, и кнопка отправки не отображается.",
+    "types": {
+      "appointment_confirmation": "Подтверждение записи",
+      "appointment_confirmation_desc": "Письмо с подтверждением при назначении приёма",
+      "appointment_cancelled": "Отмена записи",
+      "appointment_cancelled_desc": "Письмо-уведомление при отмене приёма",
+      "appointment_reminder": "Напоминание о приёме",
+      "appointment_reminder_desc": "Письмо-напоминание перед приёмом",
+      "budget_sent": "Отправка сметы",
+      "budget_sent_desc": "Письмо с деталями сметы",
+      "budget_accepted": "Смета принята",
+      "budget_accepted_desc": "Письмо с подтверждением, когда смета принята",
+      "welcome": "Приветствие",
+      "welcome_desc": "Приветственное письмо новым пациентам",
+      "invoice_sent": "Отправка счёта",
+      "invoice_sent_desc": "Сообщение со счётом при его отправке пациенту",
+      "budget_reminder": "Напоминание о смете",
+      "budget_reminder_desc": "Повторное сообщение по сметам без ответа (через 7 и 14 дней)",
+      "recall_reminder": "Напоминание о повторном визите",
+      "recall_reminder_desc": "Напоминание записаться на плановый повторный визит"
+    },
+    "sendConfirmation": "Отправить подтверждение",
+    "sendReminder": "Отправить напоминание",
+    "sendCancellation": "Отправить уведомление об отмене",
+    "sendBudget": "Отправить по email",
+    "sendAcceptance": "Отправить подтверждение",
+    "sendWelcome": "Отправить приветствие",
+    "sendEmail": "Отправить email",
+    "errors": {
+      "fetch_failed": "Ошибка загрузки настроек",
+      "save_failed": "Ошибка сохранения настроек",
+      "test_failed": "Ошибка отправки тестового письма",
+      "send_failed": "Ошибка отправки уведомления"
+    },
+    "smtp": {
+      "title": "Настройка почтового сервера",
+      "description": "Настройте SMTP-сервер для отправки писем от имени клиники. У каждой клиники может быть своя конфигурация.",
+      "configure": "Настроить",
+      "provider": "Провайдер",
+      "host": "Сервер",
+      "port": "Порт",
+      "username": "Имя пользователя",
+      "password": "Пароль",
+      "passwordHint": "Оставьте пустым, чтобы сохранить текущий пароль",
+      "useTls": "Использовать TLS",
+      "useSsl": "Использовать SSL",
+      "fromEmail": "Email отправителя",
+      "fromName": "Имя отправителя",
+      "security": "Безопасность",
+      "testConnection": "Проверить подключение",
+      "testConnectionTitle": "Проверьте настройки перед сохранением",
+      "testEmailPlaceholder": "Email для теста",
+      "test_success": "SMTP-подключение успешно. Тестовое письмо отправлено.",
+      "test_failed": "Ошибка SMTP-подключения",
+      "settings_saved": "Настройки SMTP сохранены",
+      "consoleNote": "В режиме консоли письма выводятся в консоль сервера, а не отправляются. Полезно при разработке.",
+      "disabledNote": "Пока email отключён, эта клиника не отправляет email-уведомлений.",
+      "status": {
+        "not_configured": "Не настроено",
+        "verified": "Проверено и работает",
+        "not_verified": "Настроено, но не проверено",
+        "disabled": "Email отключён",
+        "console": "Режим консоли (разработка)"
+      },
+      "errors": {
+        "fetch_failed": "Ошибка загрузки настроек SMTP",
+        "save_failed": "Ошибка сохранения настроек SMTP",
+        "test_failed": "Ошибка проверки SMTP-подключения"
+      }
+    },
+    "onboarding": {
+      "label": "Отправка email",
+      "description": "Укажите отправителя, чтобы рассылать подтверждения записи и сметы."
+    },
+    "channels": {
+      "cardTitle": "Каналы",
+      "cardDescription": "Как клиника связывается с пациентами: канал для автоматических сообщений и кнопки отправки, которые видит персонал.",
+      "preferredLabel": "Основной канал",
+      "preferredHelp": "Используется для автоматических сообщений (новая запись, напоминание, приветствие…).",
+      "fallbackLabel": "Переключаться на другой канал",
+      "fallbackHelp": "Если основной канал не может отправить сообщение, попробовать другой доступный канал, а не пропускать сообщение.",
+      "manualLabel": "Показывать кнопку отправки для…",
+      "manualHelp": "Какие кнопки отправки видит администратор в приёмах, сметах и счетах.",
+      "manualAtLeastOne": "Выберите хотя бы один канал.",
+      "email": "Email",
+      "whatsapp": "WhatsApp",
+      "whatsappUnavailableHint": "WhatsApp недоступен, пока не подключён номер клиники.",
+      "whatsappConnect": "Подключить WhatsApp (Kapso)",
+      "noEmail": "У пациента не указан email",
+      "noPhone": "У пациента не указан телефон",
+      "sms": "SMS",
+      "smsUnavailableHint": "SMS недоступны, пока не настроен SMS-провайдер.",
+      "smsConnect": "Настроить",
+      "smsDailyLimitLabel": "Дневной лимит SMS",
+      "smsDailyLimitHelp": "Максимум исходящих SMS в день для клиники."
+    },
+    "channelSent": {
+      "email": "Email отправлен",
+      "whatsapp": "Сообщение в WhatsApp отправлено",
+      "sms": "SMS отправлено"
+    },
+    "prefs": {
+      "title": "Настройки уведомлений",
+      "description": "По каким каналам можно связываться с этим пациентом. Отказ блокирует канал, даже при принудительной отправке.",
+      "saved": "Настройки сохранены",
+      "typesDescription": "Типы сообщений, которые получает этот пациент. Отключение блокирует тип во всех каналах, включая ручную отправку."
+    }
+  },
+  "invoice": {
+    "title": "Счета",
+    "description": "Управление счетами и оплатой",
+    "new": "Новый счёт",
+    "edit": "Редактировать счёт",
+    "view": "Просмотр счёта",
+    "delete": "Удалить счёт",
+    "noItems": "Нет счетов",
+    "empty": "Счета не созданы",
+    "emptyAction": "Создать первый счёт",
+    "searchPlaceholder": "Поиск по номеру или пациенту...",
+    "notFound": "Счёт не найден",
+    "draftNoNumber": "Черновик",
+    "details": "Детали",
+    "invoiceNumber": "Номер счёта",
+    "patient": "Пациент",
+    "searchPatient": "Найти пациента",
+    "searchPatientPlaceholder": "Поиск по имени...",
+    "professional": "Специалист",
+    "billingData": "Платёжные данные",
+    "billingName": "Плательщик",
+    "taxId": "ИНН",
+    "billingEmail": "Email для счетов",
+    "billingAddress": "Адрес плательщика",
+    "billingDataComplete": "Заполнены",
+    "billingDataIncomplete": "Не заполнены",
+    "billingDataIncompleteHint": "У пациента не хватает некоторых платёжных данных.",
+    "editPatientBilling": "Изменить данные пациента",
+    "fromPatient": "Из карточки пациента",
+    "editInPatient": "Изменить в профиле",
+    "billingFromPatientHint": "Эти данные взяты из карточки пациента. Чтобы изменить их, отредактируйте платёжные данные пациента.",
+    "paymentTerms": "Условия оплаты",
+    "linkedToBudget": "Связан со сметой",
+    "selectPatient": "Выберите пациента",
+    "noBillingData": "Нет платёжных данных",
+    "street": "Улица",
+    "city": "Город",
+    "postalCode": "Почтовый индекс",
+    "province": "Область",
+    "country": "Страна",
+    "linkedBudget": "Связанная смета",
+    "creditNoteFor": "Корректировочный счёт к",
+    "paymentTermDays": "Срок оплаты (дней)",
+    "dueDate": "Срок оплаты",
+    "issueDate": "Дата выставления",
+    "subtotal": "Промежуточный итог",
+    "discount": "Скидка",
+    "tax": "Налог",
+    "total": "Итого",
+    "paid": "Оплачено",
+    "balance": "Остаток",
+    "balanceDue": "Задолженность",
+    "overdue": "Просрочен",
+    "overdueDays": "Просрочено {n} дн.",
+    "info": {
+      "issueDate": "Дата выставления",
+      "dueDate": "Срок оплаты",
+      "issuedBy": "Выставил",
+      "createdBy": "Создал",
+      "createdAt": "Создан",
+      "budget": "Смета",
+      "creditNoteFor": "Корректировочный счёт к"
+    },
+    "criticalBanner": {
+      "aeatRejected": {
+        "title": "AEAT отклонила этот счёт",
+        "cta": "Исправить и отправить снова"
+      },
+      "billingIncomplete": {
+        "title": "Платёжные данные не заполнены",
+        "cta": "Заполнить данные"
+      }
+    },
+    "collect": {
+      "title": "Принять оплату по счёту",
+      "submit": "Принять оплату",
+      "noteAppliedToInvoice": "зачтено в этот счёт.",
+      "notePendingAfter": "Остаток к оплате",
+      "noteFullySettled": "Этот платёж полностью закрывает счёт.",
+      "noteToInvoice": "зачтено в этот счёт, а",
+      "noteExcessToOnAccount": "зачислено на баланс пациента.",
+      "noteInvoiceSettled": "Этот счёт уже оплачен.",
+      "noteToOnAccount": "будет зачислено на баланс пациента."
+    },
+    "tooth": "Зуб",
+    "vat": "НДС",
+    "internalNotes": "Внутренние заметки",
+    "internalNotesPlaceholder": "Заметки видны только персоналу...",
+    "publicNotes": "Заметки в счёте",
+    "publicNotesPlaceholder": "Заметки, видимые в счёте...",
+    "items": "Позиции",
+    "addItem": "Добавить позицию",
+    "editItem": "Редактировать позицию",
+    "selectTreatment": "Процедура",
+    "searchCatalog": "Поиск процедуры в каталоге...",
+    "itemDescription": "Описание",
+    "itemPrice": "Цена за единицу",
+    "itemQuantity": "Количество",
+    "selectVatType": "Выберите ставку НДС",
+    "summary": "Итоги",
+    "createDraft": "Создать черновик",
+    "createFromBudget": "Создать счёт по смете",
+    "notes": "Заметки",
+    "status": {
+      "draft": "Черновик",
+      "issued": "Выставлен",
+      "partial": "Частично оплачен",
+      "paid": "Оплачен",
+      "cancelled": "Отменён",
+      "voided": "Аннулирован"
+    },
+    "actions": {
+      "issue": "Выставить счёт",
+      "void": "Аннулировать",
+      "recordPayment": "Внести оплату",
+      "createCreditNote": "Создать корректировочный счёт",
+      "downloadPdf": "Скачать PDF",
+      "previewPdf": "Предпросмотр PDF",
+      "sendEmail": "Отправить по email"
+    },
+    "recordPayment": "Внести оплату",
+    "paymentAmount": "Сумма",
+    "paymentMethod": "Способ оплаты",
+    "paymentDate": "Дата оплаты",
+    "paymentReference": "Реквизиты платежа",
+    "paymentReferencePlaceholder": "Номер транзакции, квитанции...",
+    "paymentNotes": "Заметки к оплате",
+    "paymentVoided": "Оплата аннулирована",
+    "createCreditNote": "Создать корректировочный счёт",
+    "creditNoteReason": "Причина корректировки",
+    "creditNoteReasonPlaceholder": "Опишите причину корректировочного счёта...",
+    "creditNoteInfo": "Корректировочный счёт будет создан на всю сумму счёта.",
+    "prompts": {
+      "voidPaymentReason": "Укажите причину аннулирования этой оплаты"
+    },
+    "payments": {
+      "title": "Оплаты",
+      "void": "Аннулировать оплату",
+      "amount": "Сумма",
+      "method": "Способ оплаты",
+      "date": "Дата",
+      "reference": "Реквизиты платежа",
+      "notes": "Заметки",
+      "noPayments": "Оплат нет",
+      "voided": "Оплата аннулирована",
+      "voidReason": "Причина аннулирования",
+      "voidReasonPlaceholder": "Причина аннулирования этой оплаты...",
+      "methods": {
+        "cash": "Наличные",
+        "card": "Карта",
+        "bank_transfer": "Банковский перевод",
+        "direct_debit": "Прямое списание",
+        "insurance": "Страховка",
+        "upi": "UPI",
+        "netbanking": "Интернет-банкинг",
+        "other": "Другое"
+      }
+    },
+    "creditNote": {
+      "title": "Корректировочный счёт",
+      "create": "Создать корректировочный счёт",
+      "reason": "Причина",
+      "reasonPlaceholder": "Причина корректировочного счёта...",
+      "selectItems": "Выберите позиции для корректировки",
+      "originalInvoice": "Исходный счёт"
+    },
+    "history": {
+      "title": "История",
+      "noChanges": "Изменений нет",
+      "actions": {
+        "created": "Счёт создан",
+        "updated": "Счёт обновлён",
+        "issued": "Счёт выставлен",
+        "voided": "Счёт аннулирован",
+        "payment_recorded": "Оплата внесена",
+        "payment_voided": "Оплата аннулирована",
+        "credit_note_created": "Создан корректировочный счёт"
+      }
+    },
+    "fromBudget": "Создать счёт по смете",
+    "selectItems": "Выберите позиции для счёта",
+    "selectItemsHint": "Выберите позиции сметы, которые нужно включить в счёт",
+    "availableQuantity": "Доступно",
+    "quantityToInvoice": "Кол-во к выставлению",
+    "alreadyInvoiced": "Уже выставлено",
+    "remaining": "Осталось",
+    "noItemsAvailable": "Нет позиций для выставления счёта",
+    "allItemsInvoiced": "Все позиции уже выставлены",
+    "series": {
+      "title": "Серии счетов",
+      "prefix": "Префикс",
+      "type": "Тип",
+      "currentNumber": "Текущий номер",
+      "resetYearly": "Сбрасывать каждый год",
+      "default": "По умолчанию"
+    },
+    "filters": {
+      "allStatuses": "Статус",
+      "overdueOnly": "Просроченные",
+      "dateFrom": "С",
+      "dateTo": "По"
+    },
+    "sortFields": {
+      "created": "Создан",
+      "issueDate": "Дата выставления",
+      "dueDate": "Срок оплаты",
+      "total": "Итого"
+    },
+    "overdueByDays": "Просрочено {days} дн.",
+    "pdf": {
+      "generating": "Формирование PDF...",
+      "downloadError": "Ошибка скачивания PDF"
+    },
+    "reports": {
+      "title": "Отчёты по оплате",
+      "summary": "Сводка",
+      "overdue": "Просрочено",
+      "overdueInvoices": "Просроченные счета",
+      "byPaymentMethod": "По способу оплаты",
+      "byProfessional": "По специалистам",
+      "vatSummary": "Сводка по НДС",
+      "gaps": "Пропуски в нумерации",
+      "period": "Период",
+      "from": "С",
+      "to": "По",
+      "refresh": "Обновить",
+      "totalInvoiced": "Всего выставлено",
+      "totalCollected": "Всего получено",
+      "totalPaid": "Всего оплачено",
+      "totalPending": "Всего ожидает оплаты",
+      "pending": "Задолженность",
+      "invoices": "счетов",
+      "paid": "оплачено",
+      "payments": "оплат",
+      "noGaps": "Пропусков в нумерации нет",
+      "gapsFound": "Найдено пропусков в нумерации: {count}",
+      "gapsDetected": "Обнаружены пропуски в нумерации",
+      "missingNumbers": "Отсутствующие номера:",
+      "noData": "Нет данных за выбранный период",
+      "noOverdue": "Просроченных счетов нет",
+      "daysOverdue": "дн. просрочки",
+      "vatType": "Ставка НДС",
+      "base": "База",
+      "tax": "Налог",
+      "thisMonth": "Этот месяц",
+      "thisQuarter": "Этот квартал",
+      "thisYear": "Этот год",
+      "lastMonth": "Прошлый месяц",
+      "lastQuarter": "Прошлый квартал",
+      "lastYear": "Прошлый год"
+    },
+    "confirmations": {
+      "issue": "Выставить счёт?",
+      "issueDescription": "После выставления счёт нельзя редактировать. Можно только вносить оплаты или создавать корректировочные счета.",
+      "void": "Аннулировать счёт?",
+      "voidDescription": "Это действие нельзя отменить.",
+      "delete": "Удалить счёт?",
+      "deleteDescription": "Это действие нельзя отменить."
+    },
+    "messages": {
+      "created": "Счёт создан",
+      "updated": "Счёт обновлён",
+      "deleted": "Счёт удалён",
+      "issued": "Счёт выставлен",
+      "voided": "Счёт аннулирован",
+      "itemAdded": "Позиция добавлена",
+      "itemUpdated": "Позиция обновлена",
+      "sentByEmail": "Счёт отправлен по email",
+      "sentManually": "Счёт отмечен как отправленный",
+      "sentByWhatsapp": "Счёт отправлен в WhatsApp",
+      "creditNoteCreated": "Корректировочный счёт создан",
+      "paymentRecorded": "Оплата внесена"
+    },
+    "send": {
+      "title": "Отправить счёт",
+      "description": "Счёт можно отправить по email или в WhatsApp либо отметить как отправленный вручную (распечатан или передан лично).",
+      "sendByEmail": "Отправить по email",
+      "willSendTo": "Будет отправлено на",
+      "noPatientEmail": "У пациента не указан email",
+      "customMessage": "Своё сообщение (необязательно)",
+      "customMessagePlaceholder": "Добавьте сообщение для пациента...",
+      "manualNote": "Счёт будет отмечен как отправленный без отправки сообщения.",
+      "sendEmail": "Отправить email",
+      "markAsSent": "Отметить как отправленный",
+      "sendByWhatsapp": "Отправить в WhatsApp",
+      "sendWhatsapp": "Отправить в WhatsApp",
+      "willSendToPhone": "Будет отправлено в WhatsApp на номер"
+    },
+    "errors": {
+      "load": "Ошибка загрузки счетов",
+      "create": "Ошибка создания счёта",
+      "update": "Ошибка обновления счёта",
+      "delete": "Ошибка удаления счёта",
+      "issue": "Ошибка выставления счёта",
+      "void": "Ошибка аннулирования счёта",
+      "recordPayment": "Ошибка внесения оплаты",
+      "voidPayment": "Ошибка аннулирования оплаты",
+      "createCreditNote": "Ошибка создания корректировочного счёта",
+      "send": "Ошибка отправки счёта",
+      "creditNoteReasonRequired": "Укажите причину корректировочного счёта",
+      "notFound": "Счёт не найден",
+      "canOnlyDeleteDraft": "Удалять можно только черновики счетов",
+      "patientRequired": "Укажите пациента",
+      "itemsRequired": "Нужна хотя бы одна позиция",
+      "itemRequired": "Укажите описание и цену",
+      "selectCatalogItem": "Выберите процедуру из каталога",
+      "cannotEdit": "Редактировать можно только черновики счетов"
+    },
+    "newItemsPending": "Новые позиции не сохранены",
+    "linkedPlan": "План лечения"
+  },
+  "reports": {
+    "title": "Отчёты",
+    "subtitle": "Аналитика и статистика клиники",
+    "viewReports": "Просмотр отчётов",
+    "noAccess": "У вас нет доступа ни к одному отчёту",
+    "dashboard": {
+      "title": "Главная",
+      "subtitle": "Клиника в одном взгляде",
+      "period": "Период",
+      "snapshotBadge": "Сегодня",
+      "snapshotTooltip": "Не зависит от выбранного периода",
+      "vsPrev": "к предыдущему периоду",
+      "empty": {
+        "noData": "Нет данных за этот период"
+      },
+      "drilldown": {
+        "title": "Детализация",
+        "payments": "Платежи"
+      },
+      "kpi": {
+        "cashCollected": "Поступления",
+        "cashCollectedHint": "Платежей: {count}",
+        "patientAdvance": "Аванс пациентов",
+        "patientAdvanceHint": "Нераспределённые авансы",
+        "production": "Выполненные работы",
+        "productionHint": "Процедур: {count}",
+        "byMethod": "По способу оплаты",
+        "methodCount": "Платежей: {count}",
+        "total": "Итого",
+        "newPatients": "Новые пациенты",
+        "newPatientsHint": "{rate}% от всех приёмов",
+        "appointmentFunnel": "Доля неявок",
+        "funnelHint": "{completed}% завершено",
+        "avgCollectedTicket": "Средний чек",
+        "avgTicketHint": "По платежам: {count}",
+        "aging": "Структура задолженности"
+      },
+      "charts": {
+        "cashOverTime": "Поступления по времени",
+        "productionByDoctor": "Выполненные работы по стоматологам",
+        "refunded": "Возвраты"
+      },
+      "production": {
+        "unassigned": "Не назначен",
+        "others": "Прочие",
+        "treatmentCount": "Процедур: {count}"
+      },
+      "aging": {
+        "bucket0_30": "0–30 дней",
+        "bucket31_60": "31–60 дней",
+        "bucket61_90": "61–90 дней",
+        "bucket90plus": "90+ дней",
+        "empty": "Нет неоплаченной задолженности",
+        "patientCount": "Пациентов: {count}"
+      }
+    },
+    "billing": {
+      "title": "Счета и оплаты",
+      "description": "Выручка, платежи, НДС и просроченные счета",
+      "summary": "Сводка",
+      "overdue": "Просрочено",
+      "overdueInvoices": "Просроченные счета",
+      "byPaymentMethod": "По способу оплаты",
+      "byProfessional": "По специалистам",
+      "vatSummary": "Сводка по НДС",
+      "gaps": "Пропуски в нумерации",
+      "period": "Период",
+      "from": "С",
+      "to": "По",
+      "refresh": "Обновить",
+      "totalInvoiced": "Выставлено счетов",
+      "totalCollected": "Получено оплат",
+      "pending": "Остаток задолженности",
+      "invoices": "счетов",
+      "paid": "оплачено",
+      "payments": "платежей",
+      "gapsDetected": "Обнаружены пропуски в нумерации",
+      "missingNumbers": "Пропущенные номера:",
+      "noData": "Нет данных за выбранный период",
+      "noOverdue": "Нет просроченных счетов",
+      "invoiceAging": "Возраст счетов",
+      "invoiceAgingDescription": "Неоплаченные выставленные суммы по периодам. Счета с неистёкшим сроком показаны отдельно.",
+      "notDue": "Срок не наступил",
+      "issuedTrend": "Динамика выставления",
+      "daysOverdue": "дн. просрочки",
+      "vatType": "Ставка НДС",
+      "base": "База",
+      "tax": "Налог",
+      "thisMonth": "Этот месяц",
+      "thisQuarter": "Этот квартал",
+      "thisYear": "Этот год",
+      "lastMonth": "Прошлый месяц",
+      "lastQuarter": "Прошлый квартал",
+      "lastYear": "Прошлый год"
+    },
+    "budgets": {
+      "title": "Сметы",
+      "description": "Доля принятых смет, анализ по специалистам и процедурам",
+      "comingSoonDescription": "Отчёты по сметам скоро появятся. Вы сможете анализировать долю принятых смет, сметы по специалистам и самые частые процедуры.",
+      "features": {
+        "acceptanceRate": "Доля принятых",
+        "acceptanceRateDesc": "Процент принятых и отклонённых смет",
+        "byProfessional": "По специалистам",
+        "byProfessionalDesc": "Сметы, созданные каждым специалистом",
+        "byTreatment": "По процедурам",
+        "byTreatmentDesc": "Самые частые процедуры в сметах",
+        "averageValue": "Средняя сумма",
+        "averageValueDesc": "Средняя сумма сметы"
+      },
+      "labels": {
+        "totalCreated": "Всего создано",
+        "accepted": "Принято",
+        "rejected": "отклонено",
+        "pending": "в ожидании",
+        "completed": "Завершено",
+        "acceptanceRate": "Доля принятых",
+        "averageValue": "Средняя сумма",
+        "byStatus": "По статусам",
+        "topTreatments": "Частые процедуры в сметах",
+        "treatment": "Процедура",
+        "occurrences": "Упоминаний",
+        "quantity": "Количество"
+      }
+    },
+    "scheduling": {
+      "title": "Расписание",
+      "description": "Первичные визиты, отработанные часы и загрузка",
+      "comingSoonDescription": "Отчёты по расписанию скоро появятся. Вы сможете анализировать первичные визиты, часы по специалистам и долю отмен.",
+      "features": {
+        "firstVisits": "Первичные визиты",
+        "firstVisitsDesc": "Новые пациенты за период",
+        "hoursWorked": "Отработанные часы",
+        "hoursWorkedDesc": "Время по специалистам",
+        "cancellations": "Отмены",
+        "cancellationsDesc": "Доля отмен и неявок",
+        "cabinetUtilization": "Загрузка кабинетов",
+        "cabinetUtilizationDesc": "Использование каждого кабинета"
+      },
+      "labels": {
+        "totalAppointments": "Всего приёмов",
+        "completionRate": "Доля завершённых",
+        "completed": "завершено",
+        "cancellationRate": "Доля отмен",
+        "cancelled": "отменено",
+        "noShowRate": "Доля неявок",
+        "noShows": "неявок",
+        "newPatients": "новых пациентов",
+        "firstVisitRate": "Доля первичных визитов",
+        "ofTotalAppointments": "от всех приёмов",
+        "appointmentsInPeriod": "Приёмов за период",
+        "excludingCancelled": "без учёта отменённых",
+        "appointments": "приёмов",
+        "byDayOfWeek": "По дням недели",
+        "statusBreakdown": "Разбивка по статусам",
+        "pending": "в ожидании"
+      },
+      "analytics": {
+        "funnel": "Воронка статусов",
+        "funnelDesc": "Распределение приёмов по статусам за период",
+        "waitingTimes": "Время ожидания",
+        "waitingTimesDesc": "Минуты между приходом пациента и посадкой в кресло",
+        "punctuality": "Пунктуальность пациентов",
+        "punctualityDesc": "Разница между назначенным временем и фактическим приходом",
+        "durationVariance": "Плановая и фактическая длительность",
+        "durationVarianceDesc": "Сравнение плановой длительности с фактическим временем в кресле",
+        "samples": "Выборка",
+        "average": "Среднее",
+        "median": "Медиана",
+        "p90": "P90",
+        "avgDelta": "Среднее отклонение",
+        "medianDelta": "Медианное отклонение",
+        "onTime": "% вовремя",
+        "avgOverrun": "Среднее превышение",
+        "overrunCount": "Случаев превышения",
+        "underCount": "Случаев быстрее плана",
+        "completionRate": "Завершено",
+        "noShowRate": "Неявки",
+        "cancellationRate": "Отмены",
+        "punctuality_early": "Раньше (<-5)",
+        "punctuality_on_time": "Вовремя (±5)",
+        "punctuality_late_short": "Опоздал (5–15)",
+        "punctuality_late_long": "Опоздал (>15)"
+      },
+      "tabs": {
+        "overview": "Обзор",
+        "activity": "Активность",
+        "quality": "Качество"
+      },
+      "hero": {
+        "inPeriod": "за период"
+      },
+      "filters": {
+        "cabinet": "Кабинет",
+        "professional": "Специалист",
+        "custom": "Свой период",
+        "all": "Все",
+        "clear": "Сбросить фильтры"
+      },
+      "empty": {
+        "title": "Нет данных за этот период",
+        "desc": "Расширьте период или уберите фильтры."
+      }
+    },
+    "loadError": "Не удалось загрузить данные отчёта"
+  },
+  "invoiceSeries": {
+    "title": "Серии счетов",
+    "description": "Префиксы и нумерация счетов",
+    "regularInvoices": "Счета",
+    "creditNotes": "Корректировочные счета",
+    "new": "Новая серия",
+    "newTitle": "Новая серия: {type}",
+    "editTitle": "Изменить серию",
+    "prefix": "Префикс",
+    "prefixHint": "Например, INV, CR. Год добавится автоматически.",
+    "descriptionLabel": "Описание",
+    "descriptionPlaceholder": "Описание серии (необязательно)...",
+    "nextNumber": "Следующий номер",
+    "preview": "Предпросмотр",
+    "resetYearly": "Ежегодный сброс",
+    "resetYearlyLabel": "Сбрасывать нумерацию каждый год",
+    "setAsDefault": "Сделать основной",
+    "activeLabel": "Активная серия",
+    "showInactive": "Показать неактивные",
+    "noItems": "Серии не настроены",
+    "resetCounter": "Сбросить счётчик",
+    "currentNumber": "Текущий номер",
+    "seriesPrefix": "Префикс серии",
+    "newNumber": "Новый номер",
+    "newNumberHint": "Номер должен быть больше наибольшего существующего номера в этой серии.",
+    "resetWarningTitle": "Внимание",
+    "resetWarning": "Действие будет записано в журнал аудита и необратимо.",
+    "confirmReset": "Сбросить счётчик",
+    "created": "Серия создана",
+    "saved": "Серия обновлена",
+    "resetSuccess": "Счётчик сброшен",
+    "onboarding": {
+      "label": "Серия счетов",
+      "description": "Нужна, чтобы выставить первый счёт (например, FAC-2026-0001)."
+    }
+  },
+  "documents": {
+    "title": "Документы",
+    "add": "Добавить",
+    "edit": "Изменить документ",
+    "upload": "Загрузить документ",
+    "uploading": "Загрузка...",
+    "empty": "Документов пока нет",
+    "uploadFirst": "Загрузить первый документ",
+    "types": {
+      "consent": "Согласие",
+      "id_scan": "Удостоверение личности",
+      "insurance": "Страховка",
+      "report": "Заключение",
+      "referral": "Направление",
+      "other": "Другое"
+    },
+    "fields": {
+      "type": "Тип",
+      "title": "Название",
+      "titlePlaceholder": "Название документа",
+      "description": "Описание",
+      "descriptionPlaceholder": "Заметки (необязательно)"
+    },
+    "dropzone": {
+      "hint": "Перетащите файл сюда или нажмите, чтобы выбрать"
+    },
+    "filter": {
+      "allTypes": "Все типы"
+    },
+    "deleteConfirm": {
+      "title": "Удалить документ",
+      "message": "Удалить этот документ? Действие необратимо."
+    },
+    "fetchError": "Ошибка загрузки документов",
+    "uploadSuccess": "Документ загружен",
+    "uploadError": "Ошибка загрузки документа",
+    "downloadError": "Ошибка скачивания документа",
+    "viewError": "Ошибка открытия документа",
+    "deleteSuccess": "Документ удалён",
+    "deleteError": "Ошибка удаления документа",
+    "updateSuccess": "Документ обновлён",
+    "updateError": "Ошибка обновления документа",
+    "viewer": {
+      "loading": "Загрузка документа...",
+      "error": "Не удалось открыть документ",
+      "downloadInstead": "Скачать",
+      "unsupported": "Предпросмотр для этого типа файла недоступен",
+      "zoomOut": "Уменьшить",
+      "zoomIn": "Увеличить",
+      "resetZoom": "Сбросить до 100%",
+      "zoomHint": "Ctrl + прокрутка для масштаба"
+    },
+    "typeDesc": {
+      "consent": "Подписанный документ",
+      "id_scan": "Паспорт / удостоверение",
+      "insurance": "Полис или карта",
+      "report": "Клиническое заключение",
+      "referral": "Направление от врача",
+      "other": "Без категории"
+    },
+    "errors": {
+      "mime": "Тип файла не разрешён. Только PDF, JPG или PNG.",
+      "size": "Файл больше 10 МБ."
+    },
+    "pdfPreviewHint": "Предпросмотр будет доступен после загрузки",
+    "uploadHelp": "Укажите тип файла, чтобы он попал в нужную категорию."
+  },
+  "photoGallery": {
+    "title": "Галерея пациента",
+    "add": "Добавить фото",
+    "empty": "Фото пока нет",
+    "uploadFirst": "Загрузить первое",
+    "showingOf": "Показано {count} из {total}",
+    "upload": "Загрузить фото",
+    "uploadHelp": "Укажите тип, чтобы фото попало в нужную категорию",
+    "fetchError": "Ошибка загрузки фото",
+    "uploadError": "Ошибка загрузки фото",
+    "uploadSuccess": "Фото загружено",
+    "dropHere": "Перетащите фото сюда или нажмите",
+    "category": "Тип",
+    "subtype": "Ракурс",
+    "titlePlaceholder": "Интраоральное, фронтальное — 02/05",
+    "capturedAt": "Дата",
+    "exifHint": "Автоматически из EXIF",
+    "cat": {
+      "all": "Все",
+      "intraoral": "Интраоральные",
+      "extraoral": "Экстраоральные",
+      "xray": "Рентген",
+      "clinical": "До/после",
+      "other": "Другое"
+    },
+    "catDesc": {
+      "intraoral": "Внутри полости рта",
+      "extraoral": "Лицо и профиль",
+      "xray": "Рентгенологический снимок",
+      "clinical": "Сравнение результата лечения",
+      "other": "Без категории"
+    },
+    "sub": {
+      "frontal": "Фронтальный",
+      "lateral_left": "Левый боковой",
+      "lateral_right": "Правый боковой",
+      "occlusal_upper": "Окклюзионный верхний",
+      "occlusal_lower": "Окклюзионный нижний",
+      "palatal": "Нёбный",
+      "lingual": "Язычный",
+      "smile": "Улыбка",
+      "rest": "Покой",
+      "frontal_face": "Анфас",
+      "profile_left": "Левый профиль",
+      "profile_right": "Правый профиль",
+      "three_quarter_left": "3/4 слева",
+      "three_quarter_right": "3/4 справа",
+      "panoramic": "Панорамный",
+      "periapical": "Периапикальный",
+      "bitewing": "Прикусной (bitewing)",
+      "ceph_lat": "ТРГ боковая",
+      "ceph_pa": "ТРГ прямая",
+      "cbct": "КЛКТ",
+      "occlusal_xray": "Окклюзионный снимок",
+      "before": "До",
+      "after": "После",
+      "progress": "Ход лечения",
+      "reference": "Эталон",
+      "portrait": "Портрет",
+      "document_scan": "Документ",
+      "model_photo": "Модель"
+    },
+    "compare": {
+      "before": "До",
+      "after": "После"
+    },
+    "pair": {
+      "pickHint": "Выберите фото для пары:",
+      "noCandidates": "Нет доступных фото. Сначала загрузите ещё одно.",
+      "paired": "В паре",
+      "exitCompare": "Выйти из сравнения",
+      "compare": "Сравнить",
+      "unpair": "Убрать",
+      "pair": "Связать «до/после»"
+    }
+  },
+  "help": {
+    "label": "Справка",
+    "openHelp": "Открыть справку",
+    "drawerTitle": "Справка по странице",
+    "unavailable": "Для этой страницы справки пока нет.",
+    "openFullManual": "Открыть полное руководство"
+  },
+  "charts": {
+    "trend": {
+      "ariaLabel": "Тренд по точкам: {count}"
+    },
+    "donut": {
+      "ariaLabel": "Кольцевая диаграмма, сегментов: {count}"
+    }
+  }
+}

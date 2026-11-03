@@ -1,0 +1,40 @@
+{
+  "nav": {
+    "accountingExport": "Выгрузка для бухгалтера"
+  },
+  "accountingExport": {
+    "title": "Выгрузка для бухгалтера",
+    "subtitle": "Скачайте счета и платежи за период, чтобы передать их бухгалтеру.",
+    "period": "Период",
+    "from": "С",
+    "to": "По",
+    "presets": {
+      "currentMonth": "Текущий месяц",
+      "previousMonth": "Прошлый месяц",
+      "currentQuarter": "Текущий квартал",
+      "previousQuarter": "Прошлый квартал",
+      "yearToDate": "С начала года",
+      "custom": "Свой период"
+    },
+    "actions": {
+      "preview": "Предпросмотр",
+      "download": "Скачать (.zip)"
+    },
+    "counters": {
+      "invoices": "Счета",
+      "payments": "Платежи",
+      "base": "База",
+      "total": "Итого"
+    },
+    "cols": {
+      "numero": "Номер",
+      "fecha_emision": "Дата",
+      "cliente": "Клиент",
+      "nif": "ИНН",
+      "base": "База",
+      "cuota_iva": "НДС",
+      "total": "Итого",
+      "estado": "Статус"
+    }
+  }
+}

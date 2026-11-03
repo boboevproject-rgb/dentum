@@ -1,0 +1,37 @@
+{
+  "treasury": {
+    "nav": {
+      "title": "Касса"
+    },
+    "title": "Касса",
+    "newAccount": "Новый счёт",
+    "transfer": "Перевод",
+    "correct": "Корректировка",
+    "correctionDirection": "Направление",
+    "accounts": "Счета",
+    "noAccounts": "Счетов пока нет.",
+    "statement": "Выписка",
+    "noEntries": "Движений пока нет.",
+    "accountName": "Название счёта",
+    "accountKind": "Вид",
+    "kindCash": "Наличные",
+    "kindBank": "Банк",
+    "create": "Создать",
+    "openingBalance": "Начальный остаток",
+    "deactivate": "Отключить",
+    "activate": "Включить снова",
+    "inactive": "Неактивен",
+    "fromAccount": "Со счёта",
+    "toAccount": "На счёт",
+    "amount": "Сумма",
+    "memo": "Примечание (необязательно)",
+    "correctMemo": "Примечание (обязательно)",
+    "kind": {
+      "transfer_out": "Перевод исходящий",
+      "transfer_in": "Перевод входящий",
+      "correction_in": "Корректировка (приход)",
+      "correction_out": "Корректировка (расход)",
+      "opening": "Начальный остаток"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "expenses": {
+    "title": "Расходы",
+    "add": "Добавить расход",
+    "date": "Дата",
+    "category": "Категория",
+    "amount": "Сумма",
+    "description": "Описание",
+    "filterByCategory": "Фильтр по категории",
+    "delete": "Удалить",
+    "deleteTitle": "Удаление расхода",
+    "deleteMessage": "Удалить этот расход? Действие нельзя отменить.",
+    "categories": {
+      "rent": "Аренда",
+      "utilities": "Коммунальные услуги",
+      "salaries": "Зарплата",
+      "supplies": "Расходные материалы",
+      "equipment": "Оборудование",
+      "insurance": "Страхование",
+      "maintenance": "Обслуживание",
+      "other": "Другое"
+    }
+  }
+}

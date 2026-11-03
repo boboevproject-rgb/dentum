@@ -1,0 +1,50 @@
+{
+  "labOrders": {
+    "title": "Заказы в лабораторию",
+    "add": "Новый заказ в лабораторию",
+    "patient": "Пациент",
+    "lab": "Лаборатория",
+    "loading": "Загрузка…",
+    "selectPatient": "Выберите пациента",
+    "selectLab": "Выберите лабораторию",
+    "workType": "Вид работы",
+    "tooth": "Зуб / ориентир",
+    "impressionType": "Оттиск",
+    "antagonistInfo": "Данные об антагонисте",
+    "shade": "Цвет",
+    "sentDate": "Дата отправки",
+    "expectedDate": "Ожидаемая дата",
+    "status": "Статус",
+    "notes": "Заметки",
+    "save": "Отправить заказ",
+    "cancel": "Отмена",
+    "noLabsHint": "Сначала создайте контакт лаборатории в разделе «Контакты».",
+    "workTypes": {
+      "crown": "Коронка",
+      "bridge": "Мостовидный протез",
+      "denture": "Съёмный протез",
+      "implant": "Имплантат",
+      "veneer": "Винир",
+      "orthodontic": "Ортодонтическая работа",
+      "repair": "Ремонт",
+      "other": "Другое"
+    },
+    "impressionTypes": {
+      "alginate": "Альгинат",
+      "pvs_silicone": "PVS / силикон",
+      "digital_scan": "Цифровой скан",
+      "other": "Другое"
+    },
+    "statuses": {
+      "sent": "Отправлен",
+      "in_progress": "В работе",
+      "ready": "Готов",
+      "received": "Получен",
+      "cancelled": "Отменён"
+    }
+  },
+  "nav": {
+    "labOrdersForm": "Новый заказ в лабораторию",
+    "labOrdersStatus": "Заказы в лабораторию"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "patientRelationships": {
+    "title": "Семья",
+    "emptyHint": "Семейных связей нет.",
+    "relationships": {
+      "title": "Семейные связи",
+      "searchPatient": "Найдите пациента для связи…",
+      "addSuccess": "Связь добавлена",
+      "addError": "Не удалось добавить связь",
+      "removeError": "Не удалось удалить связь",
+      "types": {
+        "parent": "Родитель",
+        "child": "Ребёнок",
+        "spouse": "Супруг(а)",
+        "sibling": "Брат / сестра",
+        "guardian": "Опекун",
+        "ward": "Подопечный",
+        "other": "Другое"
+      }
+    }
+  }
+}

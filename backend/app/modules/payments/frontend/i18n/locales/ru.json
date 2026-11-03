@@ -1,0 +1,311 @@
+{
+  "payments": {
+    "nav": {
+      "payments": "Оплаты",
+      "reports": "Отчёты по оплатам"
+    },
+    "balance": {
+      "debt": "Должен",
+      "credit": "На счёте",
+      "paid": "Всего оплачено"
+    },
+    "list": {
+      "title": "Оплаты",
+      "subtitle": "Оплаты пациентов, авансы по сметам и средства на счёте пациента.",
+      "empty": "Оплат пока нет.",
+      "new": "Новая оплата",
+      "searchPlaceholder": "Пациент или номер",
+      "filterDateFrom": "С",
+      "filterDateTo": "По",
+      "filterMethod": "Способ",
+      "filterPatient": "Пациент",
+      "filter": {
+        "method": "Способ",
+        "hasRefunds": "С возвратами",
+        "hasUnallocated": "Нераспределённые",
+        "patient": "Пациент",
+        "withDebt": "С задолженностью",
+        "paymentStatus": "Статус"
+      },
+      "sort": {
+        "paymentDate": "Дата",
+        "amount": "Сумма"
+      },
+      "budgetStatus": {
+        "paid": "Оплачена",
+        "partial": "Частично",
+        "unpaid": "Не оплачена"
+      },
+      "row": {
+        "debtTooltip": "Задолженность пациента",
+        "creditTooltip": "Средства пациента на счёте",
+        "allocationsLabel": "Распределение",
+        "refundedLabel": "Возвращено",
+        "noPatient": "Без пациента"
+      },
+      "columnDate": "Дата",
+      "columnPatient": "Пациент",
+      "columnAmount": "Сумма",
+      "columnMethod": "Способ",
+      "columnAllocations": "Распределение",
+      "columnNet": "Итого",
+      "columnActions": "Действия"
+    },
+    "detail": {
+      "title": "Оплата {reference}",
+      "amount": "Сумма",
+      "method": "Способ",
+      "date": "Дата",
+      "recordedBy": "Кто внёс",
+      "allocations": "Распределение",
+      "refunds": "Возвраты",
+      "refund": "Возврат",
+      "refundedTotal": "Возвращено",
+      "netAmount": "Итого",
+      "reference": "Номер",
+      "notes": "Заметки"
+    },
+    "new": {
+      "title": "Внести оплату",
+      "patient": "Пациент",
+      "patientPlaceholder": "Найти пациента...",
+      "unknownPatient": "Неизвестный пациент",
+      "amount": "Сумма",
+      "suggestedHint": "К оплате: {amount}",
+      "useSuggested": "указать эту сумму",
+      "method": "Способ",
+      "moreMethods": "Ещё способы",
+      "date": "Дата",
+      "today": "Сегодня",
+      "advanced": "Дополнительно",
+      "reference": "Номер",
+      "referencePlaceholder": "Код авторизации карты, номер перевода...",
+      "notes": "Заметки",
+      "allocations": "Распределение",
+      "allocationsHint": "Разделите оплату между сметами или оставьте её на счёте пациента.",
+      "addAllocation": "Добавить распределение",
+      "allocationToBudget": "В счёт сметы",
+      "allocationOnAccount": "На счёт пациента",
+      "sumLabel": "Сумма:",
+      "sumMismatch": "не совпадает с суммой оплаты",
+      "submit": "Внести",
+      "submitWithAmount": "Принять {amount}",
+      "cancel": "Отмена",
+      "errPatient": "Выберите пациента",
+      "errAmount": "Введите сумму больше 0",
+      "errSum": "Сумма распределения должна равняться сумме оплаты",
+      "errUnknown": "Не удалось внести оплату. Попробуйте ещё раз.",
+      "methodRecord": "Внести уже полученную оплату",
+      "methodCollect": "Принять оплату сейчас"
+    },
+    "methods": {
+      "cash": "Наличные",
+      "card": "Карта",
+      "bank_transfer": "Перевод",
+      "direct_debit": "Прямое списание",
+      "insurance": "Страховка",
+      "other": "Другое",
+      "upi": "UPI",
+      "netbanking": "Интернет-банкинг"
+    },
+    "refund": {
+      "title": "Возврат оплаты",
+      "amount": "Сумма",
+      "method": "Способ",
+      "reason": "Причина",
+      "note": "Подробности",
+      "submit": "Вернуть",
+      "reasonCodes": {
+        "duplicate": "Двойная оплата",
+        "overpaid": "Переплата",
+        "treatment_cancelled": "Лечение отменено",
+        "dispute": "Спор",
+        "other": "Другое"
+      }
+    },
+    "ledger": {
+      "title": "Взаиморасчёты пациента",
+      "totalPaid": "Всего оплачено",
+      "totalEarned": "Выполнено лечения",
+      "patientCredit": "Средства пациента на счёте",
+      "clinicReceivable": "Задолженность перед клиникой",
+      "onAccount": "На счёте",
+      "empty": "Движений нет."
+    },
+    "budgetCard": {
+      "title": "Оплаты по смете",
+      "budgetTotal": "По смете",
+      "collected": "Получено",
+      "pending": "Осталось",
+      "collect": "Принять оплату",
+      "empty": "К этой смете пока не отнесено ни одной оплаты.",
+      "collectedLabel": "Получено",
+      "pendingLabel": "Осталось",
+      "outOfTotal": "из {total}",
+      "settled": "Смета оплачена полностью",
+      "history": "История оплат",
+      "payment": "Оплата",
+      "emptyDetailed": "Оплат пока нет. Нажмите «Принять оплату», чтобы внести первую."
+    },
+    "budgetCollect": {
+      "title": "Оплата по смете",
+      "amountLabel": "Сумма",
+      "methodLabel": "Способ оплаты",
+      "dateLabel": "Дата оплаты",
+      "today": "Сегодня",
+      "quickFull": "Вся сумма",
+      "optionalDetails": "Добавить номер или заметки (необязательно)",
+      "referenceLabel": "Номер",
+      "referencePlaceholder": "например, номер транзакции в терминале",
+      "notesLabel": "Внутренние заметки",
+      "submit": "Принять",
+      "cancel": "Отмена",
+      "success": "Оплата внесена",
+      "errorGeneric": "Не удалось внести оплату",
+      "noteAppliedToBudget": "зачтётся в смету.",
+      "notePendingAfter": "Останется",
+      "noteFullySettled": "Смета будет оплачена полностью.",
+      "noteToBudget": "зачтётся в смету, а",
+      "noteExcessToOnAccount": "уйдёт на счёт пациента.",
+      "noteBudgetSettled": "Смета уже оплачена полностью.",
+      "noteToOnAccount": "уйдёт на счёт пациента."
+    },
+    "pendingCharges": {
+      "title": "К оплате",
+      "count": "Сеансов: {n}",
+      "more": "+ ещё {n}",
+      "collect": "Принять {amount}",
+      "unnamedSession": "Сеанс без названия"
+    },
+    "patientPanel": {
+      "title": "Взаиморасчёты пациента",
+      "kpis": {
+        "totalPaid": "Всего оплачено",
+        "debt": "Задолженность перед клиникой",
+        "onAccount": "На счёте"
+      },
+      "sidebar": {
+        "title": "Сводка",
+        "credit": "Средства пациента",
+        "lastPayment": "Последняя оплата",
+        "noLastPayment": "Оплат пока нет",
+        "totalEarned": "Выполнено лечения"
+      },
+      "banner": {
+        "debtTitle": "Должен клинике {amount}",
+        "debtDescription": "Оплачено меньше, чем выполнено лечения.",
+        "creditTitle": "На счёте {amount}",
+        "creditDescription": "Оплачено больше, чем выполнено лечения."
+      },
+      "cobrar": "Внести оплату",
+      "timeline": {
+        "title": "Движения",
+        "empty": "Движений нет",
+        "emptyCta": "Внести первую оплату",
+        "loadError": "Не удалось загрузить взаиморасчёты пациента.",
+        "retry": "Повторить",
+        "drPrefix": "Врач {name}",
+        "types": {
+          "payment": "Оплата",
+          "refund": "Возврат",
+          "earned": "Выполнено лечения"
+        },
+        "treatmentStatus": {
+          "planned": "Запланировано",
+          "performed": "Выполнено",
+          "completed": "Завершено",
+          "cancelled": "Отменено",
+          "in_progress": "В процессе"
+        },
+        "rowMenu": {
+          "refund": "Возврат",
+          "reallocate": "Отнести к смете…"
+        }
+      },
+      "refundModal": {
+        "title": "Возврат оплаты",
+        "amount": "Сумма возврата",
+        "method": "Способ возврата",
+        "reason": "Причина",
+        "note": "Подробности (необязательно)",
+        "submit": "Подтвердить возврат",
+        "cancel": "Отмена",
+        "errorGeneric": "Не удалось оформить возврат"
+      }
+    },
+    "reports": {
+      "title": "Отчёты по оплатам",
+      "subtitle": "Поступления, возвраты, балансы пациентов и динамика за период.",
+      "loadError": "Не удалось загрузить отчёты по оплатам",
+      "cardDescription": "Поступления, возвраты, балансы пациентов, сроки долгов и динамика.",
+      "period": "Период",
+      "refresh": "Обновить",
+      "collected": "Получено",
+      "refunded": "Возвращено",
+      "net": "Итого",
+      "patientCredit": "Всего средств пациентов",
+      "patientCreditHint": "Остатки на счетах и авансы.",
+      "clinicReceivable": "Задолженность перед клиникой",
+      "refundRatio": "Доля возвратов",
+      "byMethod": "По способам",
+      "byProfessional": "По специалистам",
+      "byProfessionalHint": "Выполненное лечение, а не полученные оплаты.",
+      "aging": "Сроки задолженности",
+      "agingHint": "Пациенты с задолженностью, сгруппированные по давности долга.",
+      "refunds": "Возвраты по причинам",
+      "refundsHint": "Распределение возвратов по указанным причинам.",
+      "bucket": "{range} дн.",
+      "unknownProfessional": "Не назначен",
+      "countShort": "операций: {n}",
+      "countPatients": "пациентов: {n}",
+      "granularity": {
+        "day": "День",
+        "week": "Неделя",
+        "month": "Месяц"
+      },
+      "hero": {
+        "netCollected": "Получено за вычетом возвратов",
+        "netCollectedHint": "Поступления минус возвраты за период.",
+        "receivable": "Непогашенная задолженность",
+        "receivableHint": "Выполненное, но не оплаченное лечение по срокам.",
+        "vsPrevious": "к прошлому периоду",
+        "transactionsCount": "Операций за период: {n}"
+      },
+      "trend": {
+        "title": "Динамика поступлений",
+        "subtitle": "Итого по интервалам. Пунктир — возвраты."
+      },
+      "empty": {
+        "noDataTitle": "Нет данных за этот период",
+        "noDataDescription": "Измените период или внесите оплату, чтобы появился отчёт.",
+        "noTrend": "Слишком мало точек для графика.",
+        "noMethods": "За период нет поступлений по способам оплаты.",
+        "noProfessionals": "За период нет выполненного лечения.",
+        "noReceivable": "Нет пациентов с задолженностью."
+      },
+      "drilldown": {
+        "viewPayments": "Посмотреть оплаты за период",
+        "viewPatients": "Посмотреть пациентов с долгом"
+      }
+    },
+    "target": {
+      "label": "Зачесть в",
+      "placeholder": "Выберите, куда зачесть",
+      "onAccount": "Средства пациента (на счёте)",
+      "onAccountHint": "Останется на счёте пациента. Не зачтётся ни в один счёт или смету, пока вы не назначите.",
+      "budgetHint": "Будет зачтено в эту смету и выставленные по ней счета.",
+      "lockedBudget": "Будет зачтено в смету {budget} и её счета."
+    },
+    "reallocate": {
+      "title": "Отнести к смете",
+      "hint": "Вся оплата {amount} будет перенесена на выбранную смету и выставленные по ней счета.",
+      "submit": "Назначить",
+      "success": "Оплата отнесена к смете",
+      "error": "Не удалось перенести оплату. Попробуйте ещё раз."
+    },
+    "followup": {
+      "collect": "Принять оплату",
+      "collected": "Оплата внесена."
+    }
+  }
+}

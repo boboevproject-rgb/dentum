@@ -1,0 +1,53 @@
+{
+  "whatsapp_kapso": {
+    "settings": {
+      "title": "WhatsApp (Kapso)",
+      "description": "Подключите номер WhatsApp клиники через Kapso, чтобы отправлять и получать сообщения."
+    },
+    "connection": "Подключение",
+    "verified": "Подтверждено",
+    "notVerified": "Не подтверждено",
+    "apiKey": "API-ключ Kapso",
+    "phoneNumberId": "ID номера телефона",
+    "businessAccountId": "ID бизнес-аккаунта",
+    "businessAccountHelp": "Нужен для синхронизации одобренных шаблонов.",
+    "displayPhone": "Отображаемый номер",
+    "webhookSecret": "Секрет webhook",
+    "secretStored": "Сохранён. Оставьте пустым, чтобы не менять.",
+    "webhook": "Webhook",
+    "webhookHelp": "Вставьте этот URL в настройки webhook в Kapso, чтобы получать статусы и ответы.",
+    "copy": "Копировать",
+    "copied": "URL скопирован",
+    "templates": "Шаблоны",
+    "sync": "Синхронизировать",
+    "noTemplates": "Одобренных шаблонов нет. Нажмите «Синхронизировать», чтобы загрузить их из Kapso.",
+    "notificationType": "Тип уведомления",
+    "template": "Шаблон",
+    "map": "Привязать",
+    "mapped": "Шаблон привязан",
+    "mapError": "Не удалось привязать шаблон",
+    "test": "Тестовая отправка",
+    "sendTest": "Отправить тест",
+    "testOk": "Тестовое сообщение отправлено",
+    "testFail": "Не удалось отправить тест",
+    "saved": "Настройки сохранены",
+    "saveError": "Не удалось сохранить",
+    "synced": "Синхронизировано шаблонов: {n}",
+    "syncError": "Не удалось синхронизировать",
+    "types": {
+      "appointment_confirmation": "Подтверждение записи",
+      "appointment_reminder": "Напоминание о записи",
+      "appointment_cancelled": "Отмена записи",
+      "budget_sent": "Смета отправлена",
+      "budget_accepted": "Смета принята",
+      "budget_reminder": "Напоминание о смете",
+      "invoice_sent": "Счёт отправлен",
+      "recall_reminder": "Напоминание о повторном визите",
+      "welcome": "Приветствие"
+    },
+    "onboarding": {
+      "label": "Отправка через WhatsApp",
+      "description": "WhatsApp — предпочтительный канал клиники, но Kapso ещё не подключён. Подключите его, чтобы автоматические сообщения уходили."
+    }
+  }
+}

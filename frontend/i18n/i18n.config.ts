@@ -1,4 +1,4 @@
-import { arPluralRule, plPluralRule } from './pluralRules'
+import { arPluralRule, plPluralRule, ruPluralRule } from './pluralRules'
 
 // Message-level fallback: a key missing from the active locale renders
 // its English text instead of the raw dotted key. Module layers add
@@ -10,7 +10,7 @@ export default defineI18nConfig(() => ({
   fallbackLocale: { 'pt-BR': ['pt', 'en'], 'default': ['en'] },
   missingWarn: false,
   fallbackWarn: false,
-  pluralRules: { pl: plPluralRule, ar: arPluralRule },
+  pluralRules: { pl: plPluralRule, ar: arPluralRule, ru: ruPluralRule },
   // Named date format used by the module detail modal (`d(value, 'short')`).
   // Registered for every shipped locale so no locale falls back with a
   // console warning (L18 parity applies to config-level formats too).
@@ -24,6 +24,7 @@ export default defineI18nConfig(() => ({
     'pl': { short: { dateStyle: 'short', timeStyle: 'short' } },
     'pt': { short: { dateStyle: 'short', timeStyle: 'short' } },
     'pt-BR': { short: { dateStyle: 'short', timeStyle: 'short' } },
+    'ru': { short: { dateStyle: 'short', timeStyle: 'short' } },
     'ta': { short: { dateStyle: 'short', timeStyle: 'short' } },
     'te': { short: { dateStyle: 'short', timeStyle: 'short' } },
     'ar': { short: { dateStyle: 'short', timeStyle: 'short' } }
