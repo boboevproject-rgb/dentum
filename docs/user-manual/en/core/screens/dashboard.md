@@ -2,7 +2,7 @@
 module: core
 screen: dashboard
 route: /
-last_verified_commit: b44facb6
+last_verified_commit: 63bb9557
 ---
 
 # Dashboard
@@ -10,6 +10,12 @@ last_verified_commit: b44facb6
 The dashboard is the starting point after sign-in. Its greeting and cards
 summarize the clinic's work. Cards depend on installed modules and your role,
 so two team members may see different sections.
+
+## Before you sign in
+
+When nobody is signed in, the same `/` address shows the public Dentum landing
+page. Choose **Sign in** to continue. A fresh installation opens the initial
+setup flow; after signing in, Dentum returns you to the dashboard.
 
 ## Find a task
 

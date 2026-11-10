@@ -2,7 +2,7 @@
 module: core
 screen: dashboard
 route: /
-last_verified_commit: b44facb6
+last_verified_commit: 63bb9557
 ---
 
 # Panel
@@ -11,6 +11,13 @@ El panel es la pantalla inicial después de iniciar sesión. El saludo y las
 tarjetas resumen el trabajo de la clínica. Las tarjetas dependen de los
 módulos instalados y de tu rol, por lo que dos personas pueden ver secciones
 distintas.
+
+## Antes de iniciar sesión
+
+Si nadie ha iniciado sesión, la misma ruta `/` muestra la página pública de
+Dentum. Elige **Iniciar sesión** para continuar. En una instalación nueva se
+abre la configuración inicial; después de iniciar sesión, Dentum muestra el
+panel.
 
 ## Buscar una tarea
 
