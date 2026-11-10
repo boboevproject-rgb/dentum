@@ -587,7 +587,7 @@ onBeforeUnmount(() => {
 }
 .scene-stage__wash { position: absolute; inset: 0; background: radial-gradient(ellipse 44% 53% at 70% 48%, rgba(166, 222, 222, .32), rgba(218, 237, 233, .15) 45%, transparent 76%), linear-gradient(112deg, #f4f6f3 28%, #f3f6f3 65%, #f0f5f2); }
 .scene-stage::after { position: absolute; top: 18%; right: 7.5%; width: min(36vw, 460px); aspect-ratio: 1; border: 1px solid rgba(41, 126, 136, .08); border-radius: 50%; content: ''; }
-.scene-canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+.scene-canvas { position: absolute; inset: 0; width: 100%; height: 100%; transform: translateX(16vw); }
 .scene-fallback { position: absolute; top: 49%; left: 70%; width: min(42vw, 540px); max-height: 78svh; transform: translate(-50%, -50%); filter: drop-shadow(0 24px 28px rgba(93, 132, 131, .1)); }
 .scene-coordinate { position: absolute; z-index: 2; top: 104px; right: clamp(28px, 8vw, 128px); display: flex; align-items: center; gap: 10px; color: #7c9296; font-size: 8px; font-weight: 650; letter-spacing: .13em; }
 .scene-coordinate span { color: var(--landing-teal, #087f8c); font-size: 9px; }
@@ -618,6 +618,8 @@ onBeforeUnmount(() => {
   .scene-coordinate { top: 78px; right: 20px; font-size: 7px; }
   .scene-coordinate--bottom { top: 47svh; right: 21px; bottom: auto; left: auto; font-size: 7px; }
   .scene-coordinate--bottom i { width: 20px; }
+  .scene-coordinate--bottom { display: none; }
+  .scene-canvas { transform: none; }
   .scene-card { right: 18px; bottom: auto; top: 41svh; width: min(215px, 61vw); padding: 12px 13px 11px; border-radius: 5px; }
   .scene-card__label { font-size: 7px; }
   .scene-card__mark { width: 23px; height: 23px; font-size: 9px; }

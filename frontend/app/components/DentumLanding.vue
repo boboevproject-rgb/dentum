@@ -142,7 +142,7 @@ async function toggleLocale() {
       <a
         class="landing-brand"
         href="#top"
-        aria-label="Dentum — главная"
+        :aria-label="isRussian ? 'Dentum — главная' : 'Dentum — home'"
       >
         <span
           class="landing-brand__symbol"
@@ -286,7 +286,7 @@ async function toggleLocale() {
       <a
         class="landing-brand landing-brand--footer"
         href="#top"
-        aria-label="Dentum — вверх страницы"
+        :aria-label="isRussian ? 'Dentum — вверх страницы' : 'Dentum — back to top'"
       >
         <span
           class="landing-brand__symbol"
