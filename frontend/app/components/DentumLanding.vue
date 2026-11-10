@@ -222,6 +222,20 @@ async function toggleLocale() {
               >↓</span>{{ copy.navStory }}
             </a>
           </div>
+          <div class="story-model-credit">
+            <a
+              href="https://sketchfab.com/3d-models/maxillary-first-molar-e719a474ef7e4bd7abec508f85f1e984"
+              target="_blank"
+              rel="noopener noreferrer"
+            >{{ isRussian ? 'Maxillary First Molar · University of Dundee · Sketchfab' : 'Maxillary First Molar · University of Dundee · Sketchfab' }}</a>
+            <span>·</span>
+            <a
+              href="https://creativecommons.org/licenses/by/4.0/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >CC BY 4.0</a>
+            <span>· {{ isRussian ? 'сетка и материал изменены' : 'mesh and material modified' }}</span>
+          </div>
           <div class="story-caption">
             <span class="story-caption__line" />
             <span>{{ isRussian ? 'Клинические данные · единый рабочий процесс' : 'Clinical records · one connected workflow' }}</span>
@@ -401,6 +415,7 @@ async function toggleLocale() {
 .landing-secondary__icon { display: grid; width: 23px; height: 23px; place-items: center; border: 1px solid var(--landing-edge); border-radius: 50%; font-size: 13px; }
 .story-caption { display: flex; align-items: center; gap: 12px; margin-top: 62px; color: #849499; font-size: 9px; font-weight: 600; letter-spacing: .07em; text-transform: uppercase; }
 .story-caption__line { width: 28px; height: 1px; background: #91afb3; }
+.story-model-credit { display: none; }
 .story-next { display: inline-flex; align-items: center; gap: 16px; margin-top: 30px; color: var(--landing-ink-soft); font-size: 11px; font-weight: 650; text-decoration: none; }
 .story-next span:last-child { display: grid; width: 26px; height: 26px; place-items: center; border: 1px solid var(--landing-edge); border-radius: 50%; transition: transform .2s; }
 .story-next:hover span:last-child { transform: translateY(3px); }
@@ -438,6 +453,8 @@ async function toggleLocale() {
   .story-title, .story-title--hero, .story-chapter--final .story-title { max-width: 560px; font-size: clamp(34px, 9vw, 50px); letter-spacing: -.065em; line-height: 1.02; }
   .story-body, .story-body--hero { max-width: 540px; margin-top: 14px; font-size: 13px; line-height: 1.6; }
   .story-actions { gap: 10px; margin-top: 19px; }
+  .story-model-credit { display: flex; flex-wrap: wrap; align-items: center; gap: 3px; margin-top: 10px; color: #87989b; font-size: 7px; line-height: 1.4; }
+  .story-model-credit a { color: inherit; text-decoration: underline; text-decoration-color: rgba(135, 152, 155, .45); text-underline-offset: 2px; }
   .landing-primary { min-height: 43px; gap: 16px; padding: 0 13px; font-size: 11px; }
   .landing-secondary { font-size: 11px; }
   .story-caption, .story-next { display: none; }

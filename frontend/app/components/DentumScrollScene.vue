@@ -9,9 +9,6 @@ type SceneChapter = {
   cardMark: string
 }
 
-type ProfilePoint = [number, number, number, number?, number?]
-type ProfileSample = [number, number, number, number, number]
-
 const props = defineProps<{
   chapters: SceneChapter[]
   scrollLabel: string
@@ -55,139 +52,74 @@ function smoothstep(a: number, b: number, value: number) {
   return amount * amount * (3 - 2 * amount)
 }
 
-function sampleProfile(profile: ProfilePoint[], amount: number): ProfileSample {
-  const scaled = amount * (profile.length - 1)
-  const index = Math.min(profile.length - 2, Math.floor(scaled))
-  const t = scaled - index
-  const p0 = profile[Math.max(0, index - 1)]!
-  const p1 = profile[index]!
-  const p2 = profile[index + 1]!
-  const p3 = profile[Math.min(profile.length - 1, index + 2)]!
-  const interpolate = (axis: number) => {
-    const a = p0[axis] ?? 0
-    const b = p1[axis] ?? 0
-    const c = p2[axis] ?? 0
-    const d = p3[axis] ?? 0
-    return 0.5 * ((2 * b) + (-a + c) * t + (2 * a - 5 * b + 4 * c - d) * t * t + (-a + 3 * b - 3 * c + d) * t * t * t)
-  }
-  return [interpolate(0), interpolate(1), interpolate(2), interpolate(3), interpolate(4)]
-}
-
-function buildToothGeometry(profile: ProfilePoint[], { lobed = false, radialSegments = 72, verticalSegments = 64 } = {}) {
-  if (!THREE) throw new Error('Three.js is unavailable')
-  const positions: number[] = []
-  const indices: number[] = []
-
-  for (let row = 0; row <= verticalSegments; row++) {
-    const amount = row / verticalSegments
-    const [y, rx, rz, centerX = 0, centerZ = 0] = sampleProfile(profile, amount)
-    for (let column = 0; column <= radialSegments; column++) {
-      const theta = (column / radialSegments) * Math.PI * 2
-      const molarLobes = lobed ? 1 + 0.065 * Math.cos(4 * theta + 0.24) + 0.018 * Math.cos(8 * theta) : 1
-      const cusp = lobed ? smoothstep(0.72, 1, amount) * 0.075 * Math.cos(4 * theta + 0.2) : 0
-      positions.push(
-        centerX + Math.cos(theta) * rx * molarLobes,
-        y + cusp,
-        centerZ + Math.sin(theta) * rz * molarLobes
-      )
-    }
-  }
-
-  const profileRunsDown = profile.at(-1)![0] < profile[0]![0]
-  for (let row = 0; row < verticalSegments; row++) {
-    for (let column = 0; column < radialSegments; column++) {
-      const a = row * (radialSegments + 1) + column
-      const b = a + radialSegments + 1
-      if (profileRunsDown) indices.push(a, a + 1, b, b, a + 1, b + 1)
-      else indices.push(a, b, a + 1, b, b + 1, a + 1)
-    }
-  }
-
-  const geometry = new THREE.BufferGeometry()
-  geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3))
-  geometry.setIndex(indices)
-  geometry.computeVertexNormals()
-  return geometry
-}
-
-function addTooth() {
+async function addTooth() {
   if (!THREE || !scene) return
 
+  const { GLTFLoader } = await import('three/addons/loaders/GLTFLoader.js')
+  const gltf = await new GLTFLoader().loadAsync('/models/dentum-maxillary-first-molar.glb')
   const group = new THREE.Group()
+  const model = gltf.scene
+  model.rotation.x = Math.PI
+  model.updateMatrixWorld(true)
+
+  const originalBounds = new THREE.Box3().setFromObject(model)
+  const originalHeight = originalBounds.getSize(new THREE.Vector3()).y
+  const targetHeight = isMobile ? 3.05 : 3.28
+  model.scale.setScalar(targetHeight / Math.max(originalHeight, 0.001))
+  model.updateMatrixWorld(true)
+
+  const bounds = new THREE.Box3().setFromObject(model)
+  model.position.sub(bounds.getCenter(new THREE.Vector3()))
   group.position.set(isMobile ? 0 : 1.02, -0.03, 0)
-
-  const enamel = new THREE.MeshPhysicalMaterial({
-    color: '#f5f2e9',
-    roughness: 0.24,
-    metalness: 0.015,
-    clearcoat: 0.72,
-    clearcoatRoughness: 0.2,
-    sheen: 0.18,
-    sheenColor: '#d5edf0'
-  })
-  const rootMaterial = new THREE.MeshPhysicalMaterial({
-    color: '#ede7d9',
-    roughness: 0.31,
-    metalness: 0,
-    clearcoat: 0.4,
-    clearcoatRoughness: 0.26
-  })
-
-  const crownProfile: ProfilePoint[] = [
-    [-0.02, 0.42, 0.36],
-    [0.08, 0.59, 0.46],
-    [0.28, 0.72, 0.57],
-    [0.58, 0.78, 0.62],
-    [0.88, 0.74, 0.6],
-    [1.08, 0.67, 0.55],
-    [1.24, 0.56, 0.47],
-    [1.34, 0.42, 0.37],
-    [1.4, 0.22, 0.22],
-    [1.42, 0.025, 0.025]
-  ]
-  const crown = new THREE.Mesh(buildToothGeometry(crownProfile, { lobed: true }), enamel)
-  crown.castShadow = true
-  crown.receiveShadow = true
-  group.add(crown)
-
-  const roots: ProfilePoint[][] = [
-    [
-      [-0.05, 0.27, 0.23, -0.28, 0],
-      [-0.28, 0.235, 0.19, -0.3, -0.015],
-      [-0.61, 0.17, 0.145, -0.39, -0.02],
-      [-0.91, 0.112, 0.095, -0.43, -0.025],
-      [-1.19, 0.064, 0.059, -0.4, -0.01],
-      [-1.35, 0.009, 0.012, -0.35, 0.015]
-    ],
-    [
-      [-0.05, 0.27, 0.23, 0.28, 0],
-      [-0.28, 0.235, 0.19, 0.3, -0.015],
-      [-0.61, 0.17, 0.145, 0.39, -0.02],
-      [-0.91, 0.112, 0.095, 0.43, -0.025],
-      [-1.19, 0.064, 0.059, 0.4, -0.01],
-      [-1.35, 0.009, 0.012, 0.35, 0.015]
-    ]
-  ]
-
-  for (const profile of roots) {
-    const root = new THREE.Mesh(buildToothGeometry(profile, { radialSegments: 48, verticalSegments: 40 }), rootMaterial)
-    root.castShadow = true
-    root.receiveShadow = true
-    group.add(root)
-  }
-
-  const neck = new THREE.Mesh(
-    new THREE.TorusGeometry(0.53, 0.018, 10, 80),
-    new THREE.MeshBasicMaterial({ color: '#d2c7af', transparent: true, opacity: 0.42 })
-  )
-  neck.position.y = 0.02
-  neck.rotation.x = Math.PI / 2
-  group.add(neck)
+  group.add(model)
   scene.add(group)
+  scene.updateMatrixWorld(true)
+
+  const modelBounds = new THREE.Box3().setFromObject(model)
+  const verticalRange = Math.max(modelBounds.max.y - modelBounds.min.y, 0.001)
+  const rootTone = new THREE.Color('#decdaa')
+  const crownTone = new THREE.Color('#fffdf6')
+  const vertex = new THREE.Vector3()
+  const vertexColor = new THREE.Color()
+
+  model.traverse((object) => {
+    if (!(object instanceof THREE.Mesh)) return
+    const geometry = object.geometry
+    const positions = geometry.getAttribute('position')
+    const colors = new Float32Array(positions.count * 3)
+
+    for (let index = 0; index < positions.count; index++) {
+      vertex.fromBufferAttribute(positions, index).applyMatrix4(object.matrixWorld)
+      const enamel = smoothstep(
+        modelBounds.min.y + verticalRange * 0.46,
+        modelBounds.min.y + verticalRange * 0.54,
+        vertex.y
+      )
+      vertexColor.copy(rootTone).lerp(crownTone, enamel)
+      colors[index * 3] = vertexColor.r
+      colors[index * 3 + 1] = vertexColor.g
+      colors[index * 3 + 2] = vertexColor.b
+    }
+
+    geometry.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3))
+    geometry.computeVertexNormals()
+    object.material = new THREE.MeshPhysicalMaterial({
+      color: '#ffffff',
+      vertexColors: true,
+      roughness: 0.29,
+      clearcoat: 0.46,
+      clearcoatRoughness: 0.24,
+      sheen: 0.16,
+      sheenColor: '#d9e9e6'
+    })
+    object.castShadow = true
+    object.receiveShadow = true
+  })
+
   tooth = group
 }
 
-function createScene() {
+async function createScene() {
   if (!THREE || !canvas.value || !stage.value) return
   try {
     const width = stage.value.clientWidth
@@ -222,7 +154,7 @@ function createScene() {
     fill.position.set(-3.2, -1.5, 3.5)
     scene.add(fill)
 
-    addTooth()
+    await addTooth()
 
     orbit = new THREE.Group()
     orbit.position.set(isMobile ? 0 : 1.02, -0.04, -0.06)
@@ -373,7 +305,7 @@ onMounted(async () => {
   syncScroll()
   try {
     THREE = await import('three')
-    createScene()
+    await createScene()
     resizeScene()
   } catch {
     webglReady.value = false
@@ -413,12 +345,12 @@ onBeforeUnmount(() => {
     <div
       ref="stage"
       class="scene-stage"
-      aria-hidden="true"
     >
       <div class="scene-stage__wash" />
       <canvas
         ref="canvas"
         class="scene-canvas"
+        aria-hidden="true"
       />
 
       <svg
@@ -568,6 +500,20 @@ onBeforeUnmount(() => {
       >
         {{ String(storyStep + 1).padStart(2, '0') }} <i /> 05
       </div>
+      <div class="scene-credit">
+        <a
+          href="https://sketchfab.com/3d-models/maxillary-first-molar-e719a474ef7e4bd7abec508f85f1e984"
+          target="_blank"
+          rel="noopener noreferrer"
+        >«Maxillary First Molar» · University of Dundee, School of Dentistry · Sketchfab</a>
+        <span>·</span>
+        <a
+          href="https://creativecommons.org/licenses/by/4.0/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >CC BY 4.0</a>
+        <span>· сглажена сетка, изменён материал</span>
+      </div>
     </div>
     <slot />
   </div>
@@ -594,6 +540,8 @@ onBeforeUnmount(() => {
 .scene-coordinate i { display: block; width: 24px; height: 1px; background: #9ab8b7; }
 .scene-coordinate--bottom { top: auto; right: auto; bottom: 42px; left: clamp(30px, 8vw, 128px); color: #9aa8a8; }
 .scene-coordinate--bottom i { width: 32px; background: #bac6c4; }
+.scene-credit { position: absolute; z-index: 4; right: clamp(24px, 7vw, 112px); bottom: 16px; display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 5px; max-width: min(72vw, 620px); color: #7c9296; font-size: 8px; line-height: 1.4; letter-spacing: .015em; text-align: right; pointer-events: auto; }
+.scene-credit a { color: inherit; text-decoration: underline; text-decoration-color: rgba(124, 146, 150, .45); text-underline-offset: 2px; }
 .scene-card { position: absolute; z-index: 3; right: clamp(35px, 10vw, 160px); bottom: 17%; width: 250px; padding: 18px 19px 16px; border: 1px solid rgba(45, 107, 114, .17); border-radius: 6px; background: rgba(250, 252, 249, .84); box-shadow: 0 20px 54px rgba(48, 98, 101, .09); backdrop-filter: blur(16px); animation: card-in .42s cubic-bezier(.2,.8,.2,1) both; }
 .scene-card__topline { display: flex; align-items: center; justify-content: space-between; }
 .scene-card__label { display: flex; align-items: center; gap: 7px; color: #668185; font-size: 8px; font-weight: 700; letter-spacing: .12em; }
@@ -619,6 +567,7 @@ onBeforeUnmount(() => {
   .scene-coordinate--bottom { top: 47svh; right: 21px; bottom: auto; left: auto; font-size: 7px; }
   .scene-coordinate--bottom i { width: 20px; }
   .scene-coordinate--bottom { display: none; }
+  .scene-credit { right: 18px; bottom: 10px; max-width: calc(100vw - 36px); gap: 3px; font-size: 7px; }
   .scene-canvas { transform: none; }
   .scene-card { right: 18px; bottom: auto; top: 41svh; width: min(215px, 61vw); padding: 12px 13px 11px; border-radius: 5px; }
   .scene-card__label { font-size: 7px; }
