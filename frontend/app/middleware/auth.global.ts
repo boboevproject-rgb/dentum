@@ -31,7 +31,7 @@ export default defineNuxtRouteMiddleware(async (to) => {
   // T6), authorized server-side via the single-use token itself.
   // ``/p/check-in/<token>`` is the QR check-in landing (agenda layer,
   // signed 15-minute token, no account needed).
-  const publicRoutes = ['/login', SETUP_PATH, '/set-password', '/p/budget', '/p/push', '/p/check-in']
+  const publicRoutes = ['/', '/login', SETUP_PATH, '/set-password', '/p/budget', '/p/push', '/p/check-in']
   const isPublicRoute = publicRoutes.some(route => to.path === route || to.path.startsWith(route + '/'))
 
   // Initialize auth state (fetch user if token exists) - works on server and client
@@ -42,6 +42,10 @@ export default defineNuxtRouteMiddleware(async (to) => {
     if (to.path === '/login' || to.path === SETUP_PATH) return navigateTo('/')
     return
   }
+
+  // The public product landing is available even before a clinic has
+  // completed first-run setup. The setup wizard remains reachable at /setup.
+  if (to.path === '/') return
 
   // Unauthenticated. A fresh system has no account yet → first-run wizard.
   if (!(await isSystemInitialized())) {
