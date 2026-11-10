@@ -383,7 +383,7 @@ DELETE FROM alembic_version;
 
 ## 12. Where to file bugs
 
-GitHub: https://github.com/dentalpin/dentalpin/issues — include the
+GitHub: https://github.com/boboevproject-rgb/dentum/issues — include the
 output of:
 
 ```bash

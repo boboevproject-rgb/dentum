@@ -109,9 +109,7 @@ origine unique, donc pas de CORS et aucun certificat à renouveler. Définissez
 `SEED_ON_STARTUP=1` pour charger la clinique de démonstration et explorer avant la mise
 en production.
 
-Images : [`dentalpin-backend`](https://github.com/dentalpin/dentalpin/pkgs/container/dentalpin-backend) ·
-[`dentalpin-frontend`](https://github.com/dentalpin/dentalpin/pkgs/container/dentalpin-frontend)
-
+Les images sont créées depuis ce dépôt avec `docker-compose.deploy.yml`.
 ## Démarrage rapide (développement)
 
 Compile depuis les sources avec rechargement à chaud :

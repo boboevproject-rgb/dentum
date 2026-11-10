@@ -108,9 +108,7 @@ skonfigurowany przy pierwszym uruchomieniu — Caddy obsługuje obie usługi z j
 originu, więc nie ma CORS ani certyfikatu do odnawiania. Ustaw `SEED_ON_STARTUP=1`,
 aby załadować gabinet demo i rozejrzeć się przed startem produkcyjnym.
 
-Obrazy: [`dentalpin-backend`](https://github.com/dentalpin/dentalpin/pkgs/container/dentalpin-backend) ·
-[`dentalpin-frontend`](https://github.com/dentalpin/dentalpin/pkgs/container/dentalpin-frontend)
-
+Obrazy są budowane z tego kodu źródłowego za pomocą `docker-compose.deploy.yml`.
 ## Szybki start (rozwój)
 
 Buduje ze źródeł z hot reload:

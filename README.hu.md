@@ -109,9 +109,7 @@ originről szolgálja ki mindkét szolgáltatást, így nincs CORS és nincs meg
 tanúsítvány. Állítsa be a `SEED_ON_STARTUP=1` értéket a demórendelő betöltéséhez,
 hogy élesítés előtt körülnézhessen.
 
-Image-ek: [`dentalpin-backend`](https://github.com/dentalpin/dentalpin/pkgs/container/dentalpin-backend) ·
-[`dentalpin-frontend`](https://github.com/dentalpin/dentalpin/pkgs/container/dentalpin-frontend)
-
+A konténerképek ebből a forráskódból, a `docker-compose.deploy.yml` fájllal készülnek.
 ## Gyors kezdés (fejlesztés)
 
 Forrásból épít, hot reloaddal:

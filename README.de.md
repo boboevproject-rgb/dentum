@@ -110,9 +110,7 @@ Diensten auf einem einzigen Origin, es gibt also kein CORS und kein Zertifikat z
 erneuern. Setzen Sie `SEED_ON_STARTUP=1`, um die Demo-Praxis zu laden und sich
 umzusehen, bevor Sie live gehen.
 
-Images: [`dentalpin-backend`](https://github.com/dentalpin/dentalpin/pkgs/container/dentalpin-backend) ·
-[`dentalpin-frontend`](https://github.com/dentalpin/dentalpin/pkgs/container/dentalpin-frontend)
-
+Container-Images werden aus diesem Quellcode mit `docker-compose.deploy.yml` erstellt.
 ## Schnellstart (Entwicklung)
 
 Baut aus dem Quellcode, mit Hot Reload:

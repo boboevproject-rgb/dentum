@@ -104,9 +104,7 @@ docker compose -f docker-compose.prod.yml up -d
 इसलिए न CORS की समस्या है और न ही कोई प्रमाणपत्र नवीनीकृत करना पड़ता है। लाइव होने से पहले
 डेमो क्लिनिक लोड करके देखने के लिए `SEED_ON_STARTUP=1` सेट करें।
 
-इमेज: [`dentalpin-backend`](https://github.com/dentalpin/dentalpin/pkgs/container/dentalpin-backend) ·
-[`dentalpin-frontend`](https://github.com/dentalpin/dentalpin/pkgs/container/dentalpin-frontend)
-
+इमेज इस स्रोत कोड से `docker-compose.deploy.yml` द्वारा बनाई जाती हैं।
 ## त्वरित शुरुआत (डेवलपमेंट)
 
 हॉट रीलोड के साथ सोर्स से बिल्ड करता है:

@@ -106,9 +106,7 @@ docker compose -f docker-compose.prod.yml up -d
 CORS సమస్య లేదు, పునరుద్ధరించాల్సిన సర్టిఫికెట్ లేదు. లైవ్‌కు వెళ్ళే ముందు డెమో క్లినిక్‌ను
 లోడ్ చేసి చూడటానికి `SEED_ON_STARTUP=1` సెట్ చేయండి.
 
-ఇమేజ్‌లు: [`dentalpin-backend`](https://github.com/dentalpin/dentalpin/pkgs/container/dentalpin-backend) ·
-[`dentalpin-frontend`](https://github.com/dentalpin/dentalpin/pkgs/container/dentalpin-frontend)
-
+ఈ సోర్స్ కోడ్‌తో `docker-compose.deploy.yml` ద్వారా ఇమేజ్‌లు నిర్మించబడతాయి.
 ## త్వరిత ప్రారంభం (డెవలప్‌మెంట్)
 
 హాట్ రీలోడ్‌తో సోర్స్ నుండి బిల్డ్ చేస్తుంది:

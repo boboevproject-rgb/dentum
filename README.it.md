@@ -109,9 +109,7 @@ configurato al primo avvio — Caddy serve entrambi i servizi da un'unica origin
 quindi niente CORS e nessun certificato da rinnovare. Imposta `SEED_ON_STARTUP=1`
 per caricare lo studio demo e dare un'occhiata prima di andare in produzione.
 
-Immagini: [`dentalpin-backend`](https://github.com/dentalpin/dentalpin/pkgs/container/dentalpin-backend) ·
-[`dentalpin-frontend`](https://github.com/dentalpin/dentalpin/pkgs/container/dentalpin-frontend)
-
+Le immagini vengono create da questo codice sorgente con `docker-compose.deploy.yml`.
 ## Avvio rapido (sviluppo)
 
 Compila dai sorgenti con hot reload:

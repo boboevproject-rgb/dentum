@@ -399,7 +399,7 @@ DELETE FROM alembic_version;
 
 ## 12. Dónde reportar errores
 
-GitHub: https://github.com/dentalpin/dentalpin/issues — incluye la
+GitHub: https://github.com/boboevproject-rgb/dentum/issues — incluye la
 salida de:
 
 ```bash

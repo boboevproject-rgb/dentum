@@ -468,7 +468,7 @@
     "settings": {
       "description": "Configure os detalhes GST e os valores predefinidos de faturamento desta clínica.",
       "nonRegularNotice": "O cálculo do GST está inativo paro faturamento neste tipo de registo.",
-      "einvoiceProfessionalNotice": "Confirme a elegibilidade e as obrigações regulamentares com um profissional fiscal indiano qualificado antes de ativar o faturamento eletrónica. O Dentalpin não determina se ela se aplica à sua clínica.",
+      "einvoiceProfessionalNotice": "Confirme a elegibilidade e as obrigações regulamentares com um profissional fiscal indiano qualificado antes de ativar o faturamento eletrónica. O Dentum não determina se ela se aplica à sua clínica.",
       "turnoverThreshold": "Limite de faturamento",
       "turnoverThresholdHint": "Clínicas acima deste limite estão sujeitas à faturamento eletrónica",
       "creditNoteWorkflowDescription": "Qualquer correção a uma fatura emitida é feita por anulação ou nota de crédito, e mantém-se rastreável até ao usuário que a fez.",

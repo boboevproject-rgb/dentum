@@ -108,9 +108,7 @@ docker compose -f docker-compose.prod.yml up -d
 வழங்குகிறது, எனவே CORS பிரச்சனை இல்லை, புதுப்பிக்க வேண்டிய சான்றிதழும் இல்லை. நேரடி
 பயன்பாட்டிற்கு முன் டெமோ கிளினிக்கை ஏற்றிச் சுற்றிப் பார்க்க `SEED_ON_STARTUP=1` ஐ அமைக்கவும்.
 
-இமேஜ்கள்: [`dentalpin-backend`](https://github.com/dentalpin/dentalpin/pkgs/container/dentalpin-backend) ·
-[`dentalpin-frontend`](https://github.com/dentalpin/dentalpin/pkgs/container/dentalpin-frontend)
-
+இந்த மூலக் குறியிலிருந்து `docker-compose.deploy.yml` மூலம் படங்கள் உருவாக்கப்படுகின்றன.
 ## விரைவு தொடக்கம் (மேம்பாடு)
 
 மூலக் குறியீட்டிலிருந்து hot reload உடன் கட்டமைக்கிறது:
