@@ -9,7 +9,7 @@
 
 Issue #140 asks one question before anything else: **can an
 open-source, self-hosted product be certified by the Autoridade
-Tributária (AT) at all?** If not, DentalPin's honest position in
+Tributária (AT) at all?** If not, Dentum's honest position in
 Portugal is "clinical record and schedule, invoice elsewhere". The
 sources read are the primary texts as published by AT itself
 (Decreto-Lei 28/2019 and Portaria 363/2010 in the consolidated PDFs
@@ -28,7 +28,7 @@ anterior, um volume de negócios superior a € 50 000 […]; b) utilizem
 programas informáticos de faturação; c) sejam obrigados a dispor de
 contabilidade organizada ou por ela tenham optado". AT applies the
 three as alternatives. Condition b) is the one that matters here: a
-practice that issues its invoices from DentalPin's `billing` module
+practice that issues its invoices from Dentum's `billing` module
 *is* using an invoicing program, so the program must be certified
 regardless of the practice's turnover. Art. 4 n.º 4: when the program
 is down, invoices come from pre-printed typographic books and are
@@ -99,7 +99,7 @@ the practice runs: the simplest form is a certified invoicing service
 driven through its API (the Decision); the other is a **certified
 edition** in which (a) the signing step, and therefore
 the private key, lives in a service operated by the producer (a
-DentalPin-operated signing endpoint or a partner's), (b) the
+Dentum-operated signing endpoint or a partner's), (b) the
 installation sends the five signature fields and receives the
 signature, and (c) the practice runs the certified version's billing
 path unmodified — the same posture the AT already accepts for SaaS
@@ -144,26 +144,26 @@ Everything else in the issue is ordinary work once that model exists:
 
 ## Decision
 
-1. **DentalPin, as an open-source product the practice installs and
+1. **Dentum, as an open-source product the practice installs and
    may modify, cannot be an AT-certified invoicing program.** The
    blocker is art. 3 b)/d) of Portaria 363/2010 (producer-exclusive
    private key, unalterable program), not the licence.
 2. **Invoices for a Portuguese practice are issued by a certified
-   invoicing service through its API**, not by DentalPin. Certified
+   invoicing service through its API**, not by Dentum. Certified
    SaaS invoicing programs with public REST APIs are the norm for
    small businesses in Portugal (InvoiceXpress, Moloni, Vendus,
    TOConline, KeyInvoice, among others); they hold the private key,
    assign the ATCUD, print the QR and communicate the invoice to AT.
-   DentalPin sends the recipient and the lines, and stores what comes
+   Dentum sends the recipient and the lines, and stores what comes
    back: the provider's number, ATCUD, signature characters and PDF.
-   The provider's document is the legal invoice; DentalPin's invoice
+   The provider's document is the legal invoice; Dentum's invoice
    number is an internal reference.
 3. This is a **`PT`-gated connector module (`pt_invoicing`)** in the
    `verifactu` shape, registered through `BillingHookRegistry`: one
    provider driver first, others behind the same interface if demand
    appears. Numbering, ATCUD and PDF come from the provider via the
    hook, so `billing` learns nothing about Portugal.
-4. **Until the connector exists, DentalPin's position in Portugal is
+4. **Until the connector exists, Dentum's position in Portugal is
    "clinical record and schedule; invoice with a certified program"**:
    the website's Portuguese pages and the country readiness matrix
    say so, and a `PT` clinic sees `billing`'s invoice issuing disabled
@@ -176,7 +176,7 @@ Everything else in the issue is ordinary work once that model exists:
 6. The certified-edition route (producer-held key behind a signing
    service, frozen billing path, own ATCUD/QR/SAF-T, filed with a
    Portuguese NIF) stays documented in the Context as the only way
-   for DentalPin itself to be the certified program. It is not
+   for Dentum itself to be the certified program. It is not
    pursued: the connector delivers the same outcome for the practice
    at a subscription instead of a certification programme.
 
@@ -186,28 +186,28 @@ Everything else in the issue is ordinary work once that model exists:
 
 - The website stops implying something the law forbids, which is the
   outcome the issue asked for in the "no" case.
-- The practice invoices legally from inside DentalPin once the
-  connector exists, with no DentalPin-operated service and no
+- The practice invoices legally from inside Dentum once the
+  connector exists, with no Dentum-operated service and no
   certification filing.
-- The connector pattern (a third party issues, DentalPin mirrors) is
+- The connector pattern (a third party issues, Dentum mirrors) is
   the same one France needs for FSE (ADR 0028); the hook interface is
   shared.
 
 ### Bad / accepted trade-offs
 
-- A Portuguese practice cannot invoice from DentalPin until the
+- A Portuguese practice cannot invoice from Dentum until the
   connector ships; the product is weaker in Portugal than the UI
   translation suggests.
 - The practice pays a second subscription and depends on a commercial
-  provider's API and uptime; DentalPin holds a mirror, not the legal
+  provider's API and uptime; Dentum holds a mirror, not the legal
   document.
-- The provider's PDF replaces DentalPin's invoice template in
+- The provider's PDF replaces Dentum's invoice template in
   Portugal; per-clinic invoice branding is whatever the provider
   offers.
 
 ## Alternatives considered
 
-- **Certified edition operated by DentalPin.** — Legally sound (the
+- **Certified edition operated by Dentum.** — Legally sound (the
   key stays with the producer) but it means a signing service, a
   frozen billing path, ATCUD/QR/SAF-T and a certification filing by
   an entity with a Portuguese NIF, for the same practical result the
@@ -221,7 +221,7 @@ Everything else in the issue is ordinary work once that model exists:
 - **Ignore certification for small practices.** — DL 28/2019 art. 4
   n.º 1 b) applies to anyone using an invoicing program; no volume
   exemption survives (FAQ 4307 for ATCUD).
-- **Build ATCUD/QR/SAF-T in DentalPin now and certify later.** —
+- **Build ATCUD/QR/SAF-T in Dentum now and certify later.** —
   Wasted; in the connector model all three belong to the provider.
 
 ## How to verify the rule still holds

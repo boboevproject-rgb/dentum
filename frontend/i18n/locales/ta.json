@@ -1,6 +1,6 @@
 {
   "app": {
-    "name": "DentalPin",
+    "name": "Dentum",
     "tagline": "பல் மருத்துவமனை மேலாண்மை",
     "toastLabel": "Notification",
     "sparklineEmpty": "Sparkline empty",
@@ -83,7 +83,7 @@
     "next": "அடுத்து",
     "back": "பின்",
     "submit": "எனது கிளினிக்கை உருவாக்கு",
-    "success": "அனைத்தும் தயார்! DentalPin-க்கு வரவேற்கிறோம்",
+    "success": "அனைத்தும் தயார்! Dentum-க்கு வரவேற்கிறோம்",
     "firstNameRequired": "முதல் பெயரை உள்ளிடவும்",
     "lastNameRequired": "கடைசி பெயரை உள்ளிடவும்",
     "emailRequired": "மின்னஞ்சலை உள்ளிடவும்",
@@ -999,7 +999,7 @@
       "afternoon": "மதிய வணக்கம்",
       "evening": "மாலை வணக்கம்"
     },
-    "welcome": "DentalPin-க்கு வரவேற்கிறோம்",
+    "welcome": "Dentum-க்கு வரவேற்கிறோம்",
     "welcomeMessage": "உங்கள் முதல் நோயாளியை உருவாக்குவதன் மூலம் தொடங்குங்கள்.",
     "quickActions": {
       "newAppointment": "புதிய சந்திப்பு",
@@ -1301,14 +1301,14 @@
       "copy": "இணைப்பை நகலெடு",
       "copied": "இணைப்பு நகலெடுக்கப்பட்டது",
       "whatsapp": "WhatsApp மூலம் அனுப்பு",
-      "shareText": "வணக்கம் {name}, இதோ உங்கள் DentalPin அணுகல். திறந்து உங்கள் கடவுச்சொல்லைத் தேர்ந்தெடுக்கவும்: {url}",
+      "shareText": "வணக்கம் {name}, இதோ உங்கள் Dentum அணுகல். திறந்து உங்கள் கடவுச்சொல்லைத் தேர்ந்தெடுக்கவும்: {url}",
       "secretNote": "கடவுச்சொல் போலக் கருதுங்கள்: இணைப்பு உள்ள எவரும் இந்தக் கணக்கில் உள்நுழையலாம்.",
       "passwordOptionalHelp": "WhatsApp அல்லது மின்னஞ்சல் மூலம் அனுப்பக்கூடிய அணுகல் இணைப்பை உருவாக்க காலியாக விடவும்.",
       "passwordOptionalPlaceholder": "விருப்பத்தேர்வு",
       "createAndLink": "உருவாக்கி இணைப்பை உருவாக்கு",
       "rowAction": "அணுகல் இணைப்பு",
       "setPasswordTitle": "உங்கள் கடவுச்சொல்லைத் தேர்ந்தெடுக்கவும்",
-      "setPasswordSubtitle": "DentalPin-க்கு அழைக்கப்பட்டுள்ளீர்கள். உள்நுழைய உங்கள் கடவுச்சொல்லை உருவாக்கவும்.",
+      "setPasswordSubtitle": "Dentum-க்கு அழைக்கப்பட்டுள்ளீர்கள். உள்நுழைய உங்கள் கடவுச்சொல்லை உருவாக்கவும்.",
       "setPasswordSubmit": "சேமித்து உள்நுழை",
       "invalidToken": "இந்த இணைப்பு செல்லாதது அல்லது ஏற்கனவே பயன்படுத்தப்பட்டது. உங்கள் கிளினிக் நிர்வாகியிடம் புதியதைக் கேளுங்கள்."
     }
@@ -3176,7 +3176,7 @@
     "label": "உதவி",
     "openHelp": "உதவியைத் திற",
     "drawerTitle": "இந்தப் பக்கத்திற்கான உதவி",
-    "unavailable": "இந்தப் பக்கத்திற்கு இதுவரை சூழல் உதவி எதுவும் இல்லை.",
+    "unavailable": "இந்தப் பக்க வழிகாட்டியை ஏற்ற முடியவில்லை. கீழே உள்ள முழுக் கையேடு இணைப்பைப் பயன்படுத்தவும்.",
     "openFullManual": "முழு கையேட்டைத் திற"
   },
   "charts": {
@@ -3258,7 +3258,7 @@
       "catalog": "Treatment catalog, categories, VAT types.",
       "clinical_notes": "Polymorphic clinical notes (administrative, diagnosis, treatment, treatment plan) with author. Attachments delegated to media.",
       "contacts": "Directory of external labs, suppliers, and other provider contacts.",
-      "copilot": "Conversational AI agent over DentalPin, scoped to the caller's permissions.",
+      "copilot": "Conversational AI agent over Dentum, scoped to the caller's permissions.",
       "documents": "Generates prescriptions, medical certificates, referral letters and radiology requests as branded PDFs with configurable clinic letterhead.",
       "expenses": "Fixed/recurring office expense tracking with monthly category totals.",
       "gdpr": "Data-subject rights, consents, retention and breach reporting (GDPR).",

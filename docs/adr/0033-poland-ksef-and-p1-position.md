@@ -263,7 +263,7 @@ trzecim loginu i hasła", now with TOTP. That is a product, not a module.
    none for cosmetic work, which is taxed. The same field drives the PDF.
 5. **Transport is KSeF API 2.0 with the clinic's own identity** — an
    `Authentication` certyfikat KSeF or a KSeF token, stored encrypted per
-   clinic; never a DentalPin-held credential, never a DentalPin-operated
+   clinic; never a Dentum-held credential, never a Dentum-operated
    service. TEST/DEMO/PRD switchable like verifactu's environments. The module
    stores the sent XML, the numer KSeF, the UPO and every rejection immutably
    and mirrors state into `Invoice.compliance_data['PL']`. KOD I goes on the PDF.
@@ -275,7 +275,7 @@ trzecim loginu i hasła", now with TOTP. That is a product, not a module.
    country ADR whose answer to "may a self-hosted, modifiable, open-source
    product submit on its own behalf?" is an unqualified yes — contrast Portugal
    (ADR 0027) and Germany (ADR 0031).
-8. **The cash register stays outside DentalPin.** We are not a fiscal device and
+8. **The cash register stays outside Dentum.** We are not a fiscal device and
    never drive one. `pl_ksef` records the paragon's document number and the
    kasa's unique number against the invoice, and the UI asks for a business
    buyer's NIP *before* the paragon is taken (art. 106b ust. 5).
@@ -290,7 +290,7 @@ trzecim loginu i hasła", now with TOTP. That is a product, not a module.
    paper mode, so `pl_p1` must surface P1 unavailability to the prescriber
    rather than degrade silently; and conformance tracks CeZ's dated PIK template
    packages on the art. 8b nine-month clock, not the frozen "1.3.2" label.
-10. **DentalPin never holds a dentist's signing credential.** Signing is done
+10. **Dentum never holds a dentist's signing credential.** Signing is done
     with the dentist's qualified certificate, Profil Zaufany, e-Dowód or the ZUS
     mechanism; `pl_p1` hands the document out to be signed and takes the signed
     XML back — the Polish form of ADR 0032's rule that we talk to the trusted
@@ -301,7 +301,7 @@ trzecim loginu i hasła", now with TOTP. That is a product, not a module.
     later `pl_nfz`, on the condition that each user supplies their own operator
     login and TOTP and the system never stores a shared one. Tendering is never
     in scope.
-12. **Position until the modules ship:** "DentalPin holds the clinical record,
+12. **Position until the modules ship:** "Dentum holds the clinical record,
     schedule and invoicing for a Polish practice; patient sales still go through
     your own kasa fiskalna online, and KSeF only matters for the invoices you
     issue to businesses." Stated on the Polish pages and in the readiness matrix.
@@ -325,7 +325,7 @@ trzecim loginu i hasła", now with TOTP. That is a product, not a module.
   document repository and an audit-log feed. It needs an owner who can test
   against INT, and the II-N/III-P/IV-P prescription class gives it an
   availability requirement no other module here carries.
-- A Polish practice still runs a kasa fiskalna beside DentalPin.
+- A Polish practice still runs a kasa fiskalna beside Dentum.
 - FA(3), the API contract and the PIK template packages all move.
 - An NFZ-contracted practice keeps its NFZ reporting elsewhere — most Polish
   dental practices by volume.

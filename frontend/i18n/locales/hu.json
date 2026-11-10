@@ -1,6 +1,6 @@
 {
   "app": {
-    "name": "DentalPin",
+    "name": "Dentum",
     "tagline": "Fogorvosi rendelő ügyvitele",
     "toastLabel": "Értesítés",
     "sparklineEmpty": "Sparkline empty",
@@ -83,7 +83,7 @@
     "next": "Tovább",
     "back": "Vissza",
     "submit": "Rendelő létrehozása",
-    "success": "Kész! Üdvözöljük a DentalPinben",
+    "success": "Kész! Üdvözöljük a Dentumben",
     "firstNameRequired": "Adja meg a keresztnevet",
     "lastNameRequired": "Adja meg a vezetéknevet",
     "emailRequired": "Adja meg az e-mail-címet",
@@ -999,7 +999,7 @@
       "afternoon": "Jó napot",
       "evening": "Jó estét"
     },
-    "welcome": "Üdvözöljük a DentalPinben",
+    "welcome": "Üdvözöljük a Dentumben",
     "welcomeMessage": "Kezdje az első páciense felvételével.",
     "quickActions": {
       "newAppointment": "Új időpont",
@@ -1301,14 +1301,14 @@
       "copy": "Link másolása",
       "copied": "Link vágólapra másolva",
       "whatsapp": "Küldés WhatsAppon",
-      "shareText": "Szia {name}, itt a DentalPin-hozzáférésed. Nyisd meg és válassz jelszót: {url}",
+      "shareText": "Szia {name}, itt a Dentum-hozzáférésed. Nyisd meg és válassz jelszót: {url}",
       "secretNote": "Kezelje jelszóként: bárki, akinél a link van, be tud jelentkezni ebbe a fiókba.",
       "passwordOptionalHelp": "Hagyja üresen, ha WhatsAppon vagy e-mailben küldhető hozzáférési linket szeretne.",
       "passwordOptionalPlaceholder": "Opcionális",
       "createAndLink": "Létrehozás és link generálása",
       "rowAction": "Hozzáférési link",
       "setPasswordTitle": "Válasszon jelszót",
-      "setPasswordSubtitle": "Meghívást kapott a DentalPinbe. A bejelentkezéshez hozza létre a jelszavát.",
+      "setPasswordSubtitle": "Meghívást kapott a Dentumbe. A bejelentkezéshez hozza létre a jelszavát.",
       "setPasswordSubmit": "Mentés és bejelentkezés",
       "invalidToken": "Ez a link érvénytelen vagy már felhasználták. Kérjen újat a rendelő adminisztrátorától."
     }
@@ -3176,7 +3176,7 @@
     "label": "Súgó",
     "openHelp": "Súgó megnyitása",
     "drawerTitle": "Súgó ehhez az oldalhoz",
-    "unavailable": "Ehhez az oldalhoz még nincs kontextusfüggő súgó.",
+    "unavailable": "Az oldal útmutatóját nem sikerült betölteni. Használja az alábbi teljes kézikönyv hivatkozását.",
     "openFullManual": "Teljes kézikönyv megnyitása"
   },
   "charts": {
@@ -3258,7 +3258,7 @@
       "catalog": "Treatment catalog, categories, VAT types.",
       "clinical_notes": "Polymorphic clinical notes (administrative, diagnosis, treatment, treatment plan) with author. Attachments delegated to media.",
       "contacts": "Directory of external labs, suppliers, and other provider contacts.",
-      "copilot": "Conversational AI agent over DentalPin, scoped to the caller's permissions.",
+      "copilot": "Conversational AI agent over Dentum, scoped to the caller's permissions.",
       "documents": "Generates prescriptions, medical certificates, referral letters and radiology requests as branded PDFs with configurable clinic letterhead.",
       "expenses": "Fixed/recurring office expense tracking with monthly category totals.",
       "gdpr": "Data-subject rights, consents, retention and breach reporting (GDPR).",

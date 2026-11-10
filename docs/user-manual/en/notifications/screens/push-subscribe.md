@@ -2,6 +2,7 @@
 module: notifications
 screen: push-subscribe
 route: /p/push/[token]
+last_verified_commit: b44facb6
 related_endpoints:
   - POST /api/v1/notifications/push/subscribe-tokens
   - GET /api/v1/notifications/public/push/subscribe/{token}

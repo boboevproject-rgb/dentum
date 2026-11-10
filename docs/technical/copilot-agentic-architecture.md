@@ -389,7 +389,7 @@ tokenization means under GDPR.
 2. **Anonymization** — tokens are salted hashes, not random nonces.
    This is **pseudonymization** under GDPR Article 4(5), not
    anonymization.  A party that possesses the symbol table plus the
-   conversation salt (i.e. the DentalPin server) can reverse every
+   conversation salt (i.e. the Dentum server) can reverse every
    token.  The cloud provider receives only the tokenized form and
    holds neither table nor salt, so dictionary attacks over the
    value space do not apply to it (#586).

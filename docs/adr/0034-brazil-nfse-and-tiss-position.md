@@ -1,4 +1,4 @@
-# 0034 — Brazil: nothing certifies the software, so DentalPin emits NFS-e itself and speaks TISS per operadora
+# 0034 — Brazil: nothing certifies the software, so Dentum emits NFS-e itself and speaks TISS per operadora
 
 - **Status:** proposed
 - **Date:** 2026-09-12
@@ -295,7 +295,7 @@ relevance triggers at once: sensitive data and professional secrecy.
    art. 3º § único), TISS software (RN 501/2022, CO item 139) or
    clinical-record software (CFM 2.218/2018; Lei 13.787 art. 5º §2º;
    SBIS Manual v5.0). Brazil is the first market in this series where
-   DentalPin can be a practice's only system. This ADR exists mainly
+   Dentum can be a practice's only system. This ADR exists mainly
    so that finding is not quietly re-litigated.
 2. **Two `BR`-gated modules, `br_nfse` and `br_tiss`**, in the
    `verifactu` shape: own `br_nfse_*` / `br_tiss_*` tables, own
@@ -312,10 +312,10 @@ relevance triggers at once: sensitive data and professional secrecy.
    `GET /parametros_municipais/{codigoMunicipio}/convenio` decides at
    runtime whether a clinic is reachable this way; if not, the module
    says so and issues nothing.
-4. **The clinic holds the credential; DentalPin never does** — an
+4. **The clinic holds the credential; Dentum never does** — an
    ICP-Brasil A1 e-CNPJ uploaded per clinic like verifactu's FNMT
    certificate, plus the practice's own Painel do Contribuinte
-   credenciamento. No DentalPin-operated signing service, no producer
+   credenciamento. No Dentum-operated signing service, no producer
    key: the Portuguese failure mode cannot arise here.
 5. **Nothing calendar-dependent is hard-coded.** ISS rates, regimes,
    deductions, retentions and cancellation/substitution windows come
@@ -341,7 +341,7 @@ relevance triggers at once: sensitive data and professional secrecy.
    de Situação Inicial via LoteAnexo, the demonstrativos de retorno,
    and Recurso de Glosa Odontológica. Elegibilidade and non-anexo
    authorisation come later and, if built, are TISS-shaped (item 41).
-   **DentalPin never talks to ANS**; no code touches the 01.06.00
+   **Dentum never talks to ANS**; no code touches the 01.06.00
    monitoramento line.
 9. **TUSS is seeded read-only in `br_tiss`, with vigência dates, and
    mapped to the treatment catalog by a module-owned mapping table** —
@@ -375,7 +375,7 @@ relevance triggers at once: sensitive data and professional secrecy.
     before/after composer. TISS payloads carry only the guia's fields,
     every disclosure is logged (art. 18, VII), and breach tooling
     targets the three-working-day deadlines.
-12. **Until both modules exist, DentalPin's position in Brazil is
+12. **Until both modules exist, Dentum's position in Brazil is
     "clinical record, schedule and patient invoicing; NFS-e and TISS
     pending, both feasible"** — on the Brazilian pages and in the
     readiness matrix. Unlike Germany and Portugal, this is temporary:
@@ -387,7 +387,7 @@ relevance triggers at once: sensitive data and professional secrecy.
 
 - The feasibility question gating #139 closes with a sourced "yes" on
   both halves — the first market here whose answer is not "a third
-  party issues, DentalPin mirrors".
+  party issues, Dentum mirrors".
 - `br_nfse` gives the hook a REST/JSON reference implementation
   alongside verifactu's SOAP/mTLS; the certificate handling is an
   already-solved shape.
@@ -447,7 +447,7 @@ relevance triggers at once: sensitive data and professional secrecy.
 
 - `docs/technical/country-readiness.md` and the Brazilian landing
   page state Decision 12 and never imply any Brazilian body certifies
-  DentalPin.
+  Dentum.
 - No module grep-matches a hard-coded ISS rate, a cancellation
   deadline in days, or a CBS/IBS percentage; each resolves through
   `parametros_municipais` or a dated configuration row.
@@ -522,7 +522,7 @@ relevance triggers at once: sensitive data and professional secrecy.
 
 ## Readiness matrix row
 
-| Brazil | ✅ `pt` (pt-BR overlay on `pt` #509) | ✅ | ❌ NFS-e: feasible, no software certification exists — the practice emits from its own software with an ICP-Brasil e-CNPJ (Res. CGNFS-e 3/2023 art. 3º § único); `br_nfse` pending, targeting the SEFIN Nacional API with the `IBSCBS` groups (ADR 0034) | ❌ TISS: feasible — "qualquer solução tecnológica poderá ser utilizada" (RN 501/2022, CO item 139); `br_tiss` pending, one protocol and N per-operadora connections, Comunicação 04.03.00; DentalPin never talks to ANS (ADR 0034) | #139 (answered) |
+| Brazil | ✅ `pt` (pt-BR overlay on `pt` #509) | ✅ | ❌ NFS-e: feasible, no software certification exists — the practice emits from its own software with an ICP-Brasil e-CNPJ (Res. CGNFS-e 3/2023 art. 3º § único); `br_nfse` pending, targeting the SEFIN Nacional API with the `IBSCBS` groups (ADR 0034) | ❌ TISS: feasible — "qualquer solução tecnológica poderá ser utilizada" (RN 501/2022, CO item 139); `br_tiss` pending, one protocol and N per-operadora connections, Comunicação 04.03.00; Dentum never talks to ANS (ADR 0034) | #139 (answered) |
 
 ## References
 

@@ -1,0 +1,28 @@
+# Source-build deployment for Dentum. Combine with docker-compose.prod.yml:
+#   docker compose -f docker-compose.prod.yml -f docker-compose.deploy.yml up -d --build
+#
+# The project name and named data volumes stay compatible with the existing
+# deployment so the current database, uploads, and Caddy certificates remain
+# attached during image updates.
+services:
+  backend:
+    image: dentum-backend:${DENTUM_VERSION:-local}
+    build:
+      context: ./backend
+
+  frontend:
+    image: dentum-frontend:${DENTUM_VERSION:-local}
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile.prod
+
+  docs:
+    image: dentum-docs:${DENTUM_VERSION:-local}
+    build:
+      context: .
+      dockerfile: docs/portal/Dockerfile
+    restart: unless-stopped
+
+  caddy:
+    depends_on:
+      - docs

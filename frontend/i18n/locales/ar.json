@@ -1,6 +1,6 @@
 {
   "app": {
-    "name": "DentalPin",
+    "name": "Dentum",
     "tagline": "إدارة عيادات الأسنان",
     "toastLabel": "Notification",
     "sparklineEmpty": "Sparkline empty",
@@ -83,7 +83,7 @@
     "next": "التالي",
     "back": "رجوع",
     "submit": "إنشاء عيادتي",
-    "success": "كل شيء جاهز! مرحبًا بك في DentalPin",
+    "success": "كل شيء جاهز! مرحبًا بك في Dentum",
     "firstNameRequired": "أدخل الاسم الأول",
     "lastNameRequired": "أدخل اسم العائلة",
     "emailRequired": "أدخل البريد الإلكتروني",
@@ -999,7 +999,7 @@
       "afternoon": "مساء الخير",
       "evening": "مساء الخير"
     },
-    "welcome": "مرحبًا بك في DentalPin",
+    "welcome": "مرحبًا بك في Dentum",
     "welcomeMessage": "ابدأ بإنشاء أول مريض.",
     "quickActions": {
       "newAppointment": "موعد جديد",
@@ -1301,14 +1301,14 @@
       "copy": "نسخ الرابط",
       "copied": "تم نسخ الرابط",
       "whatsapp": "إرسال عبر واتساب",
-      "shareText": "مرحبًا {name}، هذا رابط وصولك إلى DentalPin. افتحه واختر كلمة مرورك: {url}",
+      "shareText": "مرحبًا {name}، هذا رابط وصولك إلى Dentum. افتحه واختر كلمة مرورك: {url}",
       "secretNote": "تعامل معه ككلمة مرور: أي شخص لديه الرابط يستطيع الدخول إلى هذا الحساب.",
       "passwordOptionalHelp": "اتركه فارغًا لتوليد رابط وصول يمكنك إرساله عبر واتساب أو البريد الإلكتروني.",
       "passwordOptionalPlaceholder": "اختياري",
       "createAndLink": "إنشاء وتوليد الرابط",
       "rowAction": "رابط الوصول",
       "setPasswordTitle": "اختر كلمة مرورك",
-      "setPasswordSubtitle": "تمت دعوتك إلى DentalPin. أنشئ كلمة مرورك لتسجيل الدخول.",
+      "setPasswordSubtitle": "تمت دعوتك إلى Dentum. أنشئ كلمة مرورك لتسجيل الدخول.",
       "setPasswordSubmit": "حفظ وتسجيل الدخول",
       "invalidToken": "هذا الرابط غير صالح أو استُخدم مسبقًا. اطلب من مسؤول عيادتك رابطًا جديدًا."
     }
@@ -3176,7 +3176,7 @@
     "label": "المساعدة",
     "openHelp": "فتح المساعدة",
     "drawerTitle": "مساعدة لهذه الصفحة",
-    "unavailable": "لا تتوفر مساعدة سياقية لهذه الصفحة بعد.",
+    "unavailable": "تعذر تحميل دليل الصفحة. استخدم رابط الدليل الكامل أدناه.",
     "openFullManual": "فتح الدليل الكامل"
   },
   "charts": {
@@ -3258,7 +3258,7 @@
       "catalog": "Treatment catalog, categories, VAT types.",
       "clinical_notes": "Polymorphic clinical notes (administrative, diagnosis, treatment, treatment plan) with author. Attachments delegated to media.",
       "contacts": "Directory of external labs, suppliers, and other provider contacts.",
-      "copilot": "Conversational AI agent over DentalPin, scoped to the caller's permissions.",
+      "copilot": "Conversational AI agent over Dentum, scoped to the caller's permissions.",
       "documents": "Generates prescriptions, medical certificates, referral letters and radiology requests as branded PDFs with configurable clinic letterhead.",
       "expenses": "Fixed/recurring office expense tracking with monthly category totals.",
       "gdpr": "Data-subject rights, consents, retention and breach reporting (GDPR).",

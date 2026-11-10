@@ -1,4 +1,4 @@
-# DentalPin
+# Dentum
 
 [![en](https://img.shields.io/badge/lang-en-red.svg)](./README.md)
 [![es](https://img.shields.io/badge/lang-es-yellow.svg)](./README.es.md)
@@ -16,22 +16,17 @@
 odontogramma, agenda, piani di cura, fatturazione e un copilot AI integrato —
 modulare, self-hosted, API-first.
 
-### ▶ [**Prova la demo dal vivo**](https://demo.dentalpin.com)
+[![Dentum — scheda paziente con odontogramma](docs/screenshots/patients.png)](https://dentum.online)
 
-Accedi con `admin@demo.clinic` / `demo1234` — accesso amministratore completo a uno
-studio con dati di esempio. Si azzera ogni notte, quindi esplora liberamente.
+<sub>[Sito web](https://dentum.online) · [Documentazione](https://dentum.online/docs) · [Altri screenshot ↓](#screenshot)</sub>
 
-[![DentalPin — scheda paziente con odontogramma](docs/screenshots/patients.png)](https://demo.dentalpin.com)
-
-<sub>[Sito web](https://www.dentalpin.com) · [Documentazione](https://docs.dentalpin.com) · [Telegram](https://t.me/dentalpin) · [Altri screenshot ↓](#screenshot)</sub>
-
-## Perché DentalPin?
+## Perché Dentum?
 
 Gli studi dentistici di tutto il mondo condividono le stesse esigenze fondamentali: gestire i pazienti, pianificare gli appuntamenti, seguire i trattamenti e amministrare l'attività in modo efficiente. Eppure il panorama software è frammentato in decine di soluzioni localizzate e a codice chiuso che vincolano gli studi a contratti costosi e a tecnologie obsolete.
 
 **Crediamo che sia ora di cambiare.**
 
-DentalPin nasce da una premessa semplice: **un'unica piattaforma aperta per gli studi dentistici di tutto il mondo**. Non l'ennesima soluzione regionale, ma una base globale che ogni studio può adottare, ogni sviluppatore può estendere e ogni comunità può localizzare.
+Dentum nasce da una premessa semplice: **un'unica piattaforma aperta per gli studi dentistici di tutto il mondo**. Non l'ennesima soluzione regionale, ma una base globale che ogni studio può adottare, ogni sviluppatore può estendere e ogni comunità può localizzare.
 
 ### Perché ora?
 
@@ -49,11 +44,11 @@ L'AI ha cambiato radicalmente ciò che i piccoli team possono costruire. Funzion
 
 Non stiamo solo costruendo un software: stiamo costruendo le fondamenta di un ecosistema. Una piattaforma in cui gli sviluppatori contribuiscono con moduli, gli studi condividono i miglioramenti e l'intera comunità odontoiatrica beneficia dell'innovazione collettiva.
 
-Gli studi meritano di meglio del software chiuso e costoso del decennio scorso. DentalPin è l'alternativa aperta.
+Gli studi meritano di meglio del software chiuso e costoso del decennio scorso. Dentum è l'alternativa aperta.
 
 ## ✨ AI Copilot
 
-DentalPin include un **assistente AI agentico integrato** che trasforma l'intero studio in qualcosa con cui puoi semplicemente parlare. Chiedigli di trovare un paziente, liberare uno slot, sollecitare un preventivo rimasto senza risposta o farti un riepilogo della giornata — in normale spagnolo o inglese — e agisce sui tuoi dati reali.
+Dentum include un **assistente AI agentico integrato** che trasforma l'intero studio in qualcosa con cui puoi semplicemente parlare. Chiedigli di trovare un paziente, liberare uno slot, sollecitare un preventivo rimasto senza risposta o farti un riepilogo della giornata — in normale spagnolo o inglese — e agisce sui tuoi dati reali.
 
 ![AI Copilot](docs/screenshots/ia.png)
 
@@ -71,11 +66,8 @@ Indipendente dal fornitore sotto il cofano (un'astrazione del provider LLM), con
 
 ## Sito web
 
-Visita [**dentalpin.com**](https://www.dentalpin.com) per informazioni sul prodotto, funzionalità e dettagli commerciali.
+Visita [**dentum.online**](https://dentum.online) per informazioni sul prodotto, funzionalità e dettagli commerciali.
 
-## Community
-
-Unisciti al nostro [**canale Telegram**](https://t.me/dentalpin) per supporto, aiuto con l'installazione e domande.
 
 ## Screenshot
 
@@ -102,9 +94,9 @@ Unisciti al nostro [**canale Telegram**](https://t.me/dentalpin) per supporto, a
 Immagini precompilate, senza clone, senza build. Su qualsiasi server con Docker:
 
 ```bash
-curl -O https://raw.githubusercontent.com/dentalpin/dentalpin/main/docker-compose.prod.yml
-curl -O https://raw.githubusercontent.com/dentalpin/dentalpin/main/Caddyfile
-curl -o .env https://raw.githubusercontent.com/dentalpin/dentalpin/main/.env.prod.example
+curl -O https://raw.githubusercontent.com/boboevproject-rgb/dentum/main/docker-compose.prod.yml
+curl -O https://raw.githubusercontent.com/boboevproject-rgb/dentum/main/Caddyfile
+curl -o .env https://raw.githubusercontent.com/boboevproject-rgb/dentum/main/.env.prod.example
 
 # Imposta PUBLIC_URL, POSTGRES_PASSWORD e SECRET_KEY in .env, poi:
 # BUDGET_PUBLIC_SECRET_KEY: openssl rand -hex 32
@@ -214,7 +206,7 @@ disponibili in **cinque lingue** (es, en, fr, pt, ta); ogni studio sceglie la li
 di comunicazione indipendentemente dalla lingua dell'interfaccia del personale.
 
 Vuoi la tua lingua? Aggiungerne una è un contributo di sola traduzione — consulta le
-[issue i18n](https://github.com/dentalpin/dentalpin/issues?q=label%3Ai18n) o aprine
+[issue i18n](https://github.com/boboevproject-rgb/dentum/issues?q=label%3Ai18n) o aprine
 una nuova.
 
 ## Sviluppo
@@ -298,7 +290,7 @@ Runbook completo + riferimento alle fixture: [docs/technical/e2e-testing.md](doc
 
 ## Architettura
 
-DentalPin utilizza un'architettura modulare a plugin. Ogni funzionalità è un modulo autonomo che:
+Dentum utilizza un'architettura modulare a plugin. Ogni funzionalità è un modulo autonomo che:
 - Dichiara i propri modelli SQLAlchemy
 - Fornisce un router FastAPI
 - Può sottoscrivere eventi di altri moduli
@@ -309,7 +301,7 @@ Per i dettagli consulta [ADR 0001 — architettura modulare a plugin](docs/adr/0
 
 Business Source License 1.1 (BSL 1.1)
 
-**Concessione d'uso aggiuntiva:** Puoi usare DentalPin in produzione, purché tu non lo offra come SaaS commerciale per la gestione di studi dentistici.
+**Concessione d'uso aggiuntiva:** Puoi usare Dentum in produzione, purché tu non lo offra come SaaS commerciale per la gestione di studi dentistici.
 
 **Data di cambio:** 4 anni dal rilascio
 

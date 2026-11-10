@@ -1,6 +1,6 @@
-# DentalPin Core API
+# Dentum Core API
 
-Public contract that DentalPin modules (official + community) can rely
+Public contract that Dentum modules (official + community) can rely
 on. Everything in this document is covered by the deprecation policy
 in §7 — change-without-notice is a bug.
 
@@ -67,7 +67,7 @@ MANIFEST = {
 
     # Metadata — recommended
     "summary": "Invoices + payments",
-    "author": "DentalPin Core Team",
+    "author": "Dentum Core Team",
     "license": "BSL-1.1",
 
     # Trust tier — required
@@ -307,7 +307,7 @@ through the DB (ADR 0029); with the flag off they use the static map.
 
 ## 10. Deprecation policy
 
-Until DentalPin v1.0 is tagged:
+Until Dentum v1.0 is tagged:
 
 - Breaking changes can land with an announcement in the CHANGELOG.
 

@@ -10,7 +10,7 @@ llegan desde el formulario de contacto de tu web — o que recepción apunta a
 mano — y que **no** coinciden con ningún paciente que ya tengas.
 
 > **Las consultas de pacientes que ya existen no aparecen aquí.** Cuando el
-> teléfono o el email ya pertenece a uno de tus pacientes, DentalPin añade una
+> teléfono o el email ya pertenece a uno de tus pacientes, Dentum añade una
 > llamada a **Recordatorios** con el texto de la consulta en la nota del
 > recordatorio. Comprueba Recordatorios antes de dar por hecho que el
 > formulario no funciona.

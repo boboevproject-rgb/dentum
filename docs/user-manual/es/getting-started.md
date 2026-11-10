@@ -1,6 +1,6 @@
 # Primeros pasos: configuración inicial y la tarjeta "Puesta en marcha"
 
-Esta guía explica qué ocurre la primera vez que abres una instalación nueva de DentalPin y cómo el panel de inicio te ayuda a terminar de configurar la clínica sin soporte externo.
+Esta guía explica qué ocurre la primera vez que abres una instalación nueva de Dentum y cómo el panel de inicio te ayuda a terminar de configurar la clínica sin soporte externo.
 
 ## 1. Configuración inicial (`/setup`)
 
@@ -9,7 +9,7 @@ La primera visita a una instalación nueva abre el asistente de configuración. 
 1. **Cuenta de administrador** — tu nombre, correo y una contraseña (mínimo 12 caracteres con letras y números). Será la cuenta administradora de la clínica. El interruptor **«Yo mismo atiendo pacientes»** (activado por defecto) te marca como profesional agendable — déjalo activado si trabajas solo, desactívalo si solo gestionas la clínica.
 2. **Clínica** — nombre de la clínica, **país** e identificación fiscal. El país fija por ti la zona horaria, la moneda y el IVA (puedes cambiarlos en *Zona horaria y moneda*). Para España, el asistente comprueba el formato del NIF/CIF y avisa si la letra de control no cuadra. El bloque opcional **Dirección de la clínica** (calle, código postal, ciudad) rellena la dirección que aparece en presupuestos y facturas — completarlo aquí deja resuelto el paso *Datos de la clínica* desde el primer momento.
 
-Pulsa **Crear mi clínica**. DentalPin crea por ti:
+Pulsa **Crear mi clínica**. Dentum crea por ti:
 
 - el catálogo de tratamientos y los tipos de IVA (España: exento / 10 % / 21 %; otros países: un único tipo exento editable),
 - una serie de facturas (`FAC`) y otra de rectificativas (`RECT`),
@@ -49,7 +49,7 @@ Dos pasos se abren listos para actuar: *Datos de la clínica* entra directamente
 
 ## 4. Dar de alta compañeros sin email
 
-En *Tu equipo* (o *Configuración → Personas → Usuarios*), crea el usuario y **deja la contraseña vacía**. DentalPin muestra un **enlace de acceso** de un solo uso que puedes **copiar** o **enviar por WhatsApp**. Tu compañero lo abre, elige su contraseña y entra directamente. El enlace sirve una vez y caduca a los siete días.
+En *Tu equipo* (o *Configuración → Personas → Usuarios*), crea el usuario y **deja la contraseña vacía**. Dentum muestra un **enlace de acceso** de un solo uso que puedes **copiar** o **enviar por WhatsApp**. Tu compañero lo abre, elige su contraseña y entra directamente. El enlace sirve una vez y caduca a los siete días.
 
 El icono de enlace en cualquier fila de usuario genera un enlace nuevo, útil cuando alguien olvida su contraseña.
 

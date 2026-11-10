@@ -100,7 +100,7 @@ function handleOpen(value: boolean) {
               class="w-6 h-6 text-warning"
             />
             <p class="text-default">
-              {{ t('help.unavailable', 'No contextual help available for this page yet.') }}
+              {{ t('help.unavailable', 'The page guide could not be loaded. Open the full manual below.') }}
             </p>
           </div>
 

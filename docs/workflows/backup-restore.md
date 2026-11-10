@@ -1,13 +1,13 @@
-# Backup & disaster recovery — DentalPin
+# Backup & disaster recovery — Dentum
 
 > **Audience:** clinic operators and self-hosters (not DBAs). If you run
-> DentalPin with real patient data, this page is mandatory reading.
+> Dentum with real patient data, this page is mandatory reading.
 > The one command that matters: `python -m app.cli db backup` (run
 > as `docker compose exec -T backend python -m app.cli db backup`;
 > there is no `dentalpin` binary on PATH — the entrypoint and all
 > docs use the `python -m` form).
 
-DentalPin keeps **two kinds of data in two places**, and a backup that
+Dentum keeps **two kinds of data in two places**, and a backup that
 covers only one of them will lose patient files:
 
 | What | Where | Example |

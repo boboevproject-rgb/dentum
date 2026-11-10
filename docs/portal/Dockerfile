@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1.6
 #
-# Multi-stage build for the DentalPin documentation portal.
+# Multi-stage build for the Dentum documentation portal.
 #
 # Build context MUST be the repository root (or at minimum the `docs/`
 # folder), because VitePress' `srcDir` is configured as `..` — pointing one
@@ -8,12 +8,12 @@
 # rendered without duplication.
 #
 # Coolify usage:
-#   - Repository:        dentalpin/dentalpin
+#   - Repository:        boboevproject-rgb/dentum
 #   - Build context:     /                  (repo root)
 #   - Dockerfile path:   docs/portal/Dockerfile
 #   - Exposed port:      80
-#   - Domain:            docs.dentalpin.com
-#   - TLS:               Coolify (Let's Encrypt)
+#   - Domain:            dentum.online/docs
+#   - TLS:               Caddy (Let's Encrypt)
 
 # ---- Builder ----------------------------------------------------------------
 FROM node:22-alpine@sha256:c610fcdfb1d5b4740dd70c284ed3cb16bb857e0f7166196e36a5501df7a3aa32 AS builder

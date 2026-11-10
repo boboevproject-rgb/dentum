@@ -22,35 +22,57 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 
-const PARAM_SEGMENT_RE = /^[0-9a-f]{8,}|^\d+$|^[A-Za-z0-9-]{20,}$/
+const PARAM_SEGMENT_RE = /^[0-9a-f]{8,}|^\d+$|^[A-Za-z0-9-]{20,}$/i
 
 function collapseDynamicSegments(path: string, matchedRoute: string | undefined): string {
-  // Prefer the matched route from Vue Router (e.g. `/patients/:id`) when
-  // available — convert `:id` to `[id]` for parity with the docs source.
+  // Settings categories share one dynamic route, so use the generic
+  // category guide. Module pages use the next catch-all and keep their real
+  // category/page values to find the module-specific guide.
+  if (matchedRoute === '/settings/:category') return '/settings/id'
+  if (matchedRoute?.includes('/settings/:category/:page')) return path
+
+  // Dynamic identifiers use the same stable `id` token as the docs build.
   if (matchedRoute && matchedRoute !== path) {
-    return matchedRoute.replace(/:([A-Za-z0-9_]+)/g, '[$1]')
+    const actual = path.split('/')
+    const pattern = matchedRoute.split('/')
+    return actual.map((segment, index) =>
+      /^:[A-Za-z0-9_]+$/.test(pattern[index] || '') ? 'id' : segment
+    ).join('/')
   }
 
-  // Fallback: heuristically collapse UUID/hash-looking segments.
+  // Fallback for routes not described by Vue Router: preserve ordinary
+  // names and collapse UUID-, number-, and token-like values only.
   return path
     .split('/')
-    .map((segment, idx) =>
-      idx > 0 && PARAM_SEGMENT_RE.test(segment) ? '[id]' : segment
-    )
+    .map((segment, index) => index > 0 && PARAM_SEGMENT_RE.test(segment) ? 'id' : segment)
     .join('/')
 }
 
-function routeToSlug(route: string): string {
-  // Keep the path only. `route.path` never carries a query, but a screen's
-  // `route:` in the user manual can (e.g. the periodontogram deep link), and
-  // the portal's `routeToSlug` drops it there — `?` is an illegal filename
-  // character and the fragment filename must match on both sides.
-  const [pathOnly = ''] = route.split(/[?#]/)
+function routeToSlug(route: string, query: Record<string, unknown>): string {
+  const pathOnly = route.split(/[?#]/, 1)[0] || ''
   const trimmed = pathOnly.replace(/^\/+|\/+$/g, '')
-  if (!trimmed) return 'index'
-  // Strip `[` `]` to match the portal's `routeToSlug` (filenames with
-  // brackets clash with VitePress' dynamic-route convention).
-  return trimmed.replace(/\//g, '_').replace(/[[\]]/g, '')
+  const pathSlug = trimmed
+    ? trimmed.split('/').map(segment =>
+        /^\{[^}]+\}$/.test(segment) || /^\[[^\]]+\]$/.test(segment) || /^:[A-Za-z0-9_]+$/.test(segment)
+          ? 'id'
+          : segment
+      ).join('_')
+    : 'index'
+
+  // Diagnosis subviews have distinct contextual guides. Other query state
+  // (tabs, filters, modal actions) continues to use the patient's guide.
+  const queryPairs = ['clinicalMode', 'diagnosisView']
+    .filter(key => query[key] !== undefined && query[key] !== null)
+    .flatMap(key => {
+      const value = query[key]
+      return (Array.isArray(value) ? value : [value]).map(item => [key, String(item)] as const)
+    })
+    .sort(([ak, av], [bk, bv]) => ak === bk ? (av < bv ? -1 : av > bv ? 1 : 0) : ak < bk ? -1 : 1)
+    .map(([key, value]) => `${key}_${value}`)
+    .join('_')
+    .replace(/[^A-Za-z0-9_-]/g, '_')
+
+  return queryPairs ? `${pathSlug}__${queryPairs}` : pathSlug
 }
 
 export function useHelp() {
@@ -65,7 +87,7 @@ export function useHelp() {
   })
 
   const slug = computed(() =>
-    routeToSlug(collapseDynamicSegments(route.path, matchedRoute.value))
+    routeToSlug(collapseDynamicSegments(route.path, matchedRoute.value), route.query)
   )
 
   const lang = computed(() => (locale.value?.toLowerCase().startsWith('es') ? 'es' : 'en'))

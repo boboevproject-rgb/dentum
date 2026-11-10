@@ -215,10 +215,10 @@
     },
     "invite": {
       "linkHelp": "Envie esta ligação a {name} para escolher a senha. Expira a {date} e só funciona uma vez.",
-      "shareText": "Olá {name}, aqui está o seu acesso ao DentalPin. Abra e escolha a sua senha: {url}",
+      "shareText": "Olá {name}, aqui está o seu acesso ao Dentum. Abra e escolha a sua senha: {url}",
       "secretNote": "Trate-a como uma senha: quem tiver a ligação pode entrar nesta conta.",
       "setPasswordTitle": "Escolha a sua senha",
-      "setPasswordSubtitle": "Foi convidado para o DentalPin. Crie a sua senha para entrar.",
+      "setPasswordSubtitle": "Foi convidado para o Dentum. Crie a sua senha para entrar.",
       "setPasswordSubmit": "Salvar e entrar"
     },
     "saveChanges": "Salvar alterações",

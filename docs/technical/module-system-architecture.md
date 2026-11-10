@@ -1,4 +1,4 @@
-# Sistema de módulos DentalPin — Arquitectura v1
+# Sistema de módulos Dentum — Arquitectura v1
 
 Documento de diseño para refactorizar el sistema modular actual hacia una arquitectura tipo Odoo moderna, preparada para un ecosistema open source sano (oficial + community) y sostenible a 5 años.
 
@@ -6,7 +6,7 @@ Documento de diseño para refactorizar el sistema modular actual hacia una arqui
 
 **Fecha original**: 2026-04-19
 
-**Contexto**: el core de DentalPin está casi listo. Antes de construir módulos opcionales (facturación, odontograma, presupuestos, planes de tratamiento, etc.) se refactoriza la plataforma modular para que módulos oficiales y comunitarios funcionen bajo el mismo contrato, con instalación/desinstalación limpia y reinicio explícito.
+**Contexto**: el core de Dentum está casi listo. Antes de construir módulos opcionales (facturación, odontograma, presupuestos, planes de tratamiento, etc.) se refactoriza la plataforma modular para que módulos oficiales y comunitarios funcionen bajo el mismo contrato, con instalación/desinstalación limpia y reinicio explícito.
 
 **Scope v1 (Fase A) — completado**: toda la infraestructura modular (backend + frontend slots + Nuxt layers + CLI) entregada; los 9 módulos officiales originales se migraron al contrato nuevo.
 
@@ -84,7 +84,7 @@ Nota: algunos de estos (`catalog`, `budget`, `billing`, `notifications`, `treatm
 
 **Razón para diferir**: mover modelos, API paths, permisos y componentes frontend de clinical son ~10-14 días de refactor con riesgo de regresiones en flujos funcionando (citas, pacientes, odontograma). La infraestructura modular no lo necesita. Cuando se aborde Fase B, el split es mecánico (mover archivos + migraciones de datos + actualizar manifest), no rediseño.
 
-**Razón futura para Patient-en-core**: es raíz universal de 100% de módulos dentales. Si fuera módulo, cada módulo declararía `depends: ["patients"]` — ruido permanente. Laboratorio dental usando DentalPin con entidad "cliente" en vez de "paciente" es caso <1% que no justifica la fricción diaria del 99%. GDPR se resuelve con el módulo `patients_clinical` separado que contiene los datos sensibles reales.
+**Razón futura para Patient-en-core**: es raíz universal de 100% de módulos dentales. Si fuera módulo, cada módulo declararía `depends: ["patients"]` — ruido permanente. Laboratorio dental usando Dentum con entidad "cliente" en vez de "paciente" es caso <1% que no justifica la fricción diaria del 99%. GDPR se resuelve con el módulo `patients_clinical` separado que contiene los datos sensibles reales.
 
 ### 2.2 Distribución: entry points fase 1, workspace fase 2 (Q2)
 
@@ -217,7 +217,7 @@ MANIFEST = {
     "name": "billing",
     "version": "1.0.0",
     "summary": "Facturación, recibos y pagos",
-    "author": "DentalPin Core Team",
+    "author": "Dentum Core Team",
     "license": "BSL-1.1",
     "category": "official",                 # "official" | "community"
 
@@ -226,7 +226,7 @@ MANIFEST = {
     "max_core_version": "2.0.0",            # opcional, upper bound
 
     # Dependencias
-    "depends": ["patients_clinical", "catalog"],   # módulos DentalPin
+    "depends": ["patients_clinical", "catalog"],   # módulos Dentum
     "external_dependencies": {
         "python": ["weasyprint>=60"],       # validado en discover
     },
@@ -811,7 +811,7 @@ Nota: ahorro vs plan original ~2-4 días porque no se toca clinical (split Patie
 ### Etapa 7 — Hardening y documentación (3-4 días)
 - Test end-to-end con módulo community simulado.
 - Documentar Core API pública con ejemplos.
-- Guía "tu primer módulo DentalPin" en `docs/technical/creating-modules.md` (refactor del actual).
+- Guía "tu primer módulo Dentum" en `docs/technical/creating-modules.md` (refactor del actual).
 - CI: test del sistema modular con y sin módulos no-legacy instalados. Clinical siempre instalado (es legacy, no removible).
 - CI: validador de manifiestos + FKs cross-module.
 
@@ -875,7 +875,7 @@ Todo esto es costoso (10-14 días) pero mecánico cuando la infraestructura de F
 ### 13.4 Implicaciones de governance
 
 - **PRs de módulos comunitarios no se aceptan en el repo principal**. Cada community contributor mantiene su propio repo + publica en PyPI. Se mantiene un registro mínimo (v1 = sección en docs) con enlaces a módulos conocidos.
-- **Módulos oficiales viven en el monorepo DentalPin** y son mantenidos por el core team.
+- **Módulos oficiales viven en el monorepo Dentum** y son mantenidos por el core team.
 - El core team marca un módulo como "official" solo si lo va a mantener. El ecosistema comunitario es responsable de sus propios módulos.
 
 ---

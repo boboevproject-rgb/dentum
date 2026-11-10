@@ -2,7 +2,7 @@
 
 > Local-only design. No code copied from any Group D repo (most are
 > unlicensed; MIT ones usable only with notice — see `../technical/external-repos-sweep.md`).
-> Everything below is reimplemented ideas mapped onto existing DentalPin
+> Everything below is reimplemented ideas mapped onto existing Dentum
 > modules. Requires maintainer product decision before code.
 
 ## Patterns mined (ideas only)

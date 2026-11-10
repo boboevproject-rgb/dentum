@@ -8,7 +8,7 @@
 
 ## Goal
 
-View a patient's DICOM studies (incl. CBCT) inside DentalPin, read-only,
+View a patient's DICOM studies (incl. CBCT) inside Dentum, read-only,
 with the same clinic isolation and RBAC as everything else. Today's state is
 preview-only JPEGs (`media` module); CBCT is metadata-only (`todos.md:255`).
 

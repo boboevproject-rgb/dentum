@@ -1,4 +1,4 @@
-# 0032 — Germany: Telematikinfrastruktur — DentalPin talks to an approved Konnektor, never is one
+# 0032 — Germany: Telematikinfrastruktur — Dentum talks to an approved Konnektor, never is one
 
 - **Status:** proposed
 - **Date:** 2026-09-10
@@ -95,11 +95,11 @@ eHBA and, for ePA, the KOB question above.
 
 Confirmed: the practice's Konnektor (or TI-Gateway) is the certified
 component that holds the VPN, the card sessions, encryption and
-signatures; a PVS only calls it. DentalPin's server calls the Konnektor
+signatures; a PVS only calls it. Dentum's server calls the Konnektor
 over the practice LAN (or VPN) as one ClientSystem with one or more
 Workplaces bound to card terminals; the browser never touches the
 Konnektor. KIM is reached through an approved Clientmodul over
-SMTP/POP3. DentalPin never implements VPN, gSMC-K, QES or the
+SMTP/POP3. Dentum never implements VPN, gSMC-K, QES or the
 Clientmodul itself.
 
 ### 4. Costs (official figures)
@@ -117,7 +117,7 @@ Clientmodul itself.
 
 ## Decision
 
-1. **DentalPin is a Primärsystem that talks to the practice's
+1. **Dentum is a Primärsystem that talks to the practice's
    gematik-approved Konnektor or TI-Gateway over the published
    Konnektor interface; it is never a Konnektor, VPN-Zugangsdienst,
    Kartenterminal or KIM-Clientmodul.** Feasibility is settled by
@@ -141,11 +141,11 @@ Clientmodul itself.
    the eHBA via SignatureService, the E-Rezept conformity confirmation
    (public Tiger suite, feasible later) and, for ePA, the KOB whose
    mandatory status is open. They remain with the approved PVS.
-5. **Position until then: "DentalPin reads the eGK through your
+5. **Position until then: "Dentum reads the eGK through your
    existing Konnektor (once `de_ti` ships); EBZ, E-Rezept and ePA stay
    in your KZBV-listed PVS."** With ADR 0031 this means a German
-   Kassenpraxis runs DentalPin beside its PVS, and a purely private
-   practice can run DentalPin alone (no TI duty without GKV billing).
+   Kassenpraxis runs Dentum beside its PVS, and a purely private
+   practice can run Dentum alone (no TI duty without GKV billing).
 6. **The website states the costs**: the TI-Pauschale table, the
    Konnektor-Tausch figure, the eHBA price band and that SMC-B and
    hardware prices are set by vendors.
@@ -164,7 +164,7 @@ Clientmodul itself.
 
 ### Bad / accepted trade-offs
 
-- Without EBZ/E-Rezept/ePA DentalPin cannot be the only system of a
+- Without EBZ/E-Rezept/ePA Dentum cannot be the only system of a
   Kassenpraxis; those depend on ADR 0031 and on the KOB question.
 - Testing needs a real Konnektor or TI-Gateway test account; the KoPS
   simulator is gone. Someone owns that lab.
@@ -193,7 +193,7 @@ Clientmodul itself.
   a quarter triggers `ReadVSD` and stores a Prüfungsnachweis; a second
   visit in the same quarter does not.
 - The readiness matrix and German pages say "talks to your Konnektor;
-  EBZ/E-Rezept/ePA stay in your PVS"; no page implies DentalPin is a
+  EBZ/E-Rezept/ePA stay in your PVS"; no page implies Dentum is a
   TI component.
 
 ## Answers to the issue
@@ -223,7 +223,7 @@ Clientmodul itself.
 ## Readiness matrix row
 
 See ADR 0031 — one Germany row covers both ADRs; the interop cell reads:
-"❌ TI: DentalPin talks to the practice's gematik-approved
+"❌ TI: Dentum talks to the practice's gematik-approved
 Konnektor/TI-Gateway, never is one; `de_ti` (VSDM first, KIM transport
 second) pending; EBZ/E-Rezept/ePA stay with the approved PVS (ADR 0032)".
 

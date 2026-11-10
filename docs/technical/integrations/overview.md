@@ -83,7 +83,7 @@ envelope carries `event`, `event_id`, `delivery_id`, and `data`.
 ## Signing
 
 Stripe's exact scheme (`signing.py`): header
-`X-DentalPin-Signature`, `t=<unix_ts>,v1=<hex_hmac>`, HMAC-SHA256
+`X-Dentum-Signature`, `t=<unix_ts>,v1=<hex_hmac>`, HMAC-SHA256
 over `timestamp.body`, 5-minute tolerance.
 
 ## SSRF guard

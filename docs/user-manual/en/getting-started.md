@@ -1,6 +1,6 @@
 # Getting started: first-run setup and the "Getting started" card
 
-This guide covers what happens the first time you open a fresh DentalPin installation and how the dashboard helps you finish configuring the clinic without external support.
+This guide covers what happens the first time you open a fresh Dentum installation and how the dashboard helps you finish configuring the clinic without external support.
 
 ## 1. First-run setup (`/setup`)
 
@@ -9,7 +9,7 @@ The first visit to a fresh installation opens the setup wizard. It takes about t
 1. **Administrator account** — your name, email and a password (12+ characters with letters and numbers). This is the clinic administrator. The **"I attend patients myself"** switch (on by default) marks you as a bookable professional — leave it on if you work alone, turn it off if you only manage the clinic.
 2. **Clinic** — clinic name, **country** and tax id. The country sets timezone, currency and VAT for you (you can still change them under *Timezone and currency*). For Spain the wizard checks the NIF/CIF format and warns if the checksum looks wrong. The optional **Clinic address** block (street, postal code, city) fills in the address printed on budgets and invoices — filling it here checks off the *Clinic details* step right away.
 
-Press **Create my clinic**. DentalPin creates for you:
+Press **Create my clinic**. Dentum creates for you:
 
 - the treatment catalog and VAT types (Spain: exempt / 10 % / 21 %; other countries: a single exempt rate you can edit),
 - an invoice series (`FAC`) and a credit-note series (`RECT`),
@@ -49,7 +49,7 @@ Two steps open ready to act: *Clinic details* lands directly on the edit form, a
 
 ## 4. Adding colleagues without email
 
-In *Your team* (or *Settings → People → Users*), create the user and **leave the password empty**. DentalPin shows a one-time **access link** you can **copy** or **send via WhatsApp**. Your colleague opens it, chooses a password and is signed in. The link works once and expires after seven days.
+In *Your team* (or *Settings → People → Users*), create the user and **leave the password empty**. Dentum shows a one-time **access link** you can **copy** or **send via WhatsApp**. Your colleague opens it, chooses a password and is signed in. The link works once and expires after seven days.
 
 The link icon on any user row generates a new access link — useful when someone forgot their password.
 

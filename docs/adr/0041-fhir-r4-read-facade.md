@@ -31,7 +31,7 @@ There is no mature, generally adopted dental FHIR implementation guide. The HL7 
 
 ## Decision
 
-DentalPin exposes clinical data to third parties through a **read-only FHIR R4 facade**. Module-contributed providers, collected through a core registry, assemble it. This facade becomes **the** public data API, and the internal API stays private.
+Dentum exposes clinical data to third parties through a **read-only FHIR R4 facade**. Module-contributed providers, collected through a core registry, assemble it. This facade becomes **the** public data API, and the internal API stays private.
 
 1. **Two APIs, one audience each.**
    - `/api/v1/**` stays internal. It is not a public contract and keeps changing freely.

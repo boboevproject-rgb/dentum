@@ -305,6 +305,17 @@ def _scan_module_pages(mod_dir: Path) -> dict[str, Path]:
     return out
 
 
+def _scan_host_pages() -> set[str]:
+    """Return Nuxt page templates owned by the host app (including catch-alls)."""
+    pages_dir = REPO_ROOT / "frontend" / "app" / "pages"
+    if not pages_dir.is_dir():
+        return set()
+    return {
+        _page_to_route(vue.relative_to(pages_dir))
+        for vue in pages_dir.rglob("*.vue")
+    }
+
+
 def _collect_facts(module) -> ModuleFacts:
     name = module.name
     mod_dir = MODULES_ROOT / name
@@ -382,12 +393,34 @@ def _normalise_endpoint(method: str, path: str) -> str:
     return f"{method.upper()} {norm.rstrip('/') or '/'}"
 
 
+def _route_matches_page(route: str, page_template: str) -> bool:
+    """Match a documented path to a Nuxt template, ignoring dynamic param names."""
+    route_path = route.split("?", 1)[0].split("#", 1)[0]
+    route_parts = [part for part in route_path.strip("/").split("/") if part]
+    template_parts = [part for part in page_template.strip("/").split("/") if part]
+    if len(route_parts) != len(template_parts):
+        return False
+
+    def dynamic(part: str) -> bool:
+        return (
+            (part.startswith("{") and part.endswith("}"))
+            or (part.startswith("[") and part.endswith("]"))
+            or (part.startswith(":") and len(part) > 1)
+        )
+
+    return all(
+        dynamic(template) or dynamic(documented) or template == documented
+        for documented, template in zip(route_parts, template_parts)
+    )
+
+
 def _check_module(
     facts: ModuleFacts,
     findings: Findings,
     all_endpoints: set[tuple[str, str]],
     bare_permissions: set[str],
     qualified_permissions: set[str],
+    all_page_templates: set[str],
 ) -> None:
     name = facts.name
     tech_dir = TECHNICAL_ROOT / name
@@ -447,11 +480,10 @@ def _check_module(
             route = str(fm.get("route") or "")
             if not route:
                 findings.err(f"{rel}: frontmatter `route` is required.")
-            elif route not in facts.pages:
+            elif not any(_route_matches_page(route, template) for template in all_page_templates):
                 findings.warn(
                     f"{rel}: frontmatter route {route!r} does not match any "
-                    f"page under {name}/frontend/pages/ "
-                    f"(known: {sorted(facts.pages.keys())})."
+                    "Nuxt page template in the host app or a module layer."
                 )
             if not fm.get("last_verified_commit"):
                 findings.warn(f"{rel}: frontmatter `last_verified_commit` is empty.")
@@ -522,7 +554,7 @@ def _check_locale_parity(findings: Findings, root: Path | None = None) -> None:
 
 def _check_orphan_screens(modules: list[str], findings: Findings) -> None:
     """Find screen MDs whose module folder doesn't exist."""
-    known = set(modules)
+    known = set(modules) | {"core"}
     for locale in LOCALES:
         loc_root = USER_MANUAL_ROOT / locale
         if not loc_root.is_dir():
@@ -537,6 +569,30 @@ def _check_orphan_screens(modules: list[str], findings: Findings) -> None:
                     f"docs/user-manual/{locale}/{module_dir.name}/: "
                     f"no module called '{module_dir.name}' is loaded."
                 )
+
+
+def _check_core_screen_docs(
+    findings: Findings,
+    all_page_templates: set[str],
+) -> None:
+    """Validate guides for app-owned pages that do not belong to a module."""
+    for locale in LOCALES:
+        screens_dir = USER_MANUAL_ROOT / locale / "core" / "screens"
+        if not screens_dir.is_dir():
+            findings.err(f"docs/user-manual/{locale}/core/screens/: missing core screen guides.")
+            continue
+        for screen in sorted(screens_dir.glob("*.md")):
+            fm = _parse_frontmatter(screen.read_text(encoding="utf-8", errors="replace"))
+            rel = screen.relative_to(REPO_ROOT)
+            if fm.get("module") != "core":
+                findings.err(f"{rel}: frontmatter `module` must equal 'core'.")
+            route = str(fm.get("route") or "")
+            if not route:
+                findings.err(f"{rel}: frontmatter `route` is required.")
+            elif not any(_route_matches_page(route, template) for template in all_page_templates):
+                findings.err(f"{rel}: route {route!r} does not match a host or module Nuxt page.")
+            if not fm.get("last_verified_commit"):
+                findings.warn(f"{rel}: frontmatter `last_verified_commit` is empty.")
 
 
 # ---------------------------------------------------------------------------
@@ -555,6 +611,9 @@ def run(strict: bool) -> int:
         )
 
     facts_by_name = {m.name: _collect_facts(m) for m in modules}
+    all_page_templates = _scan_host_pages() | {
+        route for facts in facts_by_name.values() for route in facts.pages
+    }
     all_endpoints = {(m, p) for facts in facts_by_name.values() for m, p in facts.endpoints}
     all_endpoints.update(_scan_core_endpoints())
     bare_permissions = {perm for facts in facts_by_name.values() for perm in facts.permissions}
@@ -562,9 +621,17 @@ def run(strict: bool) -> int:
         f"{name}.{perm}" for name, facts in facts_by_name.items() for perm in facts.permissions
     }
     for facts in facts_by_name.values():
-        _check_module(facts, findings, all_endpoints, bare_permissions, qualified_permissions)
+        _check_module(
+            facts,
+            findings,
+            all_endpoints,
+            bare_permissions,
+            qualified_permissions,
+            all_page_templates,
+        )
 
     _check_orphan_screens([m.name for m in modules], findings)
+    _check_core_screen_docs(findings, all_page_templates)
     _check_locale_parity(findings)
 
     if findings.warnings:

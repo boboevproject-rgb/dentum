@@ -1,4 +1,4 @@
-# Operating a DentalPin instance
+# Operating a Dentum instance
 
 Guide for admins and self-hosters: install and remove modules, trigger
 restarts, take backups, recover from errors. Covers the commands an
@@ -13,7 +13,7 @@ operator runs — not the Python internals.
 ## 1. Prerequisites
 
 - Docker + Docker Compose on the host.
-- Cloned DentalPin repo (or equivalent deploy artefacts).
+- Cloned Dentum repo (or equivalent deploy artefacts).
 - `.env` filled in with `POSTGRES_PASSWORD`, `SECRET_KEY`, etc.
 - A running stack: `docker compose up -d`.
 - **Serving the app and the API from different hosts?** Then they must be
@@ -122,7 +122,7 @@ monitoring scripts.
 
 ### Official modules
 
-Bundled with every DentalPin release. They auto-install on the first
+Bundled with every Dentum release. They auto-install on the first
 boot of a fresh database. Reinstall if they ended up in `uninstalled`:
 
 ```bash

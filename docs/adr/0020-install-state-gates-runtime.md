@@ -2,7 +2,7 @@
 
 - **Status:** accepted
 - **Date:** 2026-08-19
-- **Deciders:** Ramón Martínez (DentalPin Core)
+- **Deciders:** Ramón Martínez (Dentum Core)
 - **Tags:** modules, lifecycle, migrations
 
 ## Context

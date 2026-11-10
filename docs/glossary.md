@@ -1,6 +1,6 @@
 # Glossary
 
-Source of truth for DentalPin terminology. Code is in English; UI strings
+Source of truth for Dentum terminology. Code is in English; UI strings
 are in Spanish (i18n). When the same concept has both forms, list both.
 
 When you introduce a new domain term in code or UI, append it here. Keep

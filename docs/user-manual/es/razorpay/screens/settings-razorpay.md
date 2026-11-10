@@ -17,7 +17,7 @@ last_verified_commit: 2e9e9179
 
 Conecta la cuenta de Razorpay propia de la clínica para que recepción
 pueda cobrar pagos mediante UPI, QR, tarjetas y enlaces de pago
-directamente desde DentalPin. Se accede desde **Ajustes → Facturación
+directamente desde Dentum. Se accede desde **Ajustes → Facturación
 e impuestos → Razorpay**, o directamente en `/settings/razorpay`.
 
 ## Permisos

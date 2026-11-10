@@ -1,6 +1,6 @@
 # Documentación de los datos de demostración
 
-Este documento describe los datos de demostración que crea el script de seed para probar y evaluar DentalPin.
+Este documento describe los datos de demostración que crea el script de seed para probar y evaluar Dentum.
 
 ## Puesta en marcha rápida
 

@@ -59,7 +59,7 @@ re-negation.
 
 ## 2. Architecture & module boundaries
 
-DentalPin is international software; GST is India-only. The india_gst
+Dentum is international software; GST is India-only. The india_gst
 module is therefore optional, country-specific, and isolated — mirroring
 the `verifactu` (Spain/AEAT) module's architecture.
 

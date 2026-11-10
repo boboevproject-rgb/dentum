@@ -8,7 +8,7 @@
 ## Context
 
 Issue #138 asks what a Mexican practice needs before it can invoice from
-DentalPin. The first question is the one ADR 0027 (Portugal) and ADR 0031
+Dentum. The first question is the one ADR 0027 (Portugal) and ADR 0031
 (Germany) had to answer: **is there a certification of the *software* that a
 self-hosted, modifiable program cannot hold?** For Mexico the answer is no.
 Sources read are the primary texts: the CFF as reformed by the DOF decree of
@@ -166,7 +166,7 @@ the finding separating Mexico from Portugal.
 
 ## Decision
 
-1. **DentalPin builds, validates and seals the CFDI 4.0 itself; a PAC certifies
+1. **Dentum builds, validates and seals the CFDI 4.0 itself; a PAC certifies
    it.** No Mexican authority certifies invoicing or clinical software (CFF 29
    Bis authorises *providers*; NOM-004 regulates the *record*), so the
    Portugal/Germany blocker does not exist and we implement the module.
@@ -235,7 +235,7 @@ the finding separating Mexico from Portugal.
 ## How to verify the rule still holds
 
 - `docs/technical/country-readiness.md` and the Mexican landing page say "CFDI
-  4.0 issued from DentalPin, stamped by your PAC" — never "certified software".
+  4.0 issued from Dentum, stamped by your PAC" — never "certified software".
 - Backend test: `mx_cfdi` never writes a `UUID`, `FechaTimbrado`, `SelloSAT` or
   `NoCertificadoSAT` of its own; all four arrive only in a PAC response.
 - Backend test: a `PPD` invoice cannot be settled without a REP; a REP is never
@@ -250,7 +250,7 @@ the finding separating Mexico from Portugal.
 1. **Version and schema** — Anexo 20 v4.0 (DOF 13/01/2022); dental fields per
    §2–§3. No healthcare complemento exists; the only one a clinic needs is
    **Pagos (REP)**. IVA exemption is `ObjetoImp` + `TipoFactor=Exento`.
-2. **Stamping route** — the clinic contracts the PAC; DentalPin holds its CSD
+2. **Stamping route** — the clinic contracts the PAC; Dentum holds its CSD
    and the PAC credentials, seals the XML and sends it within 72 h.
    Self-certification is impossible (CFF 29 Bis; RMF 2.7.2.1).
 3. **Cancellation** — §2: motivo 01–04, acceptance unless RMF 2.7.1.35 applies,
@@ -279,7 +279,7 @@ the finding separating Mexico from Portugal.
 
 ## Readiness matrix row
 
-| Mexico | ✅ `es` | ✅ | ❌ CFDI 4.0 (Anexo 20 v4.0) is issuable from a self-hosted, modifiable program — **no Mexican certification of invoicing or clinical software exists**; the clinic holds its own CSD, DentalPin builds and seals the XML and an authorised PAC adds the timbre fiscal digital (CFF 29 Bis; RMF 2.7.2.1) — `mx_cfdi` module pending (CFDI + REP + cancellation 01–04, IVA exento per LIVA 15-XIV / RLIVA 41) (ADR 0036) | n/a — NOM-004-SSA3-2012 requires no software certification: five-year retention, signed notes | #138 (answered) |
+| Mexico | ✅ `es` | ✅ | ❌ CFDI 4.0 (Anexo 20 v4.0) is issuable from a self-hosted, modifiable program — **no Mexican certification of invoicing or clinical software exists**; the clinic holds its own CSD, Dentum builds and seals the XML and an authorised PAC adds the timbre fiscal digital (CFF 29 Bis; RMF 2.7.2.1) — `mx_cfdi` module pending (CFDI + REP + cancellation 01–04, IVA exento per LIVA 15-XIV / RLIVA 41) (ADR 0036) | n/a — NOM-004-SSA3-2012 requires no software certification: five-year retention, signed notes | #138 (answered) |
 
 ## References
 

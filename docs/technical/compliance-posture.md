@@ -1,7 +1,7 @@
 # Compliance posture — patient data, DICOM metadata, AI processing
 
 > Cross-cutting posture statement for operators and reviewers. It describes
-> how DentalPin handles regulated data **today** and what an operator must do
+> how Dentum handles regulated data **today** and what an operator must do
 > to stay compliant. It is not legal advice and not a certification.
 > Sections marked *planned* bind future modules (§§3–4); everything else
 > describes shipped behavior.

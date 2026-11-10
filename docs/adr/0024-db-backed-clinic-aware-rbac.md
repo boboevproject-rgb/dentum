@@ -2,7 +2,7 @@
 
 - **Status:** accepted
 - **Date:** 2026-09-03
-- **Deciders:** DentalPin core maintainer (@martinezsalmeron), lamanji
+- **Deciders:** Dentum core maintainer (@martinezsalmeron), lamanji
 - **Tags:** rbac, security, multi-tenancy
 
 ## Context

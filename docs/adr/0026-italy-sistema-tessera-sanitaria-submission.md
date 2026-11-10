@@ -47,7 +47,7 @@ Per document:
 | Element | Content | Notes |
 |---|---|---|
 | `Proprietario` | `codiceRegione`, `codiceAsl`, `codiceSSA` (structures only), `cfProprietario` | `cfProprietario` is sent **encrypted** |
-| `idDocumentoFiscale` | `pIva` of the issuer, `dataEmissione`, `numDocumentoFiscale{dispositivo, numDocumento}` | `dispositivo` = progressive number of the issuing device/series; DentalPin maps one series → one `dispositivo` |
+| `idDocumentoFiscale` | `pIva` of the issuer, `dataEmissione`, `numDocumentoFiscale{dispositivo, numDocumento}` | `dispositivo` = progressive number of the issuing device/series; Dentum maps one series → one `dispositivo` |
 | `dataPagamento` | payment date ≥ `dataEmissione` unless `flagPagamentoAnticipato=1` (never before 01/01/2015) | the module submits on payment, not on issue |
 | `cfCittadino` | patient's codice fiscale, encrypted | **must be absent when `flagOpposizione=1`** |
 | `voceSpesa[]` | `tipoSpesa`, `flagTipoSpesa`, `importo` (always positive, also for refunds, 5+2 decimals), `aliquotaIVA` **or** `naturaIVA` (N1–N7 and sub-codes for `F`) | one line per IVA treatment is enough; the tracciato is per expense type, not per catalog item |

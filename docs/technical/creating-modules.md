@@ -1,6 +1,6 @@
-# Creating DentalPin modules
+# Creating Dentum modules
 
-A complete guide to shipping a DentalPin module — backend, frontend,
+A complete guide to shipping a Dentum module — backend, frontend,
 migrations, seeds, tests, distribution — from scratch. Written for
 contributors who have never read the core codebase.
 
@@ -46,7 +46,7 @@ intentionally minimal in v1; richer verification (signatures,
 marketplace) is post-v1.
 
 - **Official** modules ship inside `backend/app/modules/<name>/` and
-  are installed-by-default on every DentalPin instance.
+  are installed-by-default on every Dentum instance.
 - **Community** modules live in their own git repo, publish to PyPI,
   and are installed via `pip install` + `dentalpin modules install`.
 
@@ -118,7 +118,7 @@ layer with one page, slot registration. Rename, adjust, publish:
 pip install -e .
 ```
 
-Inside the DentalPin instance:
+Inside the Dentum instance:
 
 ```bash
 ./bin/dentalpin modules install my_module
@@ -1008,7 +1008,7 @@ async def test_create_item(client, auth_headers):
 1. Add `backend/app/modules/<name>/` with the files above.
 2. Register the entry point in `backend/pyproject.toml`.
 3. Open a PR to the main repo.
-4. Ship as part of the next DentalPin release.
+4. Ship as part of the next Dentum release.
 
 ### Community module
 
@@ -1159,7 +1159,7 @@ def upgrade() -> None:
 
 ## 12. AI agent integration
 
-Every module in DentalPin participates in the AI agent contract. The
+Every module in Dentum participates in the AI agent contract. The
 contract is intentionally thin so modules can start as "agent-aware"
 without committing to LLMs or long-running autonomy up front.
 
@@ -1431,7 +1431,7 @@ Before tagging a community module release:
 ## 14. Governance
 
 - **Community modules stay in their own repos** and are not merged
-  into the DentalPin monorepo.
+  into the Dentum monorepo.
 - **Official modules** are maintained by the core team; PRs welcome
   through the usual review process.
 - A **registry of known community modules** will appear at

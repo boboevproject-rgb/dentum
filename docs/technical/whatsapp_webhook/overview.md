@@ -17,7 +17,7 @@ The thin "wire" under the channel-adapter architecture (ADR 0016):
 - **`WebhookWhatsappAdapter`** registers into
   `notifications.channels.channel_registry` on activate and delivers the
   `whatsapp` channel by POSTing the rendered message as JSON to the
-  clinic's hook URL, signed with the Stripe-style `X-DentalPin-Signature`
+  clinic's hook URL, signed with the Stripe-style `X-Dentum-Signature`
   header (shared core util `app.core.webhooks`). Unregisters on uninstall.
 - **Settings**: hook URL (SSRF-guarded, https-only), show-once signing
   secret with rotation, active toggle, test delivery.

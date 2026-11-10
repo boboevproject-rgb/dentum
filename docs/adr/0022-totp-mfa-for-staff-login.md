@@ -37,7 +37,7 @@ once the ADR is accepted.
    stays as the reference design, implemented in core auth (login is
    core, not a module):
    - **Enrolment**: `POST /auth/mfa/totp/enroll` returns a provisioning
-     URI (`otpauth://totp/DentalPin:<email>?secret=…&issuer=DentalPin`)
+     URI (`otpauth://totp/Dentum:<email>?secret=…&issuer=Dentum`)
      rendered as a QR client-side; `POST /auth/mfa/totp/confirm` with one
      valid code activates it and returns **10 single-use recovery codes**
      (shown once, stored as bcrypt hashes).

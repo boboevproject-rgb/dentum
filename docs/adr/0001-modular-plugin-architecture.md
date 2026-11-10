@@ -6,7 +6,7 @@
 
 ## Context
 
-DentalPin serves a wide spectrum of dental clinics: solo practices, group
+Dentum serves a wide spectrum of dental clinics: solo practices, group
 clinics, multi-specialty centers, and country-specific compliance regimes
 (e.g. Veri\*Factu in Spain). A monolithic codebase forces every clinic to
 carry every feature, makes country-specific compliance code mix with

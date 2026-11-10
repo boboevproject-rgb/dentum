@@ -1,4 +1,4 @@
-# Multi-tenancy en DentalPin
+# Multi-tenancy en Dentum
 
 Documento de arquitectura. Define el modelo de aislamiento actual (self-hosted) y las costuras que permitirán un módulo externo `dentalpin-saas` con DB-per-tenant sin tocar core.
 
@@ -10,7 +10,7 @@ Documento de arquitectura. Define el modelo de aislamiento actual (self-hosted) 
 
 ## 1. Modelo de aislamiento
 
-DentalPin usa **dos capas de aislamiento** complementarias:
+Dentum usa **dos capas de aislamiento** complementarias:
 
 | Capa | Unidad | Aislamiento | Vive en |
 |------|--------|-------------|---------|

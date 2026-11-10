@@ -1,6 +1,6 @@
 {
   "app": {
-    "name": "DentalPin",
+    "name": "Dentum",
     "tagline": "దంత క్లినిక్ నిర్వహణ",
     "toastLabel": "Notification",
     "sparklineEmpty": "Sparkline empty",
@@ -83,7 +83,7 @@
     "next": "తదుపరి",
     "back": "వెనక్కి",
     "submit": "నా క్లినిక్ సృష్టించండి",
-    "success": "అంతా సిద్ధం! DentalPin కు స్వాగతం",
+    "success": "అంతా సిద్ధం! Dentum కు స్వాగతం",
     "firstNameRequired": "మొదటి పేరు నమోదు చేయండి",
     "lastNameRequired": "ఇంటి పేరు నమోదు చేయండి",
     "emailRequired": "ఈమెయిల్ నమోదు చేయండి",
@@ -999,7 +999,7 @@
       "afternoon": "శుభ మధ్యాహ్నం",
       "evening": "శుభ సాయంత్రం"
     },
-    "welcome": "DentalPin కు స్వాగతం",
+    "welcome": "Dentum కు స్వాగతం",
     "welcomeMessage": "మీ మొదటి రోగిని సృష్టించడం ద్వారా ప్రారంభించండి.",
     "quickActions": {
       "newAppointment": "కొత్త అపాయింట్‌మెంట్",
@@ -1311,14 +1311,14 @@
       "copy": "లింక్ కాపీ చేయండి",
       "copied": "లింక్ కాపీ అయింది",
       "whatsapp": "WhatsApp ద్వారా పంపండి",
-      "shareText": "నమస్కారం {name}, ఇది మీ DentalPin యాక్సెస్. దీన్ని తెరిచి మీ పాస్‌వర్డ్ ఎంచుకోండి: {url}",
+      "shareText": "నమస్కారం {name}, ఇది మీ Dentum యాక్సెస్. దీన్ని తెరిచి మీ పాస్‌వర్డ్ ఎంచుకోండి: {url}",
       "secretNote": "దీన్ని పాస్‌వర్డ్ లాగా చూసుకోండి: లింక్ ఉన్న ఎవరైనా ఈ ఖాతాలోకి సైన్ ఇన్ చేయగలరు.",
       "passwordOptionalHelp": "WhatsApp లేదా ఈమెయిల్ ద్వారా పంపగల యాక్సెస్ లింక్ రూపొందించడానికి ఖాళీగా ఉంచండి.",
       "passwordOptionalPlaceholder": "ఐచ్ఛికం",
       "createAndLink": "సృష్టించి లింక్ రూపొందించండి",
       "rowAction": "యాక్సెస్ లింక్",
       "setPasswordTitle": "మీ పాస్‌వర్డ్ ఎంచుకోండి",
-      "setPasswordSubtitle": "మిమ్మల్ని DentalPin కు ఆహ్వానించారు. సైన్ ఇన్ చేయడానికి మీ పాస్‌వర్డ్ సృష్టించండి.",
+      "setPasswordSubtitle": "మిమ్మల్ని Dentum కు ఆహ్వానించారు. సైన్ ఇన్ చేయడానికి మీ పాస్‌వర్డ్ సృష్టించండి.",
       "setPasswordSubmit": "సేవ్ చేసి సైన్ ఇన్ చేయండి",
       "invalidToken": "ఈ లింక్ చెల్లదు లేదా ఇప్పటికే వాడబడింది. మీ క్లినిక్ అడ్మినిస్ట్రేటర్‌ను కొత్తది అడగండి."
     }
@@ -3186,7 +3186,7 @@
     "label": "సహాయం",
     "openHelp": "సహాయం తెరవండి",
     "drawerTitle": "ఈ పేజీకి సహాయం",
-    "unavailable": "ఈ పేజీకి ఇంకా సందర్భ సహాయం అందుబాటులో లేదు.",
+    "unavailable": "ఈ పేజీ మార్గదర్శిని లోడ్ కాలేదు. దిగువ పూర్తి మాన్యువల్ లింక్‌ను ఉపయోగించండి.",
     "openFullManual": "పూర్తి మాన్యువల్ తెరవండి"
   },
   "charts": {
@@ -3268,7 +3268,7 @@
       "catalog": "Treatment catalog, categories, VAT types.",
       "clinical_notes": "Polymorphic clinical notes (administrative, diagnosis, treatment, treatment plan) with author. Attachments delegated to media.",
       "contacts": "Directory of external labs, suppliers, and other provider contacts.",
-      "copilot": "Conversational AI agent over DentalPin, scoped to the caller's permissions.",
+      "copilot": "Conversational AI agent over Dentum, scoped to the caller's permissions.",
       "documents": "Generates prescriptions, medical certificates, referral letters and radiology requests as branded PDFs with configurable clinic letterhead.",
       "expenses": "Fixed/recurring office expense tracking with monthly category totals.",
       "gdpr": "Data-subject rights, consents, retention and breach reporting (GDPR).",

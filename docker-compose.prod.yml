@@ -1,10 +1,7 @@
-# Production stack from prebuilt images. No repo clone, no build.
-#
-#   curl -O https://raw.githubusercontent.com/dentalpin/dentalpin/main/docker-compose.prod.yml
-#   curl -O https://raw.githubusercontent.com/dentalpin/dentalpin/main/Caddyfile
-#   curl -o .env https://raw.githubusercontent.com/dentalpin/dentalpin/main/.env.prod.example
-#   # edit .env, then:
-#   docker compose -f docker-compose.prod.yml up -d
+# Runtime foundation for Dentum. Pair with docker-compose.deploy.yml to
+# build Dentum's app and documentation images from this repository:
+#   cp .env.prod.example .env
+#   docker compose -f docker-compose.prod.yml -f docker-compose.deploy.yml up -d --build
 #
 # Caddy fronts both services on a single origin, so the browser only ever
 # talks to PUBLIC_URL: no CORS to configure, and TLS is provisioned
@@ -53,8 +50,8 @@ services:
       EMAIL_SMTP_TLS: ${EMAIL_SMTP_TLS:-true}
       EMAIL_SMTP_USER: ${EMAIL_SMTP_USER:-}
       EMAIL_SMTP_PASSWORD: ${EMAIL_SMTP_PASSWORD:-}
-      EMAIL_FROM_ADDRESS: ${EMAIL_FROM_ADDRESS:-noreply@dentalpin.com}
-      EMAIL_FROM_NAME: ${EMAIL_FROM_NAME:-DentalPin}
+      EMAIL_FROM_ADDRESS: ${EMAIL_FROM_ADDRESS:-noreply@dentum.online}
+      EMAIL_FROM_NAME: ${EMAIL_FROM_NAME:-Dentum}
       # Required in production since #538 (config.py refuses to boot
       # without them): generate each with `openssl rand -hex 32`.
       BUDGET_PUBLIC_SECRET_KEY: ${BUDGET_PUBLIC_SECRET_KEY:?Set BUDGET_PUBLIC_SECRET_KEY in your .env}
@@ -100,7 +97,7 @@ services:
       # so one image serves every deployment — nothing is baked in.
       NUXT_PUBLIC_API_BASE_URL: ${PUBLIC_URL:-http://localhost}
       API_BASE_URL_SERVER: http://backend:8000
-      NUXT_PUBLIC_DOCS_URL: ${DOCS_URL:-https://docs.dentalpin.com}
+      NUXT_PUBLIC_DOCS_URL: ${DOCS_URL:-https://dentum.online/docs}
       # Content-Security-Policy rollout (#355): report | enforce | off.
       # Report-Only by default; violations are logged by the backend
       # (`grep "csp violation"`). Flip to enforce once the log is quiet.

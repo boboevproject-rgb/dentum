@@ -454,7 +454,7 @@ class LeadsModule(BaseModule):
         "name": "leads",
         "version": "0.1.0",
         "summary": "Inbound leads from external forms: new enquiries become leads, known patients become recalls.",
-        "author": "DentalPin Core Team",
+        "author": "Dentum Core Team",
         "license": "BSL-1.1",
         "category": "official",
         # recalls: matched enquiries are routed to the call list (D8).

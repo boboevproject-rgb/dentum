@@ -1,6 +1,6 @@
 {
   "app": {
-    "name": "DentalPin",
+    "name": "Dentum",
     "tagline": "Zarządzanie gabinetem stomatologicznym",
     "toastLabel": "Powiadomienie",
     "sparklineEmpty": "Sparkline empty",
@@ -83,7 +83,7 @@
     "next": "Dalej",
     "back": "Wstecz",
     "submit": "Utwórz mój gabinet",
-    "success": "Gotowe! Witamy w DentalPin",
+    "success": "Gotowe! Witamy w Dentum",
     "firstNameRequired": "Podaj imię",
     "lastNameRequired": "Podaj nazwisko",
     "emailRequired": "Podaj adres e-mail",
@@ -999,7 +999,7 @@
       "afternoon": "Dzień dobry",
       "evening": "Dobry wieczór"
     },
-    "welcome": "Witamy w DentalPin",
+    "welcome": "Witamy w Dentum",
     "welcomeMessage": "Zacznij od dodania pierwszego pacjenta.",
     "quickActions": {
       "newAppointment": "Nowa wizyta",
@@ -1301,14 +1301,14 @@
       "copy": "Kopiuj link",
       "copied": "Link skopiowany",
       "whatsapp": "Wyślij przez WhatsApp",
-      "shareText": "Cześć {name}, oto Twój dostęp do DentalPin. Otwórz link i wybierz hasło: {url}",
+      "shareText": "Cześć {name}, oto Twój dostęp do Dentum. Otwórz link i wybierz hasło: {url}",
       "secretNote": "Traktuj go jak hasło: każdy, kto ma link, może zalogować się na to konto.",
       "passwordOptionalHelp": "Pozostaw puste, aby wygenerować link dostępu do wysłania przez WhatsApp lub e-mail.",
       "passwordOptionalPlaceholder": "Opcjonalne",
       "createAndLink": "Utwórz i wygeneruj link",
       "rowAction": "Link dostępu",
       "setPasswordTitle": "Wybierz swoje hasło",
-      "setPasswordSubtitle": "Otrzymałeś(-aś) zaproszenie do DentalPin. Utwórz hasło, aby się zalogować.",
+      "setPasswordSubtitle": "Otrzymałeś(-aś) zaproszenie do Dentum. Utwórz hasło, aby się zalogować.",
       "setPasswordSubmit": "Zapisz i zaloguj",
       "invalidToken": "Ten link jest nieprawidłowy lub został już użyty. Poproś administratora gabinetu o nowy."
     }
@@ -3176,7 +3176,7 @@
     "label": "Pomoc",
     "openHelp": "Otwórz pomoc",
     "drawerTitle": "Pomoc dla tej strony",
-    "unavailable": "Dla tej strony nie ma jeszcze pomocy kontekstowej.",
+    "unavailable": "Nie udało się wczytać instrukcji tej strony. Skorzystaj z poniższego linku do pełnego podręcznika.",
     "openFullManual": "Otwórz pełny podręcznik"
   },
   "charts": {
@@ -3258,7 +3258,7 @@
       "catalog": "Treatment catalog, categories, VAT types.",
       "clinical_notes": "Polymorphic clinical notes (administrative, diagnosis, treatment, treatment plan) with author. Attachments delegated to media.",
       "contacts": "Directory of external labs, suppliers, and other provider contacts.",
-      "copilot": "Conversational AI agent over DentalPin, scoped to the caller's permissions.",
+      "copilot": "Conversational AI agent over Dentum, scoped to the caller's permissions.",
       "documents": "Generates prescriptions, medical certificates, referral letters and radiology requests as branded PDFs with configurable clinic letterhead.",
       "expenses": "Fixed/recurring office expense tracking with monthly category totals.",
       "gdpr": "Data-subject rights, consents, retention and breach reporting (GDPR).",

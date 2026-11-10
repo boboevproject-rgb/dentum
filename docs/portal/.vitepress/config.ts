@@ -19,9 +19,10 @@ const VUE_DIR = fileURLToPath(new URL("../node_modules/vue", import.meta.url));
 // existing markdown is rendered without copies. The portal folder itself
 // is excluded so VitePress does not try to render its own scaffolding.
 export default defineConfig({
-  title: "DentalPin Docs",
+  title: "Dentum User Manual",
   description:
-    "Open-source dental clinic management software — developer reference and user manual.",
+    "Dentum clinic management user manual and technical reference.",
+  base: "/docs/",
   lang: "en-US",
   cleanUrls: true,
   // VitePress uses `git log` to compute lastUpdated. The portal Docker
@@ -81,17 +82,17 @@ export default defineConfig({
     socialLinks: [
       {
         icon: "github",
-        link: "https://github.com/dentalpin/dentalpin",
+        link: "https://github.com/boboevproject-rgb/dentum",
       },
     ],
     editLink: {
       pattern:
-        "https://github.com/dentalpin/dentalpin/edit/main/docs/:path",
+        "https://github.com/boboevproject-rgb/dentum/edit/main/docs/:path",
       text: "Edit this page on GitHub",
     },
     footer: {
       message:
-        'Source: <a href="https://github.com/dentalpin/dentalpin">github.com/dentalpin/dentalpin</a>',
+        'Dentum is a rebranded derivative of DentalPin. <a href="https://github.com/boboevproject-rgb/dentum">Dentum source code</a> · <a href="https://github.com/dentalpin/dentalpin">upstream notices</a>',
       copyright: "BSL 1.1 (converts to Apache 2.0 after 4 years)",
     },
   },

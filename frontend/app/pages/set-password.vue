@@ -57,7 +57,7 @@ async function onSubmit() {
     <div class="text-center mb-6">
       <img
         src="/logo-icon.svg"
-        alt="DentalPin"
+        alt="Dentum"
         width="56"
         height="56"
         class="mx-auto mb-3"

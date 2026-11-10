@@ -1,4 +1,4 @@
-# DentalPin
+# Dentum
 
 [![en](https://img.shields.io/badge/lang-en-red.svg)](./README.md)
 [![es](https://img.shields.io/badge/lang-es-yellow.svg)](./README.es.md)
@@ -16,23 +16,17 @@
 időpontkezelés, kezelési tervek, számlázás és beépített AI copilot — moduláris,
 self-hosted, API-first.
 
-### ▶ [**Próbálja ki az élő demót**](https://demo.dentalpin.com)
+[![Dentum — páciens adatlap fogtérképpel](docs/screenshots/patients.png)](https://dentum.online)
 
-Jelentkezzen be az `admin@demo.clinic` / `demo1234` adatokkal — teljes rendszergazdai
-hozzáférés egy demóadatokkal feltöltött rendelőhöz. Minden éjjel visszaáll, így bátran
-kipróbálhat bármit.
+<sub>[Weboldal](https://dentum.online) · [Dokumentáció](https://dentum.online/docs) · [További képernyőképek ↓](#képernyőképek)</sub>
 
-[![DentalPin — páciens adatlap fogtérképpel](docs/screenshots/patients.png)](https://demo.dentalpin.com)
-
-<sub>[Weboldal](https://www.dentalpin.com) · [Dokumentáció](https://docs.dentalpin.com) · [Telegram](https://t.me/dentalpin) · [További képernyőképek ↓](#képernyőképek)</sub>
-
-## Miért a DentalPin?
+## Miért a Dentum?
 
 A fogorvosi rendelőknek világszerte ugyanazok az alapvető igényeik: a páciensek kezelése, az időpontok szervezése, a kezelések nyomon követése és a rendelő hatékony működtetése. A szoftverpiac mégis tucatnyi lokalizált, zárt forráskódú megoldásra tagolódik, amelyek drága szerződésekbe és elavult technológiába zárják a rendelőket.
 
 **Úgy gondoljuk, ideje változtatni.**
 
-A DentalPin egyszerű alapvetésre épül: **egyetlen nyílt platform a fogorvosi rendelők számára, bárhol a világon**. Nem egy újabb regionális megoldás, hanem globális alap, amelyet bármely rendelő bevezethet, bármely fejlesztő bővíthet, és bármely közösség lokalizálhat.
+A Dentum egyszerű alapvetésre épül: **egyetlen nyílt platform a fogorvosi rendelők számára, bárhol a világon**. Nem egy újabb regionális megoldás, hanem globális alap, amelyet bármely rendelő bevezethet, bármely fejlesztő bővíthet, és bármely közösség lokalizálhat.
 
 ### Miért most?
 
@@ -50,11 +44,11 @@ Az MI alapjaiban változtatta meg, hogy mire képesek a kis csapatok. Azok a fun
 
 Nem csupán szoftvert építünk — egy ökoszisztéma alapjait rakjuk le. Egy platformot, ahol a fejlesztők modulokkal járulnak hozzá, a rendelők megosztják egymással a fejlesztéseiket, és az egész fogászati közösség profitál a közös innovációból.
 
-A rendelők jobbat érdemelnek az elmúlt évtized zárt és drága szoftvereinél. A DentalPin a nyílt alternatíva.
+A rendelők jobbat érdemelnek az elmúlt évtized zárt és drága szoftvereinél. A Dentum a nyílt alternatíva.
 
 ## ✨ AI Copilot
 
-A DentalPin beépített **agentikus MI-asszisztenssel** érkezik, amely az egész rendelőt olyasvalamivé alakítja, amivel egyszerűen beszélgetni lehet. Kérje meg, hogy keressen meg egy pácienst, szabadítson fel egy időpontot, kövessen fel egy megválaszolatlan árajánlatot, vagy foglalja össze az Ön előtt álló napot — közérthető spanyol vagy angol nyelven — és a valós adatain cselekszik.
+A Dentum beépített **agentikus MI-asszisztenssel** érkezik, amely az egész rendelőt olyasvalamivé alakítja, amivel egyszerűen beszélgetni lehet. Kérje meg, hogy keressen meg egy pácienst, szabadítson fel egy időpontot, kövessen fel egy megválaszolatlan árajánlatot, vagy foglalja össze az Ön előtt álló napot — közérthető spanyol vagy angol nyelven — és a valós adatain cselekszik.
 
 ![AI Copilot](docs/screenshots/ia.png)
 
@@ -72,11 +66,7 @@ A motorháztető alatt szolgáltatófüggetlen (LLM-szolgáltatói absztrakcióv
 
 ## Weboldal
 
-Látogasson el a [**dentalpin.com**](https://www.dentalpin.com) oldalra a termékinformációkért, a funkciókért és a kereskedelmi részletekért.
-
-## Közösség
-
-Csatlakozzon a [**Telegram-csatornánkhoz**](https://t.me/dentalpin) támogatásért, telepítési segítségért és kérdésekkel.
+Látogasson el a [**dentum.online**](https://dentum.online) oldalra a termékinformációkért, a funkciókért és a kereskedelmi részletekért.
 
 ## Képernyőképek
 
@@ -103,9 +93,9 @@ Csatlakozzon a [**Telegram-csatornánkhoz**](https://t.me/dentalpin) támogatás
 Előre elkészített image-ek, klónozás és build nélkül. Bármely Dockerrel futó szerveren:
 
 ```bash
-curl -O https://raw.githubusercontent.com/dentalpin/dentalpin/main/docker-compose.prod.yml
-curl -O https://raw.githubusercontent.com/dentalpin/dentalpin/main/Caddyfile
-curl -o .env https://raw.githubusercontent.com/dentalpin/dentalpin/main/.env.prod.example
+curl -O https://raw.githubusercontent.com/boboevproject-rgb/dentum/main/docker-compose.prod.yml
+curl -O https://raw.githubusercontent.com/boboevproject-rgb/dentum/main/Caddyfile
+curl -o .env https://raw.githubusercontent.com/boboevproject-rgb/dentum/main/.env.prod.example
 
 # Állítsa be a PUBLIC_URL, POSTGRES_PASSWORD és SECRET_KEY értékét a .env fájlban, majd:
 # BUDGET_PUBLIC_SECRET_KEY: openssl rand -hex 32
@@ -216,7 +206,7 @@ A páciensek felé irányuló kommunikáció (e-mail-sablonok, PDF-ek) jelenleg
 nyelvétől függetlenül választja meg a kommunikáció nyelvét.
 
 Hiányzik az Ön nyelve? Egy új nyelv hozzáadása kizárólag fordítási feladat — nézze
-meg az [i18n issue-kat](https://github.com/dentalpin/dentalpin/issues?q=label%3Ai18n),
+meg az [i18n issue-kat](https://github.com/boboevproject-rgb/dentum/issues?q=label%3Ai18n),
 vagy nyisson újat.
 
 ## Fejlesztés
@@ -300,7 +290,7 @@ Teljes runbook + fixture-referencia: [docs/technical/e2e-testing.md](docs/techni
 
 ## Architektúra
 
-A DentalPin moduláris pluginarchitektúrát használ. Minden funkció önálló modul, amely:
+A Dentum moduláris pluginarchitektúrát használ. Minden funkció önálló modul, amely:
 - Deklarálja a SQLAlchemy-modelljeit
 - FastAPI routert biztosít
 - Feliratkozhat más modulok eseményeire
@@ -311,7 +301,7 @@ A részleteket lásd: [ADR 0001 — moduláris pluginarchitektúra](docs/adr/000
 
 Business Source License 1.1 (BSL 1.1)
 
-**Kiegészítő használati engedély:** A DentalPin éles környezetben is használható, amennyiben nem kínálja kereskedelmi SaaS-ként fogorvosi rendelők irányítására.
+**Kiegészítő használati engedély:** A Dentum éles környezetben is használható, amennyiben nem kínálja kereskedelmi SaaS-ként fogorvosi rendelők irányítására.
 
 **Váltás dátuma:** a kiadástól számított 4 év
 

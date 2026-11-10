@@ -17,7 +17,7 @@ last_verified_commit: 2e9e9179
 
 Connects the clinic's own Razorpay account so reception can collect
 payments via UPI, QR, cards, and payment links directly from
-DentalPin. Reached from **Settings → Billing & tax → Razorpay**, or
+Dentum. Reached from **Settings → Billing & tax → Razorpay**, or
 directly at `/settings/razorpay`.
 
 ## Permissions

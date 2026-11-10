@@ -15,7 +15,7 @@ the orchestrator speaks `base.py`'s `Provider` protocol (streaming
 message/event types, and the redactor tokenizes on the way to whatever
 provider is configured. The factory's own docstring reserves the slot.
 What's missing is purely: more implementations, a way for a clinic to
-pick one safely, and a way to evaluate DentalPin without a paid key.
+pick one safely, and a way to evaluate Dentum without a paid key.
 
 ## Provider set (proposal)
 

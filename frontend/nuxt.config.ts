@@ -80,7 +80,7 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: 'DentalPin',
+      title: 'Dentum',
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }
       ]
@@ -112,7 +112,7 @@ export default defineNuxtConfig({
       demoMode: process.env.NUXT_PUBLIC_DEMO_MODE === 'true',
       // Documentation portal origin used by the in-app help drawer
       // (Fase 5 of issue #75). Empty disables the help button.
-      docsUrl: process.env.NUXT_PUBLIC_DOCS_URL || 'https://docs.dentalpin.com',
+      docsUrl: process.env.NUXT_PUBLIC_DOCS_URL || 'https://dentum.online/docs',
       // Module layers baked into this build. `usePermissions().can()`
       // hides their permissions while the backend reports the module as
       // not installed (prod bakes every layer — see Dockerfile.prod).
@@ -180,7 +180,6 @@ export default defineNuxtConfig({
       { code: 'ar', name: 'العربية', file: 'ar.json', dir: 'rtl' }
     ],
     defaultLocale: 'en',
-    lazy: true,
     langDir: 'locales',
     strategy: 'no_prefix',
     // Persist the chosen locale in a cookie the server can read, so SSR

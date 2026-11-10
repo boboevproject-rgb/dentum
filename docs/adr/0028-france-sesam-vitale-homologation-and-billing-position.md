@@ -73,7 +73,7 @@ The realistic route for a project like this is therefore the one the
 market already uses: **integrate a homologated *moteur de facturation
 SESAM-Vitale*** from a specialised vendor (several exist; the GIE
 lists them among éditeurs), where the engine vendor holds the
-homologation and DentalPin is the LGC feeding it. Whether the LGC
+homologation and Dentum is the LGC feeding it. Whether the LGC
 still needs its own CNDA attestation when it drives such an engine is
 **open** on the CNDA pages; the engine vendors' editor programmes
 settle it contractually (Decision 2).
@@ -85,7 +85,7 @@ settle it contractually (Decision 2).
   health data for a French practice must be HDS-certified; a
   practice hosting its own system for its own patients is **not**
   subject to it. That is the line the issue asked us to write down:
-  self-hosted DentalPin needs no HDS; any DentalPin-operated hosting
+  self-hosted Dentum needs no HDS; any Dentum-operated hosting
   for French practices does.
 - **Ségur du numérique, vague 2, LGC chirurgiens-dentistes**: state-
   funded (SONS) referencing of practice software on INS, DMP feeding,
@@ -98,7 +98,7 @@ settle it contractually (Decision 2).
 
 ## Decision
 
-1. **DentalPin does not pursue SESAM-Vitale homologation as a
+1. **Dentum does not pursue SESAM-Vitale homologation as a
    self-hosted open-source product.** The gates are per publisher and
    per version, rest on proprietary workstation components, and would
    not survive a practice modifying its own build.
@@ -108,7 +108,7 @@ settle it contractually (Decision 2).
    The engine vendor holds the CNDA/GIE approvals, the SESAM-Vitale
    components, the card reader integration and the CPS/e-CPS; the
    *appli carte Vitale* on the patient's phone reduces the reader
-   dependency further. DentalPin sends the patient and the acts and
+   dependency further. Dentum sends the patient and the acts and
    stores the returned status and NOEMIE returns. In this model the
    LGC does not fabricate the FSE, so the CNDA attestation question
    is the engine vendor's to answer in its editor contract; the
@@ -126,7 +126,7 @@ settle it contractually (Decision 2).
    the *devis conventionnel*. Without it there is no legal devis and
    no feuille de soins, paper or electronic. This is module `fr_ccam`
    (issue #411), `FR`-gated, with no external dependency.
-5. **Until the connector exists, DentalPin's position in France is
+5. **Until the connector exists, Dentum's position in France is
    "clinical record, schedule and billing outside the Assurance
    Maladie flow"**: invoices and paper *feuilles de soins* the patient
    sends themselves; no FSE, no tiers payant. The French pages and
@@ -160,7 +160,7 @@ settle it contractually (Decision 2).
 ### Bad / accepted trade-offs
 
 - Until the connector ships, a French practice keeps a second tool
-  for billing the Assurance Maladie; DentalPin is a clinical /
+  for billing the Assurance Maladie; Dentum is a clinical /
   scheduling product there.
 - FSE depends on a commercial vendor's engine, contract and per-
   practitioner subscription; a self-hosted user still needs that
@@ -170,7 +170,7 @@ settle it contractually (Decision 2).
 
 ## Alternatives considered
 
-- **Enter the CNDA programme directly and homologate DentalPin.** —
+- **Enter the CNDA programme directly and homologate Dentum.** —
   Per-version agrément on a product users rebuild themselves, plus a
   workstation agent and proprietary components in a public repo; not
   compatible with the project's model.
@@ -178,7 +178,7 @@ settle it contractually (Decision 2).
   uses the same licensed components and reader; it does not escape
   the programme, and INSi needs a CPS-authenticated call.
 - **Stay at "billing outside the Assurance Maladie flow" for good.**
-  — Leaves DentalPin usable only by a niche of French practices; the
+  — Leaves Dentum usable only by a niche of French practices; the
   connector route is cheap enough to make that the wrong stop.
 - **Ship nothing and say nothing.** — The issue exists because the
   hedging costs credibility; the honest sentence is the deliverable.

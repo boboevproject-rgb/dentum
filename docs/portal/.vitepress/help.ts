@@ -74,23 +74,23 @@ function parseFrontmatter(text: string): { fm: Frontmatter; body: string } {
 }
 
 export function routeToSlug(route: string): string {
-  // A screen's `route:` may carry a query string (the periodontogram view
-  // deep-links `?clinicalMode=diagnosis&diagnosisView=periodontogram`).
-  // Two reasons to keep the path only: the help drawer asks for the
-  // fragment using `route.path`, which never includes a query, so writing
-  // the query into the filename produced a file the app never requested
-  // (silently falling back to the "not documented" fragment); and `?` is
-  // an illegal filename character on Windows, so the build died with a bare
-  // ENOENT there while Linux CI stayed green. The frontend's `routeToSlug`
-  // (frontend/app/composables/useHelp.ts) is the matching half of this rule.
-  const [pathOnly = ''] = route.split(/[?#]/)
-  const trimmed = pathOnly.replace(/^\/+|\/+$/g, "")
-  if (!trimmed) return "index"
-  // Strip `[` `]` so the source MD filename does not collide with
-  // VitePress' dynamic-route convention (`*[*].md` would expect a
-  // companion `.paths.{js,ts}` file). The route itself keeps the
-  // brackets — only the slug used as filename / fragment URL drops them.
-  return trimmed.replace(/\//g, "_").replace(/[[\]]/g, "")
+  const [pathOnly = "", query = ""] = route.split(/[?#]/, 2)
+  const segments = pathOnly
+    .replace(/^\/+|\/+$/g, "")
+    .split("/")
+    .filter(Boolean)
+    .map((segment) =>
+      /^\{[^}]+\}$/.test(segment) || /^\[[^\]]+\]$/.test(segment) || /^:[A-Za-z0-9_]+$/.test(segment)
+        ? "id"
+        : segment,
+    )
+  const pathSlug = segments.length ? segments.join("_") : "index"
+  const querySlug = [...new URLSearchParams(query).entries()]
+    .sort(([ak, av], [bk, bv]) => ak === bk ? (av < bv ? -1 : av > bv ? 1 : 0) : ak < bk ? -1 : 1)
+    .map(([key, value]) => `${key}_${value}`)
+    .join("_")
+    .replace(/[^A-Za-z0-9_-]/g, "_")
+  return querySlug ? `${pathSlug}__${querySlug}` : pathSlug
 }
 
 async function collectScreens(): Promise<
@@ -139,7 +139,7 @@ const FRAGMENT_SHELL = (locale: string, title: string, body: string): string => 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${escapeHtml(title)}</title>
-<link rel="stylesheet" href="/help-fragment.css">
+<link rel="stylesheet" href="../../help-fragment.css">
 </head>
 <body class="help-fragment">
 <article>
@@ -159,31 +159,25 @@ function escapeHtml(s: string): string {
 
 const NOT_FOUND_BY_LOCALE: Record<string, { title: string; body: string }> = {
   en: {
-    title: "Help — page not documented yet",
-    body: `<h1>No help for this screen yet</h1>
-<p>This part of the app does not have contextual documentation in
-the user manual yet. We're filling the gaps as each module is
-revisited — see <a href="/user-manual/en/" target="_top">the user
-manual</a> for what is already documented.</p>
-<p>If you'd like a guide for this screen, please open an issue.</p>`,
+    title: "Dentum Help Center",
+    body: `<h1>Dentum Help Center</h1>
+<p>Browse the user guide for step-by-step instructions for clinic setup,
+patients, appointments, clinical records, billing, and administration.</p>
+<p><a href="../../user-manual/en/">Open the Dentum user manual</a></p>
+<p>Use the manual search or choose a topic from its navigation to find the
+instructions you need.</p>`,
   },
   es: {
-    title: "Ayuda — pantalla aún sin documentar",
-    body: `<h1>Aún no hay ayuda para esta pantalla</h1>
-<p>Esta parte de la aplicación todavía no tiene documentación
-contextual en el manual de usuario. Iremos cubriendo huecos a medida
-que se revisen los módulos — consulta <a href="/user-manual/es/"
-target="_top">el manual</a> para ver lo que ya está documentado.</p>
-<p>Si necesitas una guía para esta pantalla, abre una incidencia.</p>`,
+    title: "Centro de ayuda de Dentum",
+    body: `<h1>Centro de ayuda de Dentum</h1>
+<p>Consulta la guía de usuario para ver instrucciones paso a paso sobre la
+configuración de la clínica, pacientes, citas, historiales clínicos,
+facturación y administración.</p>
+<p><a href="../../user-manual/es/">Abrir el manual de usuario de Dentum</a></p>
+<p>Utiliza la búsqueda del manual o elige un tema en la navegación para
+encontrar las instrucciones que necesitas.</p>`,
   },
 };
-
-// A slug becomes a filename and then a URL path segment. Anything that
-// only has meaning in a URL -- query separators, braces left over from a
-// `{id}` route -- cannot be requested back by the app, which asks for
-// `<slug>.html` built from the matched route (no query, brackets
-// stripped). See `frontend/app/composables/useHelp.ts`.
-const UNSERVABLE_IN_SLUG = /[?&=#{}]/;
 
 export async function buildHelpFragments(distDir: string): Promise<number> {
   const screens = await collectScreens();
@@ -220,22 +214,6 @@ export async function buildHelpFragments(distDir: string): Promise<number> {
         `file, so one would overwrite the other.\n${detail}\n` +
         `Give each screen a route that collapses to a distinct slug.`,
     );
-  }
-
-  // Not fatal, because the fix needs a decision on how sub-views are
-  // addressed (#573) and failing here would block every unrelated build
-  // until that lands. Loud, because the symptom otherwise shows up only
-  // as "No help for this screen yet" in the drawer.
-  const unservable = [...byTarget.keys()].filter((k) => UNSERVABLE_IN_SLUG.test(k));
-  if (unservable.length > 0) {
-    console.warn(
-      `[help] ${unservable.length} fragment(s) have a slug the app can never ` +
-        `request, so their help drawer always falls back (#573):`,
-    );
-    for (const key of unservable.sort()) {
-      const screens_ = byTarget.get(key) ?? [];
-      console.warn(`  ${key}.html  <- ${screens_.map((x) => x.file).join(", ")}`);
-    }
   }
 
   for (const screen of screens) {

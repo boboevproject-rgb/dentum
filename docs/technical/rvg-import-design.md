@@ -1,7 +1,7 @@
 # RVG auto-import design (imaging_viewer increment, T1)
 
 > Idea source: apexo-flutter 0.14.x DICOM/RVG hardening (GPL-3.0 —
-> ideas only, clean-room reimplementation in DentalPin module patterns).
+> ideas only, clean-room reimplementation in Dentum module patterns).
 > Compliant with `docs/technical/compliance-posture.md` §3.
 
 ## Flow

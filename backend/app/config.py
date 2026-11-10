@@ -185,8 +185,8 @@ class Settings(BaseSettings):
     EMAIL_SMTP_PASSWORD: str = ""
 
     # Default sender
-    EMAIL_FROM_ADDRESS: str = "noreply@dentalpin.com"
-    EMAIL_FROM_NAME: str = "DentalPin"
+    EMAIL_FROM_ADDRESS: str = "noreply@dentum.online"
+    EMAIL_FROM_NAME: str = "Dentum"
 
     # Copilot / agentic layer (app/core/llm/). OpenAI, Anthropic, Gemini,
     # OpenRouter, Groq and Ollama are the live providers; per-clinic

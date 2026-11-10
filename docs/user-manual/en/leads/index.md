@@ -10,7 +10,7 @@ form (or that the front desk typed in by hand) and that do **not** match a
 patient you already have.
 
 > **Enquiries from existing patients do not appear here.** When the phone or
-> the email already belongs to one of your patients, DentalPin adds a
+> the email already belongs to one of your patients, Dentum adds a
 > call-back to **Recalls** instead, with the enquiry text in the recall note.
 > Check Recalls before assuming the form is not working.
 

@@ -1,4 +1,4 @@
-# Operar una instancia de DentalPin
+# Operar una instancia de Dentum
 
 Guía para administradores y auto-alojados: instalar y eliminar módulos,
 provocar reinicios, hacer copias de seguridad, recuperarse de errores.
@@ -13,7 +13,7 @@ Cubre los comandos que ejecuta un operador — no los internos de Python.
 ## 1. Requisitos previos
 
 - Docker + Docker Compose en el host.
-- Repositorio de DentalPin clonado (o artefactos de despliegue equivalentes).
+- Repositorio de Dentum clonado (o artefactos de despliegue equivalentes).
 - `.env` rellenado con `POSTGRES_PASSWORD`, `SECRET_KEY`, etc.
 - Un stack en marcha: `docker compose up -d`.
 - **¿La aplicación y la API en hosts distintos?** Entonces deben ser
@@ -127,7 +127,7 @@ problema; ideal para scripts de monitorización.
 
 ### Módulos oficiales
 
-Vienen incluidos en cada versión de DentalPin. Se instalan
+Vienen incluidos en cada versión de Dentum. Se instalan
 automáticamente en el primer arranque de una base de datos nueva.
 Reinstala si quedaron en `uninstalled`:
 

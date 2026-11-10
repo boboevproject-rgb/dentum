@@ -80,7 +80,7 @@ paciente cuando le pasan el enlace.
 
 ## Permisos
 
-Pantalla pública: no hay permisos de DentalPin asociados. Las
+Pantalla pública: no hay permisos de Dentum asociados. Las
 acciones internas que la soportan sí requieren `budget.write` en la
 clínica (enviar, reenviar, generar/cambiar código, desbloquear).
 

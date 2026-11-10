@@ -1,4 +1,4 @@
-# DentalPin
+# Dentum
 
 [![en](https://img.shields.io/badge/lang-en-red.svg)](./README.md)
 [![es](https://img.shields.io/badge/lang-es-yellow.svg)](./README.es.md)
@@ -16,22 +16,17 @@
 agenda, planes de tratamiento, facturación y un copiloto de IA integrado — modular,
 self-hosted y API-first.
 
-### ▶ [**Prueba la demo en vivo**](https://demo.dentalpin.com)
+[![Dentum — ficha de paciente con odontograma](docs/screenshots/patients.png)](https://dentum.online)
 
-Entra con `admin@demo.clinic` / `demo1234` — acceso completo de administrador a una
-clínica de ejemplo. Se reinicia cada noche, así que trastea sin miedo.
+<sub>[Web](https://dentum.online) · [Documentación](https://dentum.online/docs) · [Más capturas ↓](#capturas-de-pantalla)</sub>
 
-[![DentalPin — ficha de paciente con odontograma](docs/screenshots/patients.png)](https://demo.dentalpin.com)
-
-<sub>[Web](https://www.dentalpin.com) · [Documentación](https://docs.dentalpin.com) · [Telegram](https://t.me/dentalpin) · [Más capturas ↓](#capturas-de-pantalla)</sub>
-
-## ¿Por qué DentalPin?
+## ¿Por qué Dentum?
 
 Las clínicas dentales de todo el mundo comparten las mismas necesidades fundamentales: gestionar pacientes, programar citas, hacer seguimiento de tratamientos y dirigir su práctica de manera eficiente. Sin embargo, el panorama del software está fragmentado en docenas de soluciones localizadas y de código cerrado que encierran a las clínicas en contratos costosos y tecnología obsoleta.
 
 **Creemos que es hora de cambiar.**
 
-DentalPin se construye sobre una premisa simple: **una plataforma abierta para clínicas dentales en todas partes**. No otra solución regional, sino una base global que cualquier clínica pueda adoptar, cualquier desarrollador pueda extender y cualquier comunidad pueda localizar.
+Dentum se construye sobre una premisa simple: **una plataforma abierta para clínicas dentales en todas partes**. No otra solución regional, sino una base global que cualquier clínica pueda adoptar, cualquier desarrollador pueda extender y cualquier comunidad pueda localizar.
 
 ### ¿Por qué ahora?
 
@@ -49,11 +44,11 @@ La IA ha cambiado fundamentalmente lo que los equipos pequeños pueden construir
 
 No solo estamos construyendo software — estamos construyendo la base de un ecosistema. Una plataforma donde los desarrolladores contribuyen módulos, las clínicas comparten mejoras y toda la comunidad dental se beneficia de la innovación colectiva.
 
-Las clínicas merecen algo mejor que software cerrado y costoso de la década pasada. DentalPin es la alternativa abierta.
+Las clínicas merecen algo mejor que software cerrado y costoso de la década pasada. Dentum es la alternativa abierta.
 
 ## ✨ Copiloto IA
 
-DentalPin incluye un **asistente IA agentic integrado** que convierte toda la clínica en algo con lo que simplemente puede conversar. Pídale encontrar un paciente, liberar un espacio, perseguir un presupuesto sin respuesta, o informarle sobre el día por delante — en español o inglés — y actúa sobre sus datos reales.
+Dentum incluye un **asistente IA agentic integrado** que convierte toda la clínica en algo con lo que simplemente puede conversar. Pídale encontrar un paciente, liberar un espacio, perseguir un presupuesto sin respuesta, o informarle sobre el día por delante — en español o inglés — y actúa sobre sus datos reales.
 
 ![AI Copilot](docs/screenshots/ia.png)
 
@@ -71,11 +66,7 @@ Agnóstico al proveedor en las capas internas (abstracción del proveedor LLM), 
 
 ## Sitio web
 
-Visite [**dentalpin.com**](https://www.dentalpin.com) para información del producto, características y detalles comerciales.
-
-## Comunidad
-
-Únase a nuestro [**canal de Telegram**](https://t.me/dentalpin) para soporte, ayuda con la instalación y preguntas.
+Visite [**dentum.online**](https://dentum.online) para información del producto, características y detalles comerciales.
 
 ## Capturas de pantalla
 
@@ -102,9 +93,9 @@ Visite [**dentalpin.com**](https://www.dentalpin.com) para información del prod
 Imágenes preconstruidas, sin clonar ni compilar. En cualquier servidor con Docker:
 
 ```bash
-curl -O https://raw.githubusercontent.com/dentalpin/dentalpin/main/docker-compose.prod.yml
-curl -O https://raw.githubusercontent.com/dentalpin/dentalpin/main/Caddyfile
-curl -o .env https://raw.githubusercontent.com/dentalpin/dentalpin/main/.env.prod.example
+curl -O https://raw.githubusercontent.com/boboevproject-rgb/dentum/main/docker-compose.prod.yml
+curl -O https://raw.githubusercontent.com/boboevproject-rgb/dentum/main/Caddyfile
+curl -o .env https://raw.githubusercontent.com/boboevproject-rgb/dentum/main/.env.prod.example
 
 # Configure PUBLIC_URL, POSTGRES_PASSWORD y SECRET_KEY en .env, y luego:
 # BUDGET_PUBLIC_SECRET_KEY: openssl rand -hex 32
@@ -217,7 +208,7 @@ actualmente en **cinco idiomas** (es, en, fr, pt, ta); cada clínica elige su id
 comunicación con independencia del idioma de la interfaz del personal.
 
 ¿Quiere su idioma? Añadir uno es una contribución solo de traducción — consulte los
-[issues de i18n](https://github.com/dentalpin/dentalpin/issues?q=label%3Ai18n) o abra
+[issues de i18n](https://github.com/boboevproject-rgb/dentum/issues?q=label%3Ai18n) o abra
 uno nuevo.
 
 ## Desarrollo
@@ -304,7 +295,7 @@ Runbook completo + referencia de fixtures: [docs/technical/e2e-testing.md](docs/
 
 ## Arquitectura
 
-DentalPin utiliza una arquitectura modular tipo plugin. Cada funcionalidad es un módulo autónomo que:
+Dentum utiliza una arquitectura modular tipo plugin. Cada funcionalidad es un módulo autónomo que:
 - Declara sus modelos SQLAlchemy
 - Proporciona un router FastAPI
 - Puede suscribirse a eventos de otros módulos
@@ -315,7 +306,7 @@ Consulte [docs/adr/0001-modular-plugin-architecture.md](docs/adr/0001-modular-pl
 
 Business Source License 1.1 (BSL 1.1)
 
-**Limitación de uso:** No puede ofrecer DentalPin como un SaaS comercial para la gestión de clínicas dentales.
+**Limitación de uso:** No puede ofrecer Dentum como un SaaS comercial para la gestión de clínicas dentales.
 
 **Fecha de cambio:** 4 años desde el lanzamiento
 

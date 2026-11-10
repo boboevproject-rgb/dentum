@@ -135,7 +135,7 @@ guides: the definitions name "derivatives (such as technical reports)",
 licence is production-prohibited; shipping X12 IP inside software is
 the "Commercial Use Partner" tier, priced per agreement.
 
-This is not "we cannot ship a PDF". DentalPin is BSL 1.1 and every
+This is not "we cannot ship a PDF". Dentum is BSL 1.1 and every
 release converts to **Apache 2.0 after four years** (ADR 0004) — a
 licence X12 names. An encoder built under an X12 licence would collide
 with our own licence trajectory on a four-year timer. Where the line
@@ -183,7 +183,7 @@ associate agreement with an app developer that does not create,
 receive, maintain, or transmit ePHI on behalf of or for the benefit of
 the covered entity". A project that only distributes software a
 practice installs and runs itself is therefore **not** a business
-associate. What flips it, all sourced: DentalPin-operated hosting ("An
+associate. What flips it, all sourced: Dentum-operated hosting ("An
 entity that maintains ePHI on behalf of a covered entity … is a
 business associate, even if the entity cannot actually view the ePHI",
 and "even if it does not hold a decryption key"); paid remote support
@@ -275,7 +275,7 @@ since 27 March 2016.
 
 ## Decision
 
-1. **DentalPin ships no CDT content — none, anywhere.** No code
+1. **Dentum ships no CDT content — none, anywhere.** No code
    numbers, no nomenclature, no descriptors, in the repo, in seeds, in
    fixtures, in tests or in documentation examples. The ADA's bundling
    clause reaches invisible use, so "just the numbers in a migration"
@@ -291,38 +291,38 @@ since 27 March 2016.
    US needs no country-supplied treatment catalog — it needs one
    nullable, country-module-owned *code mapping* per catalog item.
    `catalog` keeps `internal_code` and learns nothing about the US.
-4. **DentalPin does not write an X12 encoder and does not take an X12
+4. **Dentum does not write an X12 encoder and does not take an X12
    licence.** § 2.1 forbids licensing the resulting software under an
    Open Source License, which names Apache 2.0 — the licence every
    release converts to four years after release (ADR 0004). Building
    the encoder means breaching that clause or abandoning the
    conversion.
-5. **Claims leave DentalPin as a documented non-standard JSON payload
+5. **Claims leave Dentum as a documented non-standard JSON payload
    to a clearinghouse acting as the practice's business associate.**
    § 162.930(b) authorises exactly this; the clearinghouse holds the
    X12 licence, produces the 837D and is the covered entity's agent.
-   DentalPin stores the acknowledgement, status and remittance as a
-   mirror — the same "third party issues, DentalPin mirrors" pattern
+   Dentum stores the acknowledgement, status and remittance as a
+   mirror — the same "third party issues, Dentum mirrors" pattern
    as ADRs 0027 and 0028.
 6. **Module `us_claims`**, `US`-gated, `auto_install=False`, registered
    through `BillingHookRegistry` in the `verifactu` shape: own
    `us_claims_*` tables, own Alembic branch, own Nuxt layer, uninstall
    leaves nothing behind. Day one is the claim draft plus eligibility
    (270/271) and remittance (835) posting, all through the
-   clearinghouse's REST API — **no X12 on the wire from DentalPin,
+   clearinghouse's REST API — **no X12 on the wire from Dentum,
    ever**. `billing` learns nothing about the US.
 7. **Attachments stay where they are.** Radiographs live in `media` /
    `documents`; `us_claims` sends a reference and lets the
    clearinghouse produce the 275. Compliance date 26 May 2028.
-8. **No certification is sought, because none exists.** DentalPin does
+8. **No certification is sought, because none exists.** Dentum does
    not apply for ASTP/ONC certification, does not become a "health IT
    developer of certified health IT", and does not join TEFCA. Recorded
    so it is not re-litigated every time a US prospect asks "are you ONC
    certified?" — the answer is "no dental PMS is, and nothing requires
    it".
 9. **The HIPAA posture is written down as a split, and the gaps close
-   before the US is called ready.** Self-hosted: DentalPin is not a
-   business associate and signs no BAA. DentalPin-operated SaaS:
+   before the US is called ready.** Self-hosted: Dentum is not a
+   business associate and signs no BAA. Dentum-operated SaaS:
    business associate, signs a BAA, and the § 164.504(e)(2) terms
    become contractual. Three code items ship before any US readiness
    claim: a **PHI read-access log** (§ 164.312(b), a bare standard we
@@ -334,7 +334,7 @@ since 27 March 2016.
     per-version third-party audit of an application the practice may
     not modify. A US edition integrates a certified e-prescribing
     gateway or does not prescribe controlled substances at all.
-11. **Until `us_claims` exists, DentalPin's position in the US is
+11. **Until `us_claims` exists, Dentum's position in the US is
     "clinical record, schedule and patient invoicing; claims with your
     existing system"**, on the US pages and in the readiness matrix.
     Unlike Portugal and Germany this is a build backlog, not a legal
@@ -357,7 +357,7 @@ since 27 March 2016.
 
 ### Bad / accepted trade-offs
 
-- A US practice cannot bill from DentalPin until the connector ships,
+- A US practice cannot bill from Dentum until the connector ships,
   and then needs a clearinghouse account and a per-claim or monthly fee.
 - We depend on a commercial clearinghouse's API and uptime; a change of
   provider is a new driver.
@@ -458,14 +458,14 @@ since 27 March 2016.
   network or health information exchange" prong of § 171.102 is keyed
   to controlling exchange "Among more than two unaffiliated individuals
   or entities", not to holding a certified module. A future
-  DentalPin-operated exchange between clinics needs re-reading.
+  Dentum-operated exchange between clinics needs re-reading.
 - Which clearinghouses expose a REST API to a self-hosted customer, at
   what price, and whether any will contract with a practice rather than
   a software vendor. Maintainer task before any code.
 
 ## Readiness matrix row
 
-| United States | ✅ `en` | ✅ | ✅ patient invoicing works as-is | ❌ Claims: no US regulator certifies dental PMS — the blocker is IP, not approval. DentalPin ships no CDT (ADA commercial licence; the practice supplies its own) and writes no X12 837D (X12's licence forbids Open Source licensing of the combined software, and ADR 0004 converts to Apache 2.0); `us_claims` sends a non-standard payload to a clearinghouse acting as the practice's business associate (45 CFR 162.930(b); ADR 0035). HIPAA: self-hosted means DentalPin is no business associate and signs no BAA; the hosted offer is one and does. Read-access logging, automatic logoff and emergency access are open before any readiness claim | #137 (answered) |
+| United States | ✅ `en` | ✅ | ✅ patient invoicing works as-is | ❌ Claims: no US regulator certifies dental PMS — the blocker is IP, not approval. Dentum ships no CDT (ADA commercial licence; the practice supplies its own) and writes no X12 837D (X12's licence forbids Open Source licensing of the combined software, and ADR 0004 converts to Apache 2.0); `us_claims` sends a non-standard payload to a clearinghouse acting as the practice's business associate (45 CFR 162.930(b); ADR 0035). HIPAA: self-hosted means Dentum is no business associate and signs no BAA; the hosted offer is one and does. Read-access logging, automatic logoff and emergency access are open before any readiness claim | #137 (answered) |
 
 ## References
 

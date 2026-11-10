@@ -62,7 +62,7 @@ time on AEAT.
 
 ## 2. Architecture & module boundaries
 
-DentalPin is international software; AEAT/RRSIF is Spain-only. The
+Dentum is international software; AEAT/RRSIF is Spain-only. The
 verifactu module is therefore optional, country-specific, and isolated.
 
 **Module dependencies (declared in `manifest.depends`):**
@@ -160,7 +160,7 @@ docker-compose restart frontend
 # always win; env vars are fallbacks for fresh installs.
 VERIFACTU_VENDOR_NIF=                # Producer NIF (real CIF)
 VERIFACTU_VENDOR_NAME=               # Producer legal name
-VERIFACTU_SOFTWARE_NAME=DentalPin    # Optional, defaults to "DentalPin"
+VERIFACTU_SOFTWARE_NAME=Dentum    # Optional, defaults to "Dentum"
 VERIFACTU_SOFTWARE_ID=DP             # 2-char system identifier
 VERIFACTU_SOFTWARE_VERSION=0.1.0     # Pin to your deploy's version tag
 ```
