@@ -10,7 +10,6 @@ definePageMeta({
 const { t } = useI18n()
 const route = useRoute()
 const api = useApi()
-const auth = useAuth()
 const toast = useToast()
 
 const token = computed(() => (typeof route.query.token === 'string' ? route.query.token : ''))
@@ -33,21 +32,29 @@ async function onSubmit() {
   errorMessage.value = ''
   if (!validate()) return
   isLoading.value = true
+  let passwordWasSet = false
   try {
-    const res = await api.post<{ access_token: string, refresh_token: string }>(
+    await api.post<{ access_token: string, refresh_token: string }>(
       '/api/v1/auth/set-password',
       { token: token.value, password: password.value },
       // The catch renders errorMessage inline on the form.
       { skipAuth: true, errorToast: false }
     )
-    await auth.applyTokens(res.access_token, res.refresh_token)
-    toast.add({ title: t('setup.success'), color: 'success' })
-    await navigateTo('/')
+    passwordWasSet = true
   } catch (error: unknown) {
     const status = (error as { statusCode?: number }).statusCode
     errorMessage.value = status === 400 ? t('settings.invite.invalidToken') : t('setup.error')
   } finally {
     isLoading.value = false
+  }
+
+  if (passwordWasSet) {
+    toast.add({ title: t('setup.success'), color: 'success' })
+    // The API sets HttpOnly session cookies on this response. A full page
+    // load lets Nuxt's SSR read those cookies before auth middleware runs;
+    // a client-side /me request here can race cookie availability and make
+    // a successful password change look like a failed setup.
+    if (import.meta.client) window.location.assign('/')
   }
 }
 </script>

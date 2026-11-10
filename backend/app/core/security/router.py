@@ -14,6 +14,7 @@ from __future__ import annotations
 import json
 import logging
 from typing import Any
+from urllib.parse import urlsplit, urlunsplit
 
 from fastapi import APIRouter, Request, Response, status
 
@@ -32,6 +33,13 @@ _KEEP = (
     "line-number",
     "disposition",
 )
+_URI_FIELDS = frozenset({"document-uri", "blocked-uri", "source-file"})
+
+
+def _without_query(value: str) -> str:
+    """Drop query strings and fragments before logging potentially secret URLs."""
+    parts = urlsplit(value)
+    return urlunsplit((parts.scheme, parts.netloc, parts.path, "", ""))
 
 
 def _normalize(payload: Any) -> list[dict[str, Any]]:
@@ -51,7 +59,15 @@ def _normalize(payload: Any) -> list[dict[str, Any]]:
         # Reporting-API bodies use camelCase; legacy uses kebab-case.
         flat = {k.replace("_", "-"): v for k, v in report.items()}
         flat.update({_ALIAS.get(k, _camel_to_kebab(k)): v for k, v in report.items()})
-        out.append({k: str(flat[k])[:300] for k in _KEEP if k in flat})
+        safe_report = {}
+        for key in _KEEP:
+            if key not in flat:
+                continue
+            value = str(flat[key])
+            if key in _URI_FIELDS:
+                value = _without_query(value)
+            safe_report[key] = value[:300]
+        out.append(safe_report)
     return out
 
 
